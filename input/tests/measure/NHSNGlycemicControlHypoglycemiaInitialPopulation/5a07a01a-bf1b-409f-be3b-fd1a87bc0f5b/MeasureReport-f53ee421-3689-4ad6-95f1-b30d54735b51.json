@@ -1,0 +1,63 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f53ee421-3689-4ad6-95f1-b30d54735b51",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "da7fbb99-f459-4344-8e89-6fd88d413c52-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "5a07a01a-bf1b-409f-be3b-fd1a87bc0f5b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#da7fbb99-f459-4344-8e89-6fd88d413c52-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "IP Encounter with hypoglycemic med given. Lab LT 40 mg/dL, followed by lab GT 80 mg/dL within 5 minutes. Does not meet Numerator. \n\n(CMS #3)"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/5a07a01a-bf1b-409f-be3b-fd1a87bc0f5b"
+  }, {
+    "reference": "Encounter/51047cd2-5b3b-46ec-a658-8789b9ed7922"
+  }, {
+    "reference": "MedicationAdministration/d4680bbb-e63e-46e9-9970-f7737b502694"
+  }, {
+    "reference": "Observation/976bb314-2f2c-4265-a615-7f627f20be77"
+  }, {
+    "reference": "Observation/8d61517f-ad5f-436d-ab22-968556f3deca"
+  } ]
+}

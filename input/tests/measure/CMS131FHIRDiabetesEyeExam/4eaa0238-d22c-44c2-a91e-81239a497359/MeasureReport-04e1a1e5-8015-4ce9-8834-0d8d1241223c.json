@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "04e1a1e5-8015-4ce9-8834-0d8d1241223c",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6d868e69-fceb-40a2-b1fb-a978c5b2883f-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "4eaa0238-d22c-44c2-a91e-81239a497359"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6d868e69-fceb-40a2-b1fb-a978c5b2883f-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Frailty diagnosis overlaps MP"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS131FHIRDiabetesEyeExam",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/4eaa0238-d22c-44c2-a91e-81239a497359"
+  }, {
+    "reference": "Encounter/eead05d3-894d-4c3c-90ed-827e60c068a4"
+  }, {
+    "reference": "Condition/210ce6f7-d72b-4b93-918b-7f58b5aff25a"
+  }, {
+    "reference": "MedicationRequest/cc57c897-93fe-417d-a8c9-70673991f6b1"
+  }, {
+    "reference": "Condition/7bb1da58-0867-4c52-996a-49b69c58e16f"
+  } ]
+}

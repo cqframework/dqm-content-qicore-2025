@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "4afd38b9-4d5b-42e4-b6b6-5483f5d5ce65",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ff32aa58-561e-4d8b-8d14-346f7cad56c6-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "d1e00565-85ef-4b47-b241-d4cbf05cdad3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ff32aa58-561e-4d8b-8d14-346f7cad56c6-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "The anticoagulant medication was not in ordered, or completed status "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1173FHIRDiagnosticDelayVTE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/d1e00565-85ef-4b47-b241-d4cbf05cdad3"
+  }, {
+    "reference": "Encounter/ac45f123-078a-4646-b573-e17deda5ec07"
+  }, {
+    "reference": "Condition/f7ec0bab-7234-42ce-a168-ade901aebf71"
+  }, {
+    "reference": "Encounter/16ce837e-9256-4094-ae0e-e8ed81c06941"
+  }, {
+    "reference": "Condition/d477ca40-42d6-4cff-9978-da221e66d6c9"
+  }, {
+    "reference": "Observation/2a2ba5c5-05a7-40fd-a8ca-63c63765588b"
+  }, {
+    "reference": "DiagnosticReport/0f2bbbd0-7501-4fe1-b08c-b8183cf3d069"
+  }, {
+    "reference": "MedicationRequest/54aaff7e-7759-44eb-81d4-d8b2e1a665cc"
+  }, {
+    "reference": "Coverage/6a851ee8-07cf-4d85-906e-b28b00775cb9"
+  }, {
+    "reference": "Claim/9feb2041-117b-426d-9b12-66d799ed6cd9"
+  }, {
+    "reference": "Organization/43c53fe0-ba41-4bd3-a10e-7a17dbb28b05"
+  } ]
+}

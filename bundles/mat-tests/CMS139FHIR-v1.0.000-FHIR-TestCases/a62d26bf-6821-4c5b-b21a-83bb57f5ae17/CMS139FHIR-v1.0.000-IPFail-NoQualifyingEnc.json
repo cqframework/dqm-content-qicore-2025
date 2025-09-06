@@ -1,0 +1,147 @@
+{
+  "resourceType": "Bundle",
+  "id": "Patient-11-IPFail-NoQualifyingEnc",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/a62d26bf-6821-4c5b-b21a-83bb57f5ae17",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "a62d26bf-6821-4c5b-b21a-83bb57f5ae17",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1960-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/a62d26bf-6821-4c5b-b21a-83bb57f5ae17"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/b1dfff3b-a039-4e90-8d81-5f4c346065fb",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "b1dfff3b-a039-4e90-8d81-5f4c346065fb",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "bba526c4-11e0-4acf-9d34-d93345e786d2-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "a62d26bf-6821-4c5b-b21a-83bb57f5ae17"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#bba526c4-11e0-4acf-9d34-d93345e786d2-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient does not have a qualifying encounter."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS139FHIRFallRiskScreening",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/a62d26bf-6821-4c5b-b21a-83bb57f5ae17"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/b1dfff3b-a039-4e90-8d81-5f4c346065fb"
+    }
+  } ]
+}

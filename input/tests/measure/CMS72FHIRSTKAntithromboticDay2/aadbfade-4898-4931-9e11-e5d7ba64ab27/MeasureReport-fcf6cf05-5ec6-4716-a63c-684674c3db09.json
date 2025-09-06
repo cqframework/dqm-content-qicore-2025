@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "fcf6cf05-5ec6-4716-a63c-684674c3db09",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "28cb9712-79c7-4737-ba15-8b14b05061df-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "aadbfade-4898-4931-9e11-e5d7ba64ab27"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#28cb9712-79c7-4737-ba15-8b14b05061df-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient receives Ticagrelor day after IP start at 1159 pm. No ED. No Obs. Testing Day of operator with HospitalizationWithObservation function.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS72FHIRSTKAntithromboticDay2",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/aadbfade-4898-4931-9e11-e5d7ba64ab27"
+  }, {
+    "reference": "Encounter/b785150d-097f-45f3-97d0-a81adf44da3d"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "MedicationAdministration/2bfe80f0-3b07-43a2-ae5b-a749bd898a8e"
+  }, {
+    "reference": "Coverage/1a8cb0dc-9186-469f-ba62-457f70bfbca5"
+  }, {
+    "reference": "Condition/9ab49460-7a35-4a9b-ab64-cc178587d921"
+  }, {
+    "reference": "Organization/e8562000-6aaf-4824-81ca-b8fe6919e31b"
+  } ]
+}

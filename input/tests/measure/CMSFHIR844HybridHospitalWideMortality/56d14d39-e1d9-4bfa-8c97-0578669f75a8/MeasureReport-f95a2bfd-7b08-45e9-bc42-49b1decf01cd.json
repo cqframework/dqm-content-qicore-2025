@@ -1,0 +1,65 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f95a2bfd-7b08-45e9-bc42-49b1decf01cd",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "f43057bc-16de-43ff-b071-4fee3df2762a-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "56d14d39-e1d9-4bfa-8c97-0578669f75a8"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#f43057bc-16de-43ff-b071-4fee3df2762a-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Enc first day of MP (7/1), has Medicare, bicarbonate test performed 1 min before start of inpatient encounter. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMSFHIR844HybridHospitalWideMortality",
+  "period": {
+    "start": "2026-07-01",
+    "end": "2027-06-30"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/56d14d39-e1d9-4bfa-8c97-0578669f75a8"
+  }, {
+    "reference": "Encounter/d645e731-a6b5-4fb3-b309-7102d47b268e"
+  }, {
+    "reference": "Coverage/b5da192f-911b-4370-a029-660c5ed27b34"
+  }, {
+    "reference": "Observation/262338f0-f29e-4e9c-836c-936890155dd6"
+  }, {
+    "reference": "Organization/8dbed816-8387-4e3e-a3de-d085c228bdfa"
+  }, {
+    "reference": "Practitioner/f07e454e-c932-43f0-84ef-3bb865f52bc8"
+  } ]
+}

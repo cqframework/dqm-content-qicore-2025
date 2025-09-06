@@ -1,0 +1,89 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0f4dfd37-22fc-4adc-b71f-715486d5ebcf",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "b60cf27a-b9c1-4e78-b333-1657a542c106-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "7d2ac41c-0346-43d9-b069-6418679074d5"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#b60cf27a-b9c1-4e78-b333-1657a542c106-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has an encounter in the MP and the Viral Load Test is on outside edge, after the MP"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1157FHIRHIVRetention",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/7d2ac41c-0346-43d9-b069-6418679074d5"
+  }, {
+    "reference": "Condition/1090dfac-8ab1-487f-a532-fb31e2ca9588"
+  }, {
+    "reference": "Encounter/7fc4dc74-e478-4f6f-8083-d4f455b1f6de"
+  }, {
+    "reference": "Observation/8179de1c-2140-4e83-9450-d49191f1c6ab"
+  }, {
+    "reference": "Observation/dfb000c3-c3de-4618-a2fe-f41a3da9e873"
+  }, {
+    "reference": "Coverage/b275ddf0-c509-465e-8e99-962f7b9ce466"
+  }, {
+    "reference": "Organization/9838fc31-8458-4fff-9a59-8f691b6b680d"
+  }, {
+    "reference": "Practitioner/18c7382d-c5a3-4a34-a03b-0ac7e42e5412"
+  } ]
+}

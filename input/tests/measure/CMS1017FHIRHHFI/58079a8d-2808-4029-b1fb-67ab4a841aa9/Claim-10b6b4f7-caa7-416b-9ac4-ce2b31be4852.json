@@ -1,0 +1,64 @@
+{
+  "resourceType": "Claim",
+  "id": "10b6b4f7-caa7-416b-9ac4-ce2b31be4852",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "professional",
+      "display": "Professional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/58079a8d-2808-4029-b1fb-67ab4a841aa9"
+  },
+  "created": "2026-12-12",
+  "provider": {
+    "reference": "Practitioner/practitioner-1"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "W01.0XXA"
+      } ]
+    },
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "N"
+      } ]
+    }
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/coverage-1"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1, 2 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+        "code": "1101"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/dbd5bae0-8a82-41d3-87db-90435832b576"
+    } ]
+  } ]
+}

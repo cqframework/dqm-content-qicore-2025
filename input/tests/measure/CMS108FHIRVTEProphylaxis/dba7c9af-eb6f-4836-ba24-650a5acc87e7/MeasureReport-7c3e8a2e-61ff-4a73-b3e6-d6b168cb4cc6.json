@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "7c3e8a2e-61ff-4a73-b3e6-d6b168cb4cc6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "c9e560f0-9a30-431e-8eb3-63ed2b78c1c9-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "dba7c9af-eb6f-4836-ba24-650a5acc87e7"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#c9e560f0-9a30-431e-8eb3-63ed2b78c1c9-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "factor Xa and VFP not ordered due to medical reason <= 1 day after end of anesthesia\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/dba7c9af-eb6f-4836-ba24-650a5acc87e7"
+  }, {
+    "reference": "Encounter/eecf1362-7694-4f3f-964b-4cec6e4088c0"
+  }, {
+    "reference": "Coverage/a0f51d09-ff44-4511-bd00-156185e0651e"
+  }, {
+    "reference": "Procedure/0ce09a0d-5a13-495b-9ee0-5f0fd1a984f7"
+  }, {
+    "reference": "MedicationRequest/17550718-5ae1-4579-bc3c-10914c4c1184"
+  }, {
+    "reference": "Procedure/c08ad1f3-d4ce-4437-aafb-5286de6ad84e"
+  }, {
+    "reference": "Organization/67c7c974-ca6a-44b8-99bc-c817666d92a7"
+  }, {
+    "reference": "Practitioner/2d4cdeff-2628-47b8-a60e-27f378891ba7"
+  } ]
+}

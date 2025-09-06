@@ -1,0 +1,427 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-HospiceDischargeToHomeDuringMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/78a48c68-f018-47da-a1cc-c96b63c248e8",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "78a48c68-f018-47da-a1cc-c96b63c248e8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2020-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/78a48c68-f018-47da-a1cc-c96b63c248e8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/d51e96d4-456d-4f7d-8c24-d275964b730a",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "d51e96d4-456d-4f7d-8c24-d275964b730a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/78a48c68-f018-47da-a1cc-c96b63c248e8"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/d51e96d4-456d-4f7d-8c24-d275964b730a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/c2823b9b-c534-4854-935e-b6b23476909b",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "c2823b9b-c534-4854-935e-b6b23476909b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "54398005",
+          "display": "Acute upper respiratory infection (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/78a48c68-f018-47da-a1cc-c96b63c248e8"
+      },
+      "onsetDateTime": "2026-01-01T01:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/c2823b9b-c534-4854-935e-b6b23476909b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/60527e71-ee82-4e3e-8d06-55c412973e8e",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "60527e71-ee82-4e3e-8d06-55c412973e8e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "32485007",
+          "display": "Hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/78a48c68-f018-47da-a1cc-c96b63c248e8"
+      },
+      "period": {
+        "start": "2025-12-31T23:59:59.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      },
+      "hospitalization": {
+        "dischargeDisposition": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "428361000124107",
+            "display": "Discharge to home for hospice care (procedure)"
+          } ]
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/60527e71-ee82-4e3e-8d06-55c412973e8e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/f9c64aec-b84d-4d2c-9b1e-394b157f7fce",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "f9c64aec-b84d-4d2c-9b1e-394b157f7fce",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "ae527459-32f2-4296-aec4-56e64e5b5241-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "78a48c68-f018-47da-a1cc-c96b63c248e8"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#ae527459-32f2-4296-aec4-56e64e5b5241-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Hospice discharge to home during MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS154FHIRAppropriateTxforURI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        },
+        "stratifier": [ {
+          "id": "Stratification_1_1",
+          "code": [ {
+            "text": "Strata-1"
+          } ],
+          "stratum": [ {
+            "value": {
+              "text": "Strata-1"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 0
+            } ]
+          } ]
+        }, {
+          "id": "Stratification_1_2",
+          "code": [ {
+            "text": "Strata-2"
+          } ],
+          "stratum": [ {
+            "value": {
+              "text": "Strata-2"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 0
+            } ]
+          } ]
+        }, {
+          "id": "Stratification_1_3",
+          "code": [ {
+            "text": "Strata-3"
+          } ],
+          "stratum": [ {
+            "value": {
+              "text": "Strata-3"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 0
+            } ]
+          } ]
+        } ]
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/78a48c68-f018-47da-a1cc-c96b63c248e8"
+      }, {
+        "reference": "Encounter/d51e96d4-456d-4f7d-8c24-d275964b730a"
+      }, {
+        "reference": "Condition/c2823b9b-c534-4854-935e-b6b23476909b"
+      }, {
+        "reference": "Encounter/60527e71-ee82-4e3e-8d06-55c412973e8e"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/f9c64aec-b84d-4d2c-9b1e-394b157f7fce"
+    }
+  } ]
+}

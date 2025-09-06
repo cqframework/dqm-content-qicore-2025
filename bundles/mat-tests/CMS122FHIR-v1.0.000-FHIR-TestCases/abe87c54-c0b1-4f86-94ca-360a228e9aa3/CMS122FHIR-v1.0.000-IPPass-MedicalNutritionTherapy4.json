@@ -1,0 +1,221 @@
+{
+  "resourceType": "Bundle",
+  "id": "Patient-IPPass-MedicalNutritionTherapy4",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/abe87c54-c0b1-4f86-94ca-360a228e9aa3",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "abe87c54-c0b1-4f86-94ca-360a228e9aa3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2008-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/abe87c54-c0b1-4f86-94ca-360a228e9aa3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/c149a099-0960-4fea-8eb4-9626a6bfe398",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "c149a099-0960-4fea-8eb4-9626a6bfe398",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "97803",
+          "display": "Medical nutrition therapy; re-assessment and intervention, individual, face-to-face with the patient, each 15 minutes"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/abe87c54-c0b1-4f86-94ca-360a228e9aa3"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T00:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/c149a099-0960-4fea-8eb4-9626a6bfe398"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/e452b9e4-4fb4-4b54-b42e-f4ee95712683",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "e452b9e4-4fb4-4b54-b42e-f4ee95712683",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/abe87c54-c0b1-4f86-94ca-360a228e9aa3"
+      },
+      "onsetDateTime": "2026-01-01T23:59:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/e452b9e4-4fb4-4b54-b42e-f4ee95712683"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/508b552a-515f-459c-8f62-97e4b6b422e0",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "508b552a-515f-459c-8f62-97e4b6b422e0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "9180cab8-2777-474c-9090-7d22d9813085-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "abe87c54-c0b1-4f86-94ca-360a228e9aa3"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#9180cab8-2777-474c-9090-7d22d9813085-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter is medical nutrition therapy; re-assessment and intervention, individual, face-to-face with the patient, each 15 minutes"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS122FHIRDiabetesAssessGT9Pct",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/abe87c54-c0b1-4f86-94ca-360a228e9aa3"
+      }, {
+        "reference": "Encounter/c149a099-0960-4fea-8eb4-9626a6bfe398"
+      }, {
+        "reference": "Condition/e452b9e4-4fb4-4b54-b42e-f4ee95712683"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/508b552a-515f-459c-8f62-97e4b6b422e0"
+    }
+  } ]
+}

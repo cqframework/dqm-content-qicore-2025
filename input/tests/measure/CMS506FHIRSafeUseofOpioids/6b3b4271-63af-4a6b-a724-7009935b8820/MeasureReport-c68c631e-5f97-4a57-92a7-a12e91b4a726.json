@@ -1,0 +1,95 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c68c631e-5f97-4a57-92a7-a12e91b4a726",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "1046dccd-c56f-49a4-97a1-557ea3bcb91b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "6b3b4271-63af-4a6b-a724-7009935b8820"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#1046dccd-c56f-49a4-97a1-557ea3bcb91b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter 1/1 - 1/5, age 18, opioid at discharge, expired (dischargeDisposition)\n\nincludes 'Detailed' for SDE"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS506FHIRSafeUseofOpioids",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/6b3b4271-63af-4a6b-a724-7009935b8820"
+  }, {
+    "reference": "Encounter/2957b21b-fb23-43aa-87e1-89e824b64a44"
+  }, {
+    "reference": "MedicationRequest/41f0928b-c165-4fb7-8c64-094efecd0069"
+  }, {
+    "reference": "Practitioner/1086ce27-1ac0-4847-ae41-efcd6b43f54a"
+  }, {
+    "reference": "Coverage/713ab644-3d05-4bce-979a-2006bab0134f"
+  }, {
+    "reference": "Organization/b3e0d825-f7de-476a-ab43-48214181db4f"
+  } ]
+}

@@ -1,0 +1,135 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "bbd9b46e-e1fe-4003-95fc-1754c130fda3",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "8e1558a8-2858-4efd-95cb-7fe865d9b1b1-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "972573e8-bd51-4b77-a954-39babec1a055"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#8e1558a8-2858-4efd-95cb-7fe865d9b1b1-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter with a major injury POA. Also has another maj injury NPOA. Had adverse event fall during encounter. Major Inj POA doesn't cause exclusion since there was another major injury NPOA with a fall to meet denom and numerator. DENEX fails."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "NumeratorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator-exclusion",
+          "display": "Numerator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "MeasureObservation_1_1_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 3
+    }, {
+      "id": "MeasureObservation_1_2_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/224a3178-f6cb-4037-9125-f2218349586a"
+  }, {
+    "reference": "Encounter/cd28a1bd-5e0b-4b31-860a-3be27cd0369d"
+  }, {
+    "reference": "Condition/210a02dd-8321-47f7-90b5-b884497abe82"
+  }, {
+    "reference": "Condition/ce1990a8-9298-40ef-88c3-0053d2b09a85"
+  }, {
+    "reference": "Patient/972573e8-bd51-4b77-a954-39babec1a055"
+  }, {
+    "reference": "Claim/aeb3f5e6-5796-46a1-b0a6-b91cf5e0b40b"
+  }, {
+    "reference": "Claim/d4beb569-0904-4ddd-8ef0-704a640e06c4"
+  }, {
+    "reference": "AdverseEvent/9c7b4a96-5e15-4634-b3c8-de7b649a0307"
+  }, {
+    "reference": "Practitioner/272790ae-3b08-44af-981c-f1ca5268d2e1"
+  }, {
+    "reference": "Coverage/5c5e1a77-618f-4da6-b9b1-cea4134d0259"
+  }, {
+    "reference": "Organization/90699406-d859-42f0-bf21-8f740bc2ecb0"
+  } ]
+}

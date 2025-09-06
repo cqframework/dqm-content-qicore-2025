@@ -1,0 +1,87 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "098911c6-a81a-48c0-8879-cdf488b57fca",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "49189631-87f6-4f55-8ea6-693916e5ab8b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "925a689c-440c-409d-b256-b0046a43cc6d"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#49189631-87f6-4f55-8ea6-693916e5ab8b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with depression and suicide risk assessment during psychotherapy encounter using relevantDatetime"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/925a689c-440c-409d-b256-b0046a43cc6d"
+  }, {
+    "reference": "Encounter/27a3fe7f-f924-454d-83e4-5b12e0271393"
+  }, {
+    "reference": "Procedure/f46bc2cb-e5a9-44b3-a985-ba89454df64c"
+  }, {
+    "reference": "Condition/cdeb456c-3911-4a49-89ff-995521df8d94"
+  }, {
+    "reference": "Coverage/662bfd65-9500-489b-88f6-4dcc5e816bbc"
+  }, {
+    "reference": "Organization/21aa3935-10f1-4b68-bd02-6012b9ca7b3e"
+  }, {
+    "reference": "Practitioner/d4a6951a-bb29-4ca3-abaf-9bc429530aed"
+  } ]
+}

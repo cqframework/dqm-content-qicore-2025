@@ -1,0 +1,184 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-DENOMPass-MedRelPeriodStartsNoEnd-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/MedicationAdministration/746d237b-1d09-44e3-b789-1629863c9c29",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "746d237b-1d09-44e3-b789-1629863c9c29",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationadministration" ]
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1654862",
+          "display": "3 ML insulin isophane, human 100 UNT/ML Pen Injector"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+      },
+      "effectivePeriod": {
+        "start": "2026-01-11T08:00:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationAdministration/746d237b-1d09-44e3-b789-1629863c9c29"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/4007e17a-0ddb-441b-9e6d-f9408f530fd7",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "4007e17a-0ddb-441b-9e6d-f9408f530fd7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+      },
+      "period": {
+        "start": "2026-01-11T08:00:00.000Z",
+        "end": "2026-01-12T21:00:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/4007e17a-0ddb-441b-9e6d-f9408f530fd7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/c4d785a5-a3fa-463b-b9ca-91d60eeb3dab",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "c4d785a5-a3fa-463b-b9ca-91d60eeb3dab",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "CMSDENOMPass",
+        "given": [ "MedRelPeriodStartsNoEnd" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1956-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/faac6a55-338b-46a3-862f-9958bb58a6f1",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "faac6a55-338b-46a3-862f-9958bb58a6f1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "aed17b4e-2cbb-48b7-9670-835cc8d0a6a1-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#aed17b4e-2cbb-48b7-9670-835cc8d0a6a1-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Right age with encounter, meds administered, no lab tests. Med relevant period starts during encounter, no relevant end period. Meets denominator as med relevant period must start during encounter but no end required.\n\n(CMS #5)"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "MedicationAdministration/746d237b-1d09-44e3-b789-1629863c9c29"
+      }, {
+        "reference": "Encounter/4007e17a-0ddb-441b-9e6d-f9408f530fd7"
+      }, {
+        "reference": "Patient/c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/faac6a55-338b-46a3-862f-9958bb58a6f1"
+    }
+  } ]
+}

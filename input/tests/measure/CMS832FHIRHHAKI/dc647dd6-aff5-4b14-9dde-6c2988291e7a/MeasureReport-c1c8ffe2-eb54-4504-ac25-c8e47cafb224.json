@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c1c8ffe2-eb54-4504-ac25-c8e47cafb224",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "843c8575-2a7b-4918-ab41-32354970ea6e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "dc647dd6-aff5-4b14-9dde-6c2988291e7a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#843c8575-2a7b-4918-ab41-32354970ea6e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "RV Encounters that return the first Body Temp"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS832FHIRHHAKI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/dc647dd6-aff5-4b14-9dde-6c2988291e7a"
+  }, {
+    "reference": "Encounter/d5bba758-0e26-4f9f-a922-65161c308bf9"
+  }, {
+    "reference": "Encounter/0fbd050f-aadc-41a8-91ea-1a431b18bdb9"
+  }, {
+    "reference": "Observation/49375490-8fbc-42bb-b576-637b577640e9"
+  }, {
+    "reference": "Observation/68a915eb-f59f-4a5b-b209-0af38f3c408c"
+  }, {
+    "reference": "Condition/8abd5cd6-4997-4101-ba62-9774b8977bce"
+  }, {
+    "reference": "Observation/a701de4c-9f22-46ca-b5ab-d19ad9e302a1"
+  }, {
+    "reference": "Observation/b34e1a12-5e2f-4f16-a988-da265b10bdfb"
+  } ]
+}

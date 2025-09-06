@@ -1,0 +1,71 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "d4496988-5cff-4a87-9d93-82c89dbc64cf",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "66ba4c0c-af2f-4747-a0d9-7f930a9c79b1-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "dbb82192-d268-4e50-be41-8e371d33bacd"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#66ba4c0c-af2f-4747-a0d9-7f930a9c79b1-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Enc. started first day of MP (7/1), has Medicare. Creatinine tests performed 1 min before start of inpatient enc; other creatinine  labs followed for days 2-4; second creatinine test (first inpatient) counts"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMSFHIR844HybridHospitalWideMortality",
+  "period": {
+    "start": "2026-07-01",
+    "end": "2027-06-30"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/dbb82192-d268-4e50-be41-8e371d33bacd"
+  }, {
+    "reference": "Encounter/73b35978-c036-4a21-b706-0a0db65d07ab"
+  }, {
+    "reference": "Coverage/31f39a9c-701c-4479-9ced-acaae3575711"
+  }, {
+    "reference": "Observation/8b2c17ff-ceea-458a-9fea-7f5c2b86577a"
+  }, {
+    "reference": "Observation/c7bb9404-dc0d-46c5-b3fd-f419bfb48179"
+  }, {
+    "reference": "Observation/fff89ef9-825b-4708-a2fa-86c0c80bf147"
+  }, {
+    "reference": "Observation/404eba68-5b5d-4eae-806c-dd3b5eb6ef30"
+  }, {
+    "reference": "Organization/8e4fb804-c357-4106-a046-486c73c10089"
+  }, {
+    "reference": "Practitioner/f55e7dfb-7e79-4d78-926a-80f41bab1b01"
+  } ]
+}

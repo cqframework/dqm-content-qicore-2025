@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "d44b8010-3753-4a4a-9ee0-e38777f0a8e3",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "45eed8d1-5ed7-4fb1-b2be-2d916bc2da61-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "2a83ceb0-b652-479c-8b3f-69209286ca86"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#45eed8d1-5ed7-4fb1-b2be-2d916bc2da61-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "HIV diagnosis made on outside 90day edge of MP (91 days) with a qualifying encounter on same day during MP"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS314FHIRHIVViralSuppression",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/2a83ceb0-b652-479c-8b3f-69209286ca86"
+  }, {
+    "reference": "Condition/cf64a687-d037-45e2-9d12-5b82056e7aad"
+  }, {
+    "reference": "Encounter/09018621-b527-4344-8acd-67616b9dd350"
+  }, {
+    "reference": "Coverage/54708fec-00e5-482c-b914-0cc7e09e0544"
+  }, {
+    "reference": "Organization/e5ddc720-59ab-4e27-9218-233c9ae2b5bc"
+  }, {
+    "reference": "Practitioner/7ab1987a-0d57-4b77-a52a-636e313a75e3"
+  } ]
+}

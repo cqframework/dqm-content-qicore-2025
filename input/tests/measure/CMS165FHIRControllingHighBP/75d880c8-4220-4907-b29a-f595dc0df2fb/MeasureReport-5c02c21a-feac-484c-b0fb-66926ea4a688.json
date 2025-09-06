@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "5c02c21a-feac-484c-b0fb-66926ea4a688",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "975c162c-ed6c-47ae-9f78-a9408276b0d4-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "75d880c8-4220-4907-b29a-f595dc0df2fb"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#975c162c-ed6c-47ae-9f78-a9408276b0d4-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Dementia starts after MP"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS165FHIRControllingHighBP",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/75d880c8-4220-4907-b29a-f595dc0df2fb"
+  }, {
+    "reference": "Encounter/988f0b7d-603e-4b96-bf6b-842649941b67"
+  }, {
+    "reference": "Condition/07b999d1-388b-40ea-aa19-caa101e3820a"
+  }, {
+    "reference": "MedicationRequest/ca04e44d-b681-4429-993a-acdfcd51d264"
+  }, {
+    "reference": "DeviceRequest/f8dc011a-2518-4ce8-836a-6f61d883af46"
+  } ]
+}

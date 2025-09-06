@@ -1,0 +1,95 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "79fe3f48-d256-4f74-84ea-58c9cdf5519f",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "81b84c61-04ca-4584-be97-cf0142317254-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "a3867482-15a8-42fd-8d78-dff5db0d40f4"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#81b84c61-04ca-4584-be97-cf0142317254-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient Reason for not performing Cognitive Assessment is effective one minute before end of Encounter"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS149FHIRDementiaCognitiveAssess",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/a3867482-15a8-42fd-8d78-dff5db0d40f4"
+  }, {
+    "reference": "Encounter/8eb6f92a-19af-48fa-a334-c3299831fbbd"
+  }, {
+    "reference": "Condition/709fe50d-a6e5-457f-9f4b-c1236bb980db"
+  }, {
+    "reference": "Encounter/aee2351c-bd5d-4e7e-8366-c7c91953692e"
+  }, {
+    "reference": "Procedure/c09c3eba-3c71-4ff1-aaea-8067c12f54f8"
+  }, {
+    "reference": "Observation/fb3de661-cc4c-4779-89a7-233c489c1ec4"
+  } ]
+}

@@ -1,0 +1,53 @@
+{
+  "resourceType": "Encounter",
+  "id": "f74fe88c-4f38-4099-b41a-4f6ebcee2fcc",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+  },
+  "status": "finished",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "IMP",
+    "display": "inpatient encounter"
+  },
+  "type": [ {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "183452005"
+    } ]
+  } ],
+  "subject": {
+    "reference": "Patient/0988dbaf-0aae-4e2f-8f91-d42da44226f4"
+  },
+  "period": {
+    "start": "2026-02-01T08:00:00.000+00:00",
+    "end": "2026-02-05T08:15:00.000+00:00"
+  },
+  "diagnosis": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+          "code": "Y"
+        } ]
+      }
+    } ],
+    "condition": {
+      "reference": "Condition/5cb0fc29-fc4b-485e-a103-c40b6a2417f5"
+    }
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+          "code": "N"
+        } ]
+      }
+    } ],
+    "condition": {
+      "reference": "Condition/ed4c7d6f-b1bf-4bea-a48e-335a06d1c7bd"
+    }
+  } ]
+}

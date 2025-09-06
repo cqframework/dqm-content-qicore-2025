@@ -1,0 +1,432 @@
+{
+  "resourceType": "Bundle",
+  "id": "IPPass-SDECoverage",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "aec15569-ccd3-4c5c-8e46-2bec68c03e72",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1952-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/c7288487-f3c2-4271-88f3-384aeaee1ab4",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "c7288487-f3c2-4271-88f3-384aeaee1ab4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "99457",
+          "display": "Remote physiologic monitoring treatment management services, clinical staff/physician/other qualified health care professional time in a calendar month requiring interactive communication with the patient/caregiver during the month; first 20 minutes"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+      },
+      "period": {
+        "start": "2026-12-31T00:00:00.000+00:00",
+        "end": "2026-12-31T23:59:59.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/c7288487-f3c2-4271-88f3-384aeaee1ab4"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/0ca98f81-cfae-444e-a539-ac27ac7777df",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "0ca98f81-cfae-444e-a539-ac27ac7777df",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/certificate",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "59",
+          "display": "Other Private Insurance"
+        } ]
+      },
+      "policyHolder": {
+        "reference": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+      },
+      "subscriber": {
+        "reference": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+      },
+      "subscriberId": "12191",
+      "beneficiary": {
+        "reference": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+      },
+      "dependent": "0",
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2023-01-01T06:00:00.000+00:00",
+        "end": "2023-01-01T11:06:01.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+      } ],
+      "order": 9
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/0ca98f81-cfae-444e-a539-ac27ac7777df"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/c1ad971b-aa0d-403c-97f7-04b01c85659d",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "c1ad971b-aa0d-403c-97f7-04b01c85659d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "03ec9d5a-1713-4aee-bfe5-aef8b7bfb28e-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#03ec9d5a-1713-4aee-bfe5-aef8b7bfb28e-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "For meeting SDE 100% coverage - patient gender male, sde payer coverage, ethnicity detailed, race detailed\n"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS125FHIRBreastCancerScreen",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        },
+        "stratifier": [ {
+          "id": "Stratification_1_1",
+          "stratum": [ {
+            "value": {
+              "text": "true"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 0
+            } ]
+          }, {
+            "value": {
+              "text": "false"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 1
+            } ]
+          } ]
+        }, {
+          "id": "Stratification_1_2",
+          "stratum": [ {
+            "value": {
+              "text": "true"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 0
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 0
+            } ]
+          }, {
+            "value": {
+              "text": "false"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "Denominator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "DenominatorExclusion_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                } ]
+              },
+              "count": 1
+            }, {
+              "id": "Numerator_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                } ]
+              },
+              "count": 1
+            } ]
+          } ]
+        } ]
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/aec15569-ccd3-4c5c-8e46-2bec68c03e72"
+      }, {
+        "reference": "Encounter/c7288487-f3c2-4271-88f3-384aeaee1ab4"
+      }, {
+        "reference": "Coverage/0ca98f81-cfae-444e-a539-ac27ac7777df"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/c1ad971b-aa0d-403c-97f7-04b01c85659d"
+    }
+  } ]
+}

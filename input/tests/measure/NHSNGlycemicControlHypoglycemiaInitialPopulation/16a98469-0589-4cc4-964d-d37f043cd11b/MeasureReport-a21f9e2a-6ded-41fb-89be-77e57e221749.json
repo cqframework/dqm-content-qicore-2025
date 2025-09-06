@@ -1,0 +1,65 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "a21f9e2a-6ded-41fb-89be-77e57e221749",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6d7c6adc-9db2-4002-968a-79770b5a14da-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "16a98469-0589-4cc4-964d-d37f043cd11b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6d7c6adc-9db2-4002-968a-79770b5a14da-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Inpatient encounter in ICU with antidiabetic medication administered, missing location resource"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/16a98469-0589-4cc4-964d-d37f043cd11b"
+  }, {
+    "reference": "Encounter/aa87bc5b-6042-47d5-aa90-3a7ccad93f58"
+  }, {
+    "reference": "MedicationAdministration/1608b2fc-d195-4096-97a0-616a3a624f0c"
+  }, {
+    "reference": "Coverage/7d84ac32-960a-4ecf-9883-46902cb85c82"
+  }, {
+    "reference": "Organization/6bec5613-73de-4360-811b-a8e061d0a533"
+  }, {
+    "reference": "Practitioner/7cd16069-d9d1-437b-953d-fa2881ecf98c"
+  } ]
+}

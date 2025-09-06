@@ -1,0 +1,401 @@
+{
+  "resourceType": "Bundle",
+  "id": "657cbdc9b4f1f0343662347a",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/914a8308-9d17-41a5-a38a-fae14a9669ea",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "914a8308-9d17-41a5-a38a-fae14a9669ea",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "657cbdc9b4f1f0343662347a"
+      } ],
+      "name": [ {
+        "family": "ConditionReasonPass",
+        "given": [ "ConditionReason" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2008-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/914a8308-9d17-41a5-a38a-fae14a9669ea"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/d54b012e-d63c-4900-9b3b-e89fc9d3f315",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "d54b012e-d63c-4900-9b3b-e89fc9d3f315",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "ACUTE",
+        "display": "inpatient acute"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2024",
+          "code": "32485007",
+          "display": "Hospital admission (procedure)",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/914a8308-9d17-41a5-a38a-fae14a9669ea"
+      },
+      "period": {
+        "start": "2026-01-01T08:00:00.000+00:00",
+        "end": "2026-01-02T09:15:00.000+00:00"
+      },
+      "reasonReference": [ {
+        "reference": "Condition/migraine-g430"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/d54b012e-d63c-4900-9b3b-e89fc9d3f315"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Location/2a59f400-7c09-4ee5-8a7e-23adba0b18e6",
+    "resource": {
+      "resourceType": "Location",
+      "id": "2a59f400-7c09-4ee5-8a7e-23adba0b18e6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location" ]
+      },
+      "identifier": [ {
+        "use": "usual",
+        "system": "http://exampleoflocation.com",
+        "value": "B1-S.F2"
+      } ],
+      "name": "Medical Surgical East, first floor",
+      "type": [ {
+        "coding": [ {
+          "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
+          "code": "1028-0",
+          "display": "Medical Cardiac Critical Care",
+          "userSelected": true
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/2a59f400-7c09-4ee5-8a7e-23adba0b18e6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/dea854ed-f35e-41b6-9e06-d81a232a88ea",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "dea854ed-f35e-41b6-9e06-d81a232a88ea",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "completed",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "version": "06052023",
+          "code": "1007184"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/914a8308-9d17-41a5-a38a-fae14a9669ea"
+      },
+      "authoredOn": "2026-01-01T08:15:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/33d87640-6b2a-40b0-ab11-542478a88d5a"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2025-01-01T08:15:00.000+00:00"
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/dea854ed-f35e-41b6-9e06-d81a232a88ea"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/c6c03886-dc31-45e2-9b21-83d839670cc0",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "c6c03886-dc31-45e2-9b21-83d839670cc0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active",
+          "userSelected": true
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "confirmed",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "439401001",
+          "display": "Diagnosis"
+        }, {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2023-09",
+          "code": "46635009",
+          "display": "Diabetes mellitus type 1",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/914a8308-9d17-41a5-a38a-fae14a9669ea"
+      },
+      "onsetDateTime": "2026-01-01T08:00:00.000+00:00",
+      "recordedDate": "2026-01-01T08:10:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/c6c03886-dc31-45e2-9b21-83d839670cc0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/d6a6959e-fef8-4435-96a0-c2411daf8bd6",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "d6a6959e-fef8-4435-96a0-c2411daf8bd6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/certificate",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "version": "1.0.1",
+          "code": "1",
+          "display": "MEDICARE",
+          "userSelected": true
+        } ]
+      },
+      "subscriberId": "AB9876",
+      "beneficiary": {
+        "reference": "Patient/914a8308-9d17-41a5-a38a-fae14a9669ea"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/244291c5-3136-491f-9a24-2601d047d22f"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/d6a6959e-fef8-4435-96a0-c2411daf8bd6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/244291c5-3136-491f-9a24-2601d047d22f",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "244291c5-3136-491f-9a24-2601d047d22f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/244291c5-3136-491f-9a24-2601d047d22f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/dab734d9-45b3-41d7-90b3-23461f1828a3",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "dab734d9-45b3-41d7-90b3-23461f1828a3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "0723660813"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/dab734d9-45b3-41d7-90b3-23461f1828a3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/f33c21f2-685f-473c-945a-fd288fce83aa",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "f33c21f2-685f-473c-945a-fd288fce83aa",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "c2cad9de-d94b-48f7-85fe-a09488b0db8a-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "914a8308-9d17-41a5-a38a-fae14a9669ea"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#c2cad9de-d94b-48f7-85fe-a09488b0db8a-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Inpatient encounter with diabetic medication during MP with SDE condition reason"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/914a8308-9d17-41a5-a38a-fae14a9669ea"
+      }, {
+        "reference": "Encounter/d54b012e-d63c-4900-9b3b-e89fc9d3f315"
+      }, {
+        "reference": "Location/2a59f400-7c09-4ee5-8a7e-23adba0b18e6"
+      }, {
+        "reference": "MedicationRequest/dea854ed-f35e-41b6-9e06-d81a232a88ea"
+      }, {
+        "reference": "Condition/c6c03886-dc31-45e2-9b21-83d839670cc0"
+      }, {
+        "reference": "Coverage/d6a6959e-fef8-4435-96a0-c2411daf8bd6"
+      }, {
+        "reference": "Organization/244291c5-3136-491f-9a24-2601d047d22f"
+      }, {
+        "reference": "Practitioner/dab734d9-45b3-41d7-90b3-23461f1828a3"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/f33c21f2-685f-473c-945a-fd288fce83aa"
+    }
+  } ]
+}

@@ -1,0 +1,58 @@
+{
+  "resourceType": "Claim",
+  "id": "e9f2e195-a95f-4441-8b5b-b03abf715844",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "institutional",
+      "display": "Institutional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/a2b51ea0-5a72-4bda-abe5-dd393bfa0545"
+  },
+  "created": "2026-10-22",
+  "provider": {
+    "reference": "Practitioner/practitioner-1"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://snomed.info/sct",
+        "code": "14047009"
+      } ]
+    }
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/coverage-1"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1, 2 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+        "code": "1101"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/18f50cd4-4be7-434e-b775-73c95ebe9c0d"
+    } ]
+  } ]
+}

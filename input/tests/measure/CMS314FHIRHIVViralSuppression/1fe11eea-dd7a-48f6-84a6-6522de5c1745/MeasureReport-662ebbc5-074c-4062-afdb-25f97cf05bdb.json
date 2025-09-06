@@ -1,0 +1,87 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "662ebbc5-074c-4062-afdb-25f97cf05bdb",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "bd584044-ac37-4596-ab04-d07b8e10d326-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "1fe11eea-dd7a-48f6-84a6-6522de5c1745"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#bd584044-ac37-4596-ab04-d07b8e10d326-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with a diagnosis of HIV years before start of the MP and a qualifying encounter on inside 240 day edge of the MP AND a viral load test during the MP with a result using DRC Below Threshold "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS314FHIRHIVViralSuppression",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/1fe11eea-dd7a-48f6-84a6-6522de5c1745"
+  }, {
+    "reference": "Condition/8e959675-fda3-4b64-a79f-0aca7bc1b907"
+  }, {
+    "reference": "Encounter/fde4bc38-3681-49c9-852c-1daf68cbe9c2"
+  }, {
+    "reference": "Observation/9d2d807e-3ca7-4339-99d3-697180e56c88"
+  }, {
+    "reference": "Coverage/4bad48e0-ba4d-47c3-ba7e-79e60d6aa71f"
+  }, {
+    "reference": "Organization/521f9de2-9362-4a0c-96d0-8777099c4c2a"
+  }, {
+    "reference": "Practitioner/94d8947b-28b2-4f2b-a7d7-41e5bef149cb"
+  } ]
+}

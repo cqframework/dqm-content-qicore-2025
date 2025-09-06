@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "9cb7f213-6011-4f8b-be16-010172559897",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ddc471f7-5667-4f8a-8c44-2aa9b672272a-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "525e73f2-77be-49b1-920f-6fc31ef38d22"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ddc471f7-5667-4f8a-8c44-2aa9b672272a-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Low Molecular Weight Heparin refused with taskReject profile\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/525e73f2-77be-49b1-920f-6fc31ef38d22"
+  }, {
+    "reference": "Encounter/4001ea12-7207-42e9-811d-a58a349e947b"
+  }, {
+    "reference": "Coverage/422c97d2-6fc5-412e-bb2e-cfbcdf4d5969"
+  }, {
+    "reference": "MedicationRequest/32e516df-cf74-4616-bea6-0efb073e4f53"
+  }, {
+    "reference": "Task/67c514f1-edfc-4e64-9aae-2c58011dfeb4"
+  }, {
+    "reference": "Organization/96bcc8a3-5d61-49bd-9a87-820c6c4da5a5"
+  }, {
+    "reference": "Practitioner/8ce3bacf-117b-463d-8411-f7d1d002ef27"
+  } ]
+}

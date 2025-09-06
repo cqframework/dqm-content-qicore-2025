@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "e2eff580-5d1a-47f1-a2b8-f62f4c3c1251",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6d0b51d7-e868-4fa0-8411-f259de4d7a2f-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c1fe7157-3ff7-4bb8-bf05-69c28a111600"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6d0b51d7-e868-4fa0-8411-f259de4d7a2f-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "No index PCP found within previous 30 days before the VTE imaging's date time"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1173FHIRDiagnosticDelayVTE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/c1fe7157-3ff7-4bb8-bf05-69c28a111600"
+  }, {
+    "reference": "Encounter/3633536c-4f39-4a3c-a896-e353fb2e21ec"
+  }, {
+    "reference": "Condition/fba7f1dd-c707-4b2d-8298-8177aaa10404"
+  }, {
+    "reference": "Encounter/40d69339-badc-44ef-b36a-826976fc832c"
+  }, {
+    "reference": "Condition/248cb6db-b851-48c1-ba79-bcd462261152"
+  }, {
+    "reference": "Observation/3eb7b9d9-684f-4549-8fb3-c9c51d36922a"
+  }, {
+    "reference": "DiagnosticReport/513e4b61-efd3-4fe4-8635-9e29aab0df69"
+  }, {
+    "reference": "MedicationRequest/a4699e8c-45f6-4502-af12-ebbef51e91c8"
+  }, {
+    "reference": "Coverage/e17558b7-f3f2-4d5f-b254-0884d07c2500"
+  }, {
+    "reference": "Claim/f0bb8bb5-3c4c-404f-8254-4890d57e4503"
+  }, {
+    "reference": "Organization/6401d427-f0b6-4f40-a16e-47af9d7e775a"
+  } ]
+}

@@ -1,0 +1,275 @@
+{
+  "resourceType": "Bundle",
+  "id": "62fa556bf4a8c3cd9f455396",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/f8c48a84-406c-44b7-b79e-b7a5f9d15b31",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "f8c48a84-406c-44b7-b79e-b7a5f9d15b31",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "62fa556bf4a8c3cd9f455396"
+      } ],
+      "name": [ {
+        "family": "NUMERFail",
+        "given": [ "SingleUACRLab" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1975-05-02"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/f8c48a84-406c-44b7-b79e-b7a5f9d15b31"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/95c16ed1-53ff-4d1e-8303-92aeca4b8e9d",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "95c16ed1-53ff-4d1e-8303-92aeca4b8e9d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/f8c48a84-406c-44b7-b79e-b7a5f9d15b31"
+      },
+      "onsetDateTime": "2024-08-22T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/95c16ed1-53ff-4d1e-8303-92aeca4b8e9d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/d044277b-c1fe-40b2-9bb9-d83343d8cec6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d044277b-c1fe-40b2-9bb9-d83343d8cec6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "version": "2.71",
+          "code": "13705-9",
+          "display": "Albumin/Creatinine [Mass Ratio] in 24 hour Urine",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/f8c48a84-406c-44b7-b79e-b7a5f9d15b31"
+      },
+      "effectiveDateTime": "2026-08-15T08:00:00.000+00:00",
+      "valueBoolean": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/d044277b-c1fe-40b2-9bb9-d83343d8cec6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/98506af6-eb1d-4004-afe8-11d826d0f5bd",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "98506af6-eb1d-4004-afe8-11d826d0f5bd",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "444971000124105",
+          "display": "Annual wellness visit (procedure)",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/f8c48a84-406c-44b7-b79e-b7a5f9d15b31"
+      },
+      "period": {
+        "start": "2026-03-16T08:00:00.000+00:00",
+        "end": "2026-03-16T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/98506af6-eb1d-4004-afe8-11d826d0f5bd"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/5488874f-31ea-4ede-a255-43e110dba2fa",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "5488874f-31ea-4ede-a255-43e110dba2fa",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "6858115d-09c9-4d5d-960f-f9de2c5ab80a-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "f8c48a84-406c-44b7-b79e-b7a5f9d15b31"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#6858115d-09c9-4d5d-960f-f9de2c5ab80a-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "This patient is 50 years old with a qualifying encounter and active diabetes. The patient only has a single urine albumin creatine ratio lab. This case tests the numerator criteria. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS951FHIRKidneyHealthEval",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/f8c48a84-406c-44b7-b79e-b7a5f9d15b31"
+      }, {
+        "reference": "Condition/95c16ed1-53ff-4d1e-8303-92aeca4b8e9d"
+      }, {
+        "reference": "Observation/d044277b-c1fe-40b2-9bb9-d83343d8cec6"
+      }, {
+        "reference": "Encounter/98506af6-eb1d-4004-afe8-11d826d0f5bd"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/5488874f-31ea-4ede-a255-43e110dba2fa"
+    }
+  } ]
+}

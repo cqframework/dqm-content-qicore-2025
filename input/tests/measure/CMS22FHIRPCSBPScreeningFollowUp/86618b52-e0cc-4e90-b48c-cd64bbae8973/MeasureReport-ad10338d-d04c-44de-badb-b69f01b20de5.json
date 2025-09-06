@@ -1,0 +1,117 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "ad10338d-d04c-44de-badb-b69f01b20de5",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ca6e7a53-e175-40d6-b071-87b8f9433617-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "86618b52-e0cc-4e90-b48c-cd64bbae8973"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ca6e7a53-e175-40d6-b071-87b8f9433617-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "1st Enc. 01/01 0800-0845 during MP with BP readings 130/80, follow up within 4 wks. referral to detox - passes numer\n2nd Enc. 12/31 1000-1045 during MP, BP 160/90, pt. declined referral and detox. pass denexcep"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS22FHIRPCSBPScreeningFollowUp",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/86618b52-e0cc-4e90-b48c-cd64bbae8973"
+  }, {
+    "reference": "Encounter/efb51e85-a0a1-4346-8dee-b44b4b13b483"
+  }, {
+    "reference": "Observation/0a747d6a-38c0-49ed-893e-081bc04c77eb"
+  }, {
+    "reference": "ServiceRequest/6e883c1f-b27c-4a6b-b9ce-ee1b39858338"
+  }, {
+    "reference": "ServiceRequest/6a6883a4-0cdc-4678-b9e9-f481a3bb12df"
+  }, {
+    "reference": "Encounter/78d150e6-2b84-4847-bfa0-b95b9f0ba151"
+  }, {
+    "reference": "Observation/dada8dd7-58f5-4da5-8559-135c4549aba8"
+  }, {
+    "reference": "ServiceRequest/8b1510cf-34e0-42e2-be77-22db5e801fe3"
+  }, {
+    "reference": "ServiceRequest/722009ed-16db-44fb-a1cc-d9adf4898fca"
+  }, {
+    "reference": "Coverage/9581d079-b8e7-4083-9cc7-b524aba15c77"
+  }, {
+    "reference": "Organization/a888bef4-5496-427b-836f-221c636966db"
+  }, {
+    "reference": "Practitioner/57797737-bf30-423d-b964-483f758131fb"
+  } ]
+}

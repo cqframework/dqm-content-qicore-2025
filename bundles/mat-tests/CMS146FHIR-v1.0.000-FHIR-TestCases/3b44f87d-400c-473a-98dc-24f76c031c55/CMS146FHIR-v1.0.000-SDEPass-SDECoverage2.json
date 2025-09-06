@@ -1,0 +1,405 @@
+{
+  "resourceType": "Bundle",
+  "id": "SDEPass-SDECoverage2",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/3b44f87d-400c-473a-98dc-24f76c031c55",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "3b44f87d-400c-473a-98dc-24f76c031c55",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1653-5",
+            "display": "Tohono O'Odham"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2180-8",
+            "display": "Puerto Rican"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248152002"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "SDE",
+        "given": [ "SDECoverage" ]
+      } ],
+      "gender": "unknown",
+      "birthDate": "2021-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/0ea948d8-1902-430b-aad8-04cad7f50d23",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "0ea948d8-1902-430b-aad8-04cad7f50d23",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185463005",
+          "display": "Visit out of hours (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      },
+      "period": {
+        "start": "2026-10-11T12:45:00.000+00:00",
+        "end": "2026-10-11T12:59:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/0ea948d8-1902-430b-aad8-04cad7f50d23"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/758d07a4-ec49-4f60-a6a8-f9a0f2ed30b2",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "758d07a4-ec49-4f60-a6a8-f9a0f2ed30b2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/certificate",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "59",
+          "display": "Other Private Insurance"
+        } ]
+      },
+      "policyHolder": {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      },
+      "subscriber": {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      },
+      "subscriberId": "12191",
+      "beneficiary": {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      },
+      "dependent": "0",
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2023-01-01T06:00:00.000+00:00",
+        "end": "2023-01-01T11:06:01.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      } ],
+      "order": 9
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/758d07a4-ec49-4f60-a6a8-f9a0f2ed30b2"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/0e69953d-689c-40e4-b774-7e166d965b62",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "0e69953d-689c-40e4-b774-7e166d965b62",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "17741008",
+          "display": "Acute tonsillitis (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      },
+      "onsetDateTime": "2026-10-11T12:48:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/0e69953d-689c-40e4-b774-7e166d965b62"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/7c2bb473-3514-4775-9ecc-1ab1d0f27376",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "7c2bb473-3514-4775-9ecc-1ab1d0f27376",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "completed",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge",
+          "display": "Discharge"
+        } ]
+      } ],
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "141963",
+          "display": "azithromycin 40 MG/ML Oral Suspension",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      },
+      "authoredOn": "2026-10-12T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2026-10-12T00:00:00.000+00:00",
+              "end": "2026-10-20T00:00:00.000+00:00"
+            }
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/7c2bb473-3514-4775-9ecc-1ab1d0f27376"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/bdd8089b-59b0-4668-a43d-cb944e3360ea",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "bdd8089b-59b0-4668-a43d-cb944e3360ea",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "3f04385e-c05c-464a-9216-4ccbfdcb8246-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "3b44f87d-400c-473a-98dc-24f76c031c55"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#3f04385e-c05c-464a-9216-4ccbfdcb8246-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "For meeting SDE 100% coverage - patient sex female"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS146FHIRApproTestPharyngitis",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        },
+        "stratifier": [ {
+          "id": "Stratification_1_1",
+          "code": [ {
+            "text": "Strata-1"
+          } ],
+          "stratum": [ {
+            "value": {
+              "text": "Strata-1"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 1
+            } ]
+          } ]
+        }, {
+          "id": "Stratification_1_2",
+          "code": [ {
+            "text": "Strata-2"
+          } ],
+          "stratum": [ {
+            "value": {
+              "text": "Strata-2"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 1
+            } ]
+          } ]
+        }, {
+          "id": "Stratification_1_3",
+          "code": [ {
+            "text": "Strata-3"
+          } ],
+          "stratum": [ {
+            "value": {
+              "text": "Strata-3"
+            },
+            "population": [ {
+              "id": "InitialPopulation_1",
+              "code": {
+                "coding": [ {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                } ]
+              },
+              "count": 1
+            } ]
+          } ]
+        } ]
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/3b44f87d-400c-473a-98dc-24f76c031c55"
+      }, {
+        "reference": "Encounter/0ea948d8-1902-430b-aad8-04cad7f50d23"
+      }, {
+        "reference": "Coverage/758d07a4-ec49-4f60-a6a8-f9a0f2ed30b2"
+      }, {
+        "reference": "Condition/0e69953d-689c-40e4-b774-7e166d965b62"
+      }, {
+        "reference": "MedicationRequest/7c2bb473-3514-4775-9ecc-1ab1d0f27376"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/bdd8089b-59b0-4668-a43d-cb944e3360ea"
+    }
+  } ]
+}

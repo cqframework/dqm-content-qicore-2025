@@ -1,0 +1,379 @@
+{
+  "resourceType": "Bundle",
+  "id": "NUM3Fail-TobaccoUserMissingValue",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2013-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/1b7ef410-eafe-45de-ada1-1298d6159848",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "1b7ef410-eafe-45de-ada1-1298d6159848",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185463005",
+          "display": "Visit out of hours (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/1b7ef410-eafe-45de-ada1-1298d6159848"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/93a8f8a9-016e-475b-b29e-ad9700884762",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "93a8f8a9-016e-475b-b29e-ad9700884762",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "41375007",
+          "display": "Medical evaluation of hearing problem (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/93a8f8a9-016e-475b-b29e-ad9700884762"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/5625e8ef-63e6-4851-a88e-48a148c84592",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "5625e8ef-63e6-4851-a88e-48a148c84592",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "survey"
+        } ],
+        "text": "survey"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "39240-7",
+          "display": "Tobacco use status CPHS"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+      },
+      "effectivePeriod": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/5625e8ef-63e6-4851-a88e-48a148c84592"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/ab37634e-60a6-4be8-a108-75be5c00321b",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "ab37634e-60a6-4be8-a108-75be5c00321b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "151226",
+          "display": "topiramate 50 MG Oral Tablet",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+      },
+      "authoredOn": "2026-01-01T01:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/ab37634e-60a6-4be8-a108-75be5c00321b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/97a813b6-6fc2-4fe4-bdfc-c95dbe6fe839",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "97a813b6-6fc2-4fe4-bdfc-c95dbe6fe839",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "382b0dd5-a5fe-49cf-94ff-01f75a3ce764-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#382b0dd5-a5fe-49cf-94ff-01f75a3ce764-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient 12 years old with missing code value for Observation retrieve"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS138FHIRTobaccoScrnCessation",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_3",
+        "population": [ {
+          "id": "InitialPopulation_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+      }, {
+        "reference": "Encounter/1b7ef410-eafe-45de-ada1-1298d6159848"
+      }, {
+        "reference": "Encounter/93a8f8a9-016e-475b-b29e-ad9700884762"
+      }, {
+        "reference": "Observation/5625e8ef-63e6-4851-a88e-48a148c84592"
+      }, {
+        "reference": "MedicationRequest/ab37634e-60a6-4be8-a108-75be5c00321b"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/97a813b6-6fc2-4fe4-bdfc-c95dbe6fe839"
+    }
+  } ]
+}

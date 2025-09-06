@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1329777f-3981-4061-a31d-444b501566e8",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "8f08c1f1-b7e5-4edb-bed3-c6ddd82640cb-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "9c81fa03-9b46-455e-9cf7-d77d650a7b92"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#8f08c1f1-b7e5-4edb-bed3-c6ddd82640cb-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient was discharged to home for hospice care"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1173FHIRDiagnosticDelayVTE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/9c81fa03-9b46-455e-9cf7-d77d650a7b92"
+  }, {
+    "reference": "Encounter/9cb39328-3636-4188-b411-c5fc08382dad"
+  }, {
+    "reference": "Condition/9e1e6820-bdf8-4f9f-af89-58b0af1a2a65"
+  }, {
+    "reference": "Encounter/3bd69a70-6313-4d9b-ac8c-e43c5151520b"
+  }, {
+    "reference": "Condition/32ee0bee-6f02-4ecb-a1ce-c39aa6b8191e"
+  }, {
+    "reference": "Observation/c4ab79e7-2632-4d68-b209-72a3ccfa9e2a"
+  }, {
+    "reference": "DiagnosticReport/a9d7974f-697b-45a8-bc05-9df0d0b06d03"
+  }, {
+    "reference": "MedicationRequest/4433efd6-74f4-4051-9bd0-31d948e3c97c"
+  }, {
+    "reference": "Coverage/989d18f9-e2e5-49e7-894e-901d324c670b"
+  }, {
+    "reference": "Claim/87c4b622-679d-4b2b-ba3b-9035c029de98"
+  }, {
+    "reference": "Organization/370c7f96-46fa-46f9-a625-178aeebca460"
+  } ]
+}

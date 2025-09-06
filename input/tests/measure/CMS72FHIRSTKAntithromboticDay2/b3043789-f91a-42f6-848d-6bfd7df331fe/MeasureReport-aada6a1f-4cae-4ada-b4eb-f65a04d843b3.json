@@ -1,0 +1,111 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "aada6a1f-4cae-4ada-b4eb-f65a04d843b3",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "1b46f9ff-e918-4bb1-85a0-633d54b7dab3-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b3043789-f91a-42f6-848d-6bfd7df331fe"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#1b46f9ff-e918-4bb1-85a0-633d54b7dab3-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": " Patient received tPA  one day after admission to inpatient hospitalization \n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS72FHIRSTKAntithromboticDay2",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b3043789-f91a-42f6-848d-6bfd7df331fe"
+  }, {
+    "reference": "Encounter/3f2db41f-9e04-4124-8898-ee9eba50c393"
+  }, {
+    "reference": "Encounter/6e7c2c45-991d-4873-b9c4-6ea9e7c36c36"
+  }, {
+    "reference": "Procedure/529d04d2-4ad0-4598-b47b-9de2b134c8e6"
+  }, {
+    "reference": "Condition/280ddc60-46d1-41eb-abcd-52bbb5374a58"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "Coverage/c2975a90-9dca-458b-8250-ee27e7b80d87"
+  }, {
+    "reference": "Organization/f67cd6e3-5458-4b6f-ac15-cbdbd3c9879d"
+  }, {
+    "reference": "Practitioner/563e0d94-43fe-4c7c-8050-50e6b8e01d2e"
+  } ]
+}

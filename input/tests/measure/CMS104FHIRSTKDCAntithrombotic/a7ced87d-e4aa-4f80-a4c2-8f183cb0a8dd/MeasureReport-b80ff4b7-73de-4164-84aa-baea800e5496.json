@@ -1,0 +1,103 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "b80ff4b7-73de-4164-84aa-baea800e5496",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "db22c331-dd4c-457c-8bb2-09ba0f050a6e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "a7ced87d-e4aa-4f80-a4c2-8f183cb0a8dd"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#db22c331-dd4c-457c-8bb2-09ba0f050a6e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient is 18 with Non-Elective Inpatient Encounter (LOS 120 days) ends during MP with no principal diagnosis of stroke, rank of 2\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS104FHIRSTKDCAntithrombotic",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/a7ced87d-e4aa-4f80-a4c2-8f183cb0a8dd"
+  }, {
+    "reference": "Encounter/a2225061-f1cb-4ed0-9618-e4763e9fb841"
+  }, {
+    "reference": "Condition/235cdcba-1263-49ff-9b6e-8356c30d76f0"
+  }, {
+    "reference": "Coverage/9894253e-aab7-4837-82e4-87aa91bcce07"
+  }, {
+    "reference": "Organization/80994636-1b11-4956-b48d-e78fda5d4cbf"
+  } ]
+}

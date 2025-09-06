@@ -1,0 +1,65 @@
+{
+  "resourceType": "Claim",
+  "id": "deba36a8-1c2f-417e-b50a-728802b66c9c",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "institutional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+  },
+  "created": "2028-01-01",
+  "provider": {
+    "reference": "Practitioner/9c283ac8-135b-4d09-bfd7-0b596f6760cd"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://snomed.info/sct",
+        "code": "105421000119105",
+        "display": "Early onset Alzheimer's disease with behavioral disturbance (disorder)"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "principal"
+      } ]
+    } ]
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/bd9cb544-e9cc-4f74-af18-a1bf740e877a"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+        "code": "1205",
+        "display": "Exam, emergency"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/416914b1-8829-4a47-8eb6-59590d494cb5"
+    } ]
+  } ]
+}

@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "302d827a-e064-4c1a-96b0-12583cefaf21",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "861ca9be-d6f7-4cb7-baf4-d2e7024310cf-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "94f26954-f280-4596-8bd3-e77ca79c1f41"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#861ca9be-d6f7-4cb7-baf4-d2e7024310cf-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "This patient is 50 yo with a qualifying encounter during the MP and active diabetes starting before the MP. Patient has Estimated Glomerular Filtration Rate performed with overlapping urine albumin and urine creatinine labs. Numerator test."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS951FHIRKidneyHealthEval",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/94f26954-f280-4596-8bd3-e77ca79c1f41"
+  }, {
+    "reference": "Condition/bfd5d0ca-c106-4f59-9ec7-d844e374b510"
+  }, {
+    "reference": "Encounter/eb438a35-ffe2-4719-8d69-949656e337ee"
+  }, {
+    "reference": "Observation/0f973004-fbb6-4ea7-b66c-0a34339f2184"
+  }, {
+    "reference": "Observation/e77e8a81-f447-4481-a2a8-3a721db38a6a"
+  } ]
+}

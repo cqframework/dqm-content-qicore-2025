@@ -1,0 +1,324 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-HospiceDiagnosisOverlapsMP",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "6e5db6e5-8c56-4b08-9491-1a2877933f0d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2036-2",
+            "display": "Filipino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2008-01-01"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/75e73cd1-a8cb-4d7d-90ec-c7b9b4f7fb95",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "75e73cd1-a8cb-4d7d-90ec-c7b9b4f7fb95",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000Z",
+        "end": "2026-01-01T01:15:00.000Z"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/dabdfbee-8e81-4ab0-bbd0-f133bb0d4a26",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "dabdfbee-8e81-4ab0-bbd0-f133bb0d4a26",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "98970",
+          "display": "Qualified nonphysician health care professional online digital evaluation and management service, for established patient, for up to 7 days, cumulative time 5-10 minutes"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+      },
+      "period": {
+        "start": "2026-01-02T01:00:00.000Z",
+        "end": "2026-01-02T01:15:00.000Z"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/fbd90110-9211-4fe3-8a55-6b4e65a86d8f",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "fbd90110-9211-4fe3-8a55-6b4e65a86d8f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108/version/20250301",
+          "code": "10091002",
+          "display": "High output heart failure (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+      },
+      "onsetDateTime": "2025-12-31T23:59:00.000Z"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/31cd4cbf-2dd5-4ebd-b951-a95fcd5590c7",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "31cd4cbf-2dd5-4ebd-b951-a95fcd5590c7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108/version/20250301",
+          "code": "170935008",
+          "display": "Full care by hospice (finding)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+      },
+      "onsetDateTime": "2026-12-31T23:59:59.000Z"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/abd2ad0a-46bd-4810-8d5d-c8bf0bce9fec",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "abd2ad0a-46bd-4810-8d5d-c8bf0bce9fec",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "1",
+          "display": "MEDICARE"
+        } ]
+      },
+      "subscriberId": "123456",
+      "beneficiary": {
+        "reference": "Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self",
+          "display": "Self"
+        } ]
+      },
+      "period": {
+        "start": "2025-12-01T00:00:00.000Z"
+      },
+      "payor": [ {
+        "reference": "Organization/e3cdd188-e680-4a4c-8a17-4eaedc13c1ee"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/8591ad2a-a1f7-4cfe-ab29-52d3b7881059",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "8591ad2a-a1f7-4cfe-ab29-52d3b7881059",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "8cc2a41e-e153-4278-8c26-be62bd95c63a-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#8cc2a41e-e153-4278-8c26-be62bd95c63a-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has a hospice diagnosis that overlaps the measurement period during encounter"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS90FHIRFSAforHeartFailure",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/6e5db6e5-8c56-4b08-9491-1a2877933f0d"
+      }, {
+        "reference": "Encounter/75e73cd1-a8cb-4d7d-90ec-c7b9b4f7fb95"
+      }, {
+        "reference": "Encounter/dabdfbee-8e81-4ab0-bbd0-f133bb0d4a26"
+      }, {
+        "reference": "Condition/fbd90110-9211-4fe3-8a55-6b4e65a86d8f"
+      }, {
+        "reference": "Condition/31cd4cbf-2dd5-4ebd-b951-a95fcd5590c7"
+      }, {
+        "reference": "Coverage/abd2ad0a-46bd-4810-8d5d-c8bf0bce9fec"
+      } ]
+    }
+  } ]
+}

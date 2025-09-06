@@ -1,0 +1,530 @@
+{
+  "resourceType": "Bundle",
+  "id": "62fa5718ddb1a39685fad325",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/36408f0f-58eb-47fe-8e64-1b98e47e5c36",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "36408f0f-58eb-47fe-8e64-1b98e47e5c36",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "62fa5718ddb1a39685fad325"
+      } ],
+      "name": [ {
+        "family": "NUMERPop3Fail",
+        "given": [ "PrescribedHighStatinStatusStopped" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1984-01-01"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/ff50e664-aed2-473c-abce-07e454d82c1e",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "ff50e664-aed2-473c-abce-07e454d82c1e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "version": "2021",
+          "code": "99395",
+          "display": "PERIODIC PREVENTIVE MED EST PATIENT 18-39 YRS",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/36408f0f-58eb-47fe-8e64-1b98e47e5c36"
+      },
+      "period": {
+        "start": "2026-07-21T08:00:00.000+00:00",
+        "end": "2026-07-21T08:45:00.000+00:00"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/0a74d3d6-4857-4802-bb7f-92394e5d445b",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "0a74d3d6-4857-4802-bb7f-92394e5d445b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "stopped",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "2167565",
+          "display": "rosuvastatin 20 MG Oral Capsule",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/36408f0f-58eb-47fe-8e64-1b98e47e5c36"
+      },
+      "authoredOn": "2026-06-01T08:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/123456"
+      },
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      } ],
+      "dosageInstruction": [ {
+        "timing": {
+          "event": [ "2026-07-21T08:00:00.000+00:00" ],
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2026-06-01T08:00:00.000+00:00"
+            },
+            "count": 90
+          }
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/2cc9b155-080a-4979-a2ae-82cad316d15d",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "2cc9b155-080a-4979-a2ae-82cad316d15d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/900000000000207008/version/20250201",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/36408f0f-58eb-47fe-8e64-1b98e47e5c36"
+      },
+      "onsetPeriod": {
+        "start": "2021-02-01T08:00:00.000+00:00"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/19bc851d-adae-4b4b-8dd3-a0e0e3bfa758",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "19bc851d-adae-4b4b-8dd3-a0e0e3bfa758",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "status": "active",
+      "subscriberId": "123456",
+      "beneficiary": {
+        "reference": "Patient/36408f0f-58eb-47fe-8e64-1b98e47e5c36"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self",
+          "display": "Self",
+          "userSelected": true
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/41ad6276-4bbc-4ada-8f80-8a8557bcd952"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/41ad6276-4bbc-4ada-8f80-8a8557bcd952",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "41ad6276-4bbc-4ada-8f80-8a8557bcd952",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/63d4ebc6-4040-4f86-860c-2854d661f19d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "63d4ebc6-4040-4f86-860c-2854d661f19d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "1689411712"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/0ef30d6d-b807-423c-98a3-328028c61a3d",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "0ef30d6d-b807-423c-98a3-328028c61a3d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "6e293eb9-02a5-4bf2-a1c5-8e5744f14a1f-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "36408f0f-58eb-47fe-8e64-1b98e47e5c36"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#6e293eb9-02a5-4bf2-a1c5-8e5744f14a1f-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Enc. during MP, DM since 2020, statin (status) stopped in July 2024. Statin was taken during the MP so technically should pass numer.,  maybe \"stopped\", 'on-hold', 'cancelled' should be added to the logic? Sent question to Lead. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS347FHIRStatinPreventionTxCVD",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorException_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exception",
+              "display": "Denominator Exception"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorException_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exception",
+              "display": "Denominator Exception"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_3",
+        "population": [ {
+          "id": "InitialPopulation_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorException_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exception",
+              "display": "Denominator Exception"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_4",
+        "population": [ {
+          "id": "InitialPopulation_4",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_4",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_4",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_4",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorException_4",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exception",
+              "display": "Denominator Exception"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/36408f0f-58eb-47fe-8e64-1b98e47e5c36"
+      }, {
+        "reference": "Encounter/ff50e664-aed2-473c-abce-07e454d82c1e"
+      }, {
+        "reference": "MedicationRequest/0a74d3d6-4857-4802-bb7f-92394e5d445b"
+      }, {
+        "reference": "Condition/2cc9b155-080a-4979-a2ae-82cad316d15d"
+      }, {
+        "reference": "Coverage/19bc851d-adae-4b4b-8dd3-a0e0e3bfa758"
+      }, {
+        "reference": "Organization/41ad6276-4bbc-4ada-8f80-8a8557bcd952"
+      }, {
+        "reference": "Practitioner/63d4ebc6-4040-4f86-860c-2854d661f19d"
+      } ]
+    }
+  } ]
+}

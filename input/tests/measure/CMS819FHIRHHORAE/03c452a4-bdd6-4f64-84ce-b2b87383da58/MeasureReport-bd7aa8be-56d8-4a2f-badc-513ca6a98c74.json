@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "bd7aa8be-56d8-4a2f-badc-513ca6a98c74",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "b514b6a5-7bf2-45fb-b77b-2d4c55639ca1-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "03c452a4-bdd6-4f64-84ce-b2b87383da58"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#b514b6a5-7bf2-45fb-b77b-2d4c55639ca1-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter-1 4/7 0500 - 4/9 0815 of MP, in OR 4/7 0600 - 0759,  MedAdmin-1 4/7 Opioid 0700-0715, Opioid given in OR"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS819FHIRHHORAE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58"
+  }, {
+    "reference": "Encounter/2d73e2ed-8b14-4060-8239-f9338bbeb6fd"
+  }, {
+    "reference": "Location/f3470e14-b7b7-4594-b00d-63e377c32a91"
+  }, {
+    "reference": "MedicationAdministration/e8d0b9a9-893b-482e-8844-9bbc865d16a9"
+  }, {
+    "reference": "Coverage/21cd8482-723c-474a-ad0d-b1ca3e999246"
+  }, {
+    "reference": "Organization/b34079e5-4ba9-4c6e-b558-1cb5f6283487"
+  } ]
+}

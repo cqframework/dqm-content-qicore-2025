@@ -1,0 +1,87 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "55c41fab-cfb3-4741-ad74-a7dea26a5130",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4bfaccf8-e6ec-4e45-bde9-b348e2e1e886-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "4a461ae6-b9f7-4e9f-aab2-ecc9e65fb298"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4bfaccf8-e6ec-4e45-bde9-b348e2e1e886-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has two encounters in the MP on Jan 1 and Dec 31 (HIV dx at birth)"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1157FHIRHIVRetention",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/4a461ae6-b9f7-4e9f-aab2-ecc9e65fb298"
+  }, {
+    "reference": "Condition/456f3e2d-6864-4fcc-9baa-9bff944db19f"
+  }, {
+    "reference": "Encounter/2e670d2c-912a-4ac7-8356-635f0670ede2"
+  }, {
+    "reference": "Encounter/606ddc59-8286-416a-b99a-c478d3eba8a7"
+  }, {
+    "reference": "Coverage/6033ef3b-f50d-411e-b8e4-c7a7fb34428a"
+  }, {
+    "reference": "Organization/18ef5e3c-c3c9-46d8-ba88-3ef5a58b730d"
+  }, {
+    "reference": "Practitioner/e5416045-041c-441e-b643-921a71ef432d"
+  } ]
+}

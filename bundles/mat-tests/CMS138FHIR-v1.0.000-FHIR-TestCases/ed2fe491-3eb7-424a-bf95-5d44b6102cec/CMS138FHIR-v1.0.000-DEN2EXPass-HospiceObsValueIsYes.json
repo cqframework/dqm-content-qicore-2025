@@ -1,0 +1,394 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEX2Pass-DischargeToHomeInpatient",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "ed2fe491-3eb7-424a-bf95-5d44b6102cec",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2013-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/66719e8e-e234-436c-bac8-f7dbc7832916",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "66719e8e-e234-436c-bac8-f7dbc7832916",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "99429",
+          "display": "Unlisted preventive medicine service"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/66719e8e-e234-436c-bac8-f7dbc7832916"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/f95546ec-e0de-42c5-b868-47165a55406c",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "f95546ec-e0de-42c5-b868-47165a55406c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "99024",
+          "display": "Postoperative follow-up visit, normally included in the surgical package, to indicate that an evaluation and management service was performed during a postoperative period for a reason(s) related to the original procedure"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/f95546ec-e0de-42c5-b868-47165a55406c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/e7b4ebd8-2621-4b8d-b779-993d14a819cd",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e7b4ebd8-2621-4b8d-b779-993d14a819cd",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "social-history",
+          "display": "Social History"
+        } ],
+        "text": "survey"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "39240-7",
+          "display": "Tobacco use status CPHS"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+      },
+      "effectiveDateTime": "2026-01-01T01:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "110483000",
+          "display": "Tobacco user (finding)"
+        } ]
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/e7b4ebd8-2621-4b8d-b779-993d14a819cd"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/d26645e3-3f04-4497-9104-92db24c06c38",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d26645e3-3f04-4497-9104-92db24c06c38",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-screening-assessment" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "45755-6",
+          "display": "Hospice care [Minimum Data Set]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+      },
+      "effectivePeriod": {
+        "start": "2025-12-31T00:00:00.000+00:00",
+        "end": "2026-01-01T00:00:00.000+00:00"
+      },
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "373066001",
+          "display": "Yes (qualifier value)"
+        } ]
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/d26645e3-3f04-4497-9104-92db24c06c38"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/841afe4d-1c7b-4b08-805e-14715b1f61b0",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "841afe4d-1c7b-4b08-805e-14715b1f61b0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "122d8334-4ffe-4e34-95cf-01c52ccad1ab-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#122d8334-4ffe-4e34-95cf-01c52ccad1ab-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Hospice Observation - For meeting 100% coverage"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS138FHIRTobaccoScrnCessation",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_3",
+        "population": [ {
+          "id": "InitialPopulation_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/ed2fe491-3eb7-424a-bf95-5d44b6102cec"
+      }, {
+        "reference": "Encounter/66719e8e-e234-436c-bac8-f7dbc7832916"
+      }, {
+        "reference": "Encounter/f95546ec-e0de-42c5-b868-47165a55406c"
+      }, {
+        "reference": "Observation/e7b4ebd8-2621-4b8d-b779-993d14a819cd"
+      }, {
+        "reference": "Observation/d26645e3-3f04-4497-9104-92db24c06c38"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/841afe4d-1c7b-4b08-805e-14715b1f61b0"
+    }
+  } ]
+}

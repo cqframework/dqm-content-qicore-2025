@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "65b1b443-5e51-4b30-83ab-fd9fa0e46bd0",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "19eb1e04-4335-4eef-9f21-ad0a17a50252-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "fb95f47d-a7a0-4fe2-a29a-bdca9fc1be59"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#19eb1e04-4335-4eef-9f21-ad0a17a50252-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has an hospice care service request > 90 days before the end of the qualified VTE encounter"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1173FHIRDiagnosticDelayVTE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/fb95f47d-a7a0-4fe2-a29a-bdca9fc1be59"
+  }, {
+    "reference": "Encounter/b08148ee-a3c9-406e-a488-be064b4748ce"
+  }, {
+    "reference": "Condition/36bbc277-8714-43ff-8ebe-aaa73eb8a6af"
+  }, {
+    "reference": "Encounter/e2054403-3e8e-4292-8dda-e3f07048cb1d"
+  }, {
+    "reference": "Condition/dfa5bf2e-8eaf-4300-bf13-e843567e91ba"
+  }, {
+    "reference": "Observation/cd74a6ac-4818-4fd0-92a1-cc76781d6a59"
+  }, {
+    "reference": "DiagnosticReport/075a382e-ef60-452f-8567-487bb2c89beb"
+  }, {
+    "reference": "MedicationRequest/6a1d3e5d-c88f-4f09-be6b-c4c48358ab54"
+  }, {
+    "reference": "ServiceRequest/68e05cd9-3707-4165-b97a-1287b25b7574"
+  }, {
+    "reference": "Coverage/60b9ac64-8ab8-4552-88e3-45b205c144d9"
+  }, {
+    "reference": "Claim/2d161c6f-31d7-4bce-8810-510176cf09b9"
+  }, {
+    "reference": "Organization/23a14c15-659b-47bc-ba44-d636b3f9f50c"
+  } ]
+}

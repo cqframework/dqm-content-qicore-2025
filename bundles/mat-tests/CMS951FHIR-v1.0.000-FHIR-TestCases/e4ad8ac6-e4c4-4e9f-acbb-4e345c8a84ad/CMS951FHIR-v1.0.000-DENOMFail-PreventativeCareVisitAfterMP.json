@@ -1,0 +1,237 @@
+{
+  "resourceType": "Bundle",
+  "id": "641379da4b11b147841ab8ee",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "641379da4b11b147841ab8ee"
+      } ],
+      "name": [ {
+        "family": "DENOMFail",
+        "given": [ "PreventativeCareVisitAfterMP" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2005-07-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/16c902ba-ee86-47a0-b2ae-87293468c23c",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "16c902ba-ee86-47a0-b2ae-87293468c23c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad"
+      },
+      "onsetDateTime": "2026-03-16T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/16c902ba-ee86-47a0-b2ae-87293468c23c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/15073d88-db1a-4d43-9b44-5c9cd0d730a1",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "15073d88-db1a-4d43-9b44-5c9cd0d730a1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "version": "2021",
+          "code": "99395",
+          "display": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; 18-39 years",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad"
+      },
+      "period": {
+        "start": "2027-01-04T08:00:00.000+00:00",
+        "end": "2027-01-04T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/15073d88-db1a-4d43-9b44-5c9cd0d730a1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/ef895157-f6a7-445b-a2c1-566190da32fb",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "ef895157-f6a7-445b-a2c1-566190da32fb",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "27696657-0ed7-48c7-ab64-4fd3da161757-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#27696657-0ed7-48c7-ab64-4fd3da161757-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "This patient is 20 years old, and with active diabetes diagnosis but no qualifying encounter. This case tests the encounter criteria of the Denom. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS951FHIRKidneyHealthEval",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/e4ad8ac6-e4c4-4e9f-acbb-4e345c8a84ad"
+      }, {
+        "reference": "Condition/16c902ba-ee86-47a0-b2ae-87293468c23c"
+      }, {
+        "reference": "Encounter/15073d88-db1a-4d43-9b44-5c9cd0d730a1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/ef895157-f6a7-445b-a2c1-566190da32fb"
+    }
+  } ]
+}

@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "9bd6e6e7-0842-46cb-b533-a09689b18452",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6bff71cf-dd1e-46ba-94a4-2c341bd9202e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "22778fb6-6e45-40cf-9d3f-4deb60464fcd"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6bff71cf-dd1e-46ba-94a4-2c341bd9202e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "DENEX-prediabetes-diagnosis-dayoftestJan1-startofLB"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1154ScreeningPrediabetesFHIR",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/22778fb6-6e45-40cf-9d3f-4deb60464fcd"
+  }, {
+    "reference": "Encounter/2de73873-5ad2-4f9e-8ca4-b76876ea1a41"
+  }, {
+    "reference": "Encounter/1db34a0b-42ef-42ea-a003-b284d8bcf1b6"
+  }, {
+    "reference": "Observation/7caac2b7-c2dd-4f4c-a179-d276f1af4f68"
+  }, {
+    "reference": "Condition/d8484d09-8a97-448a-b96d-a19a02dc145d"
+  } ]
+}

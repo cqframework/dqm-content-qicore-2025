@@ -1,0 +1,35 @@
+The purpose of this file is to allow users to view the mapping of test case names to their test case UUIDs. In order to find a specific test case file in the export, first locate the test case name in this document and then use the associated UUID to find the name of the folder in the export.
+
+Case # 33 - 03069b40-7a8b-4dbe-9fa0-9cb01acf13d2 = IPPASS DementiaDxStartsFirstDayofMPEdgeWithAbatement
+Case # 31 - e9a609ba-0f93-4d33-965e-4bca590af192 = IPFail 2ndEncounterB4MPEdge
+Case # 30 - 0405033f-c6a4-4619-93da-14c9c5613d7b = NUMERPass CognitiveAssessment1MinB4EncounterEdge
+Case # 29 - 99f28510-d75f-48d3-9f36-69739bc27419 = NUMERPass AssessmentOneMonthBeforeEnc
+Case # 28 - 67e19058-917d-43f8-98d3-d16730fc7d32 = IPPASS EncounterandDxinMP
+Case # 27 - 9356623d-fe48-4da2-8def-54fb9e97177c = IPFail DementiaDxNotActive
+Case # 26 - 9c546150-9e90-4743-989a-39fe2b0a5a5b = IPFail MissingSecondEncounter
+Case # 25 - a8c0ccf4-e672-4c1f-9f33-fbf4464a5fe5 = IPPASS 2EncWithDementia
+Case # 24 - 051c9480-438e-48d5-b91f-5f8f980b1f8b = IPPASS EncStarts1MinAfterMPEdge
+Case # 23 - 598ab62f-bb5f-4947-b299-97aa8c50aef2 = IPFail NoDementiaDX
+Case # 22 - 6bd80fce-8086-46d6-a95f-bf70f0a016ca = IPFail DementiaDxNullOnsetPeriodStart
+Case # 21 - c0e64f12-0d43-4bff-bd50-aae46844e6b6 = IPFail EncHasNoEndDate
+Case # 20 - 9e1ffb55-7663-4cd5-a2bf-6f29fccbc70e = DENEXCEPFail NotDoneAssessmentIssuedB4EncounterEdge
+Case # 19 - 1312a23d-9987-425c-b842-ce97792fa49c = IPFail EncounterandDxinMPMissingSecondEnc
+Case # 18 - 49997661-cfa3-4554-9d30-18dbb589d95c = DENEXCEPPass AssessmentNotDonePatientReason
+Case # 17 - fd115ded-69a6-4766-bdd9-d6364347401e = NUMERPass Assessment1MinB4EncounterEdge
+Case # 16 - 04c67cc9-bf23-4f31-988c-8bac7e96f938 = NUMERFail AssessmentAfterEnc
+Case # 15 - 38fba18c-6026-4777-b99b-75996d5968e3 = DENEXCEPFail AssessmentNotDonePatientReason1DayAfterEncEdge
+Case # 14 - de56e9db-49b7-4f1a-a1ae-2649b1bb52b9 = IPFail EncClassInpatient
+Case # 13 - f2613ad5-c498-4205-98b4-e9d8ae0b53ad = IPFail DxDayAfterMPEdge
+Case # 12 - 805ca8cb-ad65-4edb-88c1-19aeec7461f2 = IPFail DementiaDxRefuted
+Case # 11 - e1e5ecba-2f9f-41c6-9bd2-2a1bc26a0273 = IPPASS EncEnds1MinB4MPEdge
+Case # 10 - a7935229-6eb1-45c1-ad08-4fcba8ebbde6 = DENEXCEPPass AssessmentNotDonePatientRefusal
+Case # 8 - a3867482-15a8-42fd-8d78-dff5db0d40f4 = DENEXCEPPass AssessmentNotDonePatientReason1MinB4EncEdge
+Case # 7 - 980e3550-6c75-4c4d-a64d-0657107e7cec = IPPASS DementiaDxOnset1MinB4EncEdge
+Case # 6 - 8f570399-4bd9-4c38-aa3d-e526d987109b = IPFail Encounter1DayAfterMPEdge
+Case # 5 - a7318ea6-4b51-4c32-aeb5-60668c1b1114 = IPPASS DementiaDxStartsFirstDayofMPEdge
+Case # 4 - bff8345c-0962-455c-afd7-a1b26bfc50e2 = IPFail DementiaDx1MinAfterEncEdge
+Case # 3 - 7698942f-4fca-43dd-8457-6b80cd517566 = IPFail EncHasNoStartDate
+Case # 2 - 83ef16cb-ad8a-4ce0-a8c8-c0ff7346d83c = IPFail EncEnds1MinAfterMPEnd
+Case # 1 - 8a93582d-baef-491c-a253-b43762a90ef6 = IPFail DementiaDxEnteredInError
+Case # 9 - e00c927a-f454-4611-97b2-e3e2bdfed182 = IPPASS DementiaDxUnconfirmed
+Case # 32 - 2eb467fd-9453-4652-bb38-18d1ab636aca = IPPASS DementiaDxEncStartsFirstDayofMPEdge

@@ -1,0 +1,59 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "ea50a8c6-239c-4787-956c-5fd8c8248840",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6f5e9d14-2336-4772-9028-47113efae138-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "af316d7c-666a-45d1-905c-20ed90640ac3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6f5e9d14-2336-4772-9028-47113efae138-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Right age with encounter, meds administered, no lab tests. Med relevant period starts during encounter, ends after encounter. Denom pass - meets rule that med must 'start' during encounter. No rule that it must end during encounter.\n\n(CMS #7)"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/ca9d2ff2-885a-485a-af2f-1b4d2bd25b2a"
+  }, {
+    "reference": "MedicationAdministration/cd79f538-815c-4062-9109-c88b8f6526e8"
+  }, {
+    "reference": "Patient/af316d7c-666a-45d1-905c-20ed90640ac3"
+  } ]
+}

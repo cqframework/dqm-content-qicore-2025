@@ -1,0 +1,281 @@
+{
+  "resourceType": "Bundle",
+  "id": "363b28a9-e77d-4fee-aaaf-73ebb35bc57c",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/b8dd3c0c-bc5c-4858-9f96-9faabbbaad45",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "b8dd3c0c-bc5c-4858-9f96-9faabbbaad45",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "other",
+      "birthDate": "1956-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/b8dd3c0c-bc5c-4858-9f96-9faabbbaad45"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/1ed1d555-d156-4fd2-a87f-2593d4b83afa",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "1ed1d555-d156-4fd2-a87f-2593d4b83afa",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/b8dd3c0c-bc5c-4858-9f96-9faabbbaad45"
+      },
+      "period": {
+        "start": "2026-04-07T08:00:00.000+00:00",
+        "end": "2026-04-11T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/1ed1d555-d156-4fd2-a87f-2593d4b83afa"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/0269b9ba-fb23-4e2d-810b-8221e7a80eed",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0269b9ba-fb23-4e2d-810b-8221e7a80eed",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "version": "2.72",
+          "code": "1556-0",
+          "display": "Fasting glucose [Mass/volume] in Capillary blood",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/b8dd3c0c-bc5c-4858-9f96-9faabbbaad45"
+      },
+      "effectiveDateTime": "2026-04-07T07:30:00.000+00:00",
+      "valueQuantity": {
+        "value": 600,
+        "unit": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/0269b9ba-fb23-4e2d-810b-8221e7a80eed"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/4c95e95d-c5a8-4b31-86c6-53d038413e85",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4c95e95d-c5a8-4b31-86c6-53d038413e85",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "version": "2.72",
+          "code": "1556-0",
+          "display": "Fasting glucose [Mass/volume] in Capillary blood",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/b8dd3c0c-bc5c-4858-9f96-9faabbbaad45"
+      },
+      "effectiveDateTime": "2026-04-07T08:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 601,
+        "unit": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/4c95e95d-c5a8-4b31-86c6-53d038413e85"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/b0d599a4-0476-4f92-921b-403084e5676e",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "b0d599a4-0476-4f92-921b-403084e5676e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "2e817dcc-f8d2-4bd0-bef8-9f4f8bca4a46-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "b8dd3c0c-bc5c-4858-9f96-9faabbbaad45"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#2e817dcc-f8d2-4bd0-bef8-9f4f8bca4a46-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "IP encounter where there is a glucose >600mg/dL within 7-hr interval, but there is a glucose test done before it, so does not meet denom exclusion. The glucose >600 must be the initial test. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS871FHIRHHHyper",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "NumeratorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator-exclusion",
+              "display": "Numerator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "MeasureObservation_1_1_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "measure-observation",
+              "display": "Measure Observation"
+            } ]
+          },
+          "count": 3
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/b8dd3c0c-bc5c-4858-9f96-9faabbbaad45"
+      }, {
+        "reference": "Encounter/1ed1d555-d156-4fd2-a87f-2593d4b83afa"
+      }, {
+        "reference": "Observation/0269b9ba-fb23-4e2d-810b-8221e7a80eed"
+      }, {
+        "reference": "Observation/4c95e95d-c5a8-4b31-86c6-53d038413e85"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/b0d599a4-0476-4f92-921b-403084e5676e"
+    }
+  } ]
+}

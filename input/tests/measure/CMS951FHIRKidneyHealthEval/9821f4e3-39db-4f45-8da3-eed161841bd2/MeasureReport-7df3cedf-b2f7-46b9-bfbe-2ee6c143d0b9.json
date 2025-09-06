@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "7df3cedf-b2f7-46b9-bfbe-2ee6c143d0b9",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "aff8a471-deab-428b-ad04-b7cc51726f87-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "9821f4e3-39db-4f45-8da3-eed161841bd2"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#aff8a471-deab-428b-ad04-b7cc51726f87-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "This patient is 67 years old with a qualifying office visit encounter and active  diabetes, with both qualifying lab tests where the UACR has undetectable results. This case tests the numerator criteria."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS951FHIRKidneyHealthEval",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/9821f4e3-39db-4f45-8da3-eed161841bd2"
+  }, {
+    "reference": "Condition/ff13951b-a9b4-40ca-b8c0-f809af84ce2b"
+  }, {
+    "reference": "Observation/04461f34-1495-4141-9f04-7935d20d6472"
+  }, {
+    "reference": "Observation/c60975ea-3cc4-47a3-90cb-0a9f18fecb2a"
+  }, {
+    "reference": "Encounter/8453aa8e-6fec-460a-8d07-1ac1c79f395f"
+  } ]
+}

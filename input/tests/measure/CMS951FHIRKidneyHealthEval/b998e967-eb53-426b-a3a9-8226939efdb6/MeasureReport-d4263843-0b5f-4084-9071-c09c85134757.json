@@ -1,0 +1,111 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "d4263843-0b5f-4084-9071-c09c85134757",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "8f10885d-e003-4478-a3e9-f805843038f7-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b998e967-eb53-426b-a3a9-8226939efdb6"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#8f10885d-e003-4478-a3e9-f805843038f7-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "This patient has diabetes and both labs, plus end stage renal disease and all possible hospice encounters. This case tests the denominator exclusions."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS951FHIRKidneyHealthEval",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b998e967-eb53-426b-a3a9-8226939efdb6"
+  }, {
+    "reference": "Condition/42152bfa-306b-491d-8734-e1f0fbbe12ed"
+  }, {
+    "reference": "Encounter/23ffccf2-4da9-4e76-8ab2-cbfd507e8400"
+  }, {
+    "reference": "Observation/c449735c-853b-4c79-a56b-a131fe78bb99"
+  }, {
+    "reference": "Observation/3521a6a7-ed61-4441-9cf7-c0692669cea7"
+  }, {
+    "reference": "Condition/a40dc24d-225a-44f4-8ec3-f44df63dd31e"
+  }, {
+    "reference": "Encounter/2e874871-3e3c-432c-8280-fb07c63b337a"
+  }, {
+    "reference": "Encounter/c4575335-65db-46c0-b9a3-00e420d40171"
+  }, {
+    "reference": "Encounter/680e9229-f8b6-483c-8e2a-cf0429cb7809"
+  }, {
+    "reference": "Encounter/2d4c1416-1ed9-480a-bbc3-32434ae8c0df"
+  }, {
+    "reference": "Encounter/789daa07-c9c1-448b-a909-967aac24caa2"
+  }, {
+    "reference": "Encounter/991821e4-d121-455a-a5fe-59e18eb51ba5"
+  }, {
+    "reference": "Encounter/da72612e-4819-4aae-a847-53631104cf8c"
+  }, {
+    "reference": "Encounter/3fdd92d5-77dd-486d-aa72-2e12bbe404c5"
+  } ]
+}

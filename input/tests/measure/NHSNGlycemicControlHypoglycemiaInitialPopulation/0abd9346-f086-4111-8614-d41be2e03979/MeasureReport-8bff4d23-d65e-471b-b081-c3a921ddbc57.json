@@ -1,0 +1,61 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "8bff4d23-d65e-471b-b081-c3a921ddbc57",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4968f4f2-d257-47fb-97c4-8ce225c6508d-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "0abd9346-f086-4111-8614-d41be2e03979"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4968f4f2-d257-47fb-97c4-8ce225c6508d-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter started in ER before IP. Hypo med relevant date/time during IP. Meets denominator.\n\n(CMS #6)"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/4ae8e4fd-2fc4-4c15-acbf-a89f8c973b07"
+  }, {
+    "reference": "Encounter/37b6d340-6d36-4b19-a9f9-7aa339094ff0"
+  }, {
+    "reference": "MedicationAdministration/e7d73dc8-b825-4900-9f70-f4060fd07696"
+  }, {
+    "reference": "Patient/0abd9346-f086-4111-8614-d41be2e03979"
+  } ]
+}

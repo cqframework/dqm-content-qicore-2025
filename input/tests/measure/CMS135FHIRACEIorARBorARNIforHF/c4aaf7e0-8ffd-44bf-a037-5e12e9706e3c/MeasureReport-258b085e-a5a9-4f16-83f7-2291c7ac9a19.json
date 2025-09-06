@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "258b085e-a5a9-4f16-83f7-2291c7ac9a19",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "fd79da7c-4bee-4faa-a58b-dace6da27b14-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#fd79da7c-4bee-4faa-a58b-dace6da27b14-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with 2 ambulatory encounters, LVSD and HF dx and not meeting denominator exclusions or exceptions has active ACE/ARB medication"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS135FHIRACEIorARBorARNIforHF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c"
+  }, {
+    "reference": "Encounter/edb09e5a-3e80-416a-8df5-2970b05e27e4"
+  }, {
+    "reference": "Encounter/b0cd42cf-b0fa-4b2d-bb95-d95bd49fbc8f"
+  }, {
+    "reference": "Condition/2acbc414-ec18-48ed-b91d-e29deb32991b"
+  }, {
+    "reference": "Condition/631740db-9df9-4505-ac87-6b200efd2543"
+  }, {
+    "reference": "MedicationRequest/5f14a776-d08a-4c1f-a227-65190df26f7d"
+  }, {
+    "reference": "Practitioner/bf54dfd3-f401-43b9-a6a0-ae0bd41c5b46"
+  } ]
+}

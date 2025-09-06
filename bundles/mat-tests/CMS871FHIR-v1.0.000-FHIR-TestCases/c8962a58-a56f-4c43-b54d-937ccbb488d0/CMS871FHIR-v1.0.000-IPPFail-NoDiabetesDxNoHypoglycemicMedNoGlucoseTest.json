@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "363b28a9-e77d-4fee-aaaf-73ebb35bc57c",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "c8962a58-a56f-4c43-b54d-937ccbb488d0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2124-6",
+            "display": "Palestinian"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248152002"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1971-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/72d84e9e-502a-4815-b7eb-ef619f699faf",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "72d84e9e-502a-4815-b7eb-ef619f699faf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/certificate",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "59",
+          "display": "Other Private Insurance"
+        } ]
+      },
+      "policyHolder": {
+        "reference": "Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0"
+      },
+      "subscriber": {
+        "reference": "Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0"
+      },
+      "beneficiary": {
+        "reference": "Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0"
+      },
+      "dependent": "0",
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2026-01-01T06:00:00.000+00:00",
+        "end": "2026-12-31T11:06:01.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Organization/Organization-2"
+      } ],
+      "order": 9
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/72d84e9e-502a-4815-b7eb-ef619f699faf"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/76b12408-6023-4dcd-843b-46097f9bb5ac",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "76b12408-6023-4dcd-843b-46097f9bb5ac",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0"
+      },
+      "period": {
+        "start": "2026-04-07T08:00:00.000+00:00",
+        "end": "2026-04-11T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/76b12408-6023-4dcd-843b-46097f9bb5ac"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/c1e03613-5bb9-49f0-aabf-505410097fc0",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "c1e03613-5bb9-49f0-aabf-505410097fc0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "c2e15a91-25e6-4872-9b81-4caa8a236aba-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "c8962a58-a56f-4c43-b54d-937ccbb488d0"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#c2e15a91-25e6-4872-9b81-4caa8a236aba-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Inpatient hospitalization for patient >=18 but no diabetes diagnosis, no hypoglycemic medication, and no glucose lab >40 mg/dL. Must meet at least one to meet IPP. IPP fails"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS871FHIRHHHyper",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "NumeratorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator-exclusion",
+              "display": "Numerator Exclusion"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/c8962a58-a56f-4c43-b54d-937ccbb488d0"
+      }, {
+        "reference": "Coverage/72d84e9e-502a-4815-b7eb-ef619f699faf"
+      }, {
+        "reference": "Encounter/76b12408-6023-4dcd-843b-46097f9bb5ac"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/c1e03613-5bb9-49f0-aabf-505410097fc0"
+    }
+  } ]
+}

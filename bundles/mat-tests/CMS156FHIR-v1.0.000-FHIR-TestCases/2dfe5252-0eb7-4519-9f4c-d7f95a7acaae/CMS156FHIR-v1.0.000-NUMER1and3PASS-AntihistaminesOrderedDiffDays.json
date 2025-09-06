@@ -1,0 +1,360 @@
+{
+  "resourceType": "Bundle",
+  "id": "NUMER1and3PASS-AntihistaminesOrderedDiffDays",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/2dfe5252-0eb7-4519-9f4c-d7f95a7acaae",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "2dfe5252-0eb7-4519-9f4c-d7f95a7acaae",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1961-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/2dfe5252-0eb7-4519-9f4c-d7f95a7acaae"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/fdcc3cad-3982-4acf-bc98-0451340d8c9e",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "fdcc3cad-3982-4acf-bc98-0451340d8c9e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/2dfe5252-0eb7-4519-9f4c-d7f95a7acaae"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/fdcc3cad-3982-4acf-bc98-0451340d8c9e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/2a20ceb7-aa1e-44fd-aef0-d2f6ea247be5",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "2a20ceb7-aa1e-44fd-aef0-d2f6ea247be5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge",
+          "display": "Discharge"
+        } ]
+      } ],
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1013619",
+          "display": "chlorpheniramine maleate 3 MG / phenylephrine hydrochloride 10 MG Oral Tablet",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/2dfe5252-0eb7-4519-9f4c-d7f95a7acaae"
+      },
+      "authoredOn": "2026-12-30T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/2a20ceb7-aa1e-44fd-aef0-d2f6ea247be5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/5d8dfbdb-be92-488a-a262-bc6f429020d1",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "5d8dfbdb-be92-488a-a262-bc6f429020d1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge",
+          "display": "Discharge"
+        } ]
+      } ],
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1013619",
+          "display": "chlorpheniramine maleate 3 MG / phenylephrine hydrochloride 10 MG Oral Tablet",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/2dfe5252-0eb7-4519-9f4c-d7f95a7acaae"
+      },
+      "authoredOn": "2026-12-31T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/5d8dfbdb-be92-488a-a262-bc6f429020d1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/b5094369-1007-4244-b7d9-46734b17b3af",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "b5094369-1007-4244-b7d9-46734b17b3af",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "6ac44c7a-a757-40ff-86cd-12d69d979835-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "2dfe5252-0eb7-4519-9f4c-d7f95a7acaae"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#6ac44c7a-a757-40ff-86cd-12d69d979835-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Antihistamine medications ordered on different days"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS156FHIRHighRiskMedsElderly",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_3",
+        "population": [ {
+          "id": "InitialPopulation_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/2dfe5252-0eb7-4519-9f4c-d7f95a7acaae"
+      }, {
+        "reference": "Encounter/fdcc3cad-3982-4acf-bc98-0451340d8c9e"
+      }, {
+        "reference": "MedicationRequest/2a20ceb7-aa1e-44fd-aef0-d2f6ea247be5"
+      }, {
+        "reference": "MedicationRequest/5d8dfbdb-be92-488a-a262-bc6f429020d1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/b5094369-1007-4244-b7d9-46734b17b3af"
+    }
+  } ]
+}

@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "a5f81f45-f8a2-4873-991c-096fee075154",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "e8f6a30e-f2a4-4980-b9d3-6c0a5fd3ca0e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "2f3ae88b-8fc4-4941-a2a3-09ae9e134c84"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#e8f6a30e-f2a4-4980-b9d3-6c0a5fd3ca0e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter with O2 therapy after end of general anesthesia, but before mechanical ventilation.  Satisfies Num2"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/2f3ae88b-8fc4-4941-a2a3-09ae9e134c84"
+  }, {
+    "reference": "Procedure/16ba5793-4e31-4e61-975d-4ad57a1c1133"
+  }, {
+    "reference": "Encounter/1857fa8b-4d16-4ad0-a64e-2df5f182c721"
+  }, {
+    "reference": "Procedure/776c3ff1-0e6b-4c7c-9ca0-3e0da96a7bc4"
+  }, {
+    "reference": "Procedure/b34e62d5-ca1d-4221-92ee-ef50764316d0"
+  } ]
+}

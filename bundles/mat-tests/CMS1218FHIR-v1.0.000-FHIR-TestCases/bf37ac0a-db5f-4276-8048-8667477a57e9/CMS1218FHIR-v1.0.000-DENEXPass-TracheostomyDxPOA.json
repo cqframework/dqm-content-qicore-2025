@@ -1,0 +1,373 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-bf37ac0a-db5f-4276-8048-8667477a57e9-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Condition/203a5fcd-35b5-4a08-9dad-d8b686d186be",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "203a5fcd-35b5-4a08-9dad-d8b686d186be",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "J95.01"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/bf37ac0a-db5f-4276-8048-8667477a57e9"
+      },
+      "encounter": {
+        "reference": "Encounter/587f83a2-d79a-4686-b631-736ca17d8f04"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/203a5fcd-35b5-4a08-9dad-d8b686d186be"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/4d7748fa-753f-4616-b060-c9b7e736cbca",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "4d7748fa-753f-4616-b060-c9b7e736cbca",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "professional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/bf37ac0a-db5f-4276-8048-8667477a57e9"
+      },
+      "created": "2026-05-16",
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+            "version": "2023",
+            "code": "J95.00",
+            "display": "Unspecified tracheostomy complication",
+            "userSelected": true
+          } ]
+        },
+        "type": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+            "code": "principal"
+          } ]
+        } ],
+        "onAdmission": {
+          "coding": [ {
+            "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+            "code": "Y"
+          } ]
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1, 5, 7 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://example.org/fhir/CodeSystem/ex-professionalservice",
+            "code": "anesthesia"
+          } ]
+        },
+        "servicedDate": "2026-04-11",
+        "encounter": [ {
+          "reference": "Encounter/587f83a2-d79a-4686-b631-736ca17d8f04"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/4d7748fa-753f-4616-b060-c9b7e736cbca"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/587f83a2-d79a-4686-b631-736ca17d8f04",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "587f83a2-d79a-4686-b631-736ca17d8f04",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/bf37ac0a-db5f-4276-8048-8667477a57e9"
+      },
+      "period": {
+        "start": "2026-04-10T08:00:00.000+00:00",
+        "end": "2026-04-14T08:15:00.000+00:00"
+      },
+      "diagnosis": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+              "code": "W"
+            } ]
+          }
+        } ],
+        "condition": {
+          "reference": "Condition/203a5fcd-35b5-4a08-9dad-d8b686d186be"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/587f83a2-d79a-4686-b631-736ca17d8f04"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/bf37ac0a-db5f-4276-8048-8667477a57e9",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "bf37ac0a-db5f-4276-8048-8667477a57e9",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2054-5",
+            "display": "Black or African American",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Black or African American"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "DENEXPass",
+        "given": [ "TracheostomyDxPOA" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1966-07-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/bf37ac0a-db5f-4276-8048-8667477a57e9"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/9f727743-96e8-44e1-a556-ffc8ccb7ceb4",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "9f727743-96e8-44e1-a556-ffc8ccb7ceb4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-04-11T10:30:00.000+00:00"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/bf37ac0a-db5f-4276-8048-8667477a57e9"
+      },
+      "performedPeriod": {
+        "start": "2026-04-11T08:00:00.000+00:00",
+        "end": "2026-04-11T10:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/9f727743-96e8-44e1-a556-ffc8ccb7ceb4"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/b5f3b4c6-b73b-4526-acfa-6e6e44629562",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "b5f3b4c6-b73b-4526-acfa-6e6e44629562",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "77772d7a-a5bd-4535-bd57-2b407c5e94ee-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "bf37ac0a-db5f-4276-8048-8667477a57e9"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#77772d7a-a5bd-4535-bd57-2b407c5e94ee-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Elective hospitalization with procedure (general anesthesia) within first 3 days of encounter but has a tracheostomy diagnosis POA,  indicator = W. \nMeets denom exclusion."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Condition/203a5fcd-35b5-4a08-9dad-d8b686d186be"
+      }, {
+        "reference": "Claim/4d7748fa-753f-4616-b060-c9b7e736cbca"
+      }, {
+        "reference": "Encounter/587f83a2-d79a-4686-b631-736ca17d8f04"
+      }, {
+        "reference": "Patient/bf37ac0a-db5f-4276-8048-8667477a57e9"
+      }, {
+        "reference": "Procedure/9f727743-96e8-44e1-a556-ffc8ccb7ceb4"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/b5f3b4c6-b73b-4526-acfa-6e6e44629562"
+    }
+  } ]
+}

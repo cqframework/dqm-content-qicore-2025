@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "7d454bf0-aa92-4e06-ae88-620283112b0b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "a39f8efe-e200-42c8-8a71-d95d8a3c7109-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "4c2e4fec-cf58-4a6e-be40-af9b9e4232c9"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#a39f8efe-e200-42c8-8a71-d95d8a3c7109-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has GCS applied 1 day after anesthesia\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/4c2e4fec-cf58-4a6e-be40-af9b9e4232c9"
+  }, {
+    "reference": "Encounter/765bce65-7a9c-406a-a19b-bc8d3c3db749"
+  }, {
+    "reference": "Coverage/1201ec88-8e02-4a9c-bfe0-efa730e6884f"
+  }, {
+    "reference": "Procedure/fc04063e-17f6-4d9d-bc9a-6cb0c0c00f4d"
+  }, {
+    "reference": "Procedure/f72c3111-a2c0-406c-acdb-a98d53a6fc43"
+  }, {
+    "reference": "Organization/a930d100-bb71-4ee5-b308-9f4cd55ca2a0"
+  }, {
+    "reference": "Practitioner/de696458-d572-44ef-aace-eb831ade0f10"
+  } ]
+}

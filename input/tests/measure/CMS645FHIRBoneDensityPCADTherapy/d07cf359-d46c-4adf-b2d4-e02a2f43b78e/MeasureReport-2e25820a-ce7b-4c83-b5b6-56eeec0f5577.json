@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "2e25820a-ce7b-4c83-b5b6-56eeec0f5577",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "74dafaf3-e4bf-4339-a0bd-d92149969bdd-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "d07cf359-d46c-4adf-b2d4-e02a2f43b78e"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#74dafaf3-e4bf-4339-a0bd-d92149969bdd-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Dx of Prostate Cancer, DEXA not performed due to patient refused. DENEXCEP passes as expected."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS645FHIRBoneDensityPCADTherapy",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/d07cf359-d46c-4adf-b2d4-e02a2f43b78e"
+  }, {
+    "reference": "Encounter/397ceea8-705b-4f08-b72f-8041bb8a8a2f"
+  }, {
+    "reference": "Condition/faca9784-0f75-4ecf-90f7-caee9d2b9ebb"
+  }, {
+    "reference": "MedicationRequest/68769e56-84bc-48a9-be81-92668891ad94"
+  }, {
+    "reference": "ServiceRequest/49f23ab7-5a7f-4195-b8e7-69d14ae28b96"
+  }, {
+    "reference": "ServiceRequest/921eb19c-9a44-4240-8166-4739553b7e0c"
+  }, {
+    "reference": "Practitioner/84e18089-fba9-4895-bb41-0a27711267e8"
+  } ]
+}

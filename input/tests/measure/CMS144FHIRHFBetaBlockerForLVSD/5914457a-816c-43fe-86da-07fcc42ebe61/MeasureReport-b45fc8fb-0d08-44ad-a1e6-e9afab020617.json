@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "b45fc8fb-0d08-44ad-a1e6-e9afab020617",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "48a0f4c8-28d3-4e99-ab5a-eafe5696de60-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "5914457a-816c-43fe-86da-07fcc42ebe61"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#48a0f4c8-28d3-4e99-ab5a-eafe5696de60-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has qualifying AV Block for denominator exception but also has hx of Cardiac Pacemaker which negates denominator exception."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS144FHIRHFBetaBlockerForLVSD",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/5914457a-816c-43fe-86da-07fcc42ebe61"
+  }, {
+    "reference": "Encounter/95a25cc3-a346-4285-8653-2f8a22d07513"
+  }, {
+    "reference": "Encounter/c56afeaa-3133-4d8f-b143-b1bbcd3dceb5"
+  }, {
+    "reference": "Condition/2675743d-3ea4-405a-a1bb-b0c735449700"
+  }, {
+    "reference": "Condition/7a49de27-da60-43cb-acf8-e13c662e3a21"
+  }, {
+    "reference": "Condition/55598dbb-58f5-4b11-a7fa-bcf0cd1bbfe7"
+  }, {
+    "reference": "Procedure/be55a310-483c-4817-a38f-ec7f99b28b1b"
+  } ]
+}

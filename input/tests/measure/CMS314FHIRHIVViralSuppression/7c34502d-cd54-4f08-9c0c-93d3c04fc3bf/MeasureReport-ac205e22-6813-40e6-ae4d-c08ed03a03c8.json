@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "ac205e22-6813-40e6-ae4d-c08ed03a03c8",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "dcc9b761-c49b-41fa-8aa1-0844020495e5-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "7c34502d-cd54-4f08-9c0c-93d3c04fc3bf"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#dcc9b761-c49b-41fa-8aa1-0844020495e5-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with a diagnosis of HIV years before start of the MP and a qualifying encounter on inside 240 day edge of the MP "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS314FHIRHIVViralSuppression",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/7c34502d-cd54-4f08-9c0c-93d3c04fc3bf"
+  }, {
+    "reference": "Condition/b709c0e8-b074-48a8-b04a-c5b42256d2ac"
+  }, {
+    "reference": "Encounter/c6911a55-23e7-4872-97b5-75713ea1fe76"
+  }, {
+    "reference": "Coverage/ccd84728-9dc2-49f4-880f-0fb769b3909f"
+  }, {
+    "reference": "Organization/3b79fb14-66b2-420d-8534-a310fecd0108"
+  }, {
+    "reference": "Practitioner/22a89743-5f69-4443-85be-2aef623a1bf7"
+  } ]
+}

@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1a7e404d-9f3d-4f1d-b9c7-ddf3ee02a7c5",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "5b1dd80f-8c3d-4547-a3c6-a35e1c17a635-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "543248c8-b6af-407d-b435-7e867c4770b4"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#5b1dd80f-8c3d-4547-a3c6-a35e1c17a635-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Has oral Xa and AFib - AFib start time concurrent with EncInp end time.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/543248c8-b6af-407d-b435-7e867c4770b4"
+  }, {
+    "reference": "Encounter/d48e1925-fbba-4ad2-b14a-8f60ad6eb849"
+  }, {
+    "reference": "Coverage/d6f6897b-027a-40ae-85c3-aef8f54836bd"
+  }, {
+    "reference": "Condition/28803452-be88-4f91-bd6f-e4cce84c03b8"
+  }, {
+    "reference": "MedicationAdministration/c214b6af-54ce-49a7-8fd1-16a632130ff1"
+  }, {
+    "reference": "Organization/47572f26-3add-466d-9bff-fa340ddb5ffc"
+  }, {
+    "reference": "Practitioner/aa9765a2-ee95-4c01-8eab-3241b0b79b46"
+  } ]
+}

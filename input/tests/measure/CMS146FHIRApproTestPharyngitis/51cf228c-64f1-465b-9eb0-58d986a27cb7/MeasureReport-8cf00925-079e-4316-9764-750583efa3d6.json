@@ -1,0 +1,155 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "8cf00925-079e-4316-9764-750583efa3d6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "398ab87f-f97a-4058-9371-5ccb36f41456-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "51cf228c-64f1-465b-9eb0-58d986a27cb7"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#398ab87f-f97a-4058-9371-5ccb36f41456-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Qualifying encounter is Virtual Encounter"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS146FHIRApproTestPharyngitis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    },
+    "stratifier": [ {
+      "id": "Stratification_1_1",
+      "code": [ {
+        "text": "Strata-1"
+      } ],
+      "stratum": [ {
+        "value": {
+          "text": "Strata-1"
+        },
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        } ]
+      } ]
+    }, {
+      "id": "Stratification_1_2",
+      "code": [ {
+        "text": "Strata-2"
+      } ],
+      "stratum": [ {
+        "value": {
+          "text": "Strata-2"
+        },
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        } ]
+      } ]
+    }, {
+      "id": "Stratification_1_3",
+      "code": [ {
+        "text": "Strata-3"
+      } ],
+      "stratum": [ {
+        "value": {
+          "text": "Strata-3"
+        },
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        } ]
+      } ]
+    } ]
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/51cf228c-64f1-465b-9eb0-58d986a27cb7"
+  }, {
+    "reference": "Encounter/a221e5c8-f658-4607-8a62-e8122dc31e29"
+  }, {
+    "reference": "Condition/02c926be-7e4c-4355-aaae-da85c576ea44"
+  }, {
+    "reference": "MedicationRequest/18b83ee3-670e-47a1-bf9c-886dc18f0701"
+  } ]
+}

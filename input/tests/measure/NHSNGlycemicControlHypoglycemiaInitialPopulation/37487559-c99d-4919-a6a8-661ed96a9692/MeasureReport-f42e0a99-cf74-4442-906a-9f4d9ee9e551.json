@@ -1,0 +1,67 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f42e0a99-cf74-4442-906a-9f4d9ee9e551",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ad5c8894-2ad9-4a93-9d16-1389b34e4901-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "37487559-c99d-4919-a6a8-661ed96a9692"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ad5c8894-2ad9-4a93-9d16-1389b34e4901-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Testing encounterlocations attributes"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/37487559-c99d-4919-a6a8-661ed96a9692"
+  }, {
+    "reference": "Encounter/6add4091-4de8-43ea-a1d2-077977d90bb8"
+  }, {
+    "reference": "Location/d58b6321-d29d-46b2-8849-3f033c353f3a"
+  }, {
+    "reference": "MedicationAdministration/9f454c3b-2ff5-42f0-9cb8-15314f26e9aa"
+  }, {
+    "reference": "Coverage/a0bc71b7-ae27-49c7-a1b0-9f4b006fcc92"
+  }, {
+    "reference": "Organization/400e743a-43a8-4e0b-b9c2-6d35e443372a"
+  }, {
+    "reference": "Practitioner/d2b7d305-1d87-4624-a35f-0a6cbc39dd9f"
+  } ]
+}

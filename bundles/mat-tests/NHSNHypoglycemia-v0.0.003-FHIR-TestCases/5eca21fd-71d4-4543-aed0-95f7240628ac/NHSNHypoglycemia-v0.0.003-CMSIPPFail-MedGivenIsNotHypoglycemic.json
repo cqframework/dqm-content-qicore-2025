@@ -1,0 +1,185 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-IPPFail-MedGivenIsNotHypoglycemic-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/581ac985-a466-4605-9e6e-63c772989b6a",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "581ac985-a466-4605-9e6e-63c772989b6a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "Inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5eca21fd-71d4-4543-aed0-95f7240628ac"
+      },
+      "period": {
+        "start": "2026-07-11T08:00:00.000Z",
+        "end": "2026-07-14T21:00:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/581ac985-a466-4605-9e6e-63c772989b6a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationAdministration/14502074-d994-4203-9b2c-7af3ade5a37b",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "14502074-d994-4203-9b2c-7af3ade5a37b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationadministration" ]
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "905377",
+          "display": "hydralazine hydrochloride 37.5 MG / isosorbide dinitrate 20 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5eca21fd-71d4-4543-aed0-95f7240628ac"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-11T08:00:00.000Z",
+        "end": "2026-07-11T09:00:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationAdministration/14502074-d994-4203-9b2c-7af3ade5a37b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/5eca21fd-71d4-4543-aed0-95f7240628ac",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "5eca21fd-71d4-4543-aed0-95f7240628ac",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "CMSIPPFail",
+        "given": [ "MedGivenIsNotHypoglycemic" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2000-07-11"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/5eca21fd-71d4-4543-aed0-95f7240628ac"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/cd225552-efaf-46a8-9b39-1872820fdbcf",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "cd225552-efaf-46a8-9b39-1872820fdbcf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "aca21ff0-5f40-4662-ae56-d04dbadd4e7d-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "5eca21fd-71d4-4543-aed0-95f7240628ac"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#aca21ff0-5f40-4662-ae56-d04dbadd4e7d-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient inpatient, but the medication administered was not hypoglycemic med. Hypo med must be administered during encounter to meet IPP. \n\n(CMS #12)"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/581ac985-a466-4605-9e6e-63c772989b6a"
+      }, {
+        "reference": "MedicationAdministration/14502074-d994-4203-9b2c-7af3ade5a37b"
+      }, {
+        "reference": "Patient/5eca21fd-71d4-4543-aed0-95f7240628ac"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/cd225552-efaf-46a8-9b39-1872820fdbcf"
+    }
+  } ]
+}

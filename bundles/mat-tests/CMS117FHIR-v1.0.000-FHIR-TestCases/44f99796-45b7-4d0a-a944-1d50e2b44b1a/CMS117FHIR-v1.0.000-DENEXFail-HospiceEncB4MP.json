@@ -1,0 +1,314 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXFail-HospiceEncB4MP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/44f99796-45b7-4d0a-a944-1d50e2b44b1a",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "44f99796-45b7-4d0a-a944-1d50e2b44b1a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2024-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/f71b8f2f-89ea-4efb-8a15-e086bff96c64",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "f71b8f2f-89ea-4efb-8a15-e086bff96c64",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/f71b8f2f-89ea-4efb-8a15-e086bff96c64"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/feb0ae32-830f-4469-8866-b1b600e88f04",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "feb0ae32-830f-4469-8866-b1b600e88f04",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "305336008",
+          "display": "Admission to hospice (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+      },
+      "period": {
+        "start": "2025-12-31T01:00:00.000+00:00",
+        "end": "2025-12-31T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/feb0ae32-830f-4469-8866-b1b600e88f04"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/2738f5b4-909c-4415-a661-e9b1059ad40a",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "2738f5b4-909c-4415-a661-e9b1059ad40a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "d64e5a6d-80a1-4f90-a80c-f80f49872eea-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#d64e5a6d-80a1-4f90-a80c-f80f49872eea-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has a hospice encounter before the MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/ChildhoodImmunizationStatusFHIR",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+      }, {
+        "reference": "Encounter/f71b8f2f-89ea-4efb-8a15-e086bff96c64"
+      }, {
+        "reference": "Encounter/feb0ae32-830f-4469-8866-b1b600e88f04"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/2738f5b4-909c-4415-a661-e9b1059ad40a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/5a88a169-ac2a-4844-b4e9-b528116305a3",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "5a88a169-ac2a-4844-b4e9-b528116305a3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "64a5c862-b0c8-4a6c-b047-f880cd519eb5-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#64a5c862-b0c8-4a6c-b047-f880cd519eb5-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has a hospice encounter before the MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS117FHIRChildImmunStatus",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/44f99796-45b7-4d0a-a944-1d50e2b44b1a"
+      }, {
+        "reference": "Encounter/f71b8f2f-89ea-4efb-8a15-e086bff96c64"
+      }, {
+        "reference": "Encounter/feb0ae32-830f-4469-8866-b1b600e88f04"
+      }, {
+        "reference": "MeasureReport/2738f5b4-909c-4415-a661-e9b1059ad40a"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/5a88a169-ac2a-4844-b4e9-b528116305a3"
+    }
+  } ]
+}

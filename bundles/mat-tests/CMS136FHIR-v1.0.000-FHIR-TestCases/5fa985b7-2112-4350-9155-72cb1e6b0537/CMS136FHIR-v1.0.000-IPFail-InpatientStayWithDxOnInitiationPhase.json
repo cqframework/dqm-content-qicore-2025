@@ -1,0 +1,559 @@
+{
+  "resourceType": "Bundle",
+  "id": "IPPass-InpatientStayOnIPSD",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/5fa985b7-2112-4350-9155-72cb1e6b0537",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "5fa985b7-2112-4350-9155-72cb1e6b0537",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2016-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/b55fd373-81e7-46fb-99f1-8a91580b7337",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "b55fd373-81e7-46fb-99f1-8a91580b7337",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185464004",
+          "display": "Out of hours visit - not night visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/b55fd373-81e7-46fb-99f1-8a91580b7337"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/9c283ac8-135b-4d09-bfd7-0b596f6760cd",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "9c283ac8-135b-4d09-bfd7-0b596f6760cd",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "1649898909"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Jojo",
+        "given": [ "Mojo" ],
+        "prefix": [ "Dr" ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/9c283ac8-135b-4d09-bfd7-0b596f6760cd"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/08e7bc6c-f992-49db-98f3-beb7384e4e58",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "08e7bc6c-f992-49db-98f3-beb7384e4e58",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ],
+        "text": "Healthcare Payer"
+      } ],
+      "name": "The Insurance Guys",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 800-867-5309"
+      }, {
+        "system": "email",
+        "value": "TheInsuranceGuys@hotmail.com"
+      } ],
+      "address": [ {
+        "line": [ "1601 Big Bucks Avenue" ],
+        "city": "Indianapolis",
+        "state": "IN",
+        "postalCode": "46237",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/08e7bc6c-f992-49db-98f3-beb7384e4e58"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/bd9cb544-e9cc-4f74-af18-a1bf740e877a",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "bd9cb544-e9cc-4f74-af18-a1bf740e877a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MB"
+          } ]
+        }
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "59",
+          "display": "Other Private Insurance"
+        } ]
+      },
+      "beneficiary": {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2024-01-01T00:00:00.000+00:00",
+        "end": "2029-01-01T00:00:00.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Organization/08e7bc6c-f992-49db-98f3-beb7384e4e58"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/bd9cb544-e9cc-4f74-af18-a1bf740e877a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/83a755b9-e579-498d-a44e-a3d1721f0a9e",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "83a755b9-e579-498d-a44e-a3d1721f0a9e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "completed",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "884173",
+          "display": "clonidine hydrochloride 0.1 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      },
+      "authoredOn": "2026-01-01T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2026-01-01T00:00:00.000+00:00",
+              "end": "2026-03-31T23:59:59.000+00:00"
+            }
+          }
+        }
+      } ],
+      "dispenseRequest": {
+        "expectedSupplyDuration": {
+          "value": 90,
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/83a755b9-e579-498d-a44e-a3d1721f0a9e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/416914b1-8829-4a47-8eb6-59590d494cb5",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "416914b1-8829-4a47-8eb6-59590d494cb5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "32485007",
+          "display": "Hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      },
+      "period": {
+        "start": "2026-01-30T00:00:00.000+00:00",
+        "end": "2026-01-30T01:00:00.000+00:00"
+      },
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/266317cf-3d44-4b1e-8b54-973bd3d8c3ed"
+        },
+        "use": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "code": "billing"
+          } ]
+        },
+        "rank": 1
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/416914b1-8829-4a47-8eb6-59590d494cb5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/266317cf-3d44-4b1e-8b54-973bd3d8c3ed",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "266317cf-3d44-4b1e-8b54-973bd3d8c3ed",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "105421000119105",
+          "display": "Early onset Alzheimer's disease with behavioral disturbance (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      },
+      "onsetDateTime": "2026-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/266317cf-3d44-4b1e-8b54-973bd3d8c3ed"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/deba36a8-1c2f-417e-b50a-728802b66c9c",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "deba36a8-1c2f-417e-b50a-728802b66c9c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "institutional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      },
+      "created": "2028-01-01",
+      "provider": {
+        "reference": "Practitioner/9c283ac8-135b-4d09-bfd7-0b596f6760cd"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "105421000119105",
+            "display": "Early onset Alzheimer's disease with behavioral disturbance (disorder)"
+          } ]
+        },
+        "type": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+            "code": "principal"
+          } ]
+        } ]
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/bd9cb544-e9cc-4f74-af18-a1bf740e877a"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1205",
+            "display": "Exam, emergency"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/416914b1-8829-4a47-8eb6-59590d494cb5"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/deba36a8-1c2f-417e-b50a-728802b66c9c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/cc3ddb81-26d0-4e8b-92e1-e79d6db680a2",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "cc3ddb81-26d0-4e8b-92e1-e79d6db680a2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "7d666412-529e-4aae-9df5-4df353ee103c-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "5fa985b7-2112-4350-9155-72cb1e6b0537"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#7d666412-529e-4aae-9df5-4df353ee103c-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Inpatient stay with qualifying diagnosis on initiation phase"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS136FHIRChildADHDMedFollowUp",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/5fa985b7-2112-4350-9155-72cb1e6b0537"
+      }, {
+        "reference": "Encounter/b55fd373-81e7-46fb-99f1-8a91580b7337"
+      }, {
+        "reference": "Practitioner/9c283ac8-135b-4d09-bfd7-0b596f6760cd"
+      }, {
+        "reference": "Organization/08e7bc6c-f992-49db-98f3-beb7384e4e58"
+      }, {
+        "reference": "Coverage/bd9cb544-e9cc-4f74-af18-a1bf740e877a"
+      }, {
+        "reference": "MedicationRequest/83a755b9-e579-498d-a44e-a3d1721f0a9e"
+      }, {
+        "reference": "Encounter/416914b1-8829-4a47-8eb6-59590d494cb5"
+      }, {
+        "reference": "Condition/266317cf-3d44-4b1e-8b54-973bd3d8c3ed"
+      }, {
+        "reference": "Claim/deba36a8-1c2f-417e-b50a-728802b66c9c"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/cc3ddb81-26d0-4e8b-92e1-e79d6db680a2"
+    }
+  } ]
+}

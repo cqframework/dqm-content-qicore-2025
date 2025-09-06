@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "22ae9d87-29d1-42c3-9908-93eff318d7b1",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "a4c78c60-4507-497e-9fa2-ec008f2c450f-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "068814f1-4270-4e10-b470-9a5433bceb3e"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#a4c78c60-4507-497e-9fa2-ec008f2c450f-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "medical reasons to not receive no GCS and no low dose heparin during ED\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/068814f1-4270-4e10-b470-9a5433bceb3e"
+  }, {
+    "reference": "Encounter/464af5b5-24d1-40b2-8e63-14748891dded"
+  }, {
+    "reference": "Encounter/a3c69803-d621-4ca7-9dd0-72c1dfeac819"
+  }, {
+    "reference": "Coverage/7df47d7a-f8ff-4f49-85af-cd91012eaf03"
+  }, {
+    "reference": "MedicationAdministration/53929a71-d4c0-4de9-83cc-8c175f8fc182"
+  }, {
+    "reference": "Procedure/a0d2dbe7-20f2-4e5d-8102-873de24517b2"
+  }, {
+    "reference": "Organization/fbab8478-df66-48af-9805-a3573a6ffa67"
+  }, {
+    "reference": "Practitioner/ae90229a-7c23-4343-9c2e-6b3e4f56dc65"
+  } ]
+}

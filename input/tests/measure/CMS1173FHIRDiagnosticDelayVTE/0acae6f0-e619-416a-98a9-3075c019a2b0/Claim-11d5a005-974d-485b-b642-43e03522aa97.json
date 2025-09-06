@@ -1,0 +1,67 @@
+{
+  "resourceType": "Claim",
+  "id": "11d5a005-974d-485b-b642-43e03522aa97",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">DOVE-IPP-PASS <b>PATIENT </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>679a60f5-1866-49a0-9992-a7ded2451985</td></tr><tr><td>Date of birth</td><td><span>10 May 1960</span></td></tr></tbody></table></div>"
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "institutional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/0acae6f0-e619-416a-98a9-3075c019a2b0"
+  },
+  "created": "2026-01-01",
+  "provider": {
+    "reference": "Practitioner/practitioner-123456"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "I63.00"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "principal"
+      } ]
+    } ]
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/5fa041661c76ba66d9959367"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+        "code": "99555"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/de58590b-30c9-4bd2-956a-987dc3dfed5f"
+    } ]
+  } ]
+}

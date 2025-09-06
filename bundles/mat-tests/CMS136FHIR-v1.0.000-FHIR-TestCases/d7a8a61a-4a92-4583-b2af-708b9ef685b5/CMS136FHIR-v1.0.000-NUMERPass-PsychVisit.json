@@ -1,0 +1,319 @@
+{
+  "resourceType": "Bundle",
+  "id": "NUMERPass-PsychVisit",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/d7a8a61a-4a92-4583-b2af-708b9ef685b5",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "d7a8a61a-4a92-4583-b2af-708b9ef685b5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2016-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/d7a8a61a-4a92-4583-b2af-708b9ef685b5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/01022889-2413-45eb-ab35-02b6519d27ed",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "01022889-2413-45eb-ab35-02b6519d27ed",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185464004",
+          "display": "Out of hours visit - not night visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/d7a8a61a-4a92-4583-b2af-708b9ef685b5"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/01022889-2413-45eb-ab35-02b6519d27ed"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/c3df6e96-aad7-4d43-8b42-2959de2657a0",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "c3df6e96-aad7-4d43-8b42-2959de2657a0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "884173",
+          "display": "clonidine hydrochloride 0.1 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/d7a8a61a-4a92-4583-b2af-708b9ef685b5"
+      },
+      "authoredOn": "2026-01-01T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2026-01-01T00:00:00.000+00:00",
+              "end": "2026-03-31T23:59:59.000+00:00"
+            }
+          }
+        }
+      } ],
+      "dispenseRequest": {
+        "expectedSupplyDuration": {
+          "value": 90,
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/c3df6e96-aad7-4d43-8b42-2959de2657a0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/a32722cd-9edc-415a-8f49-9c5c2a8cc888",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "a32722cd-9edc-415a-8f49-9c5c2a8cc888",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "90837",
+          "display": "Psychotherapy, 60 minutes with patient"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/d7a8a61a-4a92-4583-b2af-708b9ef685b5"
+      },
+      "period": {
+        "start": "2026-01-31T00:00:00.000+00:00",
+        "end": "2026-01-31T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/a32722cd-9edc-415a-8f49-9c5c2a8cc888"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/45ccdd31-e448-4ec7-bed4-6cfed758ee1a",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "45ccdd31-e448-4ec7-bed4-6cfed758ee1a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "700d0ad9-908f-4df9-845f-f26e476367de-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "d7a8a61a-4a92-4583-b2af-708b9ef685b5"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#700d0ad9-908f-4df9-845f-f26e476367de-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Qualifying numerator encounter is Psych Visit Psychotherapy"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS136FHIRChildADHDMedFollowUp",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/d7a8a61a-4a92-4583-b2af-708b9ef685b5"
+      }, {
+        "reference": "Encounter/01022889-2413-45eb-ab35-02b6519d27ed"
+      }, {
+        "reference": "MedicationRequest/c3df6e96-aad7-4d43-8b42-2959de2657a0"
+      }, {
+        "reference": "Encounter/a32722cd-9edc-415a-8f49-9c5c2a8cc888"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/45ccdd31-e448-4ec7-bed4-6cfed758ee1a"
+    }
+  } ]
+}

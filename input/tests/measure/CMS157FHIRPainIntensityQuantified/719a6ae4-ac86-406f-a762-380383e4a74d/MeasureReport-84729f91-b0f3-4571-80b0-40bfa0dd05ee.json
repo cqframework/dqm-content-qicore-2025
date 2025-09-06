@@ -1,0 +1,139 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "84729f91-b0f3-4571-80b0-40bfa0dd05ee",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "8342a4ff-bb90-4054-8ce8-0ffc75314fa3-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "719a6ae4-ac86-406f-a762-380383e4a74d"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#8342a4ff-bb90-4054-8ce8-0ffc75314fa3-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with cancer diagnosis overlaps multiple office visits during measurement period. Multiple chemotherapy administrations prior and after office visits. Pain intensity assessment was performed during 1 office visit."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS157FHIRPainIntensityQuantified",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  }, {
+    "id": "Group_2",
+    "population": [ {
+      "id": "InitialPopulation_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/719a6ae4-ac86-406f-a762-380383e4a74d"
+  }, {
+    "reference": "Observation/1a182e83-f244-48bc-8aa5-d77991990525"
+  }, {
+    "reference": "Observation/55ef63b0-f092-4305-a832-33c058728608"
+  }, {
+    "reference": "Condition/7bed5805-ddbc-4aa8-8d0d-756f8678ada8"
+  }, {
+    "reference": "Encounter/30a41f91-d260-49b3-9c50-baf486b8e72f"
+  }, {
+    "reference": "Encounter/4354e533-e1a8-4d77-abb0-74990d6ba14e"
+  }, {
+    "reference": "Encounter/196910eb-2d8b-4e86-862d-0a74d5340a48"
+  }, {
+    "reference": "Encounter/a039a449-21dd-45d1-92f3-3fae864f607c"
+  }, {
+    "reference": "Coverage/a15b60a8-4730-4fa5-aa76-9b1faf405744"
+  }, {
+    "reference": "Procedure/cb2750d4-fc3a-41c0-966b-7807b27740a1"
+  }, {
+    "reference": "Procedure/c3381005-5198-4f9c-bc44-0f19d28693fa"
+  }, {
+    "reference": "Procedure/8dd51abd-e4ed-4f75-8d88-a20b15243767"
+  }, {
+    "reference": "Procedure/a30074e4-979d-4097-a608-7cef9b106cef"
+  }, {
+    "reference": "Organization/a96b6873-33f9-45e3-9e3b-6128e5a67acf"
+  }, {
+    "reference": "Practitioner/67ea7bf0-b940-4e82-8885-398ebb32e330"
+  } ]
+}

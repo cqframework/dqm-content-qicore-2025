@@ -1,0 +1,103 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "d0b76e68-ed45-4293-8205-b31a08d4fcc2",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "51c92cac-3061-4972-8148-9cbfc88b2f6b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "92d01ab1-1808-441b-883c-4e5e9c494df3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#51c92cac-3061-4972-8148-9cbfc88b2f6b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "2TimeIncreaseInCreatUseRelevantPeriod FEMALE\nDialysis performed more than 48 hours after encounter start\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS832FHIRHHAKI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/7a8ad5bd-8dc5-492f-800b-3cdae56ec46d"
+  }, {
+    "reference": "Organization/f2de52d5-b881-4966-a8e9-4686aaf52077"
+  }, {
+    "reference": "Observation/ca4f4012-b8ea-4d31-8106-7bef3b591ecb"
+  }, {
+    "reference": "Encounter/576caa23-421e-44b1-866e-2284dcae0d23"
+  }, {
+    "reference": "Observation/04f1971b-701b-40dc-9122-855c52545550"
+  }, {
+    "reference": "Observation/9a673a8e-2616-4664-97e4-74ab3bcf599b"
+  }, {
+    "reference": "Observation/ed6f8d8f-3edc-494a-afa3-84cb05a7fa41"
+  }, {
+    "reference": "Coverage/624502da-cdc5-4a81-9b13-8b7824aa938d"
+  }, {
+    "reference": "Procedure/d95fec40-cbec-4b99-958a-5d2493a81032"
+  }, {
+    "reference": "Patient/92d01ab1-1808-441b-883c-4e5e9c494df3"
+  } ]
+}

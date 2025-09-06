@@ -1,0 +1,264 @@
+{
+  "resourceType": "Bundle",
+  "id": "Patient-16-DENEXFail-LastHousingStatusNotNursingHome",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/98735c81-5c91-4709-9392-558ac6d40b6c",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "98735c81-5c91-4709-9392-558ac6d40b6c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1958-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/98735c81-5c91-4709-9392-558ac6d40b6c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/252f83eb-3c10-4be1-9b2a-37a5fa2d1cd2",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "252f83eb-3c10-4be1-9b2a-37a5fa2d1cd2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185460008",
+          "display": "Home visit request by patient (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/98735c81-5c91-4709-9392-558ac6d40b6c"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T00:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/252f83eb-3c10-4be1-9b2a-37a5fa2d1cd2"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/404fd169-8a80-4fca-80c3-3403ace77621",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "404fd169-8a80-4fca-80c3-3403ace77621",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/98735c81-5c91-4709-9392-558ac6d40b6c"
+      },
+      "onsetDateTime": "2026-01-01T23:59:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/404fd169-8a80-4fca-80c3-3403ace77621"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/17ecd24d-c664-4d2e-a7e5-147ba85e9bd1",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "17ecd24d-c664-4d2e-a7e5-147ba85e9bd1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "71802-3",
+          "display": "Housing status"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/98735c81-5c91-4709-9392-558ac6d40b6c"
+      },
+      "effectivePeriod": {
+        "start": "2024-12-31T00:00:00.000+00:00",
+        "end": "2026-01-01T00:00:00.000+00:00"
+      },
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "160943002",
+          "display": "Lives in own home"
+        } ]
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/17ecd24d-c664-4d2e-a7e5-147ba85e9bd1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/49571699-5392-4329-b6e0-e9e045f8a481",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "49571699-5392-4329-b6e0-e9e045f8a481",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "d1f3d043-973f-4607-bcad-2bb28822eac6-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "98735c81-5c91-4709-9392-558ac6d40b6c"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#d1f3d043-973f-4607-bcad-2bb28822eac6-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Last housing status is not nursing home"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS122FHIRDiabetesAssessGT9Pct",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/98735c81-5c91-4709-9392-558ac6d40b6c"
+      }, {
+        "reference": "Encounter/252f83eb-3c10-4be1-9b2a-37a5fa2d1cd2"
+      }, {
+        "reference": "Condition/404fd169-8a80-4fca-80c3-3403ace77621"
+      }, {
+        "reference": "Observation/17ecd24d-c664-4d2e-a7e5-147ba85e9bd1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/49571699-5392-4329-b6e0-e9e045f8a481"
+    }
+  } ]
+}

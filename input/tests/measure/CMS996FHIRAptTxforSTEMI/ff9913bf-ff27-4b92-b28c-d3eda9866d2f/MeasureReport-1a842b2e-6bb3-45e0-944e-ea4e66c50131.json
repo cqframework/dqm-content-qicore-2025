@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1a842b2e-6bb3-45e0-944e-ea4e66c50131",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "cad6632f-2c86-44b4-b61a-f21d3d20f7ea-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "ff9913bf-ff27-4b92-b28c-d3eda9866d2f"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#cad6632f-2c86-44b4-b61a-f21d3d20f7ea-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has Neurologic Impairment (exclusion diagnosis) that starts before ED encounter and ends during ED"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS996FHIRAptTxforSTEMI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/ff9913bf-ff27-4b92-b28c-d3eda9866d2f"
+  }, {
+    "reference": "Encounter/e13c72b5-ecbb-47c3-86b6-db07857a022e"
+  }, {
+    "reference": "Organization/d342ed62-d1a1-47bc-98b9-c2a668ce52eb"
+  }, {
+    "reference": "Coverage/4f606546-6e90-4d88-a238-96c4ffd2aa61"
+  }, {
+    "reference": "Condition/e558b71c-cfef-4e0e-a30d-cfcf62ac9c04"
+  }, {
+    "reference": "Condition/22a6d4aa-8731-41a6-ab68-277b8de543fe"
+  } ]
+}

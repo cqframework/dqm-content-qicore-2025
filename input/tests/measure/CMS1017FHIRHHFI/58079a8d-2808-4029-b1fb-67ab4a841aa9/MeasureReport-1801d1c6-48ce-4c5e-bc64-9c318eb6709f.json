@@ -1,0 +1,159 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1801d1c6-48ce-4c5e-bc64-9c318eb6709f",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "c51b4e05-ccc1-4e16-92ff-d7b58d5eafca-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "58079a8d-2808-4029-b1fb-67ab4a841aa9"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#c51b4e05-ccc1-4e16-92ff-d7b58d5eafca-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient fall + injury during 2 encounters. Both had Adverse Event Fall + Major or Mod Injury null POA"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "NumeratorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator-exclusion",
+          "display": "Numerator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "MeasureObservation_1_1_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 4
+    }, {
+      "id": "MeasureObservation_1_1_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 3
+    }, {
+      "id": "MeasureObservation_1_2_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "MeasureObservation_1_2_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Claim/10b6b4f7-caa7-416b-9ac4-ce2b31be4852"
+  }, {
+    "reference": "Claim/83a63633-a40d-42df-bf7b-926217bc5c34"
+  }, {
+    "reference": "Claim/4a637c9d-7a9f-47ba-82ce-bccb6c178827"
+  }, {
+    "reference": "Claim/2ffb614d-bcab-4d9b-a7db-7d05c762ee4d"
+  }, {
+    "reference": "Encounter/97a65847-84a8-43c2-b484-c19edd0cc221"
+  }, {
+    "reference": "Encounter/dbd5bae0-8a82-41d3-87db-90435832b576"
+  }, {
+    "reference": "Encounter/4af1e53b-9bc9-4827-82c2-92c33a35befc"
+  }, {
+    "reference": "Patient/58079a8d-2808-4029-b1fb-67ab4a841aa9"
+  }, {
+    "reference": "AdverseEvent/fc91fd08-1d44-450e-9c1f-42a5dc18363c"
+  }, {
+    "reference": "AdverseEvent/c1f37c47-add3-416a-8c2f-2b9db95dbc71"
+  }, {
+    "reference": "Practitioner/ed2e6008-02be-4ab3-8cde-71d9ae662705"
+  }, {
+    "reference": "Coverage/31becc75-85d0-4140-9814-ac4a5d55d16c"
+  }, {
+    "reference": "Organization/0c2ad564-34e4-4667-a0f0-b298231e2cb6"
+  } ]
+}

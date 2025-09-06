@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "54994142-c1e2-4ee8-8b39-9cef8e3e96d2",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4a996df4-b345-448e-9426-1be586ba250b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "f117390a-55f1-49b7-920a-c64d1934c89c"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4a996df4-b345-448e-9426-1be586ba250b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter overlaps MP (\"start\" : \"202x-12-31T23:00:00.000+00:00\",\"end\" : \"202x-01-01T00:00:00.000+00:00\") with status finished valid Referral (\"202x-10-31T23:59:00.000+00:00\") Status Active Intent Order\n\n\n\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS50FHIRReceiptofSpecialistReport",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/f117390a-55f1-49b7-920a-c64d1934c89c"
+  }, {
+    "reference": "Encounter/d4401c41-b031-4f66-9ae6-02a00fb3961d"
+  }, {
+    "reference": "ServiceRequest/79bf18b9-daa8-45fa-8af7-7209aaad00fc"
+  }, {
+    "reference": "Coverage/eb189856-2bed-47ce-83dd-c2ff8b78858e"
+  }, {
+    "reference": "Organization/3d71b1cb-9f5f-46ff-bada-9c2d4fc63e3e"
+  }, {
+    "reference": "Practitioner/7e5ce1c2-e40d-4450-9be4-335b3937ed0f"
+  } ]
+}

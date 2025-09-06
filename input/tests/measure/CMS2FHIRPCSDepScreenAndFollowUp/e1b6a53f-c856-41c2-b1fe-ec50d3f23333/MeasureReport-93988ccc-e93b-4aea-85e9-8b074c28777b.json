@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "93988ccc-e93b-4aea-85e9-8b074c28777b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "14b79ac2-9899-454a-b9d2-57a59a06b8ca-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "e1b6a53f-c856-41c2-b1fe-ec50d3f23333"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#14b79ac2-9899-454a-b9d2-57a59a06b8ca-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "18 yo patient with history of bipolar - remission"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS2FHIRPCSDepScreenAndFollowUp",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/e1b6a53f-c856-41c2-b1fe-ec50d3f23333"
+  }, {
+    "reference": "Encounter/f3c003e0-c51e-4529-ae6c-34183cc15074"
+  }, {
+    "reference": "Condition/33552a98-1b80-422d-ba89-9cd21b4134be"
+  }, {
+    "reference": "Coverage/a9b09314-9a7b-4c65-9321-32d17b88f8ab"
+  }, {
+    "reference": "Organization/77e7a954-62f2-4c0a-912f-35797b66c224"
+  }, {
+    "reference": "Practitioner/ff784b65-ed65-430b-9296-adf1f17de72c"
+  } ]
+}

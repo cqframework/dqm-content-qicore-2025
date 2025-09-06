@@ -1,0 +1,260 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-KidneyTransplantRecipientDuringMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "DENEXPass",
+        "given": [ "KidneyTransplantRecipientDuringMP" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2007-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/f7fd415d-f589-41f7-b6a0-2fe8db3de6d0",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "f7fd415d-f589-41f7-b6a0-2fe8db3de6d0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "3391000175108",
+          "display": "Office visit for pediatric care and assessment (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/f7fd415d-f589-41f7-b6a0-2fe8db3de6d0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/aa5db735-5e62-450d-bf9f-2a3064a80747",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "aa5db735-5e62-450d-bf9f-2a3064a80747",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "371125006",
+          "display": "Labile essential hypertension (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4"
+      },
+      "onsetDateTime": "2026-06-30T23:59:59.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/aa5db735-5e62-450d-bf9f-2a3064a80747"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/f21173a7-21f4-4405-9b48-dd52664f3242",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "f21173a7-21f4-4405-9b48-dd52664f3242",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "Z94.0",
+          "display": "Kidney transplant status"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4"
+      },
+      "onsetDateTime": "2026-06-30T23:59:59.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/f21173a7-21f4-4405-9b48-dd52664f3242"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/dfceed85-e149-4c73-96cc-9285d8dbc7d4",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "dfceed85-e149-4c73-96cc-9285d8dbc7d4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "3c8d1428-c9b5-402a-b233-43b76560383f-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#3c8d1428-c9b5-402a-b233-43b76560383f-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Kidney transplant recipient during MP - ConditionProblemsHealthConcerns"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS165FHIRControllingHighBP",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4"
+      }, {
+        "reference": "Encounter/f7fd415d-f589-41f7-b6a0-2fe8db3de6d0"
+      }, {
+        "reference": "Condition/aa5db735-5e62-450d-bf9f-2a3064a80747"
+      }, {
+        "reference": "Condition/f21173a7-21f4-4405-9b48-dd52664f3242"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/dfceed85-e149-4c73-96cc-9285d8dbc7d4"
+    }
+  } ]
+}

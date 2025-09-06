@@ -1,0 +1,399 @@
+{
+  "resourceType": "Bundle",
+  "id": "NUMER2and3Fail-REMDisorderCondEncDxOverlapsMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/5c33755f-40d8-4409-b699-a3499ddddda0",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "5c33755f-40d8-4409-b699-a3499ddddda0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1961-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/5c33755f-40d8-4409-b699-a3499ddddda0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/e5f0565c-fbcf-415d-a146-e268595881ed",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "e5f0565c-fbcf-415d-a146-e268595881ed",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5c33755f-40d8-4409-b699-a3499ddddda0"
+      },
+      "period": {
+        "start": "2026-01-02T00:00:00.000+00:00",
+        "end": "2026-01-02T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/e5f0565c-fbcf-415d-a146-e268595881ed"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/5913e227-870f-4bd7-91fb-53feffa68dae",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "5913e227-870f-4bd7-91fb-53feffa68dae",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "415238003",
+          "display": "Rapid eye movement sleep behavior disorder (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5c33755f-40d8-4409-b699-a3499ddddda0"
+      },
+      "onsetDateTime": "2025-01-01T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/5913e227-870f-4bd7-91fb-53feffa68dae"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/13db2d11-cca9-49dd-b96a-e507e0d7f1e6",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "13db2d11-cca9-49dd-b96a-e507e0d7f1e6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge",
+          "display": "Discharge"
+        } ]
+      } ],
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1366192",
+          "display": "clobazam 2.5 MG/ML Oral Suspension",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5c33755f-40d8-4409-b699-a3499ddddda0"
+      },
+      "authoredOn": "2026-01-01T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/13db2d11-cca9-49dd-b96a-e507e0d7f1e6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/6021aa16-4419-4441-8dc7-bbdf1ebd3fbb",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "6021aa16-4419-4441-8dc7-bbdf1ebd3fbb",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge",
+          "display": "Discharge"
+        } ]
+      } ],
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1366192",
+          "display": "clobazam 2.5 MG/ML Oral Suspension",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5c33755f-40d8-4409-b699-a3499ddddda0"
+      },
+      "authoredOn": "2026-12-31T23:59:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/6021aa16-4419-4441-8dc7-bbdf1ebd3fbb"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/a8c9543e-2148-48f9-bd4a-0f5ab6ff7b57",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "a8c9543e-2148-48f9-bd4a-0f5ab6ff7b57",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "a80371d3-6791-43b4-b714-b73e7a12120b-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "5c33755f-40d8-4409-b699-a3499ddddda0"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#a80371d3-6791-43b4-b714-b73e7a12120b-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "REM sleep disorder overlaps year before MP. Testing for condition encounter diagnosis to meet 100% coverage,"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS156FHIRHighRiskMedsElderly",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_3",
+        "population": [ {
+          "id": "InitialPopulation_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_3",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/5c33755f-40d8-4409-b699-a3499ddddda0"
+      }, {
+        "reference": "Encounter/e5f0565c-fbcf-415d-a146-e268595881ed"
+      }, {
+        "reference": "Condition/5913e227-870f-4bd7-91fb-53feffa68dae"
+      }, {
+        "reference": "MedicationRequest/13db2d11-cca9-49dd-b96a-e507e0d7f1e6"
+      }, {
+        "reference": "MedicationRequest/6021aa16-4419-4441-8dc7-bbdf1ebd3fbb"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/a8c9543e-2148-48f9-bd4a-0f5ab6ff7b57"
+    }
+  } ]
+}

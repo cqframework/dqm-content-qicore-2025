@@ -1,0 +1,276 @@
+{
+  "resourceType": "Bundle",
+  "id": "IPPass-IPSDMethamphetamine",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/e310f6d8-a415-42ba-b088-5a9ae856d4a7",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "e310f6d8-a415-42ba-b088-5a9ae856d4a7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2017-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/e310f6d8-a415-42ba-b088-5a9ae856d4a7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/699916db-80cf-499e-b62a-c931fb5db9df",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "699916db-80cf-499e-b62a-c931fb5db9df",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185464004",
+          "display": "Out of hours visit - not night visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/e310f6d8-a415-42ba-b088-5a9ae856d4a7"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/699916db-80cf-499e-b62a-c931fb5db9df"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/1cc05810-17e5-4970-90d9-20c94bf6d5ef",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "1cc05810-17e5-4970-90d9-20c94bf6d5ef",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "completed",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "977860",
+          "display": "methamphetamine hydrochloride 5 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/e310f6d8-a415-42ba-b088-5a9ae856d4a7"
+      },
+      "authoredOn": "2026-01-01T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2026-01-01T00:00:00.000+00:00",
+              "end": "2026-03-31T23:59:59.000+00:00"
+            }
+          }
+        }
+      } ],
+      "dispenseRequest": {
+        "expectedSupplyDuration": {
+          "value": 90,
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/1cc05810-17e5-4970-90d9-20c94bf6d5ef"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/1002431f-6a43-4289-b7f5-2124bbbba67b",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "1002431f-6a43-4289-b7f5-2124bbbba67b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "0227a89b-3535-4f73-8cb7-4b694319de1c-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "e310f6d8-a415-42ba-b088-5a9ae856d4a7"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#0227a89b-3535-4f73-8cb7-4b694319de1c-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "IPSD is Methamphetamine"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS136FHIRChildADHDMedFollowUp",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/e310f6d8-a415-42ba-b088-5a9ae856d4a7"
+      }, {
+        "reference": "Encounter/699916db-80cf-499e-b62a-c931fb5db9df"
+      }, {
+        "reference": "MedicationRequest/1cc05810-17e5-4970-90d9-20c94bf6d5ef"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/1002431f-6a43-4289-b7f5-2124bbbba67b"
+    }
+  } ]
+}

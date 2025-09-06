@@ -1,0 +1,109 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "7a5ead70-59bb-4aa1-aa27-ad0b65999322",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ae2c7d88-3d50-47f8-a9c6-9fd116d8046c-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b4219e21-be97-4f81-8a31-fee0035179c8"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ae2c7d88-3d50-47f8-a9c6-9fd116d8046c-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Fibrinolytic Therapy 30 minutes of ED start"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS996FHIRAptTxforSTEMI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b4219e21-be97-4f81-8a31-fee0035179c8"
+  }, {
+    "reference": "Location/ea8fb9b8-3946-4d65-834a-98552458c249"
+  }, {
+    "reference": "Encounter/f6c378c2-4807-4aad-a16f-eea10914ca23"
+  }, {
+    "reference": "Condition/9f06ee69-95e6-4de8-96b1-b0d31dac22d0"
+  }, {
+    "reference": "MedicationAdministration/a34df8ae-21e8-4be7-b0dd-552df881e5a6"
+  }, {
+    "reference": "Coverage/dd9f9aa6-54c0-47de-ae63-bda30789f66f"
+  }, {
+    "reference": "Organization/81f1a0fb-3136-4a49-ba82-a3c7b33b1a37"
+  }, {
+    "reference": "Practitioner/ebfb3cf4-978f-47b4-ae72-9be7d553888c"
+  } ]
+}

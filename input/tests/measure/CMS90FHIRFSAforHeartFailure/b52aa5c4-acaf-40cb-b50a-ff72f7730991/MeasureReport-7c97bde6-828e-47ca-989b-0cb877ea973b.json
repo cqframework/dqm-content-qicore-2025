@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "7c97bde6-828e-47ca-989b-0cb877ea973b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "882a82cf-f0e8-4da4-beb8-4194d6f8b004-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b52aa5c4-acaf-40cb-b50a-ff72f7730991"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#882a82cf-f0e8-4da4-beb8-4194d6f8b004-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has all VR12 Oblique during the correct timeframe but VR-12 Physical component summary (PCS) score - oblique method T-score is missing result."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS90FHIRFSAforHeartFailure",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b52aa5c4-acaf-40cb-b50a-ff72f7730991"
+  }, {
+    "reference": "Encounter/94e69759-15ec-41db-90d0-6fb00fe27b87"
+  }, {
+    "reference": "Encounter/388ee0ab-4bc8-4295-a1a4-c70d2951a308"
+  }, {
+    "reference": "Condition/dc29aeb6-0a91-4449-8940-29fa0ca9ffc1"
+  }, {
+    "reference": "Observation/9b9e8785-64b0-4cd1-ae46-f4ba746d0f84"
+  }, {
+    "reference": "Observation/4430c852-bd17-4e0c-8ab1-2cf90fcf9b4b"
+  }, {
+    "reference": "Observation/51362bd2-3606-45e5-a89e-3561bcc16a01"
+  }, {
+    "reference": "Observation/7c50b8de-c4d0-43cb-8d50-dd1e60310935"
+  } ]
+}

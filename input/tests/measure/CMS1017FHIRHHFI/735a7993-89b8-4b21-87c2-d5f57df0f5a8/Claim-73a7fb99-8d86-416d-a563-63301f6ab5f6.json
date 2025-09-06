@@ -1,0 +1,61 @@
+{
+  "resourceType": "Claim",
+  "id": "73a7fb99-8d86-416d-a563-63301f6ab5f6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "institutional",
+      "display": "Institutional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/735a7993-89b8-4b21-87c2-d5f57df0f5a8"
+  },
+  "created": "2026-11-13",
+  "provider": {
+    "reference": "Practitioner/f3257371-effc-4818-932f-c64f95ea45d8"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisReference": {
+      "reference": "Condition/a119b2ed-a0b4-4490-8ada-1e0c66bfabd5"
+    },
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "N"
+      } ]
+    }
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/a1c74b1c-b141-4df8-b8c4-56310d1ca0c2"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+        "code": "1101"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/daadc257-ceb9-4593-b26e-2a07d1d8b3ae"
+    } ]
+  } ]
+}

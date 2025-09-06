@@ -1,0 +1,201 @@
+{
+  "resourceType": "Bundle",
+  "id": "IPFail-18wTHAProcNov1OPConsultAug1",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/77c1d6a6-4c0c-4a07-b0fd-c8d88225c1b0",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "77c1d6a6-4c0c-4a07-b0fd-c8d88225c1b0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2008-01-01"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/4a60c702-a208-4cc7-a624-5251f593aea8",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "4a60c702-a208-4cc7-a624-5251f593aea8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2024-11-01T00:00:00.000+00:00"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://www.cms.gov/Medicare/Coding/ICD10",
+          "code": "0SR9019",
+          "display": "Replacement of Right Hip Joint with Metal Synthetic Substitute, Cemented, Open Approach"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/77c1d6a6-4c0c-4a07-b0fd-c8d88225c1b0"
+      },
+      "performedPeriod": {
+        "start": "2024-11-01T00:00:00.000+00:00",
+        "end": "2024-11-01T01:00:00.000+00:00"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/1cfedccd-7de3-4aa3-b8e8-2555ca558078",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "1cfedccd-7de3-4aa3-b8e8-2555ca558078",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108/version/20250301",
+          "code": "281036007",
+          "display": "Follow-up consultation (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/77c1d6a6-4c0c-4a07-b0fd-c8d88225c1b0"
+      },
+      "period": {
+        "start": "2025-08-01T00:00:00.000+00:00",
+        "end": "2025-08-01T01:15:00.000+00:00"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/65b050e9-3f1a-4699-86dd-dad02b2c251b",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "65b050e9-3f1a-4699-86dd-dad02b2c251b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "400b9adc-4cf5-4562-8da5-b51daee821c8-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "77c1d6a6-4c0c-4a07-b0fd-c8d88225c1b0"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#400b9adc-4cf5-4562-8da5-b51daee821c8-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient 18yo w/ a THA Procedure 11/01 during THAProcedure Interval & Post Op Visit Outpatient Encounter on 08/01 during Qualifying Encounter Interval"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS56FHIRFuncStatHipReplacement",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/77c1d6a6-4c0c-4a07-b0fd-c8d88225c1b0"
+      }, {
+        "reference": "Procedure/4a60c702-a208-4cc7-a624-5251f593aea8"
+      }, {
+        "reference": "Encounter/1cfedccd-7de3-4aa3-b8e8-2555ca558078"
+      } ]
+    }
+  } ]
+}

@@ -1,0 +1,83 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "ce4ecf88-efc8-472e-b585-d8a95370d8c0",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "c92f8ac2-487f-47f2-bf63-6af8dc699a80-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "11589117-d7b3-48d2-ac4e-b2dedd2dda37"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#c92f8ac2-487f-47f2-bf63-6af8dc699a80-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Inpatient encounter where patient is 17 at start of IP stay. Turns 18 day after. Does not meet IPP/Denom criteria. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS819FHIRHHORAE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/11589117-d7b3-48d2-ac4e-b2dedd2dda37"
+  }, {
+    "reference": "Encounter/20839258-f379-4278-b559-ebc02bf3906e"
+  }, {
+    "reference": "Encounter/a80b5a12-eb1f-4048-ab1c-5670ac18be43"
+  }, {
+    "reference": "Coverage/efe82d90-37fa-499c-bfd0-221c366f7ece"
+  }, {
+    "reference": "MedicationAdministration/e243e133-4f76-4735-82f1-b8126de62040"
+  } ]
+}

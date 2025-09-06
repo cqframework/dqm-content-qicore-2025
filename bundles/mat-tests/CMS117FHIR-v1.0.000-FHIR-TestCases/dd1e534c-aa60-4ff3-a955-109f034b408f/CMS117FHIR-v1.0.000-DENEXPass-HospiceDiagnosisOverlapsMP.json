@@ -1,0 +1,318 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-HospiceDiagnosisOverlapsMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/dd1e534c-aa60-4ff3-a955-109f034b408f",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "dd1e534c-aa60-4ff3-a955-109f034b408f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2024-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/dd1e534c-aa60-4ff3-a955-109f034b408f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/bdff65dd-8259-4b52-8511-dafe7cf745f7",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "bdff65dd-8259-4b52-8511-dafe7cf745f7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/dd1e534c-aa60-4ff3-a955-109f034b408f"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/bdff65dd-8259-4b52-8511-dafe7cf745f7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/edea6b15-9cc5-49b3-97f6-8f47d4ba96c1",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "edea6b15-9cc5-49b3-97f6-8f47d4ba96c1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "170935008",
+          "display": "Full care by hospice (finding)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/dd1e534c-aa60-4ff3-a955-109f034b408f"
+      },
+      "onsetDateTime": "2026-12-31T23:59:59.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/edea6b15-9cc5-49b3-97f6-8f47d4ba96c1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/3bbf6c11-3e95-4300-b4c0-d815ccfa2d6e",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "3bbf6c11-3e95-4300-b4c0-d815ccfa2d6e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "b5977750-405f-4a58-bddc-15155429641e-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "dd1e534c-aa60-4ff3-a955-109f034b408f"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#b5977750-405f-4a58-bddc-15155429641e-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has hospice diagnosis overlaps MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/ChildhoodImmunizationStatusFHIR",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/dd1e534c-aa60-4ff3-a955-109f034b408f"
+      }, {
+        "reference": "Encounter/bdff65dd-8259-4b52-8511-dafe7cf745f7"
+      }, {
+        "reference": "Condition/edea6b15-9cc5-49b3-97f6-8f47d4ba96c1"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/3bbf6c11-3e95-4300-b4c0-d815ccfa2d6e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/088851e5-54bf-44b4-8fe1-fa0733cdcd31",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "088851e5-54bf-44b4-8fe1-fa0733cdcd31",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "4a123eb6-e231-40bd-8a97-088d0133b5e3-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "dd1e534c-aa60-4ff3-a955-109f034b408f"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#4a123eb6-e231-40bd-8a97-088d0133b5e3-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has hospice diagnosis overlaps MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS117FHIRChildImmunStatus",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/dd1e534c-aa60-4ff3-a955-109f034b408f"
+      }, {
+        "reference": "Encounter/bdff65dd-8259-4b52-8511-dafe7cf745f7"
+      }, {
+        "reference": "Condition/edea6b15-9cc5-49b3-97f6-8f47d4ba96c1"
+      }, {
+        "reference": "MeasureReport/3bbf6c11-3e95-4300-b4c0-d815ccfa2d6e"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/088851e5-54bf-44b4-8fe1-fa0733cdcd31"
+    }
+  } ]
+}

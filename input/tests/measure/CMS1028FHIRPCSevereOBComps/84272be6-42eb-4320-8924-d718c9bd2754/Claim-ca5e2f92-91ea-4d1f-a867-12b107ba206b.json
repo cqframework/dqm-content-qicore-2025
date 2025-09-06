@@ -1,0 +1,112 @@
+{
+  "resourceType": "Claim",
+  "id": "ca5e2f92-91ea-4d1f-a867-12b107ba206b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "institutional",
+      "display": "Institutional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/84272be6-42eb-4320-8924-d718c9bd2754"
+  },
+  "created": "2026-11-08",
+  "provider": {
+    "reference": "Practitioner/55776783-7e91-45e3-a1e0-fa78922ead49"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "J45.21",
+        "display": "Mild intermittent asthma with (acute) exacerbation"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "discharge",
+        "display": "Discharge Diagnosis"
+      } ]
+    } ],
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "Y"
+      } ]
+    }
+  }, {
+    "sequence": 2,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "A32.7",
+        "display": "Listerial sepsis"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "discharge",
+        "display": "Discharge Diagnosis"
+      } ]
+    } ],
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "Y"
+      } ]
+    }
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/Coverage-1"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "careTeamSequence": [ 1 ],
+    "diagnosisSequence": [ 1 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "99232"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/ab28a9e0-1396-46a4-b345-61b1f3f27805"
+    } ]
+  }, {
+    "sequence": 2,
+    "careTeamSequence": [ 1 ],
+    "diagnosisSequence": [ 2 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "99233"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/ab28a9e0-1396-46a4-b345-61b1f3f27805"
+    } ]
+  } ],
+  "total": {
+    "value": 3800,
+    "currency": "USD"
+  }
+}

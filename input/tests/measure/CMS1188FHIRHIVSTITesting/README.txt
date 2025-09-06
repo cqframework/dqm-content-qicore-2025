@@ -1,0 +1,36 @@
+The purpose of this file is to allow users to view the mapping of test case names to their test case UUIDs. In order to find a specific test case file in the export, first locate the test case name in this document and then use the associated UUID to find the name of the folder in the export.
+
+Case # 34 - 8002d0cb-c4c0-4f54-96b0-c0e701947c07 = NUMFail 2LabBeforeMP1LabDuringMP
+Case # 33 - 73085704-0980-4bc2-bae1-b79e75a6be99 = IPPass EncDuringMP
+Case # 32 - 164b7628-fecf-440c-b138-3f7a43adcd7e = IPFail EncBeforeMP
+Case # 31 - 65404068-ae4f-43e1-ac90-11a293315aa1 = IPFail EncAfterMP
+Case # 30 - 2384d351-d4e4-4395-bd39-2446e18674e9 = NUMFail 2LabAfterMP1LabDuringMP
+Case # 29 - 9947d6a4-aff5-49ab-8a01-c3c438a7faa2 = NumPass AllLabTestsBeforeEncAndBooleanValue
+Case # 28 - 1b318b63-7b54-4410-9e9c-6107d5eb97ca = IPPass Age13onDec31beforeMP
+Case # 27 - b7cb0363-3581-4627-a684-a4a1e2f34f42 = NUMFail 3LabAfterMP
+Case # 26 - c51459e4-0636-452f-9cbc-d73b599ad7c5 = NUMFail 1LabAfterMP2LabDuringMP
+Case # 25 - 0319c116-3664-46a8-94c9-798a6d61ca29 = IPFail EncOnJan1AfterMP
+Case # 24 - 6e5d5e93-aaf8-440f-9f99-7fbb105dce3c = NUMFail 2LabBeforeMP1LabDuringMPUnlistedprevmedEnc
+Case # 23 - d66ec0c1-1b48-4337-afbb-c2abd3fae91e = NumPass AllLabTestsBeforeEnc
+Case # 22 - 3d16a3a5-a2e7-49f8-8335-1b908a646ff4 = NUMFail 3LabBeforeMP
+Case # 21 - 876ad4f9-f0aa-431e-b76d-c0ef5b9425e0 = IPPass HIVBeforeMP
+Case # 20 - 74ac3135-a328-4695-93aa-17368142976f = NumPass MultipleOfAllLabTestsDuringMP
+Case # 19 - 6c08efb1-922f-4e66-98bc-0de25182e723 = NumPass AllLabTestsTestingrelevantPeriodMissingStartdatetime
+Case # 18 - 71c8f6dc-592e-4675-8799-803d10991782 = IPFail Age13onJan2
+Case # 17 - 75fec959-d869-4377-a181-73985bd33787 = IPFail EncOnDec31BeforeMP
+Case # 16 - 3aa2678e-0a9c-4233-9634-daae7e0e31e9 = NumPass AllLabTestsAfterEncReleventPeriod
+Case # 15 - b21edef6-b548-47fc-b399-55188354fbf1 = NUMFail 1LabBeforeMP2LabDuringMP
+Case # 14 - bc145782-a19e-4d1f-824b-d48aa3e9fe10 = IPPass Age13onJan1
+Case # 13 - 77973e2d-625a-4c4f-aa69-2c716af0ad3c = NumPass AllLabTestsTestingrelevantPeriodMissingEnddatetime
+Case # 12 - de5e2460-196e-4a0f-bb6a-988c39edadd6 = NumPass AllLabTestsAfterEncReleventDateTime
+Case # 11 - bc4eb112-a4df-4295-8200-ad5b3f1b9254 = IPFail HIVonJan1at1200ofnextyear
+Case # 10 - 2334a2b0-2a8a-4fc7-b905-5271a1619eb2 = IPPass EncOnJan1at1200amofMP
+Case # 9 - b08c7da7-5871-499c-b266-c745ba23a426 = IPPass HIVonDec31at1159ofMP
+Case # 8 - 1734084f-7e87-43cb-9376-2261e94d3f09 = NumPass ComboGonorrheaANDChlamydiaCode
+Case # 7 - 1e1a00b6-fe51-46c8-b982-2c2ff0f20158 = IPPass Age13onDec31at1159ambeforeMP
+Case # 6 - 716d4ddd-aa73-48ea-b17a-7b037b76634e = IPFail AgeUnder13
+Case # 5 - ff1abac3-d7f8-427f-ab58-af89c95e0878 = IPPass EncOnDec31DuringMP
+Case # 4 - 23a881d2-1897-4674-8857-c438bdb8bd7d = NUMFail 3LabRelevantPeriodBeforeMP
+Case # 3 - 7fafc4ad-74d9-48e7-b12e-d51a11030a14 = NumPass AllLabTestsMultipleEnc
+Case # 2 - 770c7dc8-5c0b-4987-8f60-27e90f251dae = NumPass AllLabTestsBeforeEncWith2ofSameTest
+Case # 1 - efa9696e-1451-4f5e-895a-552485e5c2b9 = IPPass AgeOver13

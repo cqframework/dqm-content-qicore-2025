@@ -1,0 +1,87 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "94f3de2f-8537-46af-ae30-d2fc3c222eb1",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "3b00c466-420b-415f-82a5-d67b8a48dbd5-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "1ad9a1f0-fba7-4731-bfe1-557919944d63"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#3b00c466-420b-415f-82a5-d67b8a48dbd5-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with depression and suicide risk assessment done during Office Visit (using profile Observation Screening Assessment)"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/1ad9a1f0-fba7-4731-bfe1-557919944d63"
+  }, {
+    "reference": "Encounter/9c9afe24-47fc-4f1c-bd57-5bcc9dfd5e49"
+  }, {
+    "reference": "Observation/d00e2923-c1d7-462b-b3c9-1016539549d3"
+  }, {
+    "reference": "Condition/1a6210be-ab4a-4b1d-bae0-567d7ec8ab2c"
+  }, {
+    "reference": "Coverage/6a91549d-21d8-4a2d-a93d-4e5713dff5d1"
+  }, {
+    "reference": "Organization/0967956f-9bf9-4157-bd72-ba0f5a8fef15"
+  }, {
+    "reference": "Practitioner/7181e973-6004-4897-8723-a8a4ff589746"
+  } ]
+}

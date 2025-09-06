@@ -1,0 +1,36 @@
+The purpose of this file is to allow users to view the mapping of test case names to their test case UUIDs. In order to find a specific test case file in the export, first locate the test case name in this document and then use the associated UUID to find the name of the folder in the export.
+
+Case # 34 - a0a8def2-58b7-4cac-ad57-1d2c01c0adc2 = SDEPass SDECoverage2
+Case # 33 - 356b9969-23f9-4cf9-8a6e-a80cfc7bfad4 = SDEPass SDECoverage
+Case # 32 - 2f117e63-a44a-4471-8f7d-d39ec5e21b16 = DENEXPass PregnancyOvrlpsMP2
+Case # 31 - 53711871-5aac-4e37-a047-9dae85fcf6cb = DENEXPass HospiceDiagnosisOverlapsMP2
+Case # 30 - bd9b9e02-ce12-43cb-af1c-25298c891e62 = DENEXPass HospiceServicesEndOnJan1OfMP
+Case # 29 - 259f8551-1cea-44f5-ae9e-e3f083d9f48f = DENEXPass HospiceServicesEndOnDec31OfMP
+Case # 28 - 1e0720b0-0782-4455-a355-8c1ecec3c653 = DENEXPass HospiceServiceRequestDuringMP
+Case # 27 - 598662b8-30c9-4f9b-a2d1-d91bea113d77 = DENEXPass HospiceProcedureStartsDuringMP
+Case # 26 - 4a9211fc-d757-47ae-8bc0-0803c43a6728 = DENEXPass HospiceObsValueIsYes
+Case # 25 - 4304f97a-e2bb-4cda-93fa-ab510a136403 = DENEXPass HospiceEncounterOverlapsMP
+Case # 24 - a0c68789-2a1b-4bc4-b6a4-d8f6b154d8ac = DENEXPass HospiceDischargeToHomeDuringMP
+Case # 23 - dbb639f6-f7b7-41c8-bc30-84e5574c08cd = DENEXPass HospiceDiagnosisOverlapsMP
+Case # 22 - dfabce9a-f0fe-4095-a948-074d3aa8ccc7 = DENEXFail HospiceServicesEndOnJan1AfterMP
+Case # 21 - 362bc370-9fa5-4806-9cd3-378c484fa873 = DENEXFail HospiceServicesEndOnDec31B4MP
+Case # 20 - b7538229-f1b4-4536-a083-c24afad633b7 = IPPass PreventiveCareGroupCounseling
+Case # 19 - da2f993c-7b67-451b-8947-1e774e3450c5 = IPPass PreventiveCareIndividualCounseling
+Case # 18 - 63bf1fd6-7829-4870-93cc-b55e3c545808 = IPPass PreventiveCareInitialVisit
+Case # 17 - 0a237d9b-7cd3-4d2c-8ae6-a0b19e491dcb = IPPass PreventiveCareEstablishedVisit
+Case # 16 - 5071effa-205b-4d59-92d9-28c171c7efa1 = IPPass TelephoneVisit
+Case # 15 - 83701ffc-f2e2-4f54-8b52-db9d363175e4 = IPPass HomeHealthcare
+Case # 14 - 1c2f5396-3698-4873-8a90-82c9f4da4622 = IPPass 17yoWOfficeVisEncDec31OfMP
+Case # 13 - 6b953d45-0f64-4b8c-a401-e3852c81ecb6 = IPPass 3yoWOfficeVisEncJan1OfMP
+Case # 12 - 2b1d8381-4a24-46fd-bf54-057839f204ff = IPFail 18yoWOfficVisEncJan1OfMP
+Case # 11 - 92184de2-2a98-4643-bb35-58cde6bbe3dc = IPFail 2yoWOfficeVisEncJan1OfMP
+Case # 10 - 055edb62-3f1f-4b4e-8671-9ab319df0e94 = Num1Fail BMIObsAfterMP
+Case # 8 - 7aed939e-eb8b-46e4-aea0-1bb414209410 = Num3Fail ActivityCounAfterMP
+Case # 7 - 285fc8a2-e8c1-49a3-88d9-7ab50b6e2aa5 = Num3Pass ActivityCouninMP
+Case # 6 - 44776848-5b7e-44c4-8456-1c6d06fa9fb7 = Num2Fail NutriCounAfterMP
+Case # 5 - 22701f90-c676-49d5-865e-188a8ddad0c2 = Num2Pass NutriCouninMP
+Case # 4 - 3ae31151-f699-470a-bb55-6a46e99b17f9 = DENEXFail PregnancyAfterMP
+Case # 3 - f9daa593-c909-43a1-9fb7-f3116380d37f = DENEXPass PregnancyOvrlpsMP
+Case # 2 - 80618581-1eba-4ba5-9523-662df5ca818d = IPFail 17WithNoQualEnc
+Case # 1 - 1b74da2d-38a7-48af-b71e-e2f64bdc01c9 = IPPass 15WithQualEnc
+Case # 9 - 5624ca8c-a408-4097-889f-ecb15d2f7f09 = Num1Pass VitalSignsObsinMP

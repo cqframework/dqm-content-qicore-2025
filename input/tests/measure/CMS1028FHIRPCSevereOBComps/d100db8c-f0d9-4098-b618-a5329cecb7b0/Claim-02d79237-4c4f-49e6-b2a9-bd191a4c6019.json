@@ -1,0 +1,112 @@
+{
+  "resourceType": "Claim",
+  "id": "02d79237-4c4f-49e6-b2a9-bd191a4c6019",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "institutional",
+      "display": "Institutional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/d100db8c-f0d9-4098-b618-a5329cecb7b0"
+  },
+  "created": "2026-11-08",
+  "provider": {
+    "reference": "Practitioner/practitioner-123456"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "O99.840",
+        "display": "Bariatric Surgery-81e0"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "discharge",
+        "display": "Discharge Diagnosis"
+      } ]
+    } ],
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "Y"
+      } ]
+    }
+  }, {
+    "sequence": 2,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "A32.7",
+        "display": "Listerial sepsis"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "discharge",
+        "display": "Discharge Diagnosis"
+      } ]
+    } ],
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "N"
+      } ]
+    }
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/Coverage-1"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "careTeamSequence": [ 1 ],
+    "diagnosisSequence": [ 1 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "99232"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/1cd19830-200d-4568-bc7f-214426f71830"
+    } ]
+  }, {
+    "sequence": 2,
+    "careTeamSequence": [ 1 ],
+    "diagnosisSequence": [ 2 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "99233"
+      } ]
+    },
+    "encounter": [ {
+      "reference": "Encounter/1cd19830-200d-4568-bc7f-214426f71830"
+    } ]
+  } ],
+  "total": {
+    "value": 3800,
+    "currency": "USD"
+  }
+}

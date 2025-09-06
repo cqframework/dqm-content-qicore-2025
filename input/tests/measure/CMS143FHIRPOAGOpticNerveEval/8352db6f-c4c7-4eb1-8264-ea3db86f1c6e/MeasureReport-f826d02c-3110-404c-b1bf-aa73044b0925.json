@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f826d02c-3110-404c-b1bf-aa73044b0925",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "0c653719-a7a3-472f-951c-ed0906eb6bee-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "8352db6f-c4c7-4eb1-8264-ea3db86f1c6e"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#0c653719-a7a3-472f-951c-ed0906eb6bee-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Glaucoma Diagnosis onset starts 1 minute after encounter and fails overlap interval"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS143FHIRPOAGOpticNerveEval",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/8352db6f-c4c7-4eb1-8264-ea3db86f1c6e"
+  }, {
+    "reference": "Condition/e0306dae-675f-4c3d-9fb3-a21dd40c726f"
+  }, {
+    "reference": "Observation/bbd49df3-26ec-44d1-9f74-0067bd2b6acf"
+  }, {
+    "reference": "Observation/ff94045f-0fe7-406e-a9f0-3a4471e961c4"
+  }, {
+    "reference": "Encounter/bffd4ee0-d53b-4cc9-bafd-bab6830373b3"
+  } ]
+}

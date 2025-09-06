@@ -1,0 +1,95 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "a052b2a8-4bdf-4aef-955f-29ac3eb883f6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "48a5fbbb-1dad-46dd-9a30-37b48c4a224c-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "ba81ece9-e0dc-42fe-9489-451f28b6f223"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#48a5fbbb-1dad-46dd-9a30-37b48c4a224c-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has all KCCQ Total Score Assessments with results during the correct timeframe."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS90FHIRFSAforHeartFailure",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/ba81ece9-e0dc-42fe-9489-451f28b6f223"
+  }, {
+    "reference": "Encounter/4fb222fb-a606-4edd-921e-c58168549a3a"
+  }, {
+    "reference": "Encounter/9d220ece-0cb4-4e14-a8fa-b93d9d46d961"
+  }, {
+    "reference": "Condition/867d6279-4a7c-4b98-b593-1b5cb3ce6a0d"
+  }, {
+    "reference": "Observation/951ee773-8767-449a-97b6-d03214e1291b"
+  }, {
+    "reference": "Observation/15a8d72c-2abf-486f-a1e5-823a1f018a88"
+  } ]
+}

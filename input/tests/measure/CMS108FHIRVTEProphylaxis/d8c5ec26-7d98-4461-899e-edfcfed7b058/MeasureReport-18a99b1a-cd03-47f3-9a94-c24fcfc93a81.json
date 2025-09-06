@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "18a99b1a-cd03-47f3-9a94-c24fcfc93a81",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4e08850d-ae5f-4052-bd58-60f8bf852b2f-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "d8c5ec26-7d98-4461-899e-edfcfed7b058"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4e08850d-ae5f-4052-bd58-60f8bf852b2f-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "venous foot pump not ordered and low dose unfractionated heparin not ordered due to  medical reason <= 1 day after start of IP encounter\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/d8c5ec26-7d98-4461-899e-edfcfed7b058"
+  }, {
+    "reference": "Encounter/84a36e5a-c9ff-4b27-9f44-13e578190e2e"
+  }, {
+    "reference": "Coverage/45b374dc-d49b-4b2b-9ad2-76cf3d666aa5"
+  }, {
+    "reference": "MedicationRequest/767fdffe-c9e4-4ee4-9a51-f8fb8140613d"
+  }, {
+    "reference": "ServiceRequest/03499f12-674c-491d-bb09-3691c5243ab4"
+  }, {
+    "reference": "Organization/cae59df3-ab29-414a-8ea4-c7d7188bb351"
+  }, {
+    "reference": "Practitioner/e4316e52-3b57-47d6-800a-11557137b378"
+  } ]
+}

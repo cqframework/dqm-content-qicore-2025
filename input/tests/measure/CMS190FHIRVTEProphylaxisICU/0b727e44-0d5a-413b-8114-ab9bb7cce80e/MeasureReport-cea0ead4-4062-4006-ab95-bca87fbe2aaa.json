@@ -1,0 +1,109 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "cea0ead4-4062-4006-ab95-bca87fbe2aaa",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "c571434b-2995-4a6e-a4a9-cc24be636833-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "0b727e44-0d5a-413b-8114-ab9bb7cce80e"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#c571434b-2995-4a6e-a4a9-cc24be636833-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with VTE prophylaxis done by VFP applied "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS190FHIRVTEProphylaxisICU",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/0b727e44-0d5a-413b-8114-ab9bb7cce80e"
+  }, {
+    "reference": "Encounter/2ac833d1-f8a9-45ae-9e0b-78009935cb78"
+  }, {
+    "reference": "Coverage/ec26ef62-4e0d-47d1-b4bc-553e676e8f86"
+  }, {
+    "reference": "Location/0f765b87-4abb-4010-8545-d9e9756ae3d5"
+  }, {
+    "reference": "Location/83e34fe6-222d-4aa5-95a5-dbbc05d1595d"
+  }, {
+    "reference": "Procedure/eda511d5-a9e6-4392-877a-17b8b0bcf9e6"
+  }, {
+    "reference": "Organization/cf5dcbfa-eb94-4544-aed0-bca060ecb285"
+  }, {
+    "reference": "Practitioner/26088a40-8c28-4192-8347-23a9f1faa18d"
+  } ]
+}

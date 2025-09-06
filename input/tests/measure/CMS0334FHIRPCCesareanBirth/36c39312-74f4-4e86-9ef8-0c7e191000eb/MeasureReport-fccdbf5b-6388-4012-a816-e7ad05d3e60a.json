@@ -1,0 +1,103 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "fccdbf5b-6388-4012-a816-e7ad05d3e60a",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "347b5816-4823-4cee-b73c-f63e173769bd-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "36c39312-74f4-4e86-9ef8-0c7e191000eb"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#347b5816-4823-4cee-b73c-f63e173769bd-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Tests that Assess Gravida Rel  Date/Time is no more than 42 weeks before the Time of Delivery  Date/Time.  This case is 42 weeks and 1 min.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS0334FHIRPCCesareanBirth",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/36c39312-74f4-4e86-9ef8-0c7e191000eb"
+  }, {
+    "reference": "Observation/52bd4076-6470-4d55-8f6f-4a2edb78e711"
+  }, {
+    "reference": "Observation/a257fb42-f4e2-4390-a75c-8de8eaaf450f"
+  }, {
+    "reference": "Observation/007629d3-1924-440a-9cbc-c3fadcd506c8"
+  }, {
+    "reference": "Encounter/57272266-b22e-484e-94de-e996de9044cb"
+  }, {
+    "reference": "Procedure/b1f18431-bb2c-41ec-90db-2316b33825c4"
+  }, {
+    "reference": "Coverage/4d2d31a2-d9e8-4b79-8e82-73ad3336392e"
+  }, {
+    "reference": "Organization/4eacd6d7-6d53-4fd5-aa5c-a8efa4cb6f47"
+  }, {
+    "reference": "Condition/85181575-95dd-4686-9d82-d5304e579c88"
+  }, {
+    "reference": "Practitioner/9f0e9535-3959-4f5c-8156-97c658e1fda2"
+  } ]
+}

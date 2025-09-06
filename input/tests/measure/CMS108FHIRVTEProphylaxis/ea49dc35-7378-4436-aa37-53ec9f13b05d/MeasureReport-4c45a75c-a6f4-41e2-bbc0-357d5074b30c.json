@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "4c45a75c-a6f4-41e2-bbc0-357d5074b30c",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "44bbf851-3709-456b-bcfc-78f3fb921ea3-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "ea49dc35-7378-4436-aa37-53ec9f13b05d"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#44bbf851-3709-456b-bcfc-78f3fb921ea3-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "TestMultipleOccur - 2 occurrences both pass NUMERATOR - even 2nd one Medication: Administered: Glycoprotein IIb/IIIa Inhibitors was prior to Adm but it still passes due to on the day of adm\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 2
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/ea49dc35-7378-4436-aa37-53ec9f13b05d"
+  }, {
+    "reference": "Encounter/e3e68e22-d290-45bd-a219-13986429b1e4"
+  }, {
+    "reference": "Encounter/a55e50e7-e205-4a19-af30-65c255423efc"
+  }, {
+    "reference": "Coverage/258586b4-d3b3-4263-929d-b27019908448"
+  }, {
+    "reference": "MedicationAdministration/e8f41516-c552-47d6-97af-b2e3f41e1755"
+  }, {
+    "reference": "Procedure/4a1f78b9-4ed9-4a5e-9f10-fec9b5760e07"
+  }, {
+    "reference": "Organization/9f9d949b-3f6b-4c1e-ae12-5df416d9a552"
+  }, {
+    "reference": "Practitioner/d1c2bb0f-1c72-4ed1-9b76-555240f09c81"
+  } ]
+}

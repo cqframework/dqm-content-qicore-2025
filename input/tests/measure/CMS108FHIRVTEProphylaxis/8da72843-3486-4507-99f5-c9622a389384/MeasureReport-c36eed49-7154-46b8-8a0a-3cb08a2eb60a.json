@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c36eed49-7154-46b8-8a0a-3cb08a2eb60a",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "3e7f46c7-ed84-44eb-93e4-debae48d4aa0-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "8da72843-3486-4507-99f5-c9622a389384"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#3e7f46c7-ed84-44eb-93e4-debae48d4aa0-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter Dx of HemStroke without Rank =2 (rank = 0 is not valid value due to QICore).\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/8da72843-3486-4507-99f5-c9622a389384"
+  }, {
+    "reference": "Encounter/6144f383-4c0f-4830-9950-1805c3867432"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "Coverage/7f9b5814-00ee-4890-94d5-f9948082a689"
+  }, {
+    "reference": "Condition/f887e328-a637-4670-8109-e5afbaf8abdf"
+  }, {
+    "reference": "Organization/585d66d0-9a4a-46bd-a7aa-7598da3b9d6a"
+  }, {
+    "reference": "Practitioner/32e6f39e-54d3-4356-b7e0-653c9b9afb8e"
+  } ]
+}

@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "6937234f-dafe-4e7c-8108-f31f24b101d4",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "964521a4-0faf-4f9f-ab38-4af200f0e6e3-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "dc409230-77aa-4b66-bc1d-84e421089367"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#964521a4-0faf-4f9f-ab38-4af200f0e6e3-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Enc starts first minute of MP and ends in 59 minutes, referral order made."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS50FHIRReceiptofSpecialistReport",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/dc409230-77aa-4b66-bc1d-84e421089367"
+  }, {
+    "reference": "ServiceRequest/754a0ee7-7e92-45b9-b717-539d05402805"
+  }, {
+    "reference": "Procedure/e37adca0-11f4-4249-b136-6c956c8b49b3"
+  }, {
+    "reference": "Coverage/3f296c5e-ce84-4527-8813-e0c1be5ad684"
+  }, {
+    "reference": "Organization/3175e9b5-0b09-4233-b282-ea8eec546a9c"
+  }, {
+    "reference": "Practitioner/f3b7474b-b83a-49de-be77-8d5f02a3eccc"
+  } ]
+}

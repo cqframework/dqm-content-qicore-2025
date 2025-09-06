@@ -1,0 +1,311 @@
+{
+  "resourceType": "Bundle",
+  "id": "8e9680a15a66f70123123i5c",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "03c452a4-bdd6-4f64-84ce-b2b87383da58",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "IPPFail",
+        "given": [ "OpioidInORNoOtherOpioid" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1974-12-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/2d73e2ed-8b14-4060-8239-f9338bbeb6fd",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "2d73e2ed-8b14-4060-8239-f9338bbeb6fd",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58"
+      },
+      "period": {
+        "start": "2026-04-07T05:00:00.000+00:00",
+        "end": "2026-04-09T08:15:00.000+00:00"
+      },
+      "location": [ {
+        "location": {
+          "reference": "Location/f3470e14-b7b7-4594-b00d-63e377c32a91"
+        },
+        "period": {
+          "start": "2026-04-07T06:00:00.000+00:00",
+          "end": "2026-04-07T07:59:00.000+00:00"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/2d73e2ed-8b14-4060-8239-f9338bbeb6fd"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Location/f3470e14-b7b7-4594-b00d-63e377c32a91",
+    "resource": {
+      "resourceType": "Location",
+      "id": "f3470e14-b7b7-4594-b00d-63e377c32a91",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location" ]
+      },
+      "identifier": [ {
+        "use": "usual",
+        "system": "http://exampleoflocation.com",
+        "value": "B1-S.F2"
+      } ],
+      "name": "Medical Surgical East, first floor",
+      "type": [ {
+        "coding": [ {
+          "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
+          "code": "1096-7",
+          "display": "Operating Room/Suite"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/f3470e14-b7b7-4594-b00d-63e377c32a91"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationAdministration/e8d0b9a9-893b-482e-8844-9bbc865d16a9",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "e8d0b9a9-893b-482e-8844-9bbc865d16a9",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationadministration" ]
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1010600",
+          "display": "Opioids, All"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58"
+      },
+      "effectivePeriod": {
+        "start": "2026-04-07T07:00:00.000+00:00",
+        "end": "2026-04-07T07:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationAdministration/e8d0b9a9-893b-482e-8844-9bbc865d16a9"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/21cd8482-723c-474a-ad0d-b1ca3e999246",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "21cd8482-723c-474a-ad0d-b1ca3e999246",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "status": "active",
+      "subscriberId": "523435",
+      "beneficiary": {
+        "reference": "Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/b34079e5-4ba9-4c6e-b558-1cb5f6283487"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/21cd8482-723c-474a-ad0d-b1ca3e999246"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/b34079e5-4ba9-4c6e-b558-1cb5f6283487",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "b34079e5-4ba9-4c6e-b558-1cb5f6283487",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/b34079e5-4ba9-4c6e-b558-1cb5f6283487"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/bd7aa8be-56d8-4a2f-badc-513ca6a98c74",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "bd7aa8be-56d8-4a2f-badc-513ca6a98c74",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "b514b6a5-7bf2-45fb-b77b-2d4c55639ca1-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "03c452a4-bdd6-4f64-84ce-b2b87383da58"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#b514b6a5-7bf2-45fb-b77b-2d4c55639ca1-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter-1 4/7 0500 - 4/9 0815 of MP, in OR 4/7 0600 - 0759,  MedAdmin-1 4/7 Opioid 0700-0715, Opioid given in OR"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS819FHIRHHORAE",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/03c452a4-bdd6-4f64-84ce-b2b87383da58"
+      }, {
+        "reference": "Encounter/2d73e2ed-8b14-4060-8239-f9338bbeb6fd"
+      }, {
+        "reference": "Location/f3470e14-b7b7-4594-b00d-63e377c32a91"
+      }, {
+        "reference": "MedicationAdministration/e8d0b9a9-893b-482e-8844-9bbc865d16a9"
+      }, {
+        "reference": "Coverage/21cd8482-723c-474a-ad0d-b1ca3e999246"
+      }, {
+        "reference": "Organization/b34079e5-4ba9-4c6e-b558-1cb5f6283487"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/bd7aa8be-56d8-4a2f-badc-513ca6a98c74"
+    }
+  } ]
+}

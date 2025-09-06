@@ -1,0 +1,1514 @@
+{
+  "resourceType": "Bundle",
+  "id": "denompass-allscans",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/3de5781f-f272-4d5c-855e-9628290d7ed5",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "3de5781f-f272-4d5c-855e-9628290d7ed5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient", "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "AllScans",
+        "given": [ "DENOMPass" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1987-06-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "11ab6819-22d2-47d4-895b-8e8a13f45b8a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-03T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/a2957030-f30f-4ad6-abe2-bb8ddf85c102",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "a2957030-f30f-4ad6-abe2-bb8ddf85c102",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31752-1",
+          "display": "Abdomen and Pelvis Low Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 63,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 597,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/a2957030-f30f-4ad6-abe2-bb8ddf85c102"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/e86623a2-485b-4d9c-9574-3c83e8c36e51",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e86623a2-485b-4d9c-9574-3c83e8c36e51",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31753-9",
+          "display": "Abdomen and Pelvis Routine Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 28,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 643,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/e86623a2-485b-4d9c-9574-3c83e8c36e51"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/be80bb7a-a5fa-4e5a-b717-51b709e4acfb",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "be80bb7a-a5fa-4e5a-b717-51b709e4acfb",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31754-7",
+          "display": "Abdomen and Pelvis High Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 28,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1259,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/be80bb7a-a5fa-4e5a-b717-51b709e4acfb"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/504ba515-6c98-4a66-a414-92e0699d72d8",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "504ba515-6c98-4a66-a414-92e0699d72d8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31755-4",
+          "display": "Cardiac Low Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 54,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 92,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/504ba515-6c98-4a66-a414-92e0699d72d8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/c74d1ec9-c841-4771-9508-9179629a3af4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c74d1ec9-c841-4771-9508-9179629a3af4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31756-2",
+          "display": "Cardiac Routine Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 31,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 575,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/c74d1ec9-c841-4771-9508-9179629a3af4"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/23a4e60c-d7e1-4215-bee0-ed6a98e146e7",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "23a4e60c-d7e1-4215-bee0-ed6a98e146e7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31758-8",
+          "display": "Chest Low Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 54,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 376,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/23a4e60c-d7e1-4215-bee0-ed6a98e146e7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/bfc1081a-d7e3-4914-a74e-e0285a991b4c",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "bfc1081a-d7e3-4914-a74e-e0285a991b4c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31759-6",
+          "display": "Chest Routine Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 48,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 376,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/bfc1081a-d7e3-4914-a74e-e0285a991b4c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/88f3cab8-e1bc-45c2-831e-f5368fd2ec3c",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "88f3cab8-e1bc-45c2-831e-f5368fd2ec3c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31761-2",
+          "display": "Cardiac High Dose and Chest High Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 48,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1281,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/88f3cab8-e1bc-45c2-831e-f5368fd2ec3c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/8197965c-b418-4b1f-9f18-d907759c9877",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "8197965c-b418-4b1f-9f18-d907759c9877",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31762-0",
+          "display": "Head Low Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 114,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 581,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/8197965c-b418-4b1f-9f18-d907759c9877"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/c0c6e81d-ae33-4100-bce0-c5eff9fb6e08",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c0c6e81d-ae33-4100-bce0-c5eff9fb6e08",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31763-8",
+          "display": "Head Routine Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 114,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1024,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/c0c6e81d-ae33-4100-bce0-c5eff9fb6e08"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/b5e9c415-d4bf-49c1-b51e-a9a49f5dd01c",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b5e9c415-d4bf-49c1-b51e-a9a49f5dd01c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31764-6",
+          "display": "Head High Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 114,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1024,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/b5e9c415-d4bf-49c1-b51e-a9a49f5dd01c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/4272203b-8245-484b-87a8-5f87c4779571",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4272203b-8245-484b-87a8-5f87c4779571",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31765-3",
+          "display": "Extremity"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 72,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 319,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/4272203b-8245-484b-87a8-5f87c4779571"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/1649f22b-5353-43aa-b0e2-9b8da9b05ee8",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "1649f22b-5353-43aa-b0e2-9b8da9b05ee8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31766-1",
+          "display": "Neck or Cervical Spine"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 24,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1259,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/1649f22b-5353-43aa-b0e2-9b8da9b05ee8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/b04f3480-c12e-4093-b90a-6e8b9c5813c3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b04f3480-c12e-4093-b90a-6e8b9c5813c3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31767-9",
+          "display": "Thoracic or Lumbar Spine"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 24,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1259,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/b04f3480-c12e-4093-b90a-6e8b9c5813c3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/87f7dec3-cc12-4dc0-85c7-78a54e8adbd0",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "87f7dec3-cc12-4dc0-85c7-78a54e8adbd0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31768-7",
+          "display": "Simultaneous Chest and Abdomen and Pelvis"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 28,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 1636,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/87f7dec3-cc12-4dc0-85c7-78a54e8adbd0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/82575f00-9b86-4ecd-9b58-8df8e9c9a857",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "82575f00-9b86-4ecd-9b58-8df8e9c9a857",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31851-1",
+          "display": "Simultaneous Thoracic and Lumbar Spine"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 24,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 2519,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/82575f00-9b86-4ecd-9b58-8df8e9c9a857"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/13760ee4-f6ae-45cb-9cd8-4d6d41bf412f",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "13760ee4-f6ae-45cb-9cd8-4d6d41bf412f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31769-5",
+          "display": "Simultaneous Head and Neck Routine Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 24,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 2284,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/13760ee4-f6ae-45cb-9cd8-4d6d41bf412f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/5eb8fdb9-9168-4cd8-8ba6-40672d195583",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "5eb8fdb9-9168-4cd8-8ba6-40672d195583",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-clinical-result" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "96914-7",
+          "display": "CT dose and image quality category"
+        } ],
+        "text": "CT dose and image quality category"
+      },
+      "subject": {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      },
+      "encounter": {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      },
+      "effectiveDateTime": "2026-01-02T00:00:00.000+00:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "LA31770-3",
+          "display": "Simultaneous Head and Neck High Dose"
+        } ]
+      },
+      "component": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96912-1",
+            "display": "Calculated CT global noise"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 24,
+          "unit": "[hnsf'U]",
+          "system": "http://unitsofmeasure.org",
+          "code": "[hnsf'U]"
+        }
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "96913-9",
+            "display": "Calculated CT size-adjusted dose"
+          } ]
+        },
+        "valueQuantity": {
+          "value": 3091,
+          "unit": "mGy.cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mGy.cm"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/5eb8fdb9-9168-4cd8-8ba6-40672d195583"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/a33894aa-3084-4b86-b923-47fb55707681",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "a33894aa-3084-4b86-b923-47fb55707681",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "4dcf5533-4b1d-4bc6-9ba1-27be9919c0f7-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "3de5781f-f272-4d5c-855e-9628290d7ed5"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#4dcf5533-4b1d-4bc6-9ba1-27be9919c0f7-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has multiple scans of every possible type with good dose and noise"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1074FHIRCTIQR",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 18
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 18
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/3de5781f-f272-4d5c-855e-9628290d7ed5"
+      }, {
+        "reference": "Encounter/11ab6819-22d2-47d4-895b-8e8a13f45b8a"
+      }, {
+        "reference": "Observation/a2957030-f30f-4ad6-abe2-bb8ddf85c102"
+      }, {
+        "reference": "Observation/e86623a2-485b-4d9c-9574-3c83e8c36e51"
+      }, {
+        "reference": "Observation/be80bb7a-a5fa-4e5a-b717-51b709e4acfb"
+      }, {
+        "reference": "Observation/504ba515-6c98-4a66-a414-92e0699d72d8"
+      }, {
+        "reference": "Observation/c74d1ec9-c841-4771-9508-9179629a3af4"
+      }, {
+        "reference": "Observation/23a4e60c-d7e1-4215-bee0-ed6a98e146e7"
+      }, {
+        "reference": "Observation/bfc1081a-d7e3-4914-a74e-e0285a991b4c"
+      }, {
+        "reference": "Observation/88f3cab8-e1bc-45c2-831e-f5368fd2ec3c"
+      }, {
+        "reference": "Observation/8197965c-b418-4b1f-9f18-d907759c9877"
+      }, {
+        "reference": "Observation/c0c6e81d-ae33-4100-bce0-c5eff9fb6e08"
+      }, {
+        "reference": "Observation/b5e9c415-d4bf-49c1-b51e-a9a49f5dd01c"
+      }, {
+        "reference": "Observation/4272203b-8245-484b-87a8-5f87c4779571"
+      }, {
+        "reference": "Observation/1649f22b-5353-43aa-b0e2-9b8da9b05ee8"
+      }, {
+        "reference": "Observation/b04f3480-c12e-4093-b90a-6e8b9c5813c3"
+      }, {
+        "reference": "Observation/87f7dec3-cc12-4dc0-85c7-78a54e8adbd0"
+      }, {
+        "reference": "Observation/82575f00-9b86-4ecd-9b58-8df8e9c9a857"
+      }, {
+        "reference": "Observation/13760ee4-f6ae-45cb-9cd8-4d6d41bf412f"
+      }, {
+        "reference": "Observation/5eb8fdb9-9168-4cd8-8ba6-40672d195583"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/a33894aa-3084-4b86-b923-47fb55707681"
+    }
+  } ]
+}

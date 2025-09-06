@@ -1,0 +1,376 @@
+{
+  "resourceType": "Bundle",
+  "id": "64d118051252352a0771c3b5",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/5690b9d1-6f68-4504-8215-4e49dc4de261",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "5690b9d1-6f68-4504-8215-4e49dc4de261",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "64d118051252352a0771c3b5"
+      } ],
+      "name": [ {
+        "family": "DENOMPass",
+        "given": [ "ConditionEncounterDiagnosisDuringEnc" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2018-01-02"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/5690b9d1-6f68-4504-8215-4e49dc4de261"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/bc1734c7-f5cc-4d2b-a99d-5477d9f8ac11",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "bc1734c7-f5cc-4d2b-a99d-5477d9f8ac11",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2023-09",
+          "code": "185463005",
+          "display": "Visit out of hours (procedure)",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5690b9d1-6f68-4504-8215-4e49dc4de261"
+      },
+      "period": {
+        "start": "2026-02-11T08:00:00.000+00:00",
+        "end": "2026-02-11T08:15:00.000+00:00"
+      },
+      "length": {
+        "value": 1,
+        "unit": "days"
+      },
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2023-09",
+          "code": "111482003",
+          "display": "Subchronic schizophrenia with acute exacerbations (disorder)",
+          "userSelected": true
+        } ]
+      } ],
+      "reasonReference": [ {
+        "reference": "Condition/c57c4e79-4c41-4457-8fd3-4bef78632ece"
+      } ],
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/c57c4e79-4c41-4457-8fd3-4bef78632ece"
+        },
+        "use": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "version": "2023-09",
+            "code": "2618002",
+            "display": "Chronic recurrent major depressive disorder (disorder)",
+            "userSelected": true
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/bc1734c7-f5cc-4d2b-a99d-5477d9f8ac11"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/c57c4e79-4c41-4457-8fd3-4bef78632ece",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "c57c4e79-4c41-4457-8fd3-4bef78632ece",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "F32.3",
+          "display": "Major depressive disorder, single episode, severe with psychotic features"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/5690b9d1-6f68-4504-8215-4e49dc4de261"
+      },
+      "encounter": {
+        "reference": "Encounter/bc1734c7-f5cc-4d2b-a99d-5477d9f8ac11"
+      },
+      "onsetDateTime": "2026-01-11T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/c57c4e79-4c41-4457-8fd3-4bef78632ece"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/e9cc2c49-fa05-46a5-9c11-73d234dbc43f",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "e9cc2c49-fa05-46a5-9c11-73d234dbc43f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MB"
+          } ]
+        }
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "version": "9.2",
+          "code": "1",
+          "display": "MEDICARE",
+          "userSelected": true
+        } ]
+      },
+      "beneficiary": {
+        "reference": "Patient/5690b9d1-6f68-4504-8215-4e49dc4de261"
+      },
+      "dependent": "0",
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2026-01-29T08:00:00.000+00:00",
+        "end": "2026-05-29T08:15:00.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Organization/8fdbc7de-9394-4528-9207-10916eca120a"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/e9cc2c49-fa05-46a5-9c11-73d234dbc43f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/8fdbc7de-9394-4528-9207-10916eca120a",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8fdbc7de-9394-4528-9207-10916eca120a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/8fdbc7de-9394-4528-9207-10916eca120a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/5bf7265f-9459-4e4c-923d-1d8a0485246d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5bf7265f-9459-4e4c-923d-1d8a0485246d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "1639101579"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/5bf7265f-9459-4e4c-923d-1d8a0485246d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/c51621fe-240c-4587-80c9-de2c95e4d3b1",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "c51621fe-240c-4587-80c9-de2c95e4d3b1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "559f22f2-5460-49b2-b01e-5a69a2ffa9e8-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "5690b9d1-6f68-4504-8215-4e49dc4de261"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#559f22f2-5460-49b2-b01e-5a69a2ffa9e8-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient is over 6 years with Depression diagnosis during Office Visit encounter using resource \"ConditionEncounterDiagnosis\""
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/5690b9d1-6f68-4504-8215-4e49dc4de261"
+      }, {
+        "reference": "Encounter/bc1734c7-f5cc-4d2b-a99d-5477d9f8ac11"
+      }, {
+        "reference": "Condition/c57c4e79-4c41-4457-8fd3-4bef78632ece"
+      }, {
+        "reference": "Coverage/e9cc2c49-fa05-46a5-9c11-73d234dbc43f"
+      }, {
+        "reference": "Organization/8fdbc7de-9394-4528-9207-10916eca120a"
+      }, {
+        "reference": "Practitioner/5bf7265f-9459-4e4c-923d-1d8a0485246d"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/c51621fe-240c-4587-80c9-de2c95e4d3b1"
+    }
+  } ]
+}

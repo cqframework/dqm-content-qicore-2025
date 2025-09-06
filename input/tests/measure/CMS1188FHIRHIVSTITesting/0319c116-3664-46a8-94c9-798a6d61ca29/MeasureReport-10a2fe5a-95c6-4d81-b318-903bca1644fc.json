@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "10a2fe5a-95c6-4d81-b318-903bca1644fc",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "28752236-43b8-4ff2-be02-a814155f017c-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "0319c116-3664-46a8-94c9-798a6d61ca29"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#28752236-43b8-4ff2-be02-a814155f017c-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient is over 13 years old and has an encounter after the MP"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1188FHIRHIVSTITesting",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/0319c116-3664-46a8-94c9-798a6d61ca29"
+  }, {
+    "reference": "Condition/bb215058-d453-4038-a245-8c49cbc3ce85"
+  }, {
+    "reference": "Encounter/6af5f71b-d1ac-4059-8e51-72fb3def1f86"
+  }, {
+    "reference": "Coverage/d4dbff95-72a1-4e1c-a708-d569174b4a07"
+  }, {
+    "reference": "Organization/ce276ce2-5d30-4eeb-af8d-52e86aa30c05"
+  }, {
+    "reference": "Practitioner/5126f8ef-4ea7-44f1-bb42-0a8e27ef5185"
+  } ]
+}

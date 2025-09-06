@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "901e464e-bc96-4112-b636-533173329a9f",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "70bd356f-d2af-4726-90a2-dd7748d72082-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "075f9e36-6a87-47ac-952e-aeb295f184d9"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#70bd356f-d2af-4726-90a2-dd7748d72082-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Enc first day of MP with a referral "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS50FHIRReceiptofSpecialistReport",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/075f9e36-6a87-47ac-952e-aeb295f184d9"
+  }, {
+    "reference": "ServiceRequest/4414a550-6068-46c4-aadf-d887bfd93e0a"
+  }, {
+    "reference": "Procedure/a9ab1d17-b4a6-4ce6-859d-ac7e718856b3"
+  }, {
+    "reference": "Coverage/ba2a1b6f-4088-41b2-b0cf-1175f95815ee"
+  }, {
+    "reference": "Organization/504a8560-626b-4e65-9d99-873d84d9e234"
+  }, {
+    "reference": "Practitioner/79eeb7c2-992a-4d58-9298-4226058c0e59"
+  } ]
+}

@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "b75e4e39-b15e-4501-a40b-b207c963fd7a",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "496775ba-2aee-4747-8836-59ca155a00ff-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "474b2964-23a1-4c77-ad16-8a21543b2ed3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#496775ba-2aee-4747-8836-59ca155a00ff-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Medical equipment use observation indicates frailty device used"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS165FHIRControllingHighBP",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/474b2964-23a1-4c77-ad16-8a21543b2ed3"
+  }, {
+    "reference": "Encounter/25133fd4-139f-45c1-9b29-7ba4f42242ff"
+  }, {
+    "reference": "Condition/06b4514f-6402-44d4-8bca-ea4199814602"
+  }, {
+    "reference": "MedicationRequest/1682c275-776a-464c-831a-13250e5cc7a3"
+  }, {
+    "reference": "Observation/deae85c6-e4de-4d0a-9ab9-4b55e8a55d9a"
+  } ]
+}

@@ -1,0 +1,133 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1edcc821-5daf-4930-bad1-a323f0437344",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "d7dd87fc-09b7-40c5-9b63-941502c39294-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "3c34a5af-1ef1-4b86-a41f-ac1d44e96ca0"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#d7dd87fc-09b7-40c5-9b63-941502c39294-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter IP of less than 12 hours with adverse event fall during encounter,  and encounter dx of injury NPOA. Meets numerator but since LOS <24 hrs, denom MO = 0."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "NumeratorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator-exclusion",
+          "display": "Numerator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "MeasureObservation_1_1_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "MeasureObservation_1_2_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/d10b0725-8b84-43db-916f-e24dc386259f"
+  }, {
+    "reference": "Condition/bd56a0bb-8b90-4717-afb9-795b84fcf660"
+  }, {
+    "reference": "Condition/3eb87fc9-c868-4380-a1ef-743647c37c15"
+  }, {
+    "reference": "Patient/3c34a5af-1ef1-4b86-a41f-ac1d44e96ca0"
+  }, {
+    "reference": "AdverseEvent/c0401f14-2729-42b5-9ee7-cef189eb0b4b"
+  }, {
+    "reference": "Claim/3ea5dc18-dc4b-4ae8-a07f-5ede1a58ad37"
+  }, {
+    "reference": "Claim/1d90ef35-750e-40cd-8816-624940be094d"
+  }, {
+    "reference": "Practitioner/df665734-8182-4cb7-8aea-9569620d77de"
+  }, {
+    "reference": "Coverage/febf2a45-c3ef-43ab-9950-21ccef1a4a7f"
+  }, {
+    "reference": "Organization/324d0a08-f212-406f-ab58-207d798461f4"
+  } ]
+}

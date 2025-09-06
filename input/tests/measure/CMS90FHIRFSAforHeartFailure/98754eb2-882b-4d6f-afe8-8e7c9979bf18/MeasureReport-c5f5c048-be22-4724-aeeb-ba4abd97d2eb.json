@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c5f5c048-be22-4724-aeeb-ba4abd97d2eb",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "58016660-0180-4907-9390-6e56ec221a1d-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "98754eb2-882b-4d6f-afe8-8e7c9979bf18"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#58016660-0180-4907-9390-6e56ec221a1d-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Two PROMIS 10 with results during correct timeframe"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS90FHIRFSAforHeartFailure",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/98754eb2-882b-4d6f-afe8-8e7c9979bf18"
+  }, {
+    "reference": "Encounter/57f91f68-61d6-46f7-a8fa-e9317de0d979"
+  }, {
+    "reference": "Encounter/7797e2de-c5c2-49ca-80b9-5f24b816a1f2"
+  }, {
+    "reference": "Condition/c6e8ca0f-f922-4f7f-a127-7513a53ef0c6"
+  }, {
+    "reference": "Observation/16a87c0d-e4ae-429e-a99d-8bb5e535b849"
+  }, {
+    "reference": "Observation/2837f87b-b120-417a-8764-5b23ee56046d"
+  }, {
+    "reference": "Observation/c2ccdfac-2949-4af4-8e46-ee166074481b"
+  }, {
+    "reference": "Observation/f5c70321-eeff-4771-86da-28deb9e073e8"
+  } ]
+}

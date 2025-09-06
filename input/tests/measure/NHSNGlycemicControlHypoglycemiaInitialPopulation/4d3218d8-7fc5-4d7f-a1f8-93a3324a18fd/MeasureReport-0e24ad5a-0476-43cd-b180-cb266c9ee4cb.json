@@ -1,0 +1,71 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0e24ad5a-0476-43cd-b180-cb266c9ee4cb",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "fa38d9f8-1001-4e55-90e1-cc50108ec7da-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "4d3218d8-7fc5-4d7f-a1f8-93a3324a18fd"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#fa38d9f8-1001-4e55-90e1-cc50108ec7da-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Testing blood glucose attributes "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/4d3218d8-7fc5-4d7f-a1f8-93a3324a18fd"
+  }, {
+    "reference": "Encounter/5ac5a7f8-1561-4191-858c-5b1d4fb8e54a"
+  }, {
+    "reference": "Location/5d458efe-700c-4f50-8471-6dcc87fd1745"
+  }, {
+    "reference": "MedicationRequest/52afd4fe-09b7-4f0e-ad34-f8390d8682e8"
+  }, {
+    "reference": "Observation/af1d9f40-69fd-412e-8419-d6d9c4ea3483"
+  }, {
+    "reference": "Observation/85316bbe-6bb6-45bf-a535-2c8c15727555"
+  }, {
+    "reference": "Coverage/1005e0ff-066b-41cb-8fbc-2f3495a004eb"
+  }, {
+    "reference": "Organization/622b1723-a0ff-4a44-a4a1-16fb45ae4b08"
+  }, {
+    "reference": "Practitioner/a6ce1f07-e407-4042-b930-bee0b7554a64"
+  } ]
+}

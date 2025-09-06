@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "efecc7e9-26a5-4c8a-8afd-6a5179ed6342",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "564d80db-315e-49a4-ad60-3582107ab325-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b30e1235-fe5d-4cd1-a536-4baafc680d7b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#564d80db-315e-49a4-ad60-3582107ab325-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Testing Multiple Encounters - one (7/5 - 7/7) fails the IPP Due to OB VTE starts in ED and another pass IPP, DEN and DENEX due to LOS = 0 day\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b30e1235-fe5d-4cd1-a536-4baafc680d7b"
+  }, {
+    "reference": "Encounter/456fba41-1947-4413-aa20-de24a42ffe79"
+  }, {
+    "reference": "Encounter/921ac51f-9082-4f49-9dbd-cbb71006eadf"
+  }, {
+    "reference": "Encounter/f4e0937b-b125-4d7f-a8ae-bec3e74e7c41"
+  }, {
+    "reference": "Coverage/7df5deda-3b0d-4fa3-b6bb-bbf90ace29c7"
+  }, {
+    "reference": "Condition/d8347fcf-965c-4366-9b5b-d17e3542bf05"
+  }, {
+    "reference": "Organization/77f47ab7-9e64-484d-b013-50fb032985c1"
+  }, {
+    "reference": "Practitioner/b5abdb5b-7d80-4e82-91c8-e2ef19ae867d"
+  } ]
+}
