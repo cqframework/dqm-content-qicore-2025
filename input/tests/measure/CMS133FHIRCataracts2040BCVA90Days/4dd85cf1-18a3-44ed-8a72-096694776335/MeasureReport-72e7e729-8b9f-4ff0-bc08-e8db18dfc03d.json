@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "72e7e729-8b9f-4ff0-bc08-e8db18dfc03d",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "eafdf115-ad48-402e-9ec6-e9568f192103-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "4dd85cf1-18a3-44ed-8a72-096694776335"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#eafdf115-ad48-402e-9ec6-e9568f192103-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with Visual Acuity Exam Performed in Dec 2023"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS133FHIRCataracts2040BCVA90Days",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/4dd85cf1-18a3-44ed-8a72-096694776335"
+  }, {
+    "reference": "Observation/b800f5a1-95db-4343-9b30-6b2ef5499f31"
+  }, {
+    "reference": "Procedure/f83c3e9f-5e6a-4a67-87fb-8caab50dd36e"
+  }, {
+    "reference": "Coverage/8d993232-5978-46ee-8bbe-3e5c917740f3"
+  }, {
+    "reference": "Organization/5cbb2a30-612b-4539-a092-514c19916b23"
+  }, {
+    "reference": "Observation/d7bcb56b-8d97-43bb-9d70-f5e65ccf6c09"
+  }, {
+    "reference": "Practitioner/48a1bb8a-2012-43ef-8b69-af941f5633ac"
+  } ]
+}

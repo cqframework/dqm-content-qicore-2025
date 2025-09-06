@@ -1,0 +1,111 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "147d1b02-3e3c-4d50-a48a-c24796997b71",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "2357b7f2-816d-4c9e-acf5-fbf1a1464cef-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c48c3487-44cf-4a09-bc17-e60e66d19002"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#2357b7f2-816d-4c9e-acf5-fbf1a1464cef-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient receives Ticagrelor during Obs, the day after Obs starts. ED ends 1 min before Obs.Obs ends 1 min before IP start at midnight. Testing Day of operator with HospitalizationWithObservation function.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS72FHIRSTKAntithromboticDay2",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/c48c3487-44cf-4a09-bc17-e60e66d19002"
+  }, {
+    "reference": "Encounter/a495fb92-eda9-4460-a20d-871d0909c3a9"
+  }, {
+    "reference": "Encounter/58a4002d-2d6f-44b4-b85d-c16aa7066b7c"
+  }, {
+    "reference": "Encounter/e5209bb3-3812-4bab-bad6-5cbc4480bd84"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "MedicationAdministration/a37a89ed-f2cd-4a8e-94df-cfe928bd8e4f"
+  }, {
+    "reference": "Coverage/1bc1cb57-a204-44d3-8c58-dd01b38852ae"
+  }, {
+    "reference": "Condition/03214caf-4b33-43ef-813d-eb2ff10b9b8a"
+  }, {
+    "reference": "Organization/db8086a9-05c2-4e08-b89b-fd03f484701f"
+  } ]
+}

@@ -1,0 +1,484 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-RVwithHeartRate",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/2ae5d974-9013-4a36-b42a-2afc07de1847",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "2ae5d974-9013-4a36-b42a-2afc07de1847",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1653-5",
+            "display": "Tohono O'Odham"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2153-5",
+            "display": "Mexican American Indian"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1975-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/a51587c6-9870-4270-8c96-13ccd95390e5",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "a51587c6-9870-4270-8c96-13ccd95390e5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "EMER",
+        "display": "emergency"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "4525004",
+          "display": "Emergency department patient visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "period": {
+        "start": "2026-09-29T08:00:00.000+00:00",
+        "end": "2026-09-29T20:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/a51587c6-9870-4270-8c96-13ccd95390e5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/ab32e84a-d08a-460f-9870-927c3f5432c5",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "ab32e84a-d08a-460f-9870-927c3f5432c5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "period": {
+        "start": "2026-09-29T20:01:00.000+00:00",
+        "end": "2026-10-03T20:00:00.000+00:00"
+      },
+      "reasonReference": [ {
+        "reference": "Condition/e32930c6-e28e-4fe2-8522-588794e5f49d"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/ab32e84a-d08a-460f-9870-927c3f5432c5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/acf4f1cc-6657-44c8-a28e-4396fbf1f343",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "acf4f1cc-6657-44c8-a28e-4396fbf1f343",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "effectiveDateTime": "2026-10-01T08:01:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.9,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/acf4f1cc-6657-44c8-a28e-4396fbf1f343"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/0cb0b9f8-f75b-461a-9ae9-614daa8e91ec",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0cb0b9f8-f75b-461a-9ae9-614daa8e91ec",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "effectiveDateTime": "2026-10-01T07:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.91,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/0cb0b9f8-f75b-461a-9ae9-614daa8e91ec"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/e32930c6-e28e-4fe2-8522-588794e5f49d",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "e32930c6-e28e-4fe2-8522-588794e5f49d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "S37.061A",
+          "display": "Major laceration of right kidney, initial encounter"
+        } ],
+        "text": "Major laceration of right kidney, initial encounter"
+      },
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "encounter": {
+        "reference": "Encounter/ab32e84a-d08a-460f-9870-927c3f5432c5"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/e32930c6-e28e-4fe2-8522-588794e5f49d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/b69c515d-3e19-47dd-a4ab-271c9555e2d0",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b69c515d-3e19-47dd-a4ab-271c9555e2d0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "effectiveDateTime": "2026-10-01T07:35:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.91,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/b69c515d-3e19-47dd-a4ab-271c9555e2d0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/4ed3669c-f13c-4f38-af93-60e2c20ae589",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4ed3669c-f13c-4f38-af93-60e2c20ae589",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "8867-4",
+          "display": "Heart rate"
+        } ],
+        "text": "Heart rate"
+      },
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "effectiveDateTime": "2026-10-01T09:10:00.000+00:00",
+      "valueQuantity": {
+        "value": 76,
+        "unit": "beats/minute",
+        "system": "http://unitsofmeasure.org",
+        "code": "/min"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/4ed3669c-f13c-4f38-af93-60e2c20ae589"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/06cdb853-7b79-4694-96f2-2fcf1442169e",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "06cdb853-7b79-4694-96f2-2fcf1442169e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "8310-5",
+          "display": "Body temperature"
+        } ],
+        "text": "Body temperature"
+      },
+      "subject": {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      },
+      "encounter": {
+        "reference": "Encounter/ab32e84a-d08a-460f-9870-927c3f5432c5"
+      },
+      "effectiveDateTime": "2026-10-01T08:30:00.000+00:00",
+      "valueQuantity": {
+        "value": 98.6
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/06cdb853-7b79-4694-96f2-2fcf1442169e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/3de4bffa-e440-4aa8-9a79-af56828ec24a",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "3de4bffa-e440-4aa8-9a79-af56828ec24a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "652b04bc-c869-48a9-8a98-fb2303c06f7f-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "2ae5d974-9013-4a36-b42a-2afc07de1847"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#652b04bc-c869-48a9-8a98-fb2303c06f7f-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "RV Encounters that return the first Heart Rate"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS832FHIRHHAKI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/2ae5d974-9013-4a36-b42a-2afc07de1847"
+      }, {
+        "reference": "Encounter/a51587c6-9870-4270-8c96-13ccd95390e5"
+      }, {
+        "reference": "Encounter/ab32e84a-d08a-460f-9870-927c3f5432c5"
+      }, {
+        "reference": "Observation/acf4f1cc-6657-44c8-a28e-4396fbf1f343"
+      }, {
+        "reference": "Observation/0cb0b9f8-f75b-461a-9ae9-614daa8e91ec"
+      }, {
+        "reference": "Condition/e32930c6-e28e-4fe2-8522-588794e5f49d"
+      }, {
+        "reference": "Observation/b69c515d-3e19-47dd-a4ab-271c9555e2d0"
+      }, {
+        "reference": "Observation/4ed3669c-f13c-4f38-af93-60e2c20ae589"
+      }, {
+        "reference": "Observation/06cdb853-7b79-4694-96f2-2fcf1442169e"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/3de4bffa-e440-4aa8-9a79-af56828ec24a"
+    }
+  } ]
+}

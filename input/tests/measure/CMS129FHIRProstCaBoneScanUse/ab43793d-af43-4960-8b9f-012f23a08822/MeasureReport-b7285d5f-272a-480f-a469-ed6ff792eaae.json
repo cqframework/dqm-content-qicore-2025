@@ -1,0 +1,101 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "b7285d5f-272a-480f-a469-ed6ff792eaae",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "7f6b1263-7fc1-4652-bda5-4432811e6312-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "ab43793d-af43-4960-8b9f-012f23a08822"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#7f6b1263-7fc1-4652-bda5-4432811e6312-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Prostate Ca Diagnosis but does not meet Gleason. Meets tumor staging. first treatment, and  PSA.  Gleason is after 1st cancer treatment.  Value < 6.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS129FHIRProstCaBoneScanUse",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/ab43793d-af43-4960-8b9f-012f23a08822"
+  }, {
+    "reference": "Condition/89593efd-8779-42ff-9e79-538772af25fe"
+  }, {
+    "reference": "Procedure/16bcf296-ca41-4c8e-912f-830f432b9672"
+  }, {
+    "reference": "Observation/51a6b188-908b-4bbd-8325-4ca96b5dcd2d"
+  }, {
+    "reference": "Observation/0cc6eb8d-e33a-4673-bd18-f18f17b13363"
+  }, {
+    "reference": "Observation/a87b6e0a-b825-4bf2-8625-78f99a5a73a5"
+  }, {
+    "reference": "Coverage/26c3c106-f58d-4f76-a4a2-439e2dbda532"
+  }, {
+    "reference": "Organization/22a6bd73-253a-44f1-99f3-8d3a7e4d67a0"
+  }, {
+    "reference": "Practitioner/03cf3cd7-9d52-4e04-83b8-9f512b84de4c"
+  } ]
+}

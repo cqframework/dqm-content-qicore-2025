@@ -1,0 +1,71 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "85fcc828-6e8b-493b-bf52-db33dfe2ce53",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "420673cf-4c1c-4629-bec4-16ec39dcb3dd-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "0dc78b19-e1f7-4a30-adb1-b2359b85a10a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#420673cf-4c1c-4629-bec4-16ec39dcb3dd-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Medication request prior to MP - fails medication SDE"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/0dc78b19-e1f7-4a30-adb1-b2359b85a10a"
+  }, {
+    "reference": "Encounter/6054d4f3-7933-47eb-8b24-310aa2245c3c"
+  }, {
+    "reference": "Location/4addf55e-a289-4415-9a60-e5ec222edf81"
+  }, {
+    "reference": "MedicationRequest/ce5f453f-e9c7-4729-8100-7d45341e8b83"
+  }, {
+    "reference": "Medication/6d57e1f9-cfb8-4b65-a595-952103ffb6c6"
+  }, {
+    "reference": "MedicationAdministration/f69dfaca-36f4-42d9-accd-2e9f4ba6cdbf"
+  }, {
+    "reference": "Coverage/c2afbc41-7910-42ec-aa3a-8a5836c9c956"
+  }, {
+    "reference": "Organization/226cad43-da73-47d2-9625-28c6d7613d27"
+  }, {
+    "reference": "Practitioner/edddbdcc-e636-4306-96ad-e18ea8190324"
+  } ]
+}

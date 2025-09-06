@@ -1,0 +1,91 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "99563891-bbd0-413f-b3a6-f64f777e90f2",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "982a7aa1-ec1a-4f3c-ad41-b521109b95d0-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "895bf328-358c-4513-8bd4-ef9bb20bacd0"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#982a7aa1-ec1a-4f3c-ad41-b521109b95d0-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with Diagnosis: Primary Open-Angle Glaucoma.   Diagnostic Study Performed: Left eye Optic disc or retinal nerve fiber layer structural abnormalities by Ophthalmoscopy result not recorded, but no medical reason noted"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS143FHIRPOAGOpticNerveEval",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/895bf328-358c-4513-8bd4-ef9bb20bacd0"
+  }, {
+    "reference": "Condition/36b4a343-91d8-4f07-8e04-d7f77b3c3c7f"
+  }, {
+    "reference": "Encounter/c2d52dc2-1d79-42d4-a756-02b7d3956394"
+  }, {
+    "reference": "Observation/c37e9f96-ae63-4f4a-8cc3-30d8871d5940"
+  } ]
+}

@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c926b87e-3e19-4020-9f37-d8e6837d5531",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "7dae7dd9-bab2-4f38-afec-2b17213369be-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "bc28b32e-1c2f-457c-8c60-f36041a2519b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#7dae7dd9-bab2-4f38-afec-2b17213369be-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Inpatient encounter during MP.  New unstageable PI by encounter diagnosis with POA indicator = N. Numerator Pass."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS826FHIRHHPI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Claim/9cf6b3e6-72ab-4f02-8b6b-5f47951ab228"
+  }, {
+    "reference": "Encounter/cec96ebf-f1fe-498d-ba16-1fbd41857a38"
+  }, {
+    "reference": "Encounter/9c23ca62-fc50-490a-9501-a281b9c1b88b"
+  }, {
+    "reference": "Patient/bc28b32e-1c2f-457c-8c60-f36041a2519b"
+  }, {
+    "reference": "MeasureReport/27809082-982b-4899-91b2-109b93f3f327"
+  } ]
+}

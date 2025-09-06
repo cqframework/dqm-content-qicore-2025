@@ -1,0 +1,95 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "13a299d2-1f32-41d7-b226-7380902e41b7",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "9cff9343-5eba-4821-82eb-1e0f819e8505-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "051c5977-9f2c-4e8b-8e02-ac3ec0c718d6"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#9cff9343-5eba-4821-82eb-1e0f819e8505-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Male Pt with OV, initial and followup assessment score with BPH during MP. Uses LastQOL as part of AUA Symptom Index and Quality of Life Assessment calculation"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS771FHIRUrinarySymptomScoreBPH",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/051c5977-9f2c-4e8b-8e02-ac3ec0c718d6"
+  }, {
+    "reference": "Encounter/3528d56f-83f8-4af9-b37d-1a5d1c57fe13"
+  }, {
+    "reference": "Condition/48869c50-d4c8-4539-9608-a0bda85446b4"
+  }, {
+    "reference": "Observation/d34cb0e9-26c4-4c63-8ce6-3cba7727f526"
+  }, {
+    "reference": "Observation/b532ca0c-ed3e-4d2f-9c92-e0f34e066eb8"
+  }, {
+    "reference": "Observation/c9e8333c-4f04-4e1e-8fe2-652beec0ff80"
+  } ]
+}

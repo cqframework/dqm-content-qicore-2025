@@ -1,0 +1,125 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "6844e7ed-08a4-43d5-be1c-720dc795b3cf",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6d176027-806a-4544-8080-f8f9992d3512-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "cb7c95fc-6d6b-4e07-81e8-a79385142b94"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6d176027-806a-4544-8080-f8f9992d3512-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient receives tPA in first encounter and antithrombotics in last 2 encounters. Testing to ensure medications without end dates do not interfere with encounters that follow. Executes as expected. \n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS72FHIRSTKAntithromboticDay2",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 3
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 3
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/cb7c95fc-6d6b-4e07-81e8-a79385142b94"
+  }, {
+    "reference": "Encounter/d047da74-a8de-40d5-9530-01960e824da1"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "Encounter/24c9a03a-ec42-4a58-ae37-dc188cb9ed94"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "Encounter/3312b3d4-df3b-49d9-aa7d-e1956ea2b1d9"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "MedicationAdministration/c6b8c3e5-422a-4a70-b87b-4c89ca975785"
+  }, {
+    "reference": "MedicationAdministration/d62c123c-291f-47b3-ab6f-a0d490b56c5b"
+  }, {
+    "reference": "Coverage/e1f2f8c0-8716-42a7-a75c-b5ab5fc157d8"
+  }, {
+    "reference": "Procedure/824551a9-1f79-42d6-b5ee-ea258ba4f4d3"
+  }, {
+    "reference": "Condition/6fb67356-490b-4dbb-adc0-25109244fe67"
+  }, {
+    "reference": "Condition/d48cb4ef-3ede-4c50-80a3-8015e085453e"
+  }, {
+    "reference": "Condition/5585b685-ed2b-4a50-9ab2-05706efbc54d"
+  }, {
+    "reference": "Organization/d1a607b3-6085-43b9-b8d9-ef4c7869a855"
+  }, {
+    "reference": "Practitioner/be141937-b30e-4abc-abdd-82e36157e9c4"
+  } ]
+}

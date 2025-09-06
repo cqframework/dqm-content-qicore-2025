@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f7dacbc6-4da6-4c84-90eb-bc8795cc3f9a",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "27843238-72b4-4bed-9a1f-44739a57b7f7-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "fbc2546d-c004-493c-b38b-8d088c6514d4"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#27843238-72b4-4bed-9a1f-44739a57b7f7-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has all MLHFQ with results during the correct timeframe. Testing the 180 days boundary."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS90FHIRFSAforHeartFailure",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/fbc2546d-c004-493c-b38b-8d088c6514d4"
+  }, {
+    "reference": "Encounter/db93ae3a-d44d-46f8-9443-16fcdfc898a4"
+  }, {
+    "reference": "Encounter/9ab354e3-ff71-4120-84a6-d2ed89423cd7"
+  }, {
+    "reference": "Condition/4b0f187a-ac4c-46b3-ab25-88b07532b75b"
+  }, {
+    "reference": "Observation/a635fba5-e30d-4a99-8b2b-da09eb5d0361"
+  }, {
+    "reference": "Observation/a148707c-abf7-4cae-9017-a23fb39154f6"
+  }, {
+    "reference": "Observation/51f23815-8c43-4ed9-ac70-0956de82a0e9"
+  }, {
+    "reference": "Observation/fb41c17e-5cc6-4e45-ae4a-f750086f6d97"
+  } ]
+}

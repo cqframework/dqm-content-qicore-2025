@@ -1,0 +1,89 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "6b4f4ad8-731c-43fa-af97-f127e7545999",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4590753a-decc-48f6-83b0-1c2cb6f8daf8-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "d051e3f4-0d8a-43d1-850f-e7a4a15762ff"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4590753a-decc-48f6-83b0-1c2cb6f8daf8-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter-1 7/11 - 7/16, in OR 7/11 0900 - 1015, MedAdmin-1 7/11 Opioid in OR location at 0900, MedAdmin-2 7/11 Antagonist at 1400, MedAdmin-3 7/11 2nd Opioid at 1300"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS819FHIRHHORAE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/d051e3f4-0d8a-43d1-850f-e7a4a15762ff"
+  }, {
+    "reference": "Encounter/61bc5f11-dfe9-4995-b4e5-fe80195305c7"
+  }, {
+    "reference": "Location/7da2d210-f0ac-4544-8e58-c2444d5e2a8c"
+  }, {
+    "reference": "MedicationAdministration/f7db6132-a045-4e2d-b6a5-304fb292c6a1"
+  }, {
+    "reference": "MedicationAdministration/0d8b250e-a7e4-4c31-9110-910fc4c14110"
+  }, {
+    "reference": "MedicationAdministration/dfa954a7-b634-4049-861f-bbf045d9eaac"
+  }, {
+    "reference": "Coverage/90657bf4-d875-4e3d-a36a-31ab07f51d57"
+  }, {
+    "reference": "Organization/afbfa2cb-c2cb-48ea-b0b2-b8be4ac2c44f"
+  } ]
+}

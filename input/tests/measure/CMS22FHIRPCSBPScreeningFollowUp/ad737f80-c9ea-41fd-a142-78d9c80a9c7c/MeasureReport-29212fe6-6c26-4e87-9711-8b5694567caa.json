@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "29212fe6-6c26-4e87-9711-8b5694567caa",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ce15c6fd-cca3-49ea-9d05-6d824918a638-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "ad737f80-c9ea-41fd-a142-78d9c80a9c7c"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ce15c6fd-cca3-49ea-9d05-6d824918a638-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter 01/01 0800-0830 during MP, BP 140/79 indicate HTN, patient declined recommendation to reduce weight"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS22FHIRPCSBPScreeningFollowUp",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/ad737f80-c9ea-41fd-a142-78d9c80a9c7c"
+  }, {
+    "reference": "Encounter/4a9aad7f-a00b-4e98-a864-1de16aca6471"
+  }, {
+    "reference": "Observation/14d06b87-eefd-4920-9c42-2d89c4fa7d49"
+  }, {
+    "reference": "ServiceRequest/2218c3fb-5a61-45c7-bf61-3fa74b2977bb"
+  }, {
+    "reference": "Coverage/ba74725f-a9fc-460e-8262-4d4e47d2cae8"
+  }, {
+    "reference": "Organization/0b5f59da-262c-498b-a507-4bd9d1281267"
+  }, {
+    "reference": "Practitioner/82bb9280-178c-419f-9637-2c8091556eba"
+  } ]
+}

@@ -1,0 +1,263 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-PalliativeCareInterventionDuringMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/36222907-f670-4253-a251-63198bb3fc6c",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "36222907-f670-4253-a251-63198bb3fc6c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1954-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/36222907-f670-4253-a251-63198bb3fc6c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/2cab6970-316c-44bd-911b-f31e79e9b90d",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "2cab6970-316c-44bd-911b-f31e79e9b90d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "456201000124103",
+          "display": "Medicare annual wellness visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/36222907-f670-4253-a251-63198bb3fc6c"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T00:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/2cab6970-316c-44bd-911b-f31e79e9b90d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/a22a7867-b1fa-4a97-af37-bf55fc0c9c9a",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "a22a7867-b1fa-4a97-af37-bf55fc0c9c9a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/36222907-f670-4253-a251-63198bb3fc6c"
+      },
+      "onsetDateTime": "2026-01-01T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/a22a7867-b1fa-4a97-af37-bf55fc0c9c9a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/65b4bebc-efa9-4d62-afc4-031f911f59b7",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "65b4bebc-efa9-4d62-afc4-031f911f59b7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-12-31T00:00:00.000+00:00"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "395694002",
+          "display": "Specialist palliative care treatment - daycare (regime/therapy)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/36222907-f670-4253-a251-63198bb3fc6c"
+      },
+      "performedPeriod": {
+        "start": "2026-12-31T00:00:00.000+00:00",
+        "end": "2026-12-31T23:59:59.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/65b4bebc-efa9-4d62-afc4-031f911f59b7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/e5009366-6515-4f9d-a77b-a47c0dd24f39",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "e5009366-6515-4f9d-a77b-a47c0dd24f39",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "47f948fa-eff6-4c60-94db-e5655ec5d518-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "36222907-f670-4253-a251-63198bb3fc6c"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#47f948fa-eff6-4c60-94db-e5655ec5d518-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Palliative care intervention during the MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS131FHIRDiabetesEyeExam",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/36222907-f670-4253-a251-63198bb3fc6c"
+      }, {
+        "reference": "Encounter/2cab6970-316c-44bd-911b-f31e79e9b90d"
+      }, {
+        "reference": "Condition/a22a7867-b1fa-4a97-af37-bf55fc0c9c9a"
+      }, {
+        "reference": "Procedure/65b4bebc-efa9-4d62-afc4-031f911f59b7"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/e5009366-6515-4f9d-a77b-a47c0dd24f39"
+    }
+  } ]
+}

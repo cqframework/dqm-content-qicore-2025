@@ -1,0 +1,125 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c03b4642-f99f-40d7-ae8f-37795a5caf5f",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "c95aea0e-e8e9-4b89-9b91-e19cd87aaab7-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "5cca62ff-f856-4b8f-9902-6a018a4599cb"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#c95aea0e-e8e9-4b89-9b91-e19cd87aaab7-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with cancer diagnosis that overlaps radiation treatment mgt. Pain intensity assessment was performed during radiation treatment management encounter. 2 episodes of care, but no pain assessment was done on 2nd radiation treatment management.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS157FHIRPainIntensityQuantified",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  }, {
+    "id": "Group_2",
+    "population": [ {
+      "id": "InitialPopulation_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Numerator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/5cca62ff-f856-4b8f-9902-6a018a4599cb"
+  }, {
+    "reference": "Observation/0ecff862-db6c-46f8-a0b1-a1266fcdd033"
+  }, {
+    "reference": "Condition/626277f0-9f9e-4c28-82d1-9501f2e1b4d9"
+  }, {
+    "reference": "Coverage/60c7ee82-62a6-4bc2-a412-27c473ae7bce"
+  }, {
+    "reference": "Encounter/c06540e3-57dd-41f8-9341-54fec8a5cf48"
+  }, {
+    "reference": "Encounter/a951c8aa-ea38-457c-aea9-4c22ddf7e718"
+  }, {
+    "reference": "Organization/50a49af5-e64b-4a3e-bf77-bf630a2e6637"
+  }, {
+    "reference": "Practitioner/a5d7d8f0-3e91-4043-bfc6-159e5dec8bf2"
+  } ]
+}

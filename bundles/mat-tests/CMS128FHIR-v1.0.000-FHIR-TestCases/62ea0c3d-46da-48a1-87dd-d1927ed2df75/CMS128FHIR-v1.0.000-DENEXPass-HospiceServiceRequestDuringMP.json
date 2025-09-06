@@ -1,0 +1,382 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-HospiceServiceRequestDuringMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "62ea0c3d-46da-48a1-87dd-d1927ed2df75",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2007-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/f2759140-f299-416d-bbc3-fe5f5ea3e44a",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "f2759140-f299-416d-bbc3-fe5f5ea3e44a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "3391000175108",
+          "display": "Office visit for pediatric care and assessment (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/f2759140-f299-416d-bbc3-fe5f5ea3e44a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationDispense/3034c06d-2546-4b7d-b6bd-7806c9af7cf1",
+    "resource": {
+      "resourceType": "MedicationDispense",
+      "id": "3034c06d-2546-4b7d-b6bd-7806c9af7cf1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationdispense" ]
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1099316",
+          "display": "desipramine hydrochloride 75 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+      },
+      "daysSupply": {
+        "value": 10,
+        "system": "http://unitsofmeasure.org",
+        "code": "d"
+      },
+      "whenHandedOver": "2026-01-01T01:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationDispense/3034c06d-2546-4b7d-b6bd-7806c9af7cf1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationDispense/d152dce1-815b-460c-af45-d6249fb2bcec",
+    "resource": {
+      "resourceType": "MedicationDispense",
+      "id": "d152dce1-815b-460c-af45-d6249fb2bcec",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationdispense" ]
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1099316",
+          "display": "desipramine hydrochloride 75 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+      },
+      "daysSupply": {
+        "value": 10,
+        "system": "http://unitsofmeasure.org",
+        "code": "d"
+      },
+      "whenHandedOver": "2026-03-01T01:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationDispense/d152dce1-815b-460c-af45-d6249fb2bcec"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/d0e640fe-8b5e-4c43-bef6-ad2c00f34425",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "d0e640fe-8b5e-4c43-bef6-ad2c00f34425",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "15193003",
+          "display": "Severe recurrent major depression with psychotic features, mood-incongruent (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+      },
+      "onsetDateTime": "2026-01-01T01:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/d0e640fe-8b5e-4c43-bef6-ad2c00f34425"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/ServiceRequest/f68c38c9-f11b-48e2-ba86-1dd831463e71",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "f68c38c9-f11b-48e2-ba86-1dd831463e71",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-servicerequest" ]
+      },
+      "status": "completed",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "387713003",
+          "display": "Surgical procedure"
+        } ]
+      } ],
+      "priority": "routine",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "385763009",
+          "display": "Hospice care (regime/therapy)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+      },
+      "authoredOn": "2026-01-02T00:00:00.000+00:00",
+      "performerType": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "405279007",
+          "display": "Attending physician (occupation)"
+        } ]
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "ServiceRequest/f68c38c9-f11b-48e2-ba86-1dd831463e71"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/c5f73be1-d764-49ce-99f1-ff26ef3b5ab4",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "c5f73be1-d764-49ce-99f1-ff26ef3b5ab4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "0b3fa234-c6c9-4dac-ba5f-1e9f5daedb27-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#0b3fa234-c6c9-4dac-ba5f-1e9f5daedb27-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Hospice service request during the MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS128FHIRAntidepressantMgmt",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/62ea0c3d-46da-48a1-87dd-d1927ed2df75"
+      }, {
+        "reference": "Encounter/f2759140-f299-416d-bbc3-fe5f5ea3e44a"
+      }, {
+        "reference": "MedicationDispense/3034c06d-2546-4b7d-b6bd-7806c9af7cf1"
+      }, {
+        "reference": "MedicationDispense/d152dce1-815b-460c-af45-d6249fb2bcec"
+      }, {
+        "reference": "Condition/d0e640fe-8b5e-4c43-bef6-ad2c00f34425"
+      }, {
+        "reference": "ServiceRequest/f68c38c9-f11b-48e2-ba86-1dd831463e71"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/c5f73be1-d764-49ce-99f1-ff26ef3b5ab4"
+    }
+  } ]
+}

@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f0537d9f-5c4d-4525-b3e2-54b5d2e8a049",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "1cd19711-385a-47ef-84ba-9d02024563b8-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "77178177-d553-4bf3-8c92-65382bfbee73"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#1cd19711-385a-47ef-84ba-9d02024563b8-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter diagnosis includes both fall and major injury NPOA, but patient 17 at encounter start. Must be 18. IPP Fails."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "NumeratorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator-exclusion",
+          "display": "Numerator Exclusion"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/6b8b5477-fe9e-4032-9b09-f0bbfafdb73e"
+  }, {
+    "reference": "Encounter/89e1d157-4f26-4e3f-91d0-531702a2fc81"
+  }, {
+    "reference": "Condition/d9b542e7-f340-40a7-830b-dba39ae8082a"
+  }, {
+    "reference": "Condition/575aac94-8f49-4d7d-bc1a-d73622332c7b"
+  }, {
+    "reference": "Patient/77178177-d553-4bf3-8c92-65382bfbee73"
+  }, {
+    "reference": "Organization/22122519-364c-4b57-9eb9-f5387c43f771"
+  }, {
+    "reference": "Coverage/c4227980-fa2c-4791-b2da-9c11be2ea891"
+  } ]
+}

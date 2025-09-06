@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1e07fe6d-d64f-4e8c-bea8-4da925258c85",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "9456aaea-d72b-48e3-ac25-2c238769b65e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "fb38d345-4723-46b4-a269-8b4fd8982bc7"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#9456aaea-d72b-48e3-ac25-2c238769b65e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has 2 ambulatory encounters, HF diagnosis and LVSD and meets denominator exception with confirmed angiotensin receptor allergy"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS135FHIRACEIorARBorARNIforHF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/fb38d345-4723-46b4-a269-8b4fd8982bc7"
+  }, {
+    "reference": "Encounter/11bb0b69-0f8c-4d88-8ff6-6efbe3132b18"
+  }, {
+    "reference": "Encounter/586ef443-1993-48a6-a944-d308d7f1d83b"
+  }, {
+    "reference": "Condition/a5632889-ad6a-4213-ae7e-7fc0f01bbd9f"
+  }, {
+    "reference": "Condition/eaeffde5-57ca-4fa0-af12-3c078841697a"
+  }, {
+    "reference": "AllergyIntolerance/a18a354b-6466-422d-a78d-5b8729d754b9"
+  } ]
+}

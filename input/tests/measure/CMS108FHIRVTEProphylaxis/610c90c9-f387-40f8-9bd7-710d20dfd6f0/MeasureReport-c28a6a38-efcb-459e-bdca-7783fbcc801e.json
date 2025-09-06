@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "c28a6a38-efcb-459e-bdca-7783fbcc801e",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "eb42d085-fb44-4041-946a-3cb6ae254840-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "610c90c9-f387-40f8-9bd7-710d20dfd6f0"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#eb42d085-fb44-4041-946a-3cb6ae254840-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "lmwh administered =0  day after end of anesthesia\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/610c90c9-f387-40f8-9bd7-710d20dfd6f0"
+  }, {
+    "reference": "Encounter/ac3b10eb-ca6d-432e-8d61-df51b61a3337"
+  }, {
+    "reference": "Coverage/bb80960a-a814-4cf0-9d82-9b46a65b55da"
+  }, {
+    "reference": "MedicationAdministration/186032ce-f5c4-4e90-8702-7c17ba7ca3fc"
+  }, {
+    "reference": "Procedure/84cdce28-32be-4ede-baf9-5f3419ae2049"
+  }, {
+    "reference": "Organization/a34d5e43-8e11-4622-b877-596dbc64af70"
+  }, {
+    "reference": "Practitioner/38189f9a-b29a-4e97-9999-303a2f0bac3f"
+  } ]
+}

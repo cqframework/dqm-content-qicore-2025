@@ -1,0 +1,87 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "5de2adcc-6710-4307-be99-711158062273",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "a9e32585-2d82-438c-9993-fb8e6a2b98d7-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "17fb3017-c03e-4766-986b-259c83a3916a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#a9e32585-2d82-438c-9993-fb8e6a2b98d7-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient complete Suicide Risk Assessment during group psychotherapy encounter but has no active MDD diagnosis"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/17fb3017-c03e-4766-986b-259c83a3916a"
+  }, {
+    "reference": "Encounter/4eca6619-974a-4e65-b3ff-58ce97893c3d"
+  }, {
+    "reference": "Procedure/f359bdbb-dc60-459c-8dab-e4be5bbdf75a"
+  }, {
+    "reference": "Condition/90abafe4-fbd4-42fe-8cfc-08fc9a1cb69c"
+  }, {
+    "reference": "Coverage/efd40e64-9114-40fa-a51d-a0af74525570"
+  }, {
+    "reference": "Organization/09c5b202-2544-4943-8fdd-4e14fb40dfd4"
+  }, {
+    "reference": "Practitioner/0d1ecea6-cf8f-48c6-84ae-85ef0798c241"
+  } ]
+}

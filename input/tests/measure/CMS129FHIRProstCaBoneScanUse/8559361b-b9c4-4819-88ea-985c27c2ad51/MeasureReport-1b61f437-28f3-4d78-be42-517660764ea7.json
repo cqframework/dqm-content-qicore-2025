@@ -1,0 +1,103 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1b61f437-28f3-4d78-be42-517660764ea7",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6295e8d3-5ea8-4fa8-92f2-bfd72af98ee6-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "8559361b-b9c4-4819-88ea-985c27c2ad51"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6295e8d3-5ea8-4fa8-92f2-bfd72af98ee6-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with prostate cancer diagnosis and bone scan starts 1 minute after start of prostate cancer diagnosis. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS129FHIRProstCaBoneScanUse",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/8559361b-b9c4-4819-88ea-985c27c2ad51"
+  }, {
+    "reference": "Condition/c469bf56-e54b-4f54-aa0b-bdbb1f78116c"
+  }, {
+    "reference": "Procedure/045d58ad-88f3-41ab-9bf6-7dc488fb4d76"
+  }, {
+    "reference": "Observation/1871c80d-90aa-459f-892d-5c3d051f609f"
+  }, {
+    "reference": "Observation/d4a34778-eaaf-41ff-8a8e-f8017225ec98"
+  }, {
+    "reference": "Observation/19c7a2b6-2a79-4672-9c0d-63a19146a2ca"
+  }, {
+    "reference": "Observation/eec3a556-b73e-471e-887f-66b1e89768b6"
+  }, {
+    "reference": "Coverage/6f1484c0-e048-4687-9742-f2a7ad785f39"
+  }, {
+    "reference": "Organization/bcbe2841-d5f8-44b3-baca-cccf23a38db4"
+  }, {
+    "reference": "Practitioner/6b512b0e-0cfe-4105-95e9-fbd5520d84d9"
+  } ]
+}

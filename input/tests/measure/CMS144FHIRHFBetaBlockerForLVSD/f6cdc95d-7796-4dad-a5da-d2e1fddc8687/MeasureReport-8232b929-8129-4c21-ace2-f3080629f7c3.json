@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "8232b929-8129-4c21-ace2-f3080629f7c3",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "e7a42ed7-1474-4786-b714-71ae9c4ddd1a-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "f6cdc95d-7796-4dad-a5da-d2e1fddc8687"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#e7a42ed7-1474-4786-b714-71ae9c4ddd1a-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Meeting denominator exclusions for active history of Left Ventricular Device Complication"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS144FHIRHFBetaBlockerForLVSD",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/f6cdc95d-7796-4dad-a5da-d2e1fddc8687"
+  }, {
+    "reference": "Encounter/00532627-cf1d-4191-8ce6-f37c83f58cb3"
+  }, {
+    "reference": "Condition/fca8bb60-3ca7-4252-8ec3-3ca7815e9d4f"
+  }, {
+    "reference": "Encounter/4785c083-bb69-4ae8-9bd7-01aef62a4b72"
+  }, {
+    "reference": "Condition/10690292-ba6d-45f9-b5cb-4a9a6af62e01"
+  }, {
+    "reference": "Condition/104770cb-0298-4ceb-b28b-5d3d0502e650"
+  } ]
+}

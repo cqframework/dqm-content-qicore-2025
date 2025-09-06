@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "11500d07-6802-4743-8970-bb5a63b0176e",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "45599345-eaf9-4100-8dfc-df843e6b89b2-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c244ed99-6bb8-4c43-a14d-f982297b3401"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#45599345-eaf9-4100-8dfc-df843e6b89b2-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient is over 17 years during Office Visit encounter with Depression diagnosis.  Since the patient turns 17 day before start of MP, the case exceeds upper age limit so fails the IPP criteria"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/c244ed99-6bb8-4c43-a14d-f982297b3401"
+  }, {
+    "reference": "Encounter/e20b0201-8009-4844-8b61-189a0d952a62"
+  }, {
+    "reference": "Condition/e6c8f512-cc9d-4221-adbe-4957b5857b70"
+  }, {
+    "reference": "Coverage/2b028355-979a-4e7d-8fcb-856b74ff3bea"
+  }, {
+    "reference": "Organization/fc9e154b-d88b-48f8-b16a-e8f53f89bc98"
+  }, {
+    "reference": "Practitioner/24501339-6af8-4423-84ae-1e86af83b9e4"
+  } ]
+}

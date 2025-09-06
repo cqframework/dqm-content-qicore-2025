@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "72e6f04b-6416-43eb-b3e1-6a4d78c1b882",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "0592d9e7-5b5c-45d2-8f6a-87ddf5061fe9-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "e4f0c8b6-6004-4565-93d6-9df005b8061f"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#0592d9e7-5b5c-45d2-8f6a-87ddf5061fe9-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with Uveitis with cataract surgery. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS133FHIRCataracts2040BCVA90Days",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/e4f0c8b6-6004-4565-93d6-9df005b8061f"
+  }, {
+    "reference": "Observation/9034eaa7-af2d-4c02-813b-b7203147dba7"
+  }, {
+    "reference": "Procedure/dafbeb1d-343a-4e28-900c-1c968e7b393b"
+  }, {
+    "reference": "Condition/cf146baa-831e-4032-8c63-a20ff5330484"
+  }, {
+    "reference": "Coverage/2aa1b5d0-7e97-4212-8495-95247c49b53e"
+  }, {
+    "reference": "Organization/af7d32d9-5bd5-4a82-be5e-6e99ed32100e"
+  }, {
+    "reference": "Practitioner/1dad3a0e-33b3-4b98-a183-d0a080dad7d0"
+  } ]
+}

@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "5b182aca-ad2a-4651-ba6b-df02e001ec36",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "237a52e1-7354-453d-bf16-af6884a36025-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "67779bc6-07ee-42cf-8ca7-e71302915dba"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#237a52e1-7354-453d-bf16-af6884a36025-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "BetaBlocker Not orderd for LVSD Patient for Medical Reasons. Note: Denominator Exception deselected for now due to negation issue."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS144FHIRHFBetaBlockerForLVSD",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/67779bc6-07ee-42cf-8ca7-e71302915dba"
+  }, {
+    "reference": "Encounter/fe292677-1c3f-4d46-8bd5-ca920356c4ba"
+  }, {
+    "reference": "Encounter/e3d90d60-9cae-4cc3-9a15-f128015098ad"
+  }, {
+    "reference": "MedicationRequest/fbc2c556-b77e-48aa-8909-2068dfa9dc4a"
+  }, {
+    "reference": "Practitioner/1b494405-8f5a-4d5b-a83e-738b75eb6940"
+  }, {
+    "reference": "Condition/08ff21b0-ba86-4e5f-8eae-a2ae5746f2ca"
+  }, {
+    "reference": "Condition/1f9396e9-d05d-48c2-ae1d-79dba51f9428"
+  } ]
+}

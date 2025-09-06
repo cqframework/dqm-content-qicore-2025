@@ -1,0 +1,127 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "eaa31743-c56c-45e9-8bbd-877d956245a8",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "5f03d1ab-b844-411f-a604-7c16e4216ef6-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "76dc2b63-710c-4ac5-afef-f76c2ef07dcd"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#5f03d1ab-b844-411f-a604-7c16e4216ef6-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Enc start 10/14 at 8am. Glucose 1001 at 6:59am, more than 1 hour prior to enc start, so does not meet denom exclusion. There are 4 hyperglycemic event days, and num is not excluded since this case is not excluded from denom. \nDenex fails\nNumex fails"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS871FHIRHHHyper",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "NumeratorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator-exclusion",
+          "display": "Numerator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "MeasureObservation_1_1_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 6
+    }, {
+      "id": "MeasureObservation_1_2_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "measure-observation",
+          "display": "Measure Observation"
+        } ]
+      },
+      "count": 4
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Condition/62733998-246b-411b-924a-106a5c4061fa"
+  }, {
+    "reference": "Encounter/bc2561ab-24b6-42e5-aaf3-b813ac49b81a"
+  }, {
+    "reference": "Patient/76dc2b63-710c-4ac5-afef-f76c2ef07dcd"
+  }, {
+    "reference": "Observation/a1a0e9ab-abb7-438a-b0ee-2d3cb64589d7"
+  }, {
+    "reference": "Observation/547ece2a-8935-4599-8b94-67c4a7862bb5"
+  }, {
+    "reference": "Observation/0af29181-1a28-467d-9d4b-b77de0b3028c"
+  }, {
+    "reference": "Observation/e5e44a95-8c38-4178-bf42-6623a36dd117"
+  } ]
+}

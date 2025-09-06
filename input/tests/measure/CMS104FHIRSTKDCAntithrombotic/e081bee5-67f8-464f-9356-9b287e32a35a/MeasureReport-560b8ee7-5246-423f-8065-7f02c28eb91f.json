@@ -1,0 +1,111 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "560b8ee7-5246-423f-8065-7f02c28eb91f",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "76a933e9-ccf6-479d-8240-69b411c9b4d8-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "e081bee5-67f8-464f-9356-9b287e32a35a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#76a933e9-ccf6-479d-8240-69b411c9b4d8-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Age equal to 18 with ischemic stroke with task rejected-medical reason"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS104FHIRSTKDCAntithrombotic",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/e081bee5-67f8-464f-9356-9b287e32a35a"
+  }, {
+    "reference": "Encounter/b10be7b6-11a1-4926-86b7-dd0f25228820"
+  }, {
+    "reference": "MedicationRequest/8834c55c-41d5-4fae-bebe-447038b62e21"
+  }, {
+    "reference": "Task/27499581-a015-4bfb-b761-3819b397628f"
+  }, {
+    "reference": "Task/27499581-a015-4bfb-b761-3819b397628f"
+  }, {
+    "reference": "Condition/fb8b4eac-4d81-4f33-96c6-28db74ffadce"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "Coverage/49618c85-3fac-4c8b-8ed1-3c884704d9b7"
+  }, {
+    "reference": "Organization/286d6841-975c-4d8d-b3e6-1218119be186"
+  } ]
+}

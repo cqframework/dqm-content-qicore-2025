@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "3cac6aa3-8f65-4573-a30a-5df60119071b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "a3eac117-ff27-48cc-889f-0bf4f5e0f297-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "f59dc89c-0125-4f26-8442-6d0eb8c3409a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#a3eac117-ff27-48cc-889f-0bf4f5e0f297-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "intracranial neurosurgery starts not principal \n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS190FHIRVTEProphylaxisICU",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/f59dc89c-0125-4f26-8442-6d0eb8c3409a"
+  }, {
+    "reference": "Encounter/ec74a867-197d-49dd-b026-83bc19d8d4a9"
+  }, {
+    "reference": "Coverage/3f08b92d-3fa4-48a2-8668-9d7ac69b085b"
+  }, {
+    "reference": "Procedure/61350bd9-d3ba-46cc-b198-dd0581ffe138"
+  }, {
+    "reference": "Location/660361d9-d456-403f-bcd4-ca337e207d6c"
+  }, {
+    "reference": "Organization/c912a859-ac2d-418d-884f-5f384ab5b0b4"
+  }, {
+    "reference": "Practitioner/8b9b88c9-1abb-49bd-9a19-b52096f4b2db"
+  } ]
+}

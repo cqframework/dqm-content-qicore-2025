@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "9b978150-c42f-4528-b310-55956af7b352",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ac42e842-b638-486c-8216-61c56d85279c-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "a8091d75-0448-41e4-b666-56873228def3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ac42e842-b638-486c-8216-61c56d85279c-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Dx of Prostate Cancer with qualifying encounter(s) in MP, but ADT greater than 9 months after start of MP. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS645FHIRBoneDensityPCADTherapy",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/a8091d75-0448-41e4-b666-56873228def3"
+  }, {
+    "reference": "Encounter/a868835d-0af2-44d2-94b4-c1ef0256d98e"
+  }, {
+    "reference": "Condition/b9f6e6a9-6d2e-4824-99d3-8c1c505b135c"
+  }, {
+    "reference": "MedicationRequest/6f3a8d20-a788-4774-99fd-4f62d99e4522"
+  }, {
+    "reference": "ServiceRequest/6d46aaa5-d26b-4cc5-8835-e6118f0a932f"
+  } ]
+}

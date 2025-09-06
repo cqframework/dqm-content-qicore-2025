@@ -1,0 +1,376 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENOMPass-RVMalignantBoneDiseaseDxPOA",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Claim/a48d01b6-82ce-4151-aaa9-96c843f6616c",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "a48d01b6-82ce-4151-aaa9-96c843f6616c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "professional",
+          "display": "Professional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/8552c09f-c2db-4069-9d15-41efafe4711a"
+      },
+      "created": "2026-12-12",
+      "provider": {
+        "reference": "Practitioner/cad8deb6-5f07-4762-bafe-bad46b7df9ff"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+            "code": "C40.00"
+          } ]
+        },
+        "onAdmission": {
+          "coding": [ {
+            "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+            "code": "Y"
+          } ]
+        }
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/8c8f67f5-bbe0-43e1-be19-f38f4784f1f0"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1, 2 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1101"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/05829907-05df-47da-9e77-589f0d3eae3c"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/a48d01b6-82ce-4151-aaa9-96c843f6616c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/8552c09f-c2db-4069-9d15-41efafe4711a",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "8552c09f-c2db-4069-9d15-41efafe4711a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "DENOMPass",
+        "given": [ "RVDeliriumDxPOA" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1964-12-11"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/8552c09f-c2db-4069-9d15-41efafe4711a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/05829907-05df-47da-9e77-589f0d3eae3c",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "05829907-05df-47da-9e77-589f0d3eae3c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/8552c09f-c2db-4069-9d15-41efafe4711a"
+      },
+      "period": {
+        "start": "2026-11-12T08:00:00.000+00:00",
+        "end": "2026-11-18T08:01:00.000+00:00"
+      },
+      "length": {
+        "value": 6,
+        "unit": "days"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/05829907-05df-47da-9e77-589f0d3eae3c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/cad8deb6-5f07-4762-bafe-bad46b7df9ff",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cad8deb6-5f07-4762-bafe-bad46b7df9ff",
+      "identifier": [ {
+        "system": "http://www.cms.gov/identifiers/pracitioners",
+        "value": "P12345"
+      } ],
+      "name": [ {
+        "use": "official",
+        "family": "Smith",
+        "given": [ "John" ]
+      } ],
+      "qualification": [ {
+        "identifier": [ {
+          "system": "http://hl7.org/fhir/sid/us-npi",
+          "value": "1234567890"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MD",
+            "display": "Medical License number"
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/cad8deb6-5f07-4762-bafe-bad46b7df9ff"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/8c8f67f5-bbe0-43e1-be19-f38f4784f1f0",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "8c8f67f5-bbe0-43e1-be19-f38f4784f1f0",
+      "status": "active",
+      "beneficiary": {
+        "reference": "Patient/8552c09f-c2db-4069-9d15-41efafe4711a"
+      },
+      "payor": [ {
+        "reference": "Organization/94b2d688-a416-4840-b101-63ed93e94d85"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/8c8f67f5-bbe0-43e1-be19-f38f4784f1f0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/94b2d688-a416-4840-b101-63ed93e94d85",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "94b2d688-a416-4840-b101-63ed93e94d85",
+      "identifier": [ {
+        "system": "http://cms.gov/insurance-ids",
+        "value": "AET12345"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        } ]
+      } ],
+      "name": "Aetna Insurance",
+      "telecom": [ {
+        "system": "phone",
+        "value": "+1-800-123-4567"
+      } ],
+      "address": [ {
+        "line": [ "123 Main Street" ],
+        "city": "Cityville",
+        "state": "CA",
+        "postalCode": "12345",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/94b2d688-a416-4840-b101-63ed93e94d85"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/bf211560-ad9c-424f-8a14-0c5339a0a1bf",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "bf211560-ad9c-424f-8a14-0c5339a0a1bf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "8059cf90-8307-4adf-850c-c059f1c507d5-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "8552c09f-c2db-4069-9d15-41efafe4711a"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#8059cf90-8307-4adf-850c-c059f1c507d5-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter with Malignant Bone Disease dx POA = Y. Meets RV"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "NumeratorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator-exclusion",
+              "display": "Numerator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "MeasureObservation_1_1_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "measure-observation",
+              "display": "Measure Observation"
+            } ]
+          },
+          "count": 6
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Claim/a48d01b6-82ce-4151-aaa9-96c843f6616c"
+      }, {
+        "reference": "Patient/8552c09f-c2db-4069-9d15-41efafe4711a"
+      }, {
+        "reference": "Encounter/05829907-05df-47da-9e77-589f0d3eae3c"
+      }, {
+        "reference": "Practitioner/cad8deb6-5f07-4762-bafe-bad46b7df9ff"
+      }, {
+        "reference": "Coverage/8c8f67f5-bbe0-43e1-be19-f38f4784f1f0"
+      }, {
+        "reference": "Organization/94b2d688-a416-4840-b101-63ed93e94d85"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/bf211560-ad9c-424f-8a14-0c5339a0a1bf"
+    }
+  } ]
+}

@@ -1,0 +1,572 @@
+{
+  "resourceType": "Bundle",
+  "id": "NUMERPass-AllAnaphylaxisCondEncDx",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/48c94879-95c1-49ff-8cdb-723c4d953347",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "48c94879-95c1-49ff-8cdb-723c4d953347",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2024-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/cc7fd8f6-99c4-4d84-8b61-7cbbbc7cd0b6",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "cc7fd8f6-99c4-4d84-8b61-7cbbbc7cd0b6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/cc7fd8f6-99c4-4d84-8b61-7cbbbc7cd0b6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/97e7ed99-cbd1-4c9e-9447-20a107693756",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "97e7ed99-cbd1-4c9e-9447-20a107693756",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "428291000124105",
+          "display": "Anaphylaxis caused by component of vaccine product containing low dose acellular Bordetella pertussis and Clostridium tetani and low dose Corynebacterium diphtheriae antigens"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/97e7ed99-cbd1-4c9e-9447-20a107693756"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/11e23d36-d284-40eb-9bd8-4675ed3d785c",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "11e23d36-d284-40eb-9bd8-4675ed3d785c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "471321000124106",
+          "display": "Anaphylaxis caused by vaccine product containing human poliovirus antigen (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/11e23d36-d284-40eb-9bd8-4675ed3d785c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/89a80264-d2e7-40e4-b97b-987a899dcf89",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "89a80264-d2e7-40e4-b97b-987a899dcf89",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "471331000124109",
+          "display": "Anaphylaxis caused by vaccine product containing Measles morbillivirus and Mumps orthorubulavirus and Rubella virus antigens (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/89a80264-d2e7-40e4-b97b-987a899dcf89"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/7d98fcff-c909-437e-9d07-66a1230bef0c",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "7d98fcff-c909-437e-9d07-66a1230bef0c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "433621000124101",
+          "display": "Anaphylaxis caused by vaccine product containing only Haemophilus influenzae type b antigen"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/7d98fcff-c909-437e-9d07-66a1230bef0c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/f4300d0e-519e-4fcb-9b2f-3d8e9c79f770",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "f4300d0e-519e-4fcb-9b2f-3d8e9c79f770",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "428321000124101",
+          "display": "Anaphylaxis due to Hepatitis B vaccine"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/f4300d0e-519e-4fcb-9b2f-3d8e9c79f770"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/04a92705-55ec-4e26-8370-318aff0242de",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "04a92705-55ec-4e26-8370-318aff0242de",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "471341000124104",
+          "display": "Anaphylaxis caused by vaccine containing Human alphaherpesvirus 3 antigen (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/04a92705-55ec-4e26-8370-318aff0242de"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/9359db17-2f32-4b58-91e9-f9f4348790c3",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "9359db17-2f32-4b58-91e9-f9f4348790c3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "471141000124102",
+          "display": "Anaphylaxis caused by vaccine product containing Streptococcus pneumoniae antigen (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-12T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/9359db17-2f32-4b58-91e9-f9f4348790c3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/b3ec39c0-2805-41af-be06-e91d8ff934ed",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "b3ec39c0-2805-41af-be06-e91d8ff934ed",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "471311000124103",
+          "display": "Anaphylaxis caused by vaccine product containing Hepatitis A virus antigen (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/b3ec39c0-2805-41af-be06-e91d8ff934ed"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/dc9ffda8-4945-4f6c-9dd6-f120de78a1ca",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "dc9ffda8-4945-4f6c-9dd6-f120de78a1ca",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "428331000124103",
+          "display": "Anaphylaxis caused by rotavirus vaccine (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/dc9ffda8-4945-4f6c-9dd6-f120de78a1ca"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/97e7ed99-cbd1-4c9e-9447-20a1076937560",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "97e7ed99-cbd1-4c9e-9447-20a1076937560",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "471361000124100",
+          "display": "Anaphylaxis caused by vaccine product containing Influenza virus antigen (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/97e7ed99-cbd1-4c9e-9447-20a1076937560"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/417d1055-49e1-4ef3-b077-abeefedd139d",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "417d1055-49e1-4ef3-b077-abeefedd139d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "f1b62757-368c-4db2-9a3d-683020e389a3-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "48c94879-95c1-49ff-8cdb-723c4d953347"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#f1b62757-368c-4db2-9a3d-683020e389a3-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "All anaphylaxis. Testing condition encounter diagnosis profile to meet 100% coverage."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS117FHIRChildImmunStatus",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/48c94879-95c1-49ff-8cdb-723c4d953347"
+      }, {
+        "reference": "Encounter/cc7fd8f6-99c4-4d84-8b61-7cbbbc7cd0b6"
+      }, {
+        "reference": "Condition/97e7ed99-cbd1-4c9e-9447-20a107693756"
+      }, {
+        "reference": "Condition/11e23d36-d284-40eb-9bd8-4675ed3d785c"
+      }, {
+        "reference": "Condition/89a80264-d2e7-40e4-b97b-987a899dcf89"
+      }, {
+        "reference": "Condition/7d98fcff-c909-437e-9d07-66a1230bef0c"
+      }, {
+        "reference": "Condition/f4300d0e-519e-4fcb-9b2f-3d8e9c79f770"
+      }, {
+        "reference": "Condition/04a92705-55ec-4e26-8370-318aff0242de"
+      }, {
+        "reference": "Condition/9359db17-2f32-4b58-91e9-f9f4348790c3"
+      }, {
+        "reference": "Condition/b3ec39c0-2805-41af-be06-e91d8ff934ed"
+      }, {
+        "reference": "Condition/dc9ffda8-4945-4f6c-9dd6-f120de78a1ca"
+      }, {
+        "reference": "Condition/97e7ed99-cbd1-4c9e-9447-20a1076937560"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/417d1055-49e1-4ef3-b077-abeefedd139d"
+    }
+  } ]
+}

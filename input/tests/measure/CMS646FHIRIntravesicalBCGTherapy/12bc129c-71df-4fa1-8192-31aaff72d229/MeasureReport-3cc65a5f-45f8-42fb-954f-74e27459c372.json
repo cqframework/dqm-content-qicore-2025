@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "3cc65a5f-45f8-42fb-954f-74e27459c372",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "37a1307b-37d8-4892-bec8-2d49b9f23ee0-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "12bc129c-71df-4fa1-8192-31aaff72d229"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#37a1307b-37d8-4892-bec8-2d49b9f23ee0-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient's tumor staged as cT1. BCG given at 6mo after staging.  Edge testing"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS646FHIRIntravesicalBCGTherapy",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/12bc129c-71df-4fa1-8192-31aaff72d229"
+  }, {
+    "reference": "Encounter/dfc50a99-9a15-4878-9567-d5ee188ffb6d"
+  }, {
+    "reference": "Condition/c41d5ef5-658d-4ad4-9f8b-b79e49b9d07c"
+  }, {
+    "reference": "Observation/be9bcf69-e477-4adc-8d63-4612e7c035e9"
+  }, {
+    "reference": "MedicationAdministration/b2e59159-793e-4ba8-8e8e-8c6d9e255a5b"
+  }, {
+    "reference": "Practitioner/bdcdc6c9-35b4-4225-b033-eedc34c1070b"
+  }, {
+    "reference": "Procedure/44a8bb1b-8d88-4bad-82cb-85e2feb3cc91"
+  } ]
+}

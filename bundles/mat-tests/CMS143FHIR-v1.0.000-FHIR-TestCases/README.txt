@@ -1,0 +1,34 @@
+The purpose of this file is to allow users to view the mapping of test case names to their test case UUIDs. In order to find a specific test case file in the export, first locate the test case name in this document and then use the associated UUID to find the name of the folder in the export.
+
+Case # 33 - e8c4626d-c2e1-45df-b073-031784e03f55 = IPPFail GlaucomaDxUnconfirmed
+Case # 32 - 3cd86896-d4cb-4396-b4ad-96d3675b74e1 = IPPFail GlaucomaDxEnteredInError
+Case # 30 - f72cdb4b-8664-425b-a6ec-53480aa155de = NUMERFail MissingCupDiscRatioExam
+Case # 29 - e320fffc-78f7-4fb3-9cce-cc3608809c53 = IPPFail GlaucomaDxRefuted
+Case # 28 - e216b280-8e64-4b45-97dc-98011f39205a = IPPPass MultipleEnc
+Case # 27 - e180c0c4-8263-401a-923d-b1426bf07636 = IPPFail POAGDxInactive
+Case # 26 - 003b7002-84ee-4303-8030-8bc113f15e7e = NUMERPass OpticExamsDuringPOAGEnc
+Case # 25 - 2e8da2d1-f38b-4c84-af43-51378f5af1c5 = DENEXCEPPass OpticExamMRB4EncEdge
+Case # 24 - 2cca67ad-d05c-4bd2-aa74-d5ba553b9afc = NUMERFail OpticDiscExamAfterEnc
+Case # 23 - 1ea6ee4a-bfb0-44ec-8a94-5f0035c81c9e = IPPPass CareServInLTRF Enc
+Case # 22 - 0e80afcd-6020-4d72-a5fd-d6db3f1f1a05 = NUMERFail MissingOpticDiscExam
+Case # 21 - 006665cc-fce7-4e0a-9c13-b394fb41aee2 = IPPFail NoGlaucomaDx
+Case # 20 - 999429c0-38b9-4932-9f33-3c03a111eefa = IPPFail EncAfterfMPEdge
+Case # 19 - 901324d3-abcb-44c1-97af-7fb226ea1985 = IPPPass GlaucomaDxOverlapsEncEdge
+Case # 18 - 1821adaa-fc62-4a94-9ebc-388ef6ced017 = DENEXCEPPass TwoDiscExamNotDoneForMR
+Case # 17 - 20d535da-db77-47c2-bc50-d36ed8a29270 = IPPFail PatientLT18atMPEdge
+Case # 16 - 9d5d6b94-a5a2-4544-be69-831ea5359943 = IPPFail QualifyingEncHasNoEndDate
+Case # 15 - 4ca8189d-0064-457f-af42-9a02e5d0cc97 = DENEXCEPPass DiscRatioNotDoneMR
+Case # 14 - 2b101fed-53d1-44c8-b11a-792edd52228d = IPPass Age18DayBeforeMPEdge
+Case # 13 - e4efaf8d-368e-4aff-9b5c-bbc074489b67 = NUMERPass DiscExamswithResultsOV
+Case # 12 - e2c1a11c-c85b-4ce9-a24e-4ce7f783a09b = IPPFail EncEnds1MinAfterMPEdge
+Case # 11 - b73f2b5d-98a4-4742-b2d6-979bd3e075a8 = IPPass EncB4EndofMPEdge
+Case # 10 - 68109c29-0e38-4fb1-b994-846311eb3079 = NUMERPass OpticDiscExm1MinB4EncEdge
+Case # 9 - 9394a368-dd04-495b-a810-ee4e9a32e8a0 = NUMERFail OpticExamsB4Enc
+Case # 7 - 7263b5ad-e3fe-45af-8775-b827ecfd1c93 = NUMERFail OpticDiscExmB4EncEdge
+Case # 6 - 5275f17e-d213-4c1f-8d5c-9022276fdf8a = IPPFail NonQualifyingInpatientEnc
+Case # 5 - 4163cf16-fe03-4cb3-aa8e-1be30b80bd22 = IPPFail GlaucomaAbatedB4Enc
+Case # 4 - 523eeca6-d45d-4326-a397-627bea696810 = DENEXCEPFail DiscExamNotDoneNoMR
+Case # 2 - 37d4f1ee-3f65-4f68-ac6c-685cc093eaf1 = DENEXCEPFail NotPerformed4MedReasonGTEncEdge
+Case # 1 - 13d6df48-7288-49e6-9ad4-aa230744746b = IPPFail QualifyingEncHasNoStartDate
+Case # 8 - 8352db6f-c4c7-4eb1-8264-ea3db86f1c6e = IPPFail GlaucomaDXOGTEncStart
+Case # 35 - 895bf328-358c-4513-8bd4-ef9bb20bacd0 = DENEXCEPFail DiscExamNotDoneNoMREncDx

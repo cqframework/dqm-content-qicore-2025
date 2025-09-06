@@ -1,0 +1,95 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "bc945d90-f897-463b-bbc2-f9b922117784",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "bafaeab8-d8f0-4893-9fdf-29a95d53106d-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "dd5a1e46-1b99-45a3-b4d3-1fde205d8a11"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#bafaeab8-d8f0-4893-9fdf-29a95d53106d-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "To test and cover Condition. clinicalStatus  in remission. >18, LOS<120 day. Medication, Administered: Oral Factor Xa Inhibitor for VTE Prophylaxis with diagnosis of  VTE starts before the encounter."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/dd5a1e46-1b99-45a3-b4d3-1fde205d8a11"
+  }, {
+    "reference": "Encounter/b9b427f0-7ff4-4564-966f-b0c0033e4813"
+  }, {
+    "reference": "Coverage/b656194f-8a45-4fe7-adbf-bf5e583c1723"
+  }, {
+    "reference": "Condition/6fab4771-db0d-48c8-b68b-11a2add22ba0"
+  }, {
+    "reference": "MedicationAdministration/83064408-86d0-44e0-8158-a09bcd74c7d6"
+  }, {
+    "reference": "Organization/b93b6050-3c6b-4bb0-b34d-fdd2cac3a11a"
+  } ]
+}

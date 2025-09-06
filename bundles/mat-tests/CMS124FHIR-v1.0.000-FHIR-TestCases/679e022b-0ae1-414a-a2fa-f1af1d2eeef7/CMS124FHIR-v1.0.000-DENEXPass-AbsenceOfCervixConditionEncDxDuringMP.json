@@ -1,0 +1,224 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-AbsenceOfCervixConditionEncDxDuringMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/679e022b-0ae1-414a-a2fa-f1af1d2eeef7",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "679e022b-0ae1-414a-a2fa-f1af1d2eeef7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248152002"
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2002-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/679e022b-0ae1-414a-a2fa-f1af1d2eeef7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/2863bf8f-0b43-4340-aaa3-1e61dec73fcd",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "2863bf8f-0b43-4340-aaa3-1e61dec73fcd",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "99395",
+          "display": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; 18-39 years"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/679e022b-0ae1-414a-a2fa-f1af1d2eeef7"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/2863bf8f-0b43-4340-aaa3-1e61dec73fcd"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/5636288f-6ebb-4844-8db8-a2f093876faf",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "5636288f-6ebb-4844-8db8-a2f093876faf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "37687000",
+          "display": "Congenital absence of cervix (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/679e022b-0ae1-414a-a2fa-f1af1d2eeef7"
+      },
+      "onsetDateTime": "2026-01-01T23:59:59.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/5636288f-6ebb-4844-8db8-a2f093876faf"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/c33e3052-6675-4492-b0e0-6d41ad42a938",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "c33e3052-6675-4492-b0e0-6d41ad42a938",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "0fb19330-70a3-45d8-bd46-199ac775d58c-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "679e022b-0ae1-414a-a2fa-f1af1d2eeef7"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#0fb19330-70a3-45d8-bd46-199ac775d58c-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Absence of Cervix Condition - Testing condition encounter diagnosis profile for meeting 100% coverage"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS124FHIRCervicalCancerScreen",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/679e022b-0ae1-414a-a2fa-f1af1d2eeef7"
+      }, {
+        "reference": "Encounter/2863bf8f-0b43-4340-aaa3-1e61dec73fcd"
+      }, {
+        "reference": "Condition/5636288f-6ebb-4844-8db8-a2f093876faf"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/c33e3052-6675-4492-b0e0-6d41ad42a938"
+    }
+  } ]
+}

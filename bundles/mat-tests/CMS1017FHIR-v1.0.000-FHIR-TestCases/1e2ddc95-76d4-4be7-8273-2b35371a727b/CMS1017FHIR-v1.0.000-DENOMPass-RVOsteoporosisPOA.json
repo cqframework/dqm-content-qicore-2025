@@ -1,0 +1,272 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENOMPass-RVOsteoporosisPOA",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/b3a7916b-b28f-40b9-ba02-d74197aadb2b",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "b3a7916b-b28f-40b9-ba02-d74197aadb2b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/1e2ddc95-76d4-4be7-8273-2b35371a727b"
+      },
+      "period": {
+        "start": "2026-11-12T08:00:00.000+00:00",
+        "end": "2026-11-18T08:01:00.000+00:00"
+      },
+      "diagnosis": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+              "code": "Y"
+            } ]
+          }
+        } ],
+        "condition": {
+          "reference": "Condition/31bd25e6-1761-442e-894a-25f7f0b07e06"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/b3a7916b-b28f-40b9-ba02-d74197aadb2b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/31bd25e6-1761-442e-894a-25f7f0b07e06",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "31bd25e6-1761-442e-894a-25f7f0b07e06",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "M80.031G"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1e2ddc95-76d4-4be7-8273-2b35371a727b"
+      },
+      "encounter": {
+        "reference": "Encounter/b3a7916b-b28f-40b9-ba02-d74197aadb2b"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/31bd25e6-1761-442e-894a-25f7f0b07e06"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/1e2ddc95-76d4-4be7-8273-2b35371a727b",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "1e2ddc95-76d4-4be7-8273-2b35371a727b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "DENOMPass",
+        "given": [ "RVOsteoporosisPOA" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1964-12-11"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/1e2ddc95-76d4-4be7-8273-2b35371a727b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/2d7f4331-e5f7-43db-9072-a6921d9993e2",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "2d7f4331-e5f7-43db-9072-a6921d9993e2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "3fc1ab51-ab53-4595-b9e9-beb9797de8a7-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "1e2ddc95-76d4-4be7-8273-2b35371a727b"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#3fc1ab51-ab53-4595-b9e9-beb9797de8a7-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter with Osteoporosis dx POA = Y. Meets RV logic"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "NumeratorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator-exclusion",
+              "display": "Numerator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "MeasureObservation_1_1_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "measure-observation",
+              "display": "Measure Observation"
+            } ]
+          },
+          "count": 6
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/b3a7916b-b28f-40b9-ba02-d74197aadb2b"
+      }, {
+        "reference": "Condition/31bd25e6-1761-442e-894a-25f7f0b07e06"
+      }, {
+        "reference": "Patient/1e2ddc95-76d4-4be7-8273-2b35371a727b"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/2d7f4331-e5f7-43db-9072-a6921d9993e2"
+    }
+  } ]
+}

@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "2febfd47-497f-4b9e-993d-d064cd2df282",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4e8ad012-734d-4a51-9999-4335156293cd-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "9c546150-9e90-4743-989a-39fe2b0a5a5b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4e8ad012-734d-4a51-9999-4335156293cd-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with only one visit during MP and does not meet criteria specification of two or more visits"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS149FHIRDementiaCognitiveAssess",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/9c546150-9e90-4743-989a-39fe2b0a5a5b"
+  }, {
+    "reference": "Condition/3e318dd4-fcae-49a9-9f90-67905351e10c"
+  }, {
+    "reference": "Encounter/a9c9c2aa-d4f9-44cf-b4fa-ddac797c228b"
+  }, {
+    "reference": "Condition/a3fd4b37-93cd-4617-866f-f3f0c6874719"
+  }, {
+    "reference": "Coverage/092f9c75-3d32-4c0e-8087-46785851ff3e"
+  }, {
+    "reference": "Organization/611ae48e-5600-4c78-91fb-98848f292b17"
+  }, {
+    "reference": "Practitioner/b77a0fa9-5d8a-4718-bb62-2e2a49b936c8"
+  } ]
+}

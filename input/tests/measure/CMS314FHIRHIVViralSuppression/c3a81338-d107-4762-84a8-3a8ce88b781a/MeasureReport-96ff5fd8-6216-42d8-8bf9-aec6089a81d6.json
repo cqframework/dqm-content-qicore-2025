@@ -1,0 +1,89 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "96ff5fd8-6216-42d8-8bf9-aec6089a81d6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "5d5d988c-2181-41a2-aa99-8fd26ce0c52e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c3a81338-d107-4762-84a8-3a8ce88b781a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#5d5d988c-2181-41a2-aa99-8fd26ce0c52e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with a diagnosis of HIV years before start of the MP and a qualifying encounter during the MP with 2 tests during the MP, most recent under 200"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS314FHIRHIVViralSuppression",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/c3a81338-d107-4762-84a8-3a8ce88b781a"
+  }, {
+    "reference": "Encounter/2c9677d9-10fa-46b9-a9fc-37dde103652b"
+  }, {
+    "reference": "Condition/b70b65cd-3473-4c02-a3bc-eb66a903a9b7"
+  }, {
+    "reference": "Observation/97299615-605f-4d8f-9900-67e69205c0aa"
+  }, {
+    "reference": "Observation/c6992b3d-037e-4b10-8643-824caf1626f9"
+  }, {
+    "reference": "Coverage/71bdfe6a-4cc5-4692-aeaa-32b5c7f01f12"
+  }, {
+    "reference": "Organization/f0143ae6-1095-4d54-96ce-932c23a98d98"
+  }, {
+    "reference": "Practitioner/38d1032f-ba13-4945-b7c1-3fe0ea94feb2"
+  } ]
+}

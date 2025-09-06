@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "5a32642f-127b-49a4-af48-5139afe7f6c3",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "0c44ea43-90cc-444f-8352-24ed352ce2f5-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "9a9e1543-79a1-47a0-a3dd-5ac008bbea65"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#0c44ea43-90cc-444f-8352-24ed352ce2f5-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient >=18 years with qualifying encounter and macular exam which occurs outside of the Diabetic Retinopathy Encounter"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS142FHIRCommWithDrManagingDiab",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/9a9e1543-79a1-47a0-a3dd-5ac008bbea65"
+  }, {
+    "reference": "Encounter/8153ccc9-0f8b-46e3-a494-3d30bdf15699"
+  }, {
+    "reference": "Condition/cffff5b5-babc-47dc-a03c-77ea0d733259"
+  }, {
+    "reference": "Observation/ed27dce2-ffd2-4f28-b2c3-4e90d83ec441"
+  }, {
+    "reference": "Coverage/0fed08c2-d280-4ecb-8627-e087195bb983"
+  }, {
+    "reference": "Organization/3f1227fa-1f86-49e2-b056-656c45eb7f7c"
+  }, {
+    "reference": "Practitioner/7e324ddb-9a17-4d0d-9920-09a8c250ba8e"
+  } ]
+}

@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "638d800b-d981-4ae5-b320-3b5dcaf20af7",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4b0b4cf8-0dfb-481c-ade3-6b8972edef10-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "bc83eb4d-4953-4995-9a14-5e2a764a6728"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4b0b4cf8-0dfb-481c-ade3-6b8972edef10-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "TestMultipleOccur - 2 occurrences one is excluded due to COMP and one pass numerator\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/bc83eb4d-4953-4995-9a14-5e2a764a6728"
+  }, {
+    "reference": "Encounter/e8aa2b12-b4bb-4749-a2ed-d51441efdbda"
+  }, {
+    "reference": "Encounter/f6603057-e35f-41ea-9b21-670185382abb"
+  }, {
+    "reference": "Procedure/a736ac7f-fd75-4a56-b595-5e20e1bc71b0"
+  }, {
+    "reference": "Coverage/7507b89a-c97e-44c3-8a32-a8d74c262ebf"
+  }, {
+    "reference": "MedicationAdministration/2c66a9d8-35b0-4658-8d8b-066188603404"
+  }, {
+    "reference": "Organization/9b96d15b-9beb-49fd-84db-0f9fd37b2f40"
+  }, {
+    "reference": "Practitioner/7780ad63-20fe-4e4f-a082-f0ad897bb3c3"
+  } ]
+}

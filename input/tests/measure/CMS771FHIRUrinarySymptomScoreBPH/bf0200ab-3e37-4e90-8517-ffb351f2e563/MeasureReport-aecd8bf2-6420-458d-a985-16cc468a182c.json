@@ -1,0 +1,95 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "aecd8bf2-6420-458d-a985-16cc468a182c",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "5b8e9059-4573-41e8-9aba-3909b18709cf-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "bf0200ab-3e37-4e90-8517-ffb351f2e563"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#5b8e9059-4573-41e8-9aba-3909b18709cf-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient meeting initial population/denominator criteria also has BMI observation which does not meet the denominator exclusion criteria of greater then or equal to 40"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS771FHIRUrinarySymptomScoreBPH",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/bf0200ab-3e37-4e90-8517-ffb351f2e563"
+  }, {
+    "reference": "Observation/198adfb7-364f-4e7c-9788-e187072cc458"
+  }, {
+    "reference": "Observation/397f97d4-08ac-44df-911a-74d9e78b74cb"
+  }, {
+    "reference": "Condition/47f3b02c-f534-4038-9f76-fe7276773a3e"
+  }, {
+    "reference": "Encounter/2f1f5bf2-514a-4048-8909-b49da2fd3265"
+  }, {
+    "reference": "Observation/e8f5216a-ec6b-4b4d-a38f-230161eca2e8"
+  } ]
+}

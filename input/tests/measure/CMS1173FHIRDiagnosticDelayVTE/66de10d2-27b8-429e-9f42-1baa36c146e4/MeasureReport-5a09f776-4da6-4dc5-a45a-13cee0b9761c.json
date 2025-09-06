@@ -1,0 +1,115 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "5a09f776-4da6-4dc5-a45a-13cee0b9761c",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "939d9c96-835e-4aeb-8e7e-c67186df7cc6-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "66de10d2-27b8-429e-9f42-1baa36c146e4"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#939d9c96-835e-4aeb-8e7e-c67186df7cc6-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "2 qualified VTE encounters which are greater than 6 months apart during the same MP.  This test also covers NUM-PASS"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1173FHIRDiagnosticDelayVTE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 2
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 2
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/66de10d2-27b8-429e-9f42-1baa36c146e4"
+  }, {
+    "reference": "Encounter/2132f859-1cba-40a7-8c86-8bad4ab82870"
+  }, {
+    "reference": "Encounter/b498baf1-9d6f-42dc-ab63-16ec274e7eef"
+  }, {
+    "reference": "Condition/145fe356-3610-4ef1-b0ef-d30fc8b3e697"
+  }, {
+    "reference": "Condition/3209b14f-46a4-4387-9765-7a7972d5141a"
+  }, {
+    "reference": "Encounter/ea112025-3cb2-47cc-ae9c-f9cbaa4dce20"
+  }, {
+    "reference": "Encounter/68cb31bc-6a6f-444e-a040-2a1628956e95"
+  }, {
+    "reference": "Condition/ad529661-78d4-4196-8991-c842feee4a9b"
+  }, {
+    "reference": "Condition/cad6dba2-e30f-4161-b71a-cef533b2517e"
+  }, {
+    "reference": "DiagnosticReport/f5fa7a54-e89b-4c15-9c2f-fbcf22e16eba"
+  }, {
+    "reference": "DiagnosticReport/b1d77173-7f0d-4d8d-b628-3c8608dbcffd"
+  }, {
+    "reference": "MedicationRequest/88784c13-4b6d-413a-8a5c-2a1cdee698f4"
+  }, {
+    "reference": "MedicationRequest/2bfaa9be-bd25-4eff-8434-1cdf181a3bc8"
+  }, {
+    "reference": "Coverage/f5585a64-7888-453b-8b06-e4f121ca415b"
+  }, {
+    "reference": "Claim/61dafedd-58cd-4357-a07c-dcbce5e78818"
+  }, {
+    "reference": "Organization/93b54dfe-540b-49c3-856a-3a52332a0568"
+  } ]
+}

@@ -1,0 +1,304 @@
+{
+  "resourceType": "Bundle",
+  "id": "64d121e71252352a0771c3c4",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "305b7ed0-25c0-4fdf-96aa-a872a74f17e3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "64d121e71252352a0771c3c4"
+      } ],
+      "name": [ {
+        "family": "IPFail",
+        "given": [ "Age5Yr11MoOnJan2Edge" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2020-01-02"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/cf3607f7-3d7b-4114-9f11-e058d555c309",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "cf3607f7-3d7b-4114-9f11-e058d555c309",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "90832",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+      },
+      "period": {
+        "start": "2026-07-12T11:45:00.000+00:00",
+        "end": "2026-07-12T11:45:00.000+00:00"
+      },
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/55cd11d7-20e1-4650-967e-73df8c7466d8"
+        },
+        "use": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "version": "2023-09",
+            "code": "10811161000119107",
+            "display": "Major depressive disorder in mother complicating pregnancy (disorder)",
+            "userSelected": true
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/cf3607f7-3d7b-4114-9f11-e058d555c309"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/55cd11d7-20e1-4650-967e-73df8c7466d8",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "55cd11d7-20e1-4650-967e-73df8c7466d8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition" ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2023-09",
+          "code": "10811121000119102",
+          "display": "Major depressive disorder in mother complicating childbirth (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+      },
+      "recordedDate": "2026-07-12T11:45:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/55cd11d7-20e1-4650-967e-73df8c7466d8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/8bb170bf-c1e4-4025-8ae8-91fd295b43d2",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "8bb170bf-c1e4-4025-8ae8-91fd295b43d2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-07-12T11:45:00.000+00:00"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "225337009",
+          "display": "Suicide risk assessment (procedure)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+      },
+      "performedPeriod": {
+        "start": "2026-07-12T11:45:00.000+00:00",
+        "end": "2026-07-12T11:45:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/8bb170bf-c1e4-4025-8ae8-91fd295b43d2"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/b16cff8f-e4d5-45b1-885b-0bc795724766",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "b16cff8f-e4d5-45b1-885b-0bc795724766",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/certificate",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "version": "9.2",
+          "code": "1",
+          "display": "MEDICARE",
+          "userSelected": true
+        } ]
+      },
+      "beneficiary": {
+        "reference": "Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+      },
+      "period": {
+        "start": "2026-01-28T08:00:00.000+00:00",
+        "end": "2026-08-28T00:15:00.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Organization/Organization-2"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/b16cff8f-e4d5-45b1-885b-0bc795724766"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/1e75b76b-d293-43cb-8f4f-588de243b6a4",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "1e75b76b-d293-43cb-8f4f-588de243b6a4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "bcd11832-a44b-4c84-8bad-fa7bd577ab22-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#bcd11832-a44b-4c84-8bad-fa7bd577ab22-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient is 5 years 11 months 30 days at the start of the MP with depression and suicide risk assessment during psychotherapy encounter. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/305b7ed0-25c0-4fdf-96aa-a872a74f17e3"
+      }, {
+        "reference": "Encounter/cf3607f7-3d7b-4114-9f11-e058d555c309"
+      }, {
+        "reference": "Condition/55cd11d7-20e1-4650-967e-73df8c7466d8"
+      }, {
+        "reference": "Procedure/8bb170bf-c1e4-4025-8ae8-91fd295b43d2"
+      }, {
+        "reference": "Coverage/b16cff8f-e4d5-45b1-885b-0bc795724766"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/1e75b76b-d293-43cb-8f4f-588de243b6a4"
+    }
+  } ]
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType": "Claim",
+  "id": "9d9d99e7-b4fa-44b0-82d8-e700f9af12ac",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "professional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/6e5ce204-2257-40d5-a356-13614de68783"
+  },
+  "created": "2026-05-16",
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "diagnosisCodeableConcept": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "L89.006",
+        "display": "Pressure-induced deep tissue damage of unspecified elbow"
+      } ]
+    },
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+        "code": "principal"
+      } ]
+    } ],
+    "onAdmission": {
+      "coding": [ {
+        "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+        "code": "N"
+      } ]
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1, 5, 7 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://example.org/fhir/CodeSystem/ex-professionalservice",
+        "code": "anesthesia"
+      } ]
+    },
+    "servicedDate": "2026-04-11",
+    "encounter": [ {
+      "reference": "Encounter/43e43ac8-01ee-4b0b-9a9a-131bd4e69c6d"
+    } ]
+  } ]
+}

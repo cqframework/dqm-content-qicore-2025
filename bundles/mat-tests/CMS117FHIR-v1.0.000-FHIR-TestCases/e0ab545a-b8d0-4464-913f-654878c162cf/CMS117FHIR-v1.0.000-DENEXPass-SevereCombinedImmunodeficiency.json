@@ -1,0 +1,917 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-SevereCombinedImmunodeficiency",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/e0ab545a-b8d0-4464-913f-654878c162cf",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "e0ab545a-b8d0-4464-913f-654878c162cf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2024-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/49e1a59e-caac-4bb2-88bd-1868ed29ad0f",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "49e1a59e-caac-4bb2-88bd-1868ed29ad0f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185317003",
+          "display": "Telephone encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "period": {
+        "start": "2026-01-01T01:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/49e1a59e-caac-4bb2-88bd-1868ed29ad0f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/bfb6740e-2ff2-4eb9-806f-4da8d2a909cf",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "bfb6740e-2ff2-4eb9-806f-4da8d2a909cf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "3439009",
+          "display": "Severe combined immunodeficiency due to absent peripheral T cell maturation (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "onsetDateTime": "2025-01-02T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/bfb6740e-2ff2-4eb9-806f-4da8d2a909cf"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/b7c881f1-5b06-42ce-88ac-51a7b97ecb28",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "b7c881f1-5b06-42ce-88ac-51a7b97ecb28",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/b7c881f1-5b06-42ce-88ac-51a7b97ecb28"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/9884cce3-f305-41cf-adf0-61cc70001660",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "9884cce3-f305-41cf-adf0-61cc70001660",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-05T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/9884cce3-f305-41cf-adf0-61cc70001660"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/c4ff61a1-d6ec-4573-9dc1-613fee24c861",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "c4ff61a1-d6ec-4573-9dc1-613fee24c861",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-07T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/c4ff61a1-d6ec-4573-9dc1-613fee24c861"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/4aef5b9c-c1e1-4522-a3f8-3440b530402c",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "4aef5b9c-c1e1-4522-a3f8-3440b530402c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-10T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/4aef5b9c-c1e1-4522-a3f8-3440b530402c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/c23d74b7-cddf-4b89-a7d3-9e9f12026570",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "c23d74b7-cddf-4b89-a7d3-9e9f12026570",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/c23d74b7-cddf-4b89-a7d3-9e9f12026570"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/3f2be85b-1407-49e5-b196-83f4c797609b",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "3f2be85b-1407-49e5-b196-83f4c797609b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-06T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/3f2be85b-1407-49e5-b196-83f4c797609b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/90f7f95b-354f-4cf7-8044-f489fab0daf6",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "90f7f95b-354f-4cf7-8044-f489fab0daf6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "146",
+          "display": "DTaP,IPV,Hib,HepB"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-09T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/90f7f95b-354f-4cf7-8044-f489fab0daf6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/8ac1ff2a-74c3-437a-bfc4-9fee479d5798",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "8ac1ff2a-74c3-437a-bfc4-9fee479d5798",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "94",
+          "display": "measles, mumps, rubella, and varicella virus vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/8ac1ff2a-74c3-437a-bfc4-9fee479d5798"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/7ef03a83-8ea7-48c5-a448-0aa544f0efd4",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "7ef03a83-8ea7-48c5-a448-0aa544f0efd4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "49",
+          "display": "Haemophilus influenzae type b vaccine, PRP-OMP conjugate"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/7ef03a83-8ea7-48c5-a448-0aa544f0efd4"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/1035de95-22ee-4e0f-9aa1-2119c6654ab2",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "1035de95-22ee-4e0f-9aa1-2119c6654ab2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "49",
+          "display": "Haemophilus influenzae type b vaccine, PRP-OMP conjugate"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/1035de95-22ee-4e0f-9aa1-2119c6654ab2"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/da5cd4d3-d768-4cb7-acb9-8a0fb05c7b07",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "da5cd4d3-d768-4cb7-acb9-8a0fb05c7b07",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "49",
+          "display": "Haemophilus influenzae type b vaccine, PRP-OMP conjugate"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/da5cd4d3-d768-4cb7-acb9-8a0fb05c7b07"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/c5374fe8-2c6f-41ac-91f8-115822c0f2f6",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "c5374fe8-2c6f-41ac-91f8-115822c0f2f6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "51",
+          "display": "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/c5374fe8-2c6f-41ac-91f8-115822c0f2f6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/e7bcc44e-f5d0-44fd-b2f3-e2189536429c",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "e7bcc44e-f5d0-44fd-b2f3-e2189536429c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "51",
+          "display": "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-10T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/e7bcc44e-f5d0-44fd-b2f3-e2189536429c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/5094cf5c-8f44-488b-bb60-6bd302f1e4fb",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "5094cf5c-8f44-488b-bb60-6bd302f1e4fb",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "51",
+          "display": "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-12T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/5094cf5c-8f44-488b-bb60-6bd302f1e4fb"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/2bdea9f7-d700-4172-a439-490cbc8abc9e",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "2bdea9f7-d700-4172-a439-490cbc8abc9e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "94",
+          "display": "measles, mumps, rubella, and varicella virus vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/2bdea9f7-d700-4172-a439-490cbc8abc9e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/0d2db0e8-bbed-4808-a5a3-16f6d0c01f8c",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "0d2db0e8-bbed-4808-a5a3-16f6d0c01f8c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "215",
+          "display": "Pneumococcal conjugate vaccine 15-valent (PCV15), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-12T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/0d2db0e8-bbed-4808-a5a3-16f6d0c01f8c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/a491fd3a-9a8b-4d5c-a262-7b04cf162068",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "a491fd3a-9a8b-4d5c-a262-7b04cf162068",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "215",
+          "display": "Pneumococcal conjugate vaccine 15-valent (PCV15), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-14T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/a491fd3a-9a8b-4d5c-a262-7b04cf162068"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/10420ec3-71ab-4c45-bef6-84dcb64fe60c",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "10420ec3-71ab-4c45-bef6-84dcb64fe60c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "215",
+          "display": "Pneumococcal conjugate vaccine 15-valent (PCV15), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-20T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/10420ec3-71ab-4c45-bef6-84dcb64fe60c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/c3ca4fef-363b-4688-80d4-1fb5ce04bd12",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "c3ca4fef-363b-4688-80d4-1fb5ce04bd12",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "215",
+          "display": "Pneumococcal conjugate vaccine 15-valent (PCV15), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-22T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/c3ca4fef-363b-4688-80d4-1fb5ce04bd12"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/6a3382fa-5dd9-43b9-9269-bb34155f7146",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "6a3382fa-5dd9-43b9-9269-bb34155f7146",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "85",
+          "display": "hepatitis A vaccine, unspecified formulation"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/6a3382fa-5dd9-43b9-9269-bb34155f7146"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/b267dd86-13b6-4fe7-a2e9-f6368426a537",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "b267dd86-13b6-4fe7-a2e9-f6368426a537",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "119",
+          "display": "rotavirus, live, monovalent vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/b267dd86-13b6-4fe7-a2e9-f6368426a537"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/d8f26656-e838-4234-9e90-233d25d7e386",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "d8f26656-e838-4234-9e90-233d25d7e386",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "119",
+          "display": "rotavirus, live, monovalent vaccine"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-07T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/d8f26656-e838-4234-9e90-233d25d7e386"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/7518595e-7507-434f-adf1-10a62b8f7b9f",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "7518595e-7507-434f-adf1-10a62b8f7b9f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "153",
+          "display": "Influenza, injectable, MDCK, preservative free"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-02T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/7518595e-7507-434f-adf1-10a62b8f7b9f"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Immunization/88e74227-5d42-41ef-8701-1b25f9dfd419",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "88e74227-5d42-41ef-8701-1b25f9dfd419",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "153",
+          "display": "Influenza, injectable, MDCK, preservative free"
+        } ]
+      },
+      "patient": {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      },
+      "occurrenceDateTime": "2025-01-10T00:00:00.000+00:00",
+      "recorded": "2025-01-02T00:00:00.000+00:00",
+      "primarySource": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Immunization/88e74227-5d42-41ef-8701-1b25f9dfd419"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/f4079fc2-ae56-4402-a561-c954418a8781",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "f4079fc2-ae56-4402-a561-c954418a8781",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "ba4484b8-4955-47bb-9930-0cfede167632-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "e0ab545a-b8d0-4464-913f-654878c162cf"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#ba4484b8-4955-47bb-9930-0cfede167632-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has severe combined immunodeficiency"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS117FHIRChildImmunStatus",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/e0ab545a-b8d0-4464-913f-654878c162cf"
+      }, {
+        "reference": "Encounter/49e1a59e-caac-4bb2-88bd-1868ed29ad0f"
+      }, {
+        "reference": "Condition/bfb6740e-2ff2-4eb9-806f-4da8d2a909cf"
+      }, {
+        "reference": "Immunization/b7c881f1-5b06-42ce-88ac-51a7b97ecb28"
+      }, {
+        "reference": "Immunization/9884cce3-f305-41cf-adf0-61cc70001660"
+      }, {
+        "reference": "Immunization/c4ff61a1-d6ec-4573-9dc1-613fee24c861"
+      }, {
+        "reference": "Immunization/4aef5b9c-c1e1-4522-a3f8-3440b530402c"
+      }, {
+        "reference": "Immunization/c23d74b7-cddf-4b89-a7d3-9e9f12026570"
+      }, {
+        "reference": "Immunization/3f2be85b-1407-49e5-b196-83f4c797609b"
+      }, {
+        "reference": "Immunization/90f7f95b-354f-4cf7-8044-f489fab0daf6"
+      }, {
+        "reference": "Immunization/8ac1ff2a-74c3-437a-bfc4-9fee479d5798"
+      }, {
+        "reference": "Immunization/7ef03a83-8ea7-48c5-a448-0aa544f0efd4"
+      }, {
+        "reference": "Immunization/1035de95-22ee-4e0f-9aa1-2119c6654ab2"
+      }, {
+        "reference": "Immunization/da5cd4d3-d768-4cb7-acb9-8a0fb05c7b07"
+      }, {
+        "reference": "Immunization/c5374fe8-2c6f-41ac-91f8-115822c0f2f6"
+      }, {
+        "reference": "Immunization/e7bcc44e-f5d0-44fd-b2f3-e2189536429c"
+      }, {
+        "reference": "Immunization/5094cf5c-8f44-488b-bb60-6bd302f1e4fb"
+      }, {
+        "reference": "Immunization/2bdea9f7-d700-4172-a439-490cbc8abc9e"
+      }, {
+        "reference": "Immunization/0d2db0e8-bbed-4808-a5a3-16f6d0c01f8c"
+      }, {
+        "reference": "Immunization/a491fd3a-9a8b-4d5c-a262-7b04cf162068"
+      }, {
+        "reference": "Immunization/10420ec3-71ab-4c45-bef6-84dcb64fe60c"
+      }, {
+        "reference": "Immunization/c3ca4fef-363b-4688-80d4-1fb5ce04bd12"
+      }, {
+        "reference": "Immunization/6a3382fa-5dd9-43b9-9269-bb34155f7146"
+      }, {
+        "reference": "Immunization/b267dd86-13b6-4fe7-a2e9-f6368426a537"
+      }, {
+        "reference": "Immunization/d8f26656-e838-4234-9e90-233d25d7e386"
+      }, {
+        "reference": "Immunization/7518595e-7507-434f-adf1-10a62b8f7b9f"
+      }, {
+        "reference": "Immunization/88e74227-5d42-41ef-8701-1b25f9dfd419"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/f4079fc2-ae56-4402-a561-c954418a8781"
+    }
+  } ]
+}

@@ -1,0 +1,113 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "72b0c813-b97f-4a57-a57f-b333acf14b3b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "e4b6fb55-7475-4147-acda-53111d385a90-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "a2630a47-3cd8-470c-9fe2-8f4e1066a2d0"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#e4b6fb55-7475-4147-acda-53111d385a90-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Encounter diagnoses include: Fall POA and Moderate injury NPOA. Patient has adverse event fall later in encounter (which meets Numerator), but is excluded from both MOs since Fall POA meets Num and Denom Exclusion."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "NumeratorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator-exclusion",
+          "display": "Numerator Exclusion"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/a2630a47-3cd8-470c-9fe2-8f4e1066a2d0"
+  }, {
+    "reference": "Encounter/d6ce8c7f-87d1-48e6-8f2c-a36e582d3b1d"
+  }, {
+    "reference": "Encounter/45d7ed73-5441-4b6c-b6f5-c2ef9f87630d"
+  }, {
+    "reference": "AdverseEvent/217e8274-7d5c-438e-b74b-a0d1c97f0fd5"
+  }, {
+    "reference": "Claim/26c6ad6b-e0a4-400e-bf30-5f05a25f17fc"
+  }, {
+    "reference": "Claim/39759634-62c0-46fd-9ddd-b36c09986621"
+  }, {
+    "reference": "Claim/dca3e187-0f83-41fc-bfce-92ce4e994c12"
+  }, {
+    "reference": "Practitioner/32f0083c-4232-4252-832a-fbcd779131c1"
+  }, {
+    "reference": "Coverage/75ed6888-c7ce-41ce-873e-7978cb701bd9"
+  }, {
+    "reference": "Organization/a1f6817d-9ec8-4251-9738-b840dd5600e5"
+  } ]
+}

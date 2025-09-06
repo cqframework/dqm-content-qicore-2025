@@ -1,0 +1,309 @@
+{
+  "resourceType": "Bundle",
+  "id": "64947021d09ece2c2e9bf955",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/4fb37f38-8be8-4963-8386-38c98cc095c8",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "4fb37f38-8be8-4963-8386-38c98cc095c8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2054-5",
+            "display": "Black or African American",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Black or African American"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "64947021d09ece2c2e9bf955"
+      } ],
+      "name": [ {
+        "family": "22IPFail",
+        "given": [ "LV240DaysIntoMP" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1988-08-04"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/bd48917e-e9d4-47e1-9cde-cc48967b102f",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "bd48917e-e9d4-47e1-9cde-cc48967b102f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-9-cm",
+          "version": "2013",
+          "code": "042",
+          "display": "Human immunodeficiency virus [HIV] disease",
+          "userSelected": true
+        }, {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108/version/20250301",
+          "code": "165816005",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/4fb37f38-8be8-4963-8386-38c98cc095c8"
+      },
+      "onsetDateTime": "2001-06-22T08:00:00.000+00:00",
+      "recordedDate": "2001-06-22T08:00:00.000+00:00"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/5c41cad2-1a33-4b7f-ab0e-4f7c7d2f3bc5",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "5c41cad2-1a33-4b7f-ab0e-4f7c7d2f3bc5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "version": "2.73",
+          "code": "10351-5",
+          "display": "HIV 1 RNA [Units/volume] (viral load) in Serum or Plasma by Probe with amplification",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/4fb37f38-8be8-4963-8386-38c98cc095c8"
+      },
+      "effectiveDateTime": "2026-11-22T08:00:00.000+00:00",
+      "dataAbsentReason": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+          "code": "unknown",
+          "display": "Unknown"
+        } ]
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/59069a54-cdb1-420e-b076-64df028ac5dc",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "59069a54-cdb1-420e-b076-64df028ac5dc",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "status": "active",
+      "subscriberId": "123456",
+      "beneficiary": {
+        "reference": "Patient/4fb37f38-8be8-4963-8386-38c98cc095c8"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self",
+          "display": "Self"
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/ad5337d9-e843-4a3c-b500-391498828f0f"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/ad5337d9-e843-4a3c-b500-391498828f0f",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "ad5337d9-e843-4a3c-b500-391498828f0f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/664623e2-3c72-49ec-b5fb-df792eed4026",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "664623e2-3c72-49ec-b5fb-df792eed4026",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "1689411712"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/bb0c727e-0a5d-451d-92cf-b702448408ce",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "bb0c727e-0a5d-451d-92cf-b702448408ce",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "be4cada2-c383-43e9-a561-65fc9e434879-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "4fb37f38-8be8-4963-8386-38c98cc095c8"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#be4cada2-c383-43e9-a561-65fc9e434879-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has VL test more than 240 days after start of MP and no other encounters."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1157FHIRHIVRetention",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/4fb37f38-8be8-4963-8386-38c98cc095c8"
+      }, {
+        "reference": "Condition/bd48917e-e9d4-47e1-9cde-cc48967b102f"
+      }, {
+        "reference": "Observation/5c41cad2-1a33-4b7f-ab0e-4f7c7d2f3bc5"
+      }, {
+        "reference": "Coverage/59069a54-cdb1-420e-b076-64df028ac5dc"
+      }, {
+        "reference": "Organization/ad5337d9-e843-4a3c-b500-391498828f0f"
+      }, {
+        "reference": "Practitioner/664623e2-3c72-49ec-b5fb-df792eed4026"
+      } ]
+    }
+  } ]
+}

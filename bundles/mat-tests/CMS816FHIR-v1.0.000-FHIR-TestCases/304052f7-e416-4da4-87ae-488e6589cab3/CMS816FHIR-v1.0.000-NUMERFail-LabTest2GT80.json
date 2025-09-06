@@ -1,0 +1,272 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-NUMERFail-LabTest2GT80-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/bb4781ea-b1a1-441e-8892-28354b713d0b",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "bb4781ea-b1a1-441e-8892-28354b713d0b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "Inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Inpatient encounter"
+        } ]
+      } ],
+      "period": {
+        "start": "2026-07-11T08:00:00.000+00:00",
+        "end": "2026-07-11T21:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/bb4781ea-b1a1-441e-8892-28354b713d0b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationAdministration/66d82587-84bf-449d-9feb-376d4f4eebaf",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "66d82587-84bf-449d-9feb-376d4f4eebaf",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationadministration" ]
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1652639",
+          "display": "Hypoglycemics Severe Hypoglycemia"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/304052f7-e416-4da4-87ae-488e6589cab3"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-11T08:00:00.000+00:00",
+        "end": "2026-07-11T09:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationAdministration/66d82587-84bf-449d-9feb-376d4f4eebaf"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/4aca1faf-2e18-46b1-a12a-136379724ee3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4aca1faf-2e18-46b1-a12a-136379724ee3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "1556-0",
+          "display": "Glucose Lab Test Mass Per Volume"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/304052f7-e416-4da4-87ae-488e6589cab3"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-11T08:00:00.000+00:00",
+        "end": "2026-07-11T08:00:00.000+00:00"
+      },
+      "issued": "2026-07-11T08:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 35,
+        "unit": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/4aca1faf-2e18-46b1-a12a-136379724ee3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/84112f38-4d79-4fed-b643-05e6ea45dc9e",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "84112f38-4d79-4fed-b643-05e6ea45dc9e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "1556-0",
+          "display": "Glucose Lab Test Mass Per Volume"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/304052f7-e416-4da4-87ae-488e6589cab3"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-11T08:05:00.000+00:00",
+        "end": "2026-07-11T08:05:00.000+00:00"
+      },
+      "issued": "2026-07-11T08:05:00.000+00:00",
+      "valueQuantity": {
+        "value": 80.1,
+        "unit": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/84112f38-4d79-4fed-b643-05e6ea45dc9e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/304052f7-e416-4da4-87ae-488e6589cab3",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "304052f7-e416-4da4-87ae-488e6589cab3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2000-07-11"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/304052f7-e416-4da4-87ae-488e6589cab3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/a754b13e-2ef7-4c69-a205-f9af9a9a089e",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "a754b13e-2ef7-4c69-a205-f9af9a9a089e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "a7701e30-7ae3-4dab-bbff-58610a75281d-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "304052f7-e416-4da4-87ae-488e6589cab3"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#a7701e30-7ae3-4dab-bbff-58610a75281d-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter, meds administered, lab test 2 result GT 80 within 5 min of lab test 1 that has result of 35 mg/dL."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS816FHIRHHHypo",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/bb4781ea-b1a1-441e-8892-28354b713d0b"
+      }, {
+        "reference": "MedicationAdministration/66d82587-84bf-449d-9feb-376d4f4eebaf"
+      }, {
+        "reference": "Observation/4aca1faf-2e18-46b1-a12a-136379724ee3"
+      }, {
+        "reference": "Observation/84112f38-4d79-4fed-b643-05e6ea45dc9e"
+      }, {
+        "reference": "Patient/304052f7-e416-4da4-87ae-488e6589cab3"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/a754b13e-2ef7-4c69-a205-f9af9a9a089e"
+    }
+  } ]
+}

@@ -1,0 +1,125 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1bbaa68f-b303-4828-aa6b-c3f5d25b9246",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "0e241989-f9c0-4a5f-ba58-d3283730a59a-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "055640ae-dc71-4e1d-918b-e367013de209"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#0e241989-f9c0-4a5f-ba58-d3283730a59a-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with cancer diagnosis that overlaps the office visit during measurement period. Cancer diagnosis and office visit start on last day of the measurement period. \n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS157FHIRPainIntensityQuantified",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  }, {
+    "id": "Group_2",
+    "population": [ {
+      "id": "InitialPopulation_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/055640ae-dc71-4e1d-918b-e367013de209"
+  }, {
+    "reference": "Condition/8f04d38c-e868-46de-9706-6493715dcbcd"
+  }, {
+    "reference": "Encounter/41fe4653-5b5b-45be-8f00-1d2024514907"
+  }, {
+    "reference": "Coverage/bb804322-569e-4f09-a9ec-d3b1a2402eab"
+  }, {
+    "reference": "Procedure/1454592d-c299-4c05-b002-9312072a4f76"
+  }, {
+    "reference": "Procedure/5dca7e22-c451-47c4-9ecb-dc5cc5bb60bd"
+  }, {
+    "reference": "Organization/b4e3cd5d-15ae-4a24-8827-9357cd36e57d"
+  }, {
+    "reference": "Practitioner/8c06ba0b-4363-4ec9-b5fd-1cb6f7c90a1a"
+  } ]
+}

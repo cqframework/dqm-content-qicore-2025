@@ -1,0 +1,70 @@
+{
+  "resourceType": "Claim",
+  "id": "c42815e0-ba9e-453b-8838-c1bf5a3b4501",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+      "code": "professional"
+    } ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/f09836ee-f6c6-4fd0-8e17-547df4d65bff"
+  },
+  "created": "2026-05-16",
+  "provider": {
+    "reference": "Practitioner/example"
+  },
+  "priority": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+      "code": "normal"
+    } ]
+  },
+  "diagnosis": [ {
+    "sequence": 1,
+    "type": [ {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosis-type",
+        "code": "principal"
+      } ]
+    } ],
+    "onAdmission": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/ValueSet/POAIndicators",
+        "code": "Y"
+      } ]
+    }
+  } ],
+  "procedure": [ {
+    "sequence": 1,
+    "procedureReference": {
+      "reference": "Procedure/e18ed920-cee6-4a5b-a8a8-a5b7b0c8e182"
+    }
+  } ],
+  "insurance": [ {
+    "sequence": 1,
+    "focal": true,
+    "coverage": {
+      "reference": "Coverage/example"
+    }
+  } ],
+  "item": [ {
+    "sequence": 1,
+    "diagnosisSequence": [ 1, 2, 3 ],
+    "productOrService": {
+      "coding": [ {
+        "system": "http://example.org/fhir/CodeSystem/ex-professionalservice",
+        "code": "anesthesia"
+      } ]
+    },
+    "servicedDate": "2026-04-11",
+    "encounter": [ {
+      "reference": "Encounter/60a53951-614c-43be-b6aa-d4f989232ef2"
+    } ]
+  } ]
+}

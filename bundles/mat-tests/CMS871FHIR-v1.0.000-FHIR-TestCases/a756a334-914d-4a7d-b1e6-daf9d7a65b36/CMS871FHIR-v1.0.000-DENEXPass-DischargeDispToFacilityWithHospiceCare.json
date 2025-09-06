@@ -1,0 +1,261 @@
+{
+  "resourceType": "Bundle",
+  "id": "test-DischargeDispToFacilityWithHospiceCare",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/a756a334-914d-4a7d-b1e6-daf9d7a65b36",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "a756a334-914d-4a7d-b1e6-daf9d7a65b36",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1956-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/a756a334-914d-4a7d-b1e6-daf9d7a65b36"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/38d9bd15-211c-4e7e-b019-2e00431fdce8",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "38d9bd15-211c-4e7e-b019-2e00431fdce8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/a756a334-914d-4a7d-b1e6-daf9d7a65b36"
+      },
+      "period": {
+        "start": "2026-04-07T08:00:00.000Z",
+        "end": "2026-04-11T08:15:00.000Z"
+      },
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "E10.21",
+          "display": "Type 1 diabetes mellitus with diabetic nephropathy"
+        } ]
+      } ],
+      "hospitalization": {
+        "admitSource": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code": "EMER",
+            "display": "Emergency"
+          } ]
+        },
+        "dischargeDisposition": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "version": "2023-09",
+            "code": "428371000124100",
+            "display": "Discharge to healthcare facility for hospice care (procedure)"
+          } ]
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/38d9bd15-211c-4e7e-b019-2e00431fdce8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/506e5183-6617-498f-8178-5c74fdc5a0a9",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "506e5183-6617-498f-8178-5c74fdc5a0a9",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "provisional",
+          "display": "Provisional"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "E10.21",
+          "display": "Type 1 diabetes mellitus with diabetic nephropathy"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/a756a334-914d-4a7d-b1e6-daf9d7a65b36"
+      },
+      "onsetDateTime": "2011-01-02"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/506e5183-6617-498f-8178-5c74fdc5a0a9"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/7ca48902-fb88-4a2a-9890-3318a5f93f92",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "7ca48902-fb88-4a2a-9890-3318a5f93f92",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "ac6b61fe-5e3e-499e-9827-b512708a28d6-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "a756a334-914d-4a7d-b1e6-daf9d7a65b36"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#ac6b61fe-5e3e-499e-9827-b512708a28d6-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient has discharge disposition to healthcare facility with hospice care. Meets denom exclusion"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS871FHIRHHHyper",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "NumeratorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator-exclusion",
+              "display": "Numerator Exclusion"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/a756a334-914d-4a7d-b1e6-daf9d7a65b36"
+      }, {
+        "reference": "Encounter/38d9bd15-211c-4e7e-b019-2e00431fdce8"
+      }, {
+        "reference": "Condition/506e5183-6617-498f-8178-5c74fdc5a0a9"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/7ca48902-fb88-4a2a-9890-3318a5f93f92"
+    }
+  } ]
+}

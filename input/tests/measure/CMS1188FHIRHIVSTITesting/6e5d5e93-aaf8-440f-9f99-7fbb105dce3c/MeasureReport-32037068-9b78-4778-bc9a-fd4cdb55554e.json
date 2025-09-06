@@ -1,0 +1,91 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "32037068-9b78-4778-bc9a-fd4cdb55554e",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "ff524a82-caf0-485d-a281-7b5b7e5455fa-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "6e5d5e93-aaf8-440f-9f99-7fbb105dce3c"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#ff524a82-caf0-485d-a281-7b5b7e5455fa-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient is over 13 years old with an encounter - 2 STI screen before MP, 1 STI screen during MP with Unlisted preventive medicine service encounter"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1188FHIRHIVSTITesting",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/6e5d5e93-aaf8-440f-9f99-7fbb105dce3c"
+  }, {
+    "reference": "Condition/dbb529a3-91d9-4419-9637-a6c3dbdccfda"
+  }, {
+    "reference": "Encounter/630c373d-6195-4021-a52b-b45a07f0d7b9"
+  }, {
+    "reference": "Observation/64ca5d92-8f44-41eb-98f9-cc0f920fab04"
+  }, {
+    "reference": "Observation/7a576ae7-b517-449a-84bc-92e988c1ca9c"
+  }, {
+    "reference": "Observation/006bcb4d-4211-41be-9048-1a181ac4fccc"
+  }, {
+    "reference": "Coverage/03481aff-5d72-432d-bb76-a30efd966b76"
+  }, {
+    "reference": "Organization/9854604c-4591-483c-bd11-f9ba8e0794a5"
+  }, {
+    "reference": "Practitioner/92a096c3-244c-4496-85bf-197eb4fbd4b2"
+  } ]
+}

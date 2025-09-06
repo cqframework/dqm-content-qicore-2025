@@ -1,0 +1,549 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-RVwithPOAindicator",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "f3a73c0a-9569-40ad-887e-e2402f8ca6b6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1004-1",
+            "display": "American Indian"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1975-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/04529fdf-cd4c-438a-848f-7d1b4586971e",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "04529fdf-cd4c-438a-848f-7d1b4586971e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "EMER",
+        "display": "emergency"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "4525004",
+          "display": "Emergency department patient visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "period": {
+        "start": "2026-09-29T08:00:00.000+00:00",
+        "end": "2026-09-29T20:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/04529fdf-cd4c-438a-848f-7d1b4586971e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/164d3142-2734-4f99-8522-ff416101dead",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "164d3142-2734-4f99-8522-ff416101dead",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "period": {
+        "start": "2026-09-29T20:01:00.000+00:00",
+        "end": "2026-10-03T20:00:00.000+00:00"
+      },
+      "reasonReference": [ {
+        "reference": "Condition/be5bca75-5150-4f9f-bc8b-e4969762f1f9"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/164d3142-2734-4f99-8522-ff416101dead"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/6682d0b8-c487-4825-9f01-02b285e757a3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "6682d0b8-c487-4825-9f01-02b285e757a3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Arterial blood"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "effectiveDateTime": "2026-10-01T08:01:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.9,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/6682d0b8-c487-4825-9f01-02b285e757a3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/2cb1d86b-5f06-42e1-8d90-22823435247a",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "2cb1d86b-5f06-42e1-8d90-22823435247a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Arterial blood"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "effectiveDateTime": "2026-10-01T07:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.91,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/2cb1d86b-5f06-42e1-8d90-22823435247a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/be5bca75-5150-4f9f-bc8b-e4969762f1f9",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "be5bca75-5150-4f9f-bc8b-e4969762f1f9",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "S37.061A",
+          "display": "Major laceration of right kidney, initial encounter"
+        } ],
+        "text": "Major laceration of right kidney, initial encounter"
+      },
+      "subject": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "encounter": {
+        "reference": "Encounter/164d3142-2734-4f99-8522-ff416101dead"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/be5bca75-5150-4f9f-bc8b-e4969762f1f9"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/2d4b8af3-ee72-4af0-99d5-a4e3096ccff5",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "2d4b8af3-ee72-4af0-99d5-a4e3096ccff5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Arterial blood"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "effectiveDateTime": "2026-10-01T07:35:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.91,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/2d4b8af3-ee72-4af0-99d5-a4e3096ccff5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/feed0e96-0ecf-4e64-9b1d-32e22dd65e4e",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "feed0e96-0ecf-4e64-9b1d-32e22dd65e4e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "professional",
+          "display": "Professional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      },
+      "created": "2026-09-30",
+      "provider": {
+        "reference": "Practitioner/practitioner-1"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+            "code": "S37.061A"
+          } ]
+        },
+        "onAdmission": {
+          "coding": [ {
+            "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+            "code": "Y"
+          } ]
+        }
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/coverage-1"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1101"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/164d3142-2734-4f99-8522-ff416101dead"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/feed0e96-0ecf-4e64-9b1d-32e22dd65e4e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/e21c12c2-f85f-456a-b5a4-18e372e2eb85",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e21c12c2-f85f-456a-b5a4-18e372e2eb85",
+      "identifier": [ {
+        "system": "http://www.cms.gov/identifiers/pracitioners",
+        "value": "P12345"
+      } ],
+      "name": [ {
+        "use": "official",
+        "family": "Smith",
+        "given": [ "John" ]
+      } ],
+      "qualification": [ {
+        "identifier": [ {
+          "system": "http://hl7.org/fhir/sid/us-npi",
+          "value": "1234567890"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MD",
+            "display": "Medical License number"
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/e21c12c2-f85f-456a-b5a4-18e372e2eb85"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/83e8c13f-9ec0-475c-952d-67eac86eb6d3",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "83e8c13f-9ec0-475c-952d-67eac86eb6d3",
+      "identifier": [ {
+        "system": "http://cms.gov/insurance-ids",
+        "value": "AET12345"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        } ]
+      } ],
+      "name": "Aetna Insurance",
+      "telecom": [ {
+        "system": "phone",
+        "value": "+1-800-123-4567"
+      } ],
+      "address": [ {
+        "line": [ "123 Main Street" ],
+        "city": "Cityville",
+        "state": "CA",
+        "postalCode": "12345",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/83e8c13f-9ec0-475c-952d-67eac86eb6d3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/4c4c4943-e791-432a-be92-e9ace691295f",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "4c4c4943-e791-432a-be92-e9ace691295f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "e4ffbea4-96ef-43cf-b54e-dbf06241835e-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#e4ffbea4-96ef-43cf-b54e-dbf06241835e-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "RV Encounters that contain POA indicators"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS832FHIRHHAKI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/f3a73c0a-9569-40ad-887e-e2402f8ca6b6"
+      }, {
+        "reference": "Encounter/04529fdf-cd4c-438a-848f-7d1b4586971e"
+      }, {
+        "reference": "Encounter/164d3142-2734-4f99-8522-ff416101dead"
+      }, {
+        "reference": "Observation/6682d0b8-c487-4825-9f01-02b285e757a3"
+      }, {
+        "reference": "Observation/2cb1d86b-5f06-42e1-8d90-22823435247a"
+      }, {
+        "reference": "Condition/be5bca75-5150-4f9f-bc8b-e4969762f1f9"
+      }, {
+        "reference": "Observation/2d4b8af3-ee72-4af0-99d5-a4e3096ccff5"
+      }, {
+        "reference": "Claim/feed0e96-0ecf-4e64-9b1d-32e22dd65e4e"
+      }, {
+        "reference": "Practitioner/e21c12c2-f85f-456a-b5a4-18e372e2eb85"
+      }, {
+        "reference": "Organization/83e8c13f-9ec0-475c-952d-67eac86eb6d3"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/4c4c4943-e791-432a-be92-e9ace691295f"
+    }
+  } ]
+}

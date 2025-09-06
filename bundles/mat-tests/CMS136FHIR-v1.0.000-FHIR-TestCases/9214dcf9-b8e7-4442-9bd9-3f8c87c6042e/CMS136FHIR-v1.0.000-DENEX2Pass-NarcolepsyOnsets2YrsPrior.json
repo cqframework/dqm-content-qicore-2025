@@ -1,0 +1,350 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEX2Pass-NarcolepsyOnsets2YrsPrior",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "9214dcf9-b8e7-4442-9bd9-3f8c87c6042e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2017-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/301b34b9-f980-4d83-808b-5ed9260330a9",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "301b34b9-f980-4d83-808b-5ed9260330a9",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185464004",
+          "display": "Out of hours visit - not night visit (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/301b34b9-f980-4d83-808b-5ed9260330a9"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/50a23958-b38b-413f-b7ca-2ade5eb8746d",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "50a23958-b38b-413f-b7ca-2ade5eb8746d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "completed",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "884173",
+          "display": "clonidine hydrochloride 0.1 MG Oral Tablet"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+      },
+      "authoredOn": "2026-01-02T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2026-01-02T00:00:00.000+00:00",
+              "end": "2026-07-30T23:59:59.000+00:00"
+            }
+          }
+        }
+      } ],
+      "dispenseRequest": {
+        "expectedSupplyDuration": {
+          "value": 210,
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/50a23958-b38b-413f-b7ca-2ade5eb8746d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/300dbe87-6da9-4081-a47e-27451d3c9ed1",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "300dbe87-6da9-4081-a47e-27451d3c9ed1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "90791",
+          "display": "Psychiatric diagnostic evaluation"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+      },
+      "period": {
+        "start": "2026-01-31T00:00:00.000+00:00",
+        "end": "2026-01-31T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/300dbe87-6da9-4081-a47e-27451d3c9ed1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/206c1f38-87d8-4b21-92f8-7bc10029f3e7",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "206c1f38-87d8-4b21-92f8-7bc10029f3e7",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "735676003",
+          "display": "Narcolepsy type 1 (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+      },
+      "onsetDateTime": "2023-12-31T23:59:59.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/206c1f38-87d8-4b21-92f8-7bc10029f3e7"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/17ca7280-9b89-482a-841e-e46021b658a5",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "17ca7280-9b89-482a-841e-e46021b658a5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "ab8eeb44-e064-4efc-9d98-92797cfc478c-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#ab8eeb44-e064-4efc-9d98-92797cfc478c-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Narcolepsy onsets 2 years prior"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS136FHIRChildADHDMedFollowUp",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      }, {
+        "id": "Group_2",
+        "population": [ {
+          "id": "InitialPopulation_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_2",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/9214dcf9-b8e7-4442-9bd9-3f8c87c6042e"
+      }, {
+        "reference": "Encounter/301b34b9-f980-4d83-808b-5ed9260330a9"
+      }, {
+        "reference": "MedicationRequest/50a23958-b38b-413f-b7ca-2ade5eb8746d"
+      }, {
+        "reference": "Encounter/300dbe87-6da9-4081-a47e-27451d3c9ed1"
+      }, {
+        "reference": "Condition/206c1f38-87d8-4b21-92f8-7bc10029f3e7"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/17ca7280-9b89-482a-841e-e46021b658a5"
+    }
+  } ]
+}

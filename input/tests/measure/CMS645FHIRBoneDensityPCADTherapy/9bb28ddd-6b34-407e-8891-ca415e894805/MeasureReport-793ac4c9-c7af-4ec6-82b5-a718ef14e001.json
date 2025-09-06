@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "793ac4c9-c7af-4ec6-82b5-a718ef14e001",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "9e42c135-6146-4492-ba67-57953298eee3-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "9bb28ddd-6b34-407e-8891-ca415e894805"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#9e42c135-6146-4492-ba67-57953298eee3-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Male with PCa that ends 1 year prior to MP,   ADT is given after PCa ends and procedure code is listed..  Should fail IPP."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS645FHIRBoneDensityPCADTherapy",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/9bb28ddd-6b34-407e-8891-ca415e894805"
+  }, {
+    "reference": "Encounter/4d7a9c73-968f-401d-a2a6-ac6936ef9796"
+  }, {
+    "reference": "Condition/fb13825d-5122-439b-8957-92526706e6c9"
+  }, {
+    "reference": "MedicationRequest/ca82199e-85ec-4ed7-8188-75be5a4b1061"
+  }, {
+    "reference": "ServiceRequest/ca07e75c-31e1-4e33-bba7-81430c0e2833"
+  } ]
+}

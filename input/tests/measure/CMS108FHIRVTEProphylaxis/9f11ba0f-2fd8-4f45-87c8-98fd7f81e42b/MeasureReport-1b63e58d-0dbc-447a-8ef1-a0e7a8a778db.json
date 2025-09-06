@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1b63e58d-0dbc-447a-8ef1-a0e7a8a778db",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "e0f0ec96-5f6d-4447-8760-443a45658db2-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "9f11ba0f-2fd8-4f45-87c8-98fd7f81e42b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#e0f0ec96-5f6d-4447-8760-443a45658db2-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient had SCIP -GenSurg during Encounter and Rank =1\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/9f11ba0f-2fd8-4f45-87c8-98fd7f81e42b"
+  }, {
+    "reference": "Encounter/715e13ec-66d2-42f1-ab93-4186f13c6384"
+  }, {
+    "reference": "Claim/5ca62962b8484628b8de1ec5"
+  }, {
+    "reference": "Coverage/382550ed-1a60-4c5b-8c5c-06609a465127"
+  }, {
+    "reference": "Procedure/81149d4e-1106-4ef2-9aef-086ed46966f6"
+  }, {
+    "reference": "Organization/77c6a6cf-d196-4ada-aeab-e1845d3c1e4d"
+  }, {
+    "reference": "Practitioner/98a337a8-5ac3-456b-b01a-5a1d5133c488"
+  } ]
+}

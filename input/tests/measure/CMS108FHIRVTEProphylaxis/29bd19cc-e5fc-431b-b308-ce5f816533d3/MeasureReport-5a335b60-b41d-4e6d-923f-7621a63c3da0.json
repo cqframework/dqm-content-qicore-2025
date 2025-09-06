@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "5a335b60-b41d-4e6d-923f-7621a63c3da0",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "469c88df-735a-4ac5-857f-ca81b747f36b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "29bd19cc-e5fc-431b-b308-ce5f816533d3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#469c88df-735a-4ac5-857f-ca81b747f36b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Rivaroxaban for VTE Prophylaxis Med Administered during OBS which ends >1 hr before adm and ED = 1 hr ends OBS\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/29bd19cc-e5fc-431b-b308-ce5f816533d3"
+  }, {
+    "reference": "Encounter/cf2760dd-c696-4a72-aaeb-0c968e5e0f6d"
+  }, {
+    "reference": "Encounter/e2a5edaf-6a89-4b72-bddb-64985ba12c61"
+  }, {
+    "reference": "Encounter/1b6c761f-4c44-4ca3-88fa-b7dc0fc80547"
+  }, {
+    "reference": "Coverage/2694a835-0fa4-4936-a6be-abda3b5603f7"
+  }, {
+    "reference": "MedicationAdministration/945c9bb1-d6f9-41bb-9913-75dd91e7deb5"
+  }, {
+    "reference": "Organization/9aac9121-20ee-4265-9e1f-7cbda182d6a7"
+  }, {
+    "reference": "Practitioner/a35adcbe-5889-4926-8986-009d0491f93e"
+  } ]
+}

@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "e9dfa1fc-026f-4ace-a571-8a9cde11ef38",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "a3de8247-2060-454f-8099-bea33069a592-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "8eb00db0-32af-43c6-9c00-79eb2a4462ad"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#a3de8247-2060-454f-8099-bea33069a592-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Low Dose Unfractionated Heparin for VTE Prophylaxis administered > 1 day after anesthesia\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/8eb00db0-32af-43c6-9c00-79eb2a4462ad"
+  }, {
+    "reference": "Encounter/42dab42c-3a2a-45f0-a721-710e0aa46a2e"
+  }, {
+    "reference": "Coverage/5faf372c-a29f-49c7-a893-de666b52c876"
+  }, {
+    "reference": "MedicationAdministration/3c3edbae-c564-48b8-83d8-2af9a8692626"
+  }, {
+    "reference": "Procedure/ab5a4109-bd85-4e02-b632-7e04f2f24548"
+  }, {
+    "reference": "Organization/e98c656f-f51e-4bc2-94f2-7a1eef9fceaf"
+  }, {
+    "reference": "Practitioner/eb9bc890-b387-49d0-aea3-def39a3e3f82"
+  } ]
+}

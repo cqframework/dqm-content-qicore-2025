@@ -1,0 +1,292 @@
+{
+  "resourceType": "Bundle",
+  "id": "SDEPass-SDECoverage",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "0919ba5b-bc08-4660-b8c9-9369b955ffd8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1653-5",
+            "display": "Tohono O'Odham"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2180-8",
+            "display": "Puerto Rican"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "SDE",
+        "given": [ "SDECoverage" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2007-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/a312d3ec-be48-4709-a833-c83a90d55297",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "a312d3ec-be48-4709-a833-c83a90d55297",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "401267002",
+          "display": "Telephone triage encounter (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T00:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/a312d3ec-be48-4709-a833-c83a90d55297"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/86942bdb-ceca-4146-96b8-b7b143c8a0e5",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "86942bdb-ceca-4146-96b8-b7b143c8a0e5",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/certificate",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "59",
+          "display": "Other Private Insurance"
+        } ]
+      },
+      "policyHolder": {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      },
+      "subscriber": {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      },
+      "subscriberId": "12191",
+      "beneficiary": {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      },
+      "dependent": "0",
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2023-01-01T06:00:00.000+00:00",
+        "end": "2023-01-01T11:06:01.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      } ],
+      "order": 9
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/86942bdb-ceca-4146-96b8-b7b143c8a0e5"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/c8efddc5-b814-4dab-aa14-fefd727fd5cc",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "c8efddc5-b814-4dab-aa14-fefd727fd5cc",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      },
+      "onsetDateTime": "2026-01-01T00:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/c8efddc5-b814-4dab-aa14-fefd727fd5cc"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/b281b7a8-9fbb-4bfd-8174-912841dc6185",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "b281b7a8-9fbb-4bfd-8174-912841dc6185",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "b3f3e8d4-8705-4010-94b1-8773415c92d7-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#b3f3e8d4-8705-4010-94b1-8773415c92d7-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "For meeting SDE 100% coverage - patient gender male, sde payer coverage, ethnicity detailed, race detailed"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS131FHIRDiabetesEyeExam",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/0919ba5b-bc08-4660-b8c9-9369b955ffd8"
+      }, {
+        "reference": "Encounter/a312d3ec-be48-4709-a833-c83a90d55297"
+      }, {
+        "reference": "Coverage/86942bdb-ceca-4146-96b8-b7b143c8a0e5"
+      }, {
+        "reference": "Condition/c8efddc5-b814-4dab-aa14-fefd727fd5cc"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/b281b7a8-9fbb-4bfd-8174-912841dc6185"
+    }
+  } ]
+}

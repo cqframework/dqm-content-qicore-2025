@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "edde43ad-6227-4191-a938-18d954b2ae6b",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "605ab113-8777-492f-9c6d-f8458b0a9795-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "84ed0de7-7cfb-4ac3-96a3-3c854eff391a"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#605ab113-8777-492f-9c6d-f8458b0a9795-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Active Prostate Ca Diagnosis and meets all other denominator criteria (first treatment, tumor staging, PSA test, Gleason). Testing multiple PSA results with most recent  before treatment less than 10.\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS129FHIRProstCaBoneScanUse",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/84ed0de7-7cfb-4ac3-96a3-3c854eff391a"
+  }, {
+    "reference": "Condition/56c073a5-7db7-4ecf-b8bd-4f759e7c26e4"
+  }, {
+    "reference": "Procedure/5b9125c4-cd4c-419f-915a-354468551c14"
+  }, {
+    "reference": "Observation/bc7482da-73d7-491d-a8e6-d89cfb504c3a"
+  }, {
+    "reference": "Observation/02f8ec80-c684-45c2-8b21-df82436c2c7b"
+  }, {
+    "reference": "Observation/655708d8-f130-4fc2-9eba-687bc15af734"
+  }, {
+    "reference": "Observation/a2245d76-853d-4afb-85fc-9ab98278691e"
+  }, {
+    "reference": "Observation/086bbaed-c2a8-43df-b207-a612634fdbe3"
+  }, {
+    "reference": "Observation/70684be6-9b9c-4cfa-9086-993605d47292"
+  }, {
+    "reference": "Coverage/14694903-f391-4a6e-be52-19f5b3e06b5a"
+  }, {
+    "reference": "Organization/e35bfe10-b55b-4bd9-bf8c-8d6c9e4c1415"
+  }, {
+    "reference": "Practitioner/e3bc3cae-c2c7-4671-93e1-7cfc9c7d1e65"
+  } ]
+}

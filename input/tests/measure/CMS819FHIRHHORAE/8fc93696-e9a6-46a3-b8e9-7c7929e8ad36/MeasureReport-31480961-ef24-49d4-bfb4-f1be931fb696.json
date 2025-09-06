@@ -1,0 +1,81 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "31480961-ef24-49d4-bfb4-f1be931fb696",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "b41163be-e6c1-4403-a8ac-ca843f9560a2-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "8fc93696-e9a6-46a3-b8e9-7c7929e8ad36"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#b41163be-e6c1-4403-a8ac-ca843f9560a2-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient given opioid 8:15AM. Antagonist is given 8:14PM,  11 hours and 59 minutes after opioid but no route provided. Must be IV, IM, nasal etc. (non oral) to meet num criteria."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS819FHIRHHORAE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "MedicationAdministration/fe47c04d-7391-4084-a2df-20918a86c1e1"
+  }, {
+    "reference": "MedicationAdministration/fc718dd0-fc81-44df-8678-0bed26e49c36"
+  }, {
+    "reference": "Encounter/1cda2b96-c901-4427-abd0-f46c9f9b2d4b"
+  }, {
+    "reference": "Patient/8fc93696-e9a6-46a3-b8e9-7c7929e8ad36"
+  } ]
+}

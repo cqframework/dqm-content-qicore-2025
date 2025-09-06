@@ -1,0 +1,229 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-DENOMPass-Age17inEDAge18DayOfAdmitToIP-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/6c15e22d-38a7-43b8-a5ad-90d784e2990a",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "6c15e22d-38a7-43b8-a5ad-90d784e2990a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2022-09",
+          "code": "183452005",
+          "display": "Emergency hospital admission (procedure)",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/39fd854c-e5c0-440e-a88d-1585af66cb1c"
+      },
+      "period": {
+        "start": "2026-02-01T08:30:00.000+00:00",
+        "end": "2026-02-06T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/6c15e22d-38a7-43b8-a5ad-90d784e2990a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/a8b27511-bed3-4eb4-b7cd-668b3e258a47",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "a8b27511-bed3-4eb4-b7cd-668b3e258a47",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "EMER",
+        "display": "emergency"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2022-09",
+          "code": "4525004",
+          "display": "Emergency department patient visit (procedure)",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/39fd854c-e5c0-440e-a88d-1585af66cb1c"
+      },
+      "period": {
+        "start": "2026-01-31T08:00:00.000+00:00",
+        "end": "2026-02-01T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/a8b27511-bed3-4eb4-b7cd-668b3e258a47"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/39fd854c-e5c0-440e-a88d-1585af66cb1c",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "39fd854c-e5c0-440e-a88d-1585af66cb1c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "63d963937a195f4975f0062a"
+      } ],
+      "name": [ {
+        "family": "DENOMPass",
+        "given": [ "Age17inEDAge18DayOfAdmitToIP" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2008-02-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/39fd854c-e5c0-440e-a88d-1585af66cb1c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/24d26bce-1ff7-4a1f-bb3c-4fe36d364e41",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "24d26bce-1ff7-4a1f-bb3c-4fe36d364e41",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "bdc7df28-036e-44e7-9223-2b8e0199f818-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "39fd854c-e5c0-440e-a88d-1585af66cb1c"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#bdc7df28-036e-44e7-9223-2b8e0199f818-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Inpatient encounter during MP.  Age is 17 when in ED. Turns 18 on day of inpatient admit. Meets IPP / Denom. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS826FHIRHHPI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/6c15e22d-38a7-43b8-a5ad-90d784e2990a"
+      }, {
+        "reference": "Encounter/a8b27511-bed3-4eb4-b7cd-668b3e258a47"
+      }, {
+        "reference": "Patient/39fd854c-e5c0-440e-a88d-1585af66cb1c"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/24d26bce-1ff7-4a1f-bb3c-4fe36d364e41"
+    }
+  } ]
+}

@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "a3c3b10f-36ae-4511-8cfa-e5d165a9aa38",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "5d0ac308-a287-410c-8601-2f40865848e8-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "fee36f91-f35f-4d50-a89c-51ecd0d3ee4f"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#5d0ac308-a287-410c-8601-2f40865848e8-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "medical reasons for not receiving all devices and warfarin in ED but ED is 1 day before adm\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/fee36f91-f35f-4d50-a89c-51ecd0d3ee4f"
+  }, {
+    "reference": "Encounter/2bc46972-e12d-444e-9906-e2ef18faad71"
+  }, {
+    "reference": "Encounter/6a0b5843-d019-4716-842c-d4211f20a5b2"
+  }, {
+    "reference": "Coverage/b9162925-d0a7-4a78-af35-0c2ced725f6e"
+  }, {
+    "reference": "MedicationAdministration/0a965545-4139-46ba-8150-eabc3341be0b"
+  }, {
+    "reference": "Procedure/283d85e7-3200-4019-aea2-269e7199398e"
+  }, {
+    "reference": "Organization/7252d4bd-a803-48fe-8407-7ff8e6714eaa"
+  }, {
+    "reference": "Practitioner/aea4f275-ab00-45b3-9f66-bf356fbe25b3"
+  } ]
+}

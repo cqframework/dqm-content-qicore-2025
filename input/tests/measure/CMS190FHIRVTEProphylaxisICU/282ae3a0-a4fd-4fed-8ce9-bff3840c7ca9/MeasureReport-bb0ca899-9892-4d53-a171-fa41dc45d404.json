@@ -1,0 +1,109 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "bb0ca899-9892-4d53-a171-fa41dc45d404",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "7db4ad6d-f3a6-4ef0-adb2-218d796814b8-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "282ae3a0-a4fd-4fed-8ce9-bff3840c7ca9"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#7db4ad6d-f3a6-4ef0-adb2-218d796814b8-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient refusal for warfarin with Task Rejected"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS190FHIRVTEProphylaxisICU",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/282ae3a0-a4fd-4fed-8ce9-bff3840c7ca9"
+  }, {
+    "reference": "Encounter/575941af-1d41-45af-8767-57ffc31470b9"
+  }, {
+    "reference": "Coverage/e576a955-3609-480a-be00-0190eca46728"
+  }, {
+    "reference": "MedicationRequest/9b5c77d2-ba3b-49a2-a6c2-7060b3221c1a"
+  }, {
+    "reference": "Task/7098895e-d49a-4ab5-8519-03c230b59976"
+  }, {
+    "reference": "Location/ad1d3d4e-ed04-4a67-81df-3c4ad243d1be"
+  }, {
+    "reference": "Organization/22002cbd-0689-4ffc-8273-011075018b04"
+  }, {
+    "reference": "Practitioner/9de3a453-5686-4f91-b127-f9cd0556233f"
+  } ]
+}

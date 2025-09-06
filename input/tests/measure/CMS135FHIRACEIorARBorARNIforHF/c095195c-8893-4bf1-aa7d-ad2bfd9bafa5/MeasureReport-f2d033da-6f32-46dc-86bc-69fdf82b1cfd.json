@@ -1,0 +1,113 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "f2d033da-6f32-46dc-86bc-69fdf82b1cfd",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "414ac74c-36c0-4741-b303-5005aab3cc3c-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c095195c-8893-4bf1-aa7d-ad2bfd9bafa5"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#414ac74c-36c0-4741-b303-5005aab3cc3c-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Fails denominator due to Ejection Fraction < 40 Observation being one minute past encounter"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS135FHIRACEIorARBorARNIforHF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/c095195c-8893-4bf1-aa7d-ad2bfd9bafa5"
+  }, {
+    "reference": "Encounter/f723d90e-9a0e-4fd9-95e7-dd3bf7c1c319"
+  }, {
+    "reference": "Encounter/0a2b5654-48c1-4c13-802f-1ffa480bc3f3"
+  }, {
+    "reference": "Condition/06caf2cb-f9cd-4151-bfb5-62ea418e5b7a"
+  }, {
+    "reference": "Observation/6a5dcddb-4413-4cd3-a49d-2c3677c35e63"
+  }, {
+    "reference": "MedicationRequest/07d579bf-dbf5-4122-82c4-40fccb1922dd"
+  }, {
+    "reference": "Medication/5256de90-9f37-4c32-a9db-c45b3383d841"
+  }, {
+    "reference": "Coverage/0df76e38-2426-429d-9cfd-62a727e5c5a0"
+  }, {
+    "reference": "Organization/c3bc92c1-9033-4335-beb9-7d1a71061c98"
+  }, {
+    "reference": "Practitioner/f6315530-c6ae-4d28-b354-5aafbcfc2ba3"
+  } ]
+}

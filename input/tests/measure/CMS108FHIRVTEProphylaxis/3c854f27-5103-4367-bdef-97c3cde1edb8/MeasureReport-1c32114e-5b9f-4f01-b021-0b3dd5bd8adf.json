@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "1c32114e-5b9f-4f01-b021-0b3dd5bd8adf",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "a0e4732a-96d0-4066-933b-460354f2d697-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "3c854f27-5103-4367-bdef-97c3cde1edb8"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#a0e4732a-96d0-4066-933b-460354f2d697-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Graduated compression stockings\" order  rejected on 1 day after start of IP encounter and same day with Aneth\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/3c854f27-5103-4367-bdef-97c3cde1edb8"
+  }, {
+    "reference": "Encounter/51ddeb00-e6f2-4395-910a-c4572f340c85"
+  }, {
+    "reference": "Coverage/cced3509-a9db-4d44-ad6a-eff2dc5faa24"
+  }, {
+    "reference": "Procedure/691de5ab-afe3-45f2-b45d-a9bf630d31e8"
+  }, {
+    "reference": "ServiceRequest/92d8e366-cd5b-4943-a92d-c0366b4a368b"
+  }, {
+    "reference": "Task/d9750d5c-10af-47a0-ba47-43d9d383f82a"
+  }, {
+    "reference": "Organization/fa56abb9-7994-44b8-8eae-dbe0ed76573b"
+  }, {
+    "reference": "Practitioner/dd83bee6-4f97-4f31-8a1d-35d67fa7e141"
+  } ]
+}

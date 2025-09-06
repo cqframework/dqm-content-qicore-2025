@@ -1,0 +1,345 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-DENEXFail-Increase03UsingFirstCreatInFirst48Hours",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1975-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/0af90f1e-57e9-4c40-b1d8-aa625bcc1095",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "0af90f1e-57e9-4c40-b1d8-aa625bcc1095",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005",
+          "display": "Emergency hospital admission (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+      },
+      "period": {
+        "start": "2026-12-16T08:00:00.000+00:00",
+        "end": "2026-12-24T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/0af90f1e-57e9-4c40-b1d8-aa625bcc1095"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/4e78fca7-f992-42ff-943a-4c25a787c89c",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4e78fca7-f992-42ff-943a-4c25a787c89c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+      },
+      "effectiveDateTime": "2026-12-17T09:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.8,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/4e78fca7-f992-42ff-943a-4c25a787c89c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/bce0aabc-f4b2-4aad-aa1a-ef848c6368ce",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "bce0aabc-f4b2-4aad-aa1a-ef848c6368ce",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+      },
+      "effectiveDateTime": "2026-12-17T10:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 1.1,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/bce0aabc-f4b2-4aad-aa1a-ef848c6368ce"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/7a556ac6-b1ed-4f48-866c-2820b449c3a3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "7a556ac6-b1ed-4f48-866c-2820b449c3a3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+      },
+      "effectiveDateTime": "2026-12-17T21:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 1,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/7a556ac6-b1ed-4f48-866c-2820b449c3a3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/5d33ce35-d1a8-4674-a030-4885bfb11d6e",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "5d33ce35-d1a8-4674-a030-4885bfb11d6e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21232-4",
+          "display": "Creatinine [Mass/volume] in Serum or Plasma"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+      },
+      "effectiveDateTime": "2026-12-19T02:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 0.9,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/5d33ce35-d1a8-4674-a030-4885bfb11d6e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/dd46c362-de66-4a57-b245-3c575ee64109",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "dd46c362-de66-4a57-b245-3c575ee64109",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "d7a60123-06e1-4d2a-837e-cd3483f0bf7e-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#d7a60123-06e1-4d2a-837e-cd3483f0bf7e-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "IP encounter where patient had 0.3 increase in SCr within first 48 hours, using first creatinine in first 48 hours as there is no SCr within first 24 hours. Meets Denominator Exclusion."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS832FHIRHHAKI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/4e0c6578-8b8d-4c10-98d6-7c0a7c2ea385"
+      }, {
+        "reference": "Encounter/0af90f1e-57e9-4c40-b1d8-aa625bcc1095"
+      }, {
+        "reference": "Observation/4e78fca7-f992-42ff-943a-4c25a787c89c"
+      }, {
+        "reference": "Observation/bce0aabc-f4b2-4aad-aa1a-ef848c6368ce"
+      }, {
+        "reference": "Observation/7a556ac6-b1ed-4f48-866c-2820b449c3a3"
+      }, {
+        "reference": "Observation/5d33ce35-d1a8-4674-a030-4885bfb11d6e"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/dd46c362-de66-4a57-b245-3c575ee64109"
+    }
+  } ]
+}

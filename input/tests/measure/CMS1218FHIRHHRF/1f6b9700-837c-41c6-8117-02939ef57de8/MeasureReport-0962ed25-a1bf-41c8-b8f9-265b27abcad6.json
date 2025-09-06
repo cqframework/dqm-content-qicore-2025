@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0962ed25-a1bf-41c8-b8f9-265b27abcad6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "7ca49657-e436-40cd-b114-fc498aa74f0a-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "1f6b9700-837c-41c6-8117-02939ef57de8"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#7ca49657-e436-40cd-b114-fc498aa74f0a-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Elective hospitalization with procedure (general anesthesia) within first 3 days of encounter. Meets IPP/Denom. RV test includes 2 hemoglobin values; RV displays the first (12 mmol/L) not the second (15 mmol/L), as expected. \n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Procedure/94e1d55f-b340-48c0-aba7-52a3b6a23b68"
+  }, {
+    "reference": "Patient/1f6b9700-837c-41c6-8117-02939ef57de8"
+  }, {
+    "reference": "Observation/b8a3d955-b9d5-4716-9b7f-a9165458c4d7"
+  }, {
+    "reference": "Observation/e9464be4-6a74-489b-aaba-e8e42aecd352"
+  }, {
+    "reference": "Encounter/e186646c-116a-4d6b-9579-626872e01d06"
+  } ]
+}

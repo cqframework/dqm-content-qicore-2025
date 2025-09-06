@@ -1,0 +1,205 @@
+{
+  "resourceType": "Bundle",
+  "id": "43233532424ba67d6e1d1c91",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/7f0a0909-3618-4bea-899e-0a12c8aed445",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "7f0a0909-3618-4bea-899e-0a12c8aed445",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "asked-declined"
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        }, {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1653-5",
+            "display": "Tohono O'Odham"
+          }
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "SDE",
+        "given": [ "SDEAll" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2006-02-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/7f0a0909-3618-4bea-899e-0a12c8aed445"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/8bd2320e-ca74-4823-9447-89589ad770fe",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "8bd2320e-ca74-4823-9447-89589ad770fe",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "identifier": [ {
+        "system": "http://benefitsinc.com/memberid",
+        "value": "12345"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "https://nahdo.org/sopt",
+          "code": "59",
+          "display": "Other Private Insurance"
+        } ]
+      },
+      "policyHolder": {
+        "reference": "Patient/7f0a0909-3618-4bea-899e-0a12c8aed445"
+      },
+      "subscriberId": "523435",
+      "beneficiary": {
+        "reference": "Patient/7f0a0909-3618-4bea-899e-0a12c8aed445"
+      },
+      "dependent": "0",
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "period": {
+        "start": "2024-01-01T06:00:00.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Organization/123456"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/8bd2320e-ca74-4823-9447-89589ad770fe"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/54527cb5-0977-46b0-807c-5a09bd8276b0",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "54527cb5-0977-46b0-807c-5a09bd8276b0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "8f8cbe2b-774a-4931-b36b-78c5ab3df67d-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "7f0a0909-3618-4bea-899e-0a12c8aed445"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#8f8cbe2b-774a-4931-b36b-78c5ab3df67d-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Denom Pass test with more complete data for SDE elements, race, ethnicity, etc."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS826FHIRHHPI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/7f0a0909-3618-4bea-899e-0a12c8aed445"
+      }, {
+        "reference": "Coverage/8bd2320e-ca74-4823-9447-89589ad770fe"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/54527cb5-0977-46b0-807c-5a09bd8276b0"
+    }
+  } ]
+}

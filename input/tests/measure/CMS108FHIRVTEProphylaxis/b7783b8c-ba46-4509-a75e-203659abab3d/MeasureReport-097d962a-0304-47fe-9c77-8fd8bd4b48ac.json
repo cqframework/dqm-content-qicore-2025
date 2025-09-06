@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "097d962a-0304-47fe-9c77-8fd8bd4b48ac",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "6a8ba09e-a16e-4992-b239-0bc77daf0325-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b7783b8c-ba46-4509-a75e-203659abab3d"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#6a8ba09e-a16e-4992-b239-0bc77daf0325-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "VFP refused in day of inpatient encounter\n"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS108FHIRVTEProphylaxis",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b7783b8c-ba46-4509-a75e-203659abab3d"
+  }, {
+    "reference": "Encounter/874744b2-b330-4432-aaf7-8b2939cfe6dd"
+  }, {
+    "reference": "Encounter/3450126c-9e42-4787-9eff-5b1b2da6f79e"
+  }, {
+    "reference": "Coverage/989944ab-3881-411d-997e-e09fc10324cc"
+  }, {
+    "reference": "Procedure/50439669-f90c-4cdd-9482-ec33cf0ddf37"
+  }, {
+    "reference": "Organization/7b61437c-57b5-4dd0-aa6b-d6636d7b7787"
+  }, {
+    "reference": "Practitioner/348c0d22-7ab5-4955-be66-b560014df9c6"
+  } ]
+}

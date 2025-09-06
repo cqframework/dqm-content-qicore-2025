@@ -1,0 +1,105 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "a08e2374-4dea-4a09-8163-296239dcd454",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "5a84c10f-b986-4613-b38b-d46b4768e407-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "a55c6265-a05c-4fad-beb4-c5338420d1b1"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#5a84c10f-b986-4613-b38b-d46b4768e407-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Enc. 01/01 0800-0830 during MP, age 20, BP 120/79, patient refused f/u in 4-6 months due to religious reasons"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS22FHIRPCSBPScreeningFollowUp",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/a55c6265-a05c-4fad-beb4-c5338420d1b1"
+  }, {
+    "reference": "Encounter/4c6e806e-f82f-4a03-bf22-47a0f20ede86"
+  }, {
+    "reference": "Observation/31b3770f-8008-4f1b-9976-94f2685f81f0"
+  }, {
+    "reference": "ServiceRequest/09071d1f-6538-4946-a442-4b7a65bce4c0"
+  }, {
+    "reference": "Coverage/34f79825-4ba0-4fef-a17c-0983eaa7f339"
+  }, {
+    "reference": "Organization/0d742cea-0e5d-4f15-a622-0e1b6ce20a65"
+  } ]
+}

@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "66929cb5-74be-4cb0-bc4f-ef877c246562",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "e2fb024f-3d08-4c1c-b27e-88d3e79f5961-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "5b2aee56-e057-4632-8f39-4b91c1cb6a32"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#e2fb024f-3d08-4c1c-b27e-88d3e79f5961-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with HIV diagnosed before date of visit"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1157FHIRHIVRetention",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/5b2aee56-e057-4632-8f39-4b91c1cb6a32"
+  }, {
+    "reference": "Condition/5d0aca45-e9ed-4bba-b804-be31640744db"
+  }, {
+    "reference": "Encounter/a4146a64-ff1b-4354-8949-484726518411"
+  }, {
+    "reference": "Coverage/0bebaf48-c5e3-45e3-b932-34a01f8e812f"
+  }, {
+    "reference": "Organization/ddf0a8c9-4fca-4a1b-b46f-db9780ccc68e"
+  }, {
+    "reference": "Practitioner/92129ef4-698b-4c81-8d73-65cad1ead736"
+  } ]
+}

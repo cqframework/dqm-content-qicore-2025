@@ -1,0 +1,349 @@
+{
+  "resourceType": "Bundle",
+  "id": "6109650598086b538055a106",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "62e63186-10d6-4d51-96a4-a698ecb75ab1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Age6AfterMP <b>IPPFAIL </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>b019f48474eaf180a54102214f1c1c371596f305e81efba54422f6d95eac8f78</td></tr><tr><td>Date of birth</td><td><span>02 January 2006</span></td></tr></tbody></table></div>"
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "6109650598086b538055a106"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "IPFail",
+        "given": [ "Age6AfterMP" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2021-01-02"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/58ff34cf-e91d-4474-a660-983808eea770",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "58ff34cf-e91d-4474-a660-983808eea770",
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "90832"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1"
+      },
+      "period": {
+        "start": "2027-07-12T11:45:00.000+00:00",
+        "end": "2027-07-12T12:15:00.000+00:00"
+      },
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2020-09",
+          "code": "10811161000119107",
+          "display": "Major depressive disorder in mother complicating pregnancy (disorder)",
+          "userSelected": true
+        } ]
+      } ],
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/8d5d3eea-cf47-45a1-9f9c-a3d5f8f2ea04"
+        },
+        "use": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "version": "2022-09",
+            "code": "10811161000119107",
+            "display": "Major depressive disorder in mother complicating pregnancy (disorder)",
+            "userSelected": true
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/58ff34cf-e91d-4474-a660-983808eea770"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/2fefc253-2402-4d05-8a17-029967f1c44e",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "2fefc253-2402-4d05-8a17-029967f1c44e",
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "225337009"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1"
+      },
+      "performedPeriod": {
+        "start": "2027-07-12T11:50:00.000+00:00",
+        "end": "2027-07-12T12:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/2fefc253-2402-4d05-8a17-029967f1c44e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/8d5d3eea-cf47-45a1-9f9c-a3d5f8f2ea04",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "8d5d3eea-cf47-45a1-9f9c-a3d5f8f2ea04",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "encounter-diagnosis",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2022-09",
+          "code": "10811121000119102",
+          "display": "Major depressive disorder in mother complicating childbirth (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1"
+      },
+      "recordedDate": "2027-07-12T11:45:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/8d5d3eea-cf47-45a1-9f9c-a3d5f8f2ea04"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/4ffb6f2e-4d44-4b23-bcba-8adc6981b15b",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "4ffb6f2e-4d44-4b23-bcba-8adc6981b15b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "status": "active",
+      "beneficiary": {
+        "reference": "Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1"
+      },
+      "payor": [ {
+        "reference": "Organization/d978bd3a-a3b0-46dc-99c2-ecdb38859d73"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/4ffb6f2e-4d44-4b23-bcba-8adc6981b15b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/d978bd3a-a3b0-46dc-99c2-ecdb38859d73",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "d978bd3a-a3b0-46dc-99c2-ecdb38859d73",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/d978bd3a-a3b0-46dc-99c2-ecdb38859d73"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/c2ef6de9-7b7e-4708-a574-6c44b150b196",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "c2ef6de9-7b7e-4708-a574-6c44b150b196",
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "123456"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/c2ef6de9-7b7e-4708-a574-6c44b150b196"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/33356f1f-0460-4aaa-98e8-313bb924cef3",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "33356f1f-0460-4aaa-98e8-313bb924cef3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "44beb2bd-b885-4875-83fa-d2195d79ab2d-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "62e63186-10d6-4d51-96a4-a698ecb75ab1"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#44beb2bd-b885-4875-83fa-d2195d79ab2d-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient turns 6 one day after the start of the MP with depression and suicide risk assessment during psychotherapy encounter"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/62e63186-10d6-4d51-96a4-a698ecb75ab1"
+      }, {
+        "reference": "Encounter/58ff34cf-e91d-4474-a660-983808eea770"
+      }, {
+        "reference": "Procedure/2fefc253-2402-4d05-8a17-029967f1c44e"
+      }, {
+        "reference": "Condition/8d5d3eea-cf47-45a1-9f9c-a3d5f8f2ea04"
+      }, {
+        "reference": "Coverage/4ffb6f2e-4d44-4b23-bcba-8adc6981b15b"
+      }, {
+        "reference": "Organization/d978bd3a-a3b0-46dc-99c2-ecdb38859d73"
+      }, {
+        "reference": "Practitioner/c2ef6de9-7b7e-4708-a574-6c44b150b196"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/33356f1f-0460-4aaa-98e8-313bb924cef3"
+    }
+  } ]
+}

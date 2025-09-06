@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "77832829-c8fa-4b33-ad9e-c6dbc94583a7",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "13268835-6743-48f6-959c-6fb72bb7a43e-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "790f8993-7a03-4ed7-94d7-c0e95587afa0"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#13268835-6743-48f6-959c-6fb72bb7a43e-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "BCa, OV and staging present.  BCG given twice.  First is within 6 months of staging and 2nd is at 7 months after staging.  Test to determine if 1st BCG is calculating the results. Passes as expected."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS646FHIRIntravesicalBCGTherapy",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/790f8993-7a03-4ed7-94d7-c0e95587afa0"
+  }, {
+    "reference": "Encounter/ae783575-b616-4249-9ecb-c2237936c5b4"
+  }, {
+    "reference": "Condition/65aaf8c1-6c3a-4049-b964-f0b96de0b9b5"
+  }, {
+    "reference": "Procedure/a8105f96-3080-49f9-bd81-1ea131988f21"
+  }, {
+    "reference": "Observation/1359299f-8ad5-4729-bbd4-0f873ba2f813"
+  }, {
+    "reference": "MedicationAdministration/cf961ac9-cd54-4602-8260-fe21dcaa1721"
+  }, {
+    "reference": "MedicationAdministration/c20af83c-c8e6-4be7-a7e1-e5781bd31dbf"
+  } ]
+}

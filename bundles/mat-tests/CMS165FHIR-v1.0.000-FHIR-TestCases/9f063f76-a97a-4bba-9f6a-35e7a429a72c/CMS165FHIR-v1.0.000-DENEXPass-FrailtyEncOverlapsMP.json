@@ -1,0 +1,295 @@
+{
+  "resourceType": "Bundle",
+  "id": "DENEXPass-FrailtyEncOverlapsMP",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "9f063f76-a97a-4bba-9f6a-35e7a429a72c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "DENEXPass",
+        "given": [ "FrailtyEncOverlapsMP" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1959-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/86b697d4-84f2-4620-9547-0ff6652530c8",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "86b697d4-84f2-4620-9547-0ff6652530c8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "3391000175108",
+          "display": "Office visit for pediatric care and assessment (procedure)"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/86b697d4-84f2-4620-9547-0ff6652530c8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/215fa452-b265-4cad-892f-e50faa2e8704",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "215fa452-b265-4cad-892f-e50faa2e8704",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "371125006",
+          "display": "Labile essential hypertension (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+      },
+      "onsetDateTime": "2026-06-30T23:59:59.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/215fa452-b265-4cad-892f-e50faa2e8704"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MedicationRequest/9c8769f4-5634-4f34-bd74-8a272cb3e07e",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "9c8769f4-5634-4f34-bd74-8a272cb3e07e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+      },
+      "status": "active",
+      "intent": "order",
+      "doNotPerform": false,
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "312836",
+          "display": "rivastigmine 6 MG Oral Capsule"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+      },
+      "authoredOn": "2026-01-01T00:00:00.000+00:00",
+      "requester": {
+        "reference": "Practitioner/example"
+      },
+      "dispenseRequest": {
+        "expectedSupplyDuration": {
+          "value": 90,
+          "system": "http://unitsofmeasure.org",
+          "code": "days"
+        }
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/9c8769f4-5634-4f34-bd74-8a272cb3e07e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/196e3c08-847d-4ed3-9eda-f42d0f074303",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "196e3c08-847d-4ed3-9eda-f42d0f074303",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "99509",
+          "display": "Home visit for assistance with activities of daily living and personal care"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-02T00:00:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/196e3c08-847d-4ed3-9eda-f42d0f074303"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/f1c55ef7-2274-491a-b508-21faf51aacec",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "f1c55ef7-2274-491a-b508-21faf51aacec",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "232825ac-99e9-4c92-8f2a-d122fb50e858-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#232825ac-99e9-4c92-8f2a-d122fb50e858-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Frailty encounter overlaps MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS165FHIRControllingHighBP",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/9f063f76-a97a-4bba-9f6a-35e7a429a72c"
+      }, {
+        "reference": "Encounter/86b697d4-84f2-4620-9547-0ff6652530c8"
+      }, {
+        "reference": "Condition/215fa452-b265-4cad-892f-e50faa2e8704"
+      }, {
+        "reference": "MedicationRequest/9c8769f4-5634-4f34-bd74-8a272cb3e07e"
+      }, {
+        "reference": "Encounter/196e3c08-847d-4ed3-9eda-f42d0f074303"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/f1c55ef7-2274-491a-b508-21faf51aacec"
+    }
+  } ]
+}

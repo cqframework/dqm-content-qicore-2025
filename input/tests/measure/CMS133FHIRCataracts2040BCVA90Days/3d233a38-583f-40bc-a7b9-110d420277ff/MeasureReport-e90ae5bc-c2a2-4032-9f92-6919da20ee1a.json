@@ -1,0 +1,97 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "e90ae5bc-c2a2-4032-9f92-6919da20ee1a",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "441b5ed2-0416-4442-9671-e6eb9a1700df-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "3d233a38-583f-40bc-a7b9-110d420277ff"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#441b5ed2-0416-4442-9671-e6eb9a1700df-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with Prior Penetrating Keratoplasty with cataract surgery. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS133FHIRCataracts2040BCVA90Days",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/3d233a38-583f-40bc-a7b9-110d420277ff"
+  }, {
+    "reference": "Observation/e8908b5e-1f8a-49e9-896d-100c170161aa"
+  }, {
+    "reference": "Procedure/011d0b2d-f9e8-4e98-bd54-0db74721420e"
+  }, {
+    "reference": "Condition/3da19e5b-70ea-49cf-827e-490d501636df"
+  }, {
+    "reference": "Coverage/efeb0868-9bdf-4d58-aef9-244d79d8b0a9"
+  }, {
+    "reference": "Organization/6fdb0e00-3a60-4a4b-8276-581f718f47ae"
+  }, {
+    "reference": "Practitioner/e80e6db5-af87-435c-af91-dc9d7678909b"
+  } ]
+}

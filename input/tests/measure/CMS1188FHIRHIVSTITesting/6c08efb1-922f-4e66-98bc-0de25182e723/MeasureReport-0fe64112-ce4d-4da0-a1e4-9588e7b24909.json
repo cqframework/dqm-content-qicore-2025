@@ -1,0 +1,91 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0fe64112-ce4d-4da0-a1e4-9588e7b24909",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "bdf9970c-97e5-45b0-8018-b92520865b61-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "6c08efb1-922f-4e66-98bc-0de25182e723"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#bdf9970c-97e5-45b0-8018-b92520865b61-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient is over 13 years old and has an encounter during the MP and has all three lab tests during the MP -- testing relevantPeriod missing start datetime"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1188FHIRHIVSTITesting",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/6c08efb1-922f-4e66-98bc-0de25182e723"
+  }, {
+    "reference": "Condition/6e89a343-10e8-45ad-bd6d-598aa0d8b75e"
+  }, {
+    "reference": "Encounter/ca6a59d0-570c-48bd-94d7-91c154f29a7d"
+  }, {
+    "reference": "Observation/07764deb-8c70-447f-bc83-761be3357cdd"
+  }, {
+    "reference": "Observation/71b3a8f3-10e5-445f-8cf4-ca5234e0331c"
+  }, {
+    "reference": "Observation/2d335e72-fea3-43d1-9d49-4f61c8fbf41e"
+  }, {
+    "reference": "Coverage/0fe29ae8-9237-4917-a640-e57688499fdf"
+  }, {
+    "reference": "Organization/3831c97b-3439-448e-9827-8a8acdb7d804"
+  }, {
+    "reference": "Practitioner/b67d5c2b-c5f2-4748-9ef8-27a602a543fa"
+  } ]
+}

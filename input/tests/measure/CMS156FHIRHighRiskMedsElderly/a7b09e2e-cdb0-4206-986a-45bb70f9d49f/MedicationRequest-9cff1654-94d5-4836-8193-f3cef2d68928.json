@@ -1,0 +1,51 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "9cff1654-94d5-4836-8193-f3cef2d68928",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationrequest" ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [ {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+      "code": "discharge",
+      "display": "Discharge"
+    } ]
+  } ],
+  "medicationCodeableConcept": {
+    "coding": [ {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "966787",
+      "display": "doxepin 3 MG Oral Tablet",
+      "userSelected": true
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/a7b09e2e-cdb0-4206-986a-45bb70f9d49f"
+  },
+  "authoredOn": "2026-01-04T00:00:00.000+00:00",
+  "requester": {
+    "reference": "Practitioner/example"
+  },
+  "dosageInstruction": [ {
+    "timing": {
+      "repeat": {
+        "boundsPeriod": {
+          "start": "2026-01-04T00:00:00.000+00:00",
+          "end": "2026-01-05T00:00:00.000+00:00"
+        }
+      }
+    }
+  } ],
+  "dispenseRequest": {
+    "quantity": {
+      "value": 1
+    },
+    "expectedSupplyDuration": {
+      "value": 1,
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  }
+}

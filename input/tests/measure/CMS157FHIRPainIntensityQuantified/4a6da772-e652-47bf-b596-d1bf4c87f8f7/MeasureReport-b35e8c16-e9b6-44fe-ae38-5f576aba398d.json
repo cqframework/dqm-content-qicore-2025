@@ -1,0 +1,133 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "b35e8c16-e9b6-44fe-ae38-5f576aba398d",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "499b946c-f85d-4f72-9754-809520e8f3cf-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "4a6da772-e652-47bf-b596-d1bf4c87f8f7"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#499b946c-f85d-4f72-9754-809520e8f3cf-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with cancer diagnosis that overlaps the office visits. Has office visit and chemo within 30 days prior to the measurement period, and another office visit and chemo within measurement period. "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS157FHIRPainIntensityQuantified",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  }, {
+    "id": "Group_2",
+    "population": [ {
+      "id": "InitialPopulation_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Denominator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/4a6da772-e652-47bf-b596-d1bf4c87f8f7"
+  }, {
+    "reference": "Condition/356109a9-8776-4211-816e-97b0526b88b2"
+  }, {
+    "reference": "Encounter/9fd045c0-fc4d-4e9f-adc2-342084f887be"
+  }, {
+    "reference": "Encounter/588bc2d1-e4c7-4eda-9ab6-b32a8d287e5e"
+  }, {
+    "reference": "Coverage/e3f93d76-e47a-4123-8030-4c71d9d2e219"
+  }, {
+    "reference": "Procedure/24ba84d3-f3b2-48b8-b605-6505d04dd198"
+  }, {
+    "reference": "Procedure/e4a8f18a-a966-4a29-91d8-e7f5ed010d15"
+  }, {
+    "reference": "Procedure/bc24040c-9de4-4a3c-bccb-cee26c905e19"
+  }, {
+    "reference": "Procedure/79f6d102-6036-4dd8-bca4-ef287293b924"
+  }, {
+    "reference": "Procedure/8dcd0b12-4bb6-4060-977c-b57a40c58462"
+  }, {
+    "reference": "Procedure/26f73100-fcca-45d0-9d61-f4798efcd15c"
+  }, {
+    "reference": "Organization/40e991c5-ce40-48e5-b1de-5d03f6f6298c"
+  } ]
+}

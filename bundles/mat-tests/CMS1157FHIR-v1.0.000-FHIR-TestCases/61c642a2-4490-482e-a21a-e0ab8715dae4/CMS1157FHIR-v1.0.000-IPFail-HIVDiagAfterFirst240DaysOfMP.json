@@ -1,0 +1,265 @@
+{
+  "resourceType": "Bundle",
+  "id": "64946f2fd09ece2c2e9bf950",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/61c642a2-4490-482e-a21a-e0ab8715dae4",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "61c642a2-4490-482e-a21a-e0ab8715dae4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "64946f2fd09ece2c2e9bf950"
+      } ],
+      "name": [ {
+        "family": "20IPFail",
+        "given": [ "HIVDiagAfterFirst240DaysOfMP" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2006-10-21"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/adbd219c-4655-405a-8a17-b7111a032397",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "adbd219c-4655-405a-8a17-b7111a032397",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-9-cm",
+          "version": "2013",
+          "code": "042",
+          "display": "Human immunodeficiency virus [HIV] disease",
+          "userSelected": true
+        }, {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108/version/20250301",
+          "code": "165816005",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/61c642a2-4490-482e-a21a-e0ab8715dae4"
+      },
+      "onsetDateTime": "2026-11-22T08:00:00.000+00:00",
+      "recordedDate": "2026-11-22T08:00:00.000+00:00"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/70b67c30-4e5c-44c9-8838-d386c845f6a1",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "70b67c30-4e5c-44c9-8838-d386c845f6a1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+      },
+      "status": "active",
+      "subscriberId": "123456",
+      "beneficiary": {
+        "reference": "Patient/61c642a2-4490-482e-a21a-e0ab8715dae4"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self",
+          "display": "Self"
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/9e7c6e0a-c74e-435d-8e80-4188173efc27"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/9e7c6e0a-c74e-435d-8e80-4188173efc27",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "9e7c6e0a-c74e-435d-8e80-4188173efc27",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/8b158d2b-4dd6-47c6-8204-7a55309aff4f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "8b158d2b-4dd6-47c6-8204-7a55309aff4f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "1689411712"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/cda40047-cc6d-481d-b60a-8fec2454d616",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "cda40047-cc6d-481d-b60a-8fec2454d616",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "ad0baea1-28bf-453a-9c0f-5704c3adb2f4-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "61c642a2-4490-482e-a21a-e0ab8715dae4"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#ad0baea1-28bf-453a-9c0f-5704c3adb2f4-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient is diagnosed with HIV more than 240 days after the start of MP."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1157FHIRHIVRetention",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/61c642a2-4490-482e-a21a-e0ab8715dae4"
+      }, {
+        "reference": "Condition/adbd219c-4655-405a-8a17-b7111a032397"
+      }, {
+        "reference": "Coverage/70b67c30-4e5c-44c9-8838-d386c845f6a1"
+      }, {
+        "reference": "Organization/9e7c6e0a-c74e-435d-8e80-4188173efc27"
+      }, {
+        "reference": "Practitioner/8b158d2b-4dd6-47c6-8204-7a55309aff4f"
+      } ]
+    }
+  } ]
+}

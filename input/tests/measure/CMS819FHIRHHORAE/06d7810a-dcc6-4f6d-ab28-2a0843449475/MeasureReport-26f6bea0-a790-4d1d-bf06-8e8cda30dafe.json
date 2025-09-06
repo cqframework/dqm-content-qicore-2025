@@ -1,0 +1,81 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "26f6bea0-a790-4d1d-bf06-8e8cda30dafe",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "83b1d75a-72e0-479f-8c93-8fde44131d74-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "06d7810a-dcc6-4f6d-ab28-2a0843449475"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#83b1d75a-72e0-479f-8c93-8fde44131d74-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Age 17 in ED, 18 at time of admission meets denominator. Sex = \"other\". "
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS819FHIRHHORAE",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/06d7810a-dcc6-4f6d-ab28-2a0843449475"
+  }, {
+    "reference": "Encounter/15e1c304-c9bb-4ef3-b940-2e2d536cebb4"
+  }, {
+    "reference": "Encounter/75a60e50-33d8-4299-8734-4b77d80e1eca"
+  }, {
+    "reference": "MedicationAdministration/7536edfc-7bc1-4ed6-9e60-f438a15fd175"
+  } ]
+}

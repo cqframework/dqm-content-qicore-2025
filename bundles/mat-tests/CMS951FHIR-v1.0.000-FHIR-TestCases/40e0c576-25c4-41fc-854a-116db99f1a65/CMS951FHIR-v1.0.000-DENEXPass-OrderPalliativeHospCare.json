@@ -1,0 +1,431 @@
+{
+  "resourceType": "Bundle",
+  "id": "64136dac4b11b147841ab8be",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/40e0c576-25c4-41fc-854a-116db99f1a65",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "40e0c576-25c4-41fc-854a-116db99f1a65",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "64136dac4b11b147841ab8be"
+      } ],
+      "name": [ {
+        "family": "DENEXPass",
+        "given": [ "OrderPalliativeHospCare" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1955-10-21"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/d76a01ec-1b3d-4689-8a90-284af17dc84c",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "d76a01ec-1b3d-4689-8a90-284af17dc84c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "102781000119107",
+          "display": "Sensory neuropathy due to type 1 diabetes mellitus (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "onsetDateTime": "2025-03-03T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/d76a01ec-1b3d-4689-8a90-284af17dc84c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/422a9d08-a943-48cf-afba-2ea855554f05",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "422a9d08-a943-48cf-afba-2ea855554f05",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "185463005",
+          "display": "Visit out of hours (procedure)",
+          "userSelected": true
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "period": {
+        "start": "2026-02-15T08:00:00.000+00:00",
+        "end": "2026-02-15T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/422a9d08-a943-48cf-afba-2ea855554f05"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/d57c8c4a-39c6-4dcb-8a70-76130a1f535a",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d57c8c4a-39c6-4dcb-8a70-76130a1f535a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "version": "2.71",
+          "code": "48642-3",
+          "display": "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among non black population",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "issued": "2026-02-15T08:00:00.000+00:00",
+      "valueBoolean": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/d57c8c4a-39c6-4dcb-8a70-76130a1f535a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/e36e6597-548f-4263-a561-4f0105ad6730",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e36e6597-548f-4263-a561-4f0105ad6730",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "version": "2.71",
+          "code": "13705-9",
+          "display": "Albumin/Creatinine [Mass Ratio] in 24 hour Urine",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "issued": "2026-02-15T08:00:00.000+00:00",
+      "valueBoolean": true
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/e36e6597-548f-4263-a561-4f0105ad6730"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/dc1c5a95-845a-4b6f-aafb-eb6b4677dd66",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "dc1c5a95-845a-4b6f-aafb-eb6b4677dd66",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "active",
+          "userSelected": true
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis",
+          "userSelected": true
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "433146000",
+          "display": "Chronic kidney disease stage 5 (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "onsetDateTime": "2026-03-06T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/dc1c5a95-845a-4b6f-aafb-eb6b4677dd66"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/cccd55ec-ba98-4cde-ae6c-2548dfea1af4",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "cccd55ec-ba98-4cde-ae6c-2548dfea1af4",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2025-03-01T08:35:00.000+00:00"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "103735009",
+          "display": "Palliative care (regime/therapy)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "performedDateTime": "2026-03-01T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/cccd55ec-ba98-4cde-ae6c-2548dfea1af4"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/587f9d5d-1ba5-4392-a2bd-f9e2babf0c49",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "587f9d5d-1ba5-4392-a2bd-f9e2babf0c49",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-03-01T08:00:00.000+00:00"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103693007",
+          "display": "Diagnostic procedure",
+          "userSelected": true
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2021-09",
+          "code": "170935008",
+          "display": "Full care by hospice (finding)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      },
+      "performedDateTime": "2026-03-10T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/587f9d5d-1ba5-4392-a2bd-f9e2babf0c49"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/87b0af29-ce41-49e9-83e6-63992cb6946e",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "87b0af29-ce41-49e9-83e6-63992cb6946e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "db4a69fc-ea72-433f-827b-7d2ed3a5df61-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "40e0c576-25c4-41fc-854a-116db99f1a65"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#db4a69fc-ea72-433f-827b-7d2ed3a5df61-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "This patient is 70 years old with a qualifying encounter and active diabetes diagnosis, two qualifying lab tests, as well as an order for palliative or hospice care. This case tests the denominator exclusion criteria."
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS951FHIRKidneyHealthEval",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/40e0c576-25c4-41fc-854a-116db99f1a65"
+      }, {
+        "reference": "Condition/d76a01ec-1b3d-4689-8a90-284af17dc84c"
+      }, {
+        "reference": "Encounter/422a9d08-a943-48cf-afba-2ea855554f05"
+      }, {
+        "reference": "Observation/d57c8c4a-39c6-4dcb-8a70-76130a1f535a"
+      }, {
+        "reference": "Observation/e36e6597-548f-4263-a561-4f0105ad6730"
+      }, {
+        "reference": "Condition/dc1c5a95-845a-4b6f-aafb-eb6b4677dd66"
+      }, {
+        "reference": "Procedure/cccd55ec-ba98-4cde-ae6c-2548dfea1af4"
+      }, {
+        "reference": "Procedure/587f9d5d-1ba5-4392-a2bd-f9e2babf0c49"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/87b0af29-ce41-49e9-83e6-63992cb6946e"
+    }
+  } ]
+}

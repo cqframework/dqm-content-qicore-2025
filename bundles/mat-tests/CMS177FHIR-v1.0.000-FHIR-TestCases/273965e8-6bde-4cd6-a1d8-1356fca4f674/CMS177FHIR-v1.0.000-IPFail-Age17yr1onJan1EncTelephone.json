@@ -1,0 +1,323 @@
+{
+  "resourceType": "Bundle",
+  "id": "6109650598086b538055a0e6",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/273965e8-6bde-4cd6-a1d8-1356fca4f674",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "273965e8-6bde-4cd6-a1d8-1356fca4f674",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">AgeOver17OneDayB4EncTelehealth <b>IPPFAIL </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>cd568cb6b2f07d024c404c48394c395c</td></tr><tr><td>Date of birth</td><td><span>31 December 1994</span></td></tr></tbody></table></div>"
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "American Indian or Alaska Native"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "6109650598086b538055a0e6"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "IPFail",
+        "given": [ "AgeOver17OneDayB4EncTelephone" ]
+      } ],
+      "gender": "male",
+      "birthDate": "2008-12-31"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/273965e8-6bde-4cd6-a1d8-1356fca4f674"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/83ff2c42-23ae-4926-a7ee-84137f7369ac",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "83ff2c42-23ae-4926-a7ee-84137f7369ac",
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory",
+        "userSelected": true
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "98966"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/273965e8-6bde-4cd6-a1d8-1356fca4f674"
+      },
+      "period": {
+        "start": "2027-01-01T08:00:00.000+00:00",
+        "end": "2027-01-01T08:15:00.000+00:00"
+      },
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/65380216-6327-45eb-bc04-91f50a28a7db"
+        },
+        "use": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "version": "2022-09",
+            "code": "10811161000119107",
+            "display": "Major depressive disorder in mother complicating pregnancy (disorder)",
+            "userSelected": true
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/83ff2c42-23ae-4926-a7ee-84137f7369ac"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/65380216-6327-45eb-bc04-91f50a28a7db",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "65380216-6327-45eb-bc04-91f50a28a7db",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2022-09",
+          "code": "10811121000119102",
+          "display": "Major depressive disorder in mother complicating childbirth (disorder)",
+          "userSelected": true
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/273965e8-6bde-4cd6-a1d8-1356fca4f674"
+      },
+      "recordedDate": "2027-01-01T08:00:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/65380216-6327-45eb-bc04-91f50a28a7db"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/2c45ed08-def9-4f9f-86fa-2a0f91d67d3b",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "2c45ed08-def9-4f9f-86fa-2a0f91d67d3b",
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/sop",
+          "version": "9.2",
+          "code": "1",
+          "display": "MEDICARE",
+          "userSelected": true
+        } ]
+      },
+      "beneficiary": {
+        "reference": "Patient/273965e8-6bde-4cd6-a1d8-1356fca4f674"
+      },
+      "period": {
+        "start": "2027-01-01T08:00:00.000+00:00",
+        "end": "2027-03-28T08:15:00.000+00:00"
+      },
+      "payor": [ {
+        "reference": "Organization/49d66a39-8625-43fa-be47-c16a00df56a3"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/2c45ed08-def9-4f9f-86fa-2a0f91d67d3b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/49d66a39-8625-43fa-be47-c16a00df56a3",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "49d66a39-8625-43fa-be47-c16a00df56a3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization" ]
+      },
+      "identifier": [ {
+        "use": "temp",
+        "system": "urn:oid:2.16.840.1.113883.4.4",
+        "value": "21-3259825"
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        } ]
+      } ],
+      "name": "Blue Cross Blue Shield of Texas",
+      "telecom": [ {
+        "system": "phone",
+        "value": "(+1) 972-766-6900"
+      } ],
+      "address": [ {
+        "use": "billing",
+        "type": "postal",
+        "line": [ "P.O. Box 660044" ],
+        "city": "Dallas",
+        "state": "TX",
+        "postalCode": "75266-0044",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/49d66a39-8625-43fa-be47-c16a00df56a3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/cd437e98-7b52-4bff-86e3-5407e8d8d8cb",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cd437e98-7b52-4bff-86e3-5407e8d8d8cb",
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "123456"
+      } ],
+      "name": [ {
+        "family": "Evil",
+        "prefix": [ "Dr" ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/cd437e98-7b52-4bff-86e3-5407e8d8d8cb"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/1eb62caa-f24d-4b31-b159-d1f971edc63b",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "1eb62caa-f24d-4b31-b159-d1f971edc63b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "cfb86dc3-5449-43ef-be79-e0984810c2dd-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "273965e8-6bde-4cd6-a1d8-1356fca4f674"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#cfb86dc3-5449-43ef-be79-e0984810c2dd-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient is 17 years 1 day on Dec 31 and completed a Telephone visit encounter during MP"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS177FHIRChildMDDSuicideAssmt",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/273965e8-6bde-4cd6-a1d8-1356fca4f674"
+      }, {
+        "reference": "Encounter/83ff2c42-23ae-4926-a7ee-84137f7369ac"
+      }, {
+        "reference": "Condition/65380216-6327-45eb-bc04-91f50a28a7db"
+      }, {
+        "reference": "Coverage/2c45ed08-def9-4f9f-86fa-2a0f91d67d3b"
+      }, {
+        "reference": "Organization/49d66a39-8625-43fa-be47-c16a00df56a3"
+      }, {
+        "reference": "Practitioner/cd437e98-7b52-4bff-86e3-5407e8d8d8cb"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/1eb62caa-f24d-4b31-b159-d1f971edc63b"
+    }
+  } ]
+}

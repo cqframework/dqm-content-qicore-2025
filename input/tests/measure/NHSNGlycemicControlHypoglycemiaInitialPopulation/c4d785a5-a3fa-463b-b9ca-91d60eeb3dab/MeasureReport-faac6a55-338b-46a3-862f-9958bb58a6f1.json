@@ -1,0 +1,59 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "faac6a55-338b-46a3-862f-9958bb58a6f1",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "aed17b4e-2cbb-48b7-9670-835cc8d0a6a1-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#aed17b4e-2cbb-48b7-9670-835cc8d0a6a1-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Right age with encounter, meds administered, no lab tests. Med relevant period starts during encounter, no relevant end period. Meets denominator as med relevant period must start during encounter but no end required.\n\n(CMS #5)"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/NHSNGlycemicControlHypoglycemiaInitialPopulation",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "MedicationAdministration/746d237b-1d09-44e3-b789-1629863c9c29"
+  }, {
+    "reference": "Encounter/4007e17a-0ddb-441b-9e6d-f9408f530fd7"
+  }, {
+    "reference": "Patient/c4d785a5-a3fa-463b-b9ca-91d60eeb3dab"
+  } ]
+}

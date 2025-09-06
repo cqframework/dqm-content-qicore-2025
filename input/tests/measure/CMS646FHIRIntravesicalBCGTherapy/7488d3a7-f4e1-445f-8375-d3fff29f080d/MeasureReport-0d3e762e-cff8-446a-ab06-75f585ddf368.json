@@ -1,0 +1,107 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0d3e762e-cff8-446a-ab06-75f585ddf368",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "db64dbd6-4255-4434-9c4f-6b77d30f7b6b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "7488d3a7-f4e1-445f-8375-d3fff29f080d"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#db64dbd6-4255-4434-9c4f-6b77d30f7b6b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient with OV in MP. Bladder cancer diagnosis and cancer staging in MP.  Pt has HIV dx and should be excluded."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS646FHIRIntravesicalBCGTherapy",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/7488d3a7-f4e1-445f-8375-d3fff29f080d"
+  }, {
+    "reference": "Encounter/6ed55d85-3013-4645-a819-e671de7b2278"
+  }, {
+    "reference": "Condition/0f9b4517-b268-4a42-82ea-b1768ce3da8c"
+  }, {
+    "reference": "Condition/ff270f92-f5f4-41bc-98df-73a68972f02e"
+  }, {
+    "reference": "Condition/607834e0-3101-451b-86ac-5948662ed85c"
+  }, {
+    "reference": "Procedure/186bb51c-027a-488a-bf88-2192bdafee96"
+  }, {
+    "reference": "Observation/95886f4e-ff85-4f7a-bdd1-358185f5d591"
+  } ]
+}

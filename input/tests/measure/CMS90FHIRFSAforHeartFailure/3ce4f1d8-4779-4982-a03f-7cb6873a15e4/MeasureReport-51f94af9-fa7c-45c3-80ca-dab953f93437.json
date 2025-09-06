@@ -1,0 +1,99 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "51f94af9-fa7c-45c3-80ca-dab953f93437",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "4f9ebf05-2a75-4068-9d47-31dee927ff24-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "3ce4f1d8-4779-4982-a03f-7cb6873a15e4"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#4f9ebf05-2a75-4068-9d47-31dee927ff24-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Patient has all VR36 Orthogonal Assessments during the correct timeframe but one FSA is missing a result."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS90FHIRFSAforHeartFailure",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/3ce4f1d8-4779-4982-a03f-7cb6873a15e4"
+  }, {
+    "reference": "Encounter/d42be21a-ef7c-4560-8cc9-8d154abb6b28"
+  }, {
+    "reference": "Encounter/671ecfad-cd6d-48b3-93b7-640d7a34cf5c"
+  }, {
+    "reference": "Condition/eb6d477f-929c-496f-a44e-0c9aa0774f43"
+  }, {
+    "reference": "Observation/45f802fa-3399-4335-badb-1a806c48b655"
+  }, {
+    "reference": "Observation/2c780653-b191-4393-99de-b1219fe8cd52"
+  }, {
+    "reference": "Observation/84c9086a-8cf8-4bf0-a4f0-602ed1040be9"
+  }, {
+    "reference": "Observation/e5c15dd0-7585-4cde-92c3-01eb14612ca7"
+  } ]
+}

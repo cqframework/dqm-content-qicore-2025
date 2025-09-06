@@ -1,0 +1,147 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "dfd74cf2-15a0-4b9e-b50d-591bc593735d",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "68049e6f-9a30-4781-b954-b6354ab6da86-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "b472b9b5-419f-4e40-81c7-2086b4b3962d"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#68049e6f-9a30-4781-b954-b6354ab6da86-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Pt > 18, 2 visits in MP, AV block onset after 1st visit b4 2nd visit, pulse of 25 bpm during 2nd visit, a pulse of 20 bpm after 2nd visit, moderate LVSD onset b4 1st visit, CAD Dx onset during 2nd visit, and Cardiac Pacer Px during MP b4 1st visit"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS145FHIRCADBBlockerTPMIorLVSD",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  }, {
+    "id": "Group_2",
+    "population": [ {
+      "id": "InitialPopulation_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "DenominatorException_2",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exception",
+          "display": "Denominator Exception"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/b472b9b5-419f-4e40-81c7-2086b4b3962d"
+  }, {
+    "reference": "Encounter/1667c5a2-0e75-4010-9187-bb66ab7269f9"
+  }, {
+    "reference": "Encounter/d17efff3-b09b-4991-9040-668c25bbe637"
+  }, {
+    "reference": "Condition/251a9949-e335-4875-8250-403fa5162452"
+  }, {
+    "reference": "Observation/ba538250-8d35-40d0-b91f-ad9552dc1ccb"
+  }, {
+    "reference": "Observation/f00af8a6-22e7-44c4-adba-f19c51f2825a"
+  }, {
+    "reference": "Condition/5364555e-4486-4cd4-9c1e-b96e4d218fa4"
+  }, {
+    "reference": "Condition/0c7c3682-31c7-40fa-bb2c-90ea6c70f7bc"
+  }, {
+    "reference": "Procedure/c7a0d2e5-76f8-4141-8fb7-5a7039b3942e"
+  } ]
+}

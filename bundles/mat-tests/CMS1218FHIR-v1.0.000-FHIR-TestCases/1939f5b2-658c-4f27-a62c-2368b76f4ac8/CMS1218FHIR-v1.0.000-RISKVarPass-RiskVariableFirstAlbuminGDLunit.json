@@ -1,0 +1,330 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-1939f5b2-658c-4f27-a62c-2368b76f4ac8-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Procedure/e0071778-da66-4380-be4c-db7431b69d5b",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "e0071778-da66-4380-be4c-db7431b69d5b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-04-11T10:30:00.000+00:00"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+      },
+      "performedPeriod": {
+        "start": "2026-04-11T08:00:00.000+00:00",
+        "end": "2026-04-11T10:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/e0071778-da66-4380-be4c-db7431b69d5b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/0a3c0305-50e7-4d85-80af-d814a4955b36",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0a3c0305-50e7-4d85-80af-d814a4955b36",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ],
+        "text": "Laboratory"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "1751-7",
+          "display": "Albumin [Mass/volume] in Serum or Plasma"
+        } ],
+        "text": "Albumin [Mass/volume] in Serum or Plasma"
+      },
+      "subject": {
+        "reference": "Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+      },
+      "encounter": {
+        "reference": "Encounter/895b1c9a-e552-44f3-8659-4a0b3d67d050"
+      },
+      "effectiveDateTime": "2026-04-11T10:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 2,
+        "unit": "g/dl",
+        "system": "http://unitsofmeasure.org",
+        "code": "g/dl"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/0a3c0305-50e7-4d85-80af-d814a4955b36"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "1939f5b2-658c-4f27-a62c-2368b76f4ac8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2054-5",
+            "display": "Black or African American",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Black or African American"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "DENOMPass",
+        "given": [ "RiskVariableFirstAlbuminGDLunit" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1966-07-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/895b1c9a-e552-44f3-8659-4a0b3d67d050",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "895b1c9a-e552-44f3-8659-4a0b3d67d050",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+      },
+      "period": {
+        "start": "2026-04-10T08:00:00.000+00:00",
+        "end": "2026-04-14T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/895b1c9a-e552-44f3-8659-4a0b3d67d050"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/8bb68777-5046-45f7-b035-c71ff3e0b52b",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "8bb68777-5046-45f7-b035-c71ff3e0b52b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation-lab" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        } ],
+        "text": "Laboratory"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "1751-7",
+          "display": "Albumin [Mass/volume] in Serum or Plasma"
+        } ],
+        "text": "Albumin [Mass/volume] in Serum or Plasma"
+      },
+      "subject": {
+        "reference": "Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+      },
+      "encounter": {
+        "reference": "Encounter/895b1c9a-e552-44f3-8659-4a0b3d67d050"
+      },
+      "effectiveDateTime": "2026-04-11T08:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 1,
+        "unit": "g/dl",
+        "system": "http://unitsofmeasure.org",
+        "code": "g/dl"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/8bb68777-5046-45f7-b035-c71ff3e0b52b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/5f7c943f-e46f-465b-acba-cd48f64f4d0f",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "5f7c943f-e46f-465b-acba-cd48f64f4d0f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "d75690b4-2c8c-45d1-8790-df17fcdf2815-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#d75690b4-2c8c-45d1-8790-df17fcdf2815-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter with 2 albumins during encounter. RV returns first, not second value. First value = 1. Second value = 2. Test for RV first albumin using unit g/dL passes. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Procedure/e0071778-da66-4380-be4c-db7431b69d5b"
+      }, {
+        "reference": "Observation/0a3c0305-50e7-4d85-80af-d814a4955b36"
+      }, {
+        "reference": "Patient/1939f5b2-658c-4f27-a62c-2368b76f4ac8"
+      }, {
+        "reference": "Encounter/895b1c9a-e552-44f3-8659-4a0b3d67d050"
+      }, {
+        "reference": "Observation/8bb68777-5046-45f7-b035-c71ff3e0b52b"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/5f7c943f-e46f-465b-acba-cd48f64f4d0f"
+    }
+  } ]
+}

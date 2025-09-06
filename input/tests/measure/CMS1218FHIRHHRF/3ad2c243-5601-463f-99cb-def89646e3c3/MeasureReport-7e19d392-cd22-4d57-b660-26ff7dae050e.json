@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "7e19d392-cd22-4d57-b660-26ff7dae050e",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "de439a14-d84d-4bbf-82f4-b8e5bdb09313-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "3ad2c243-5601-463f-99cb-def89646e3c3"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#de439a14-d84d-4bbf-82f4-b8e5bdb09313-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Existing Extubation with preceding Noninvasive Oxygen causes numerator to fail."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/3ad2c243-5601-463f-99cb-def89646e3c3"
+  }, {
+    "reference": "Encounter/13b0a084-0019-42da-84b2-36525b655c2f"
+  }, {
+    "reference": "Procedure/e26fb41a-f680-4763-befa-d9f1e7907a06"
+  }, {
+    "reference": "Procedure/6a4007a2-a5b6-451e-b876-d310eab505b9"
+  }, {
+    "reference": "Procedure/47ee4fef-767d-4198-86b2-9c513bc1ef5e"
+  } ]
+}

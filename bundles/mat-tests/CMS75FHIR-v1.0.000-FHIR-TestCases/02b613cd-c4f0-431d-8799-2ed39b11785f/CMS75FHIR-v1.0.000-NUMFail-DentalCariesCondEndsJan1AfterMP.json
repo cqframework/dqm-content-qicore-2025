@@ -1,0 +1,206 @@
+{
+  "resourceType": "Bundle",
+  "id": "NUMFail-DentalCariesCondEndsJan1AfterMP",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/02b613cd-c4f0-431d-8799-2ed39b11785f",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "02b613cd-c4f0-431d-8799-2ed39b11785f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      } ],
+      "name": [ {
+        "family": "Bertha",
+        "given": [ "Betty" ]
+      } ],
+      "gender": "female",
+      "birthDate": "2006-01-01"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/2e34e9e8-eedb-4ee9-a969-090af282cef8",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "2e34e9e8-eedb-4ee9-a969-090af282cef8",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://www.ada.org/cdt",
+          "code": "D0120",
+          "display": "periodic oral evaluation - established patient"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/02b613cd-c4f0-431d-8799-2ed39b11785f"
+      },
+      "period": {
+        "start": "2026-01-01T00:00:00.000+00:00",
+        "end": "2026-01-01T01:15:00.000+00:00"
+      }
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Condition/58640448-9d1b-44b5-b198-d9f3c74ea71a",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "58640448-9d1b-44b5-b198-d9f3c74ea71a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "resolved"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "109564008",
+          "display": "Dental caries associated with enamel hypomineralization (disorder)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/02b613cd-c4f0-431d-8799-2ed39b11785f"
+      },
+      "onsetDateTime": "2027-01-01T00:00:00.000+00:00",
+      "abatementDateTime": "2027-01-01T00:00:00.000+00:00"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/6331e30d-9172-4269-9ea6-68497c9973c2",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "6331e30d-9172-4269-9ea6-68497c9973c2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "858ced5f-b5bc-4728-8f19-838e6120692b-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "02b613cd-c4f0-431d-8799-2ed39b11785f"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#858ced5f-b5bc-4728-8f19-838e6120692b-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Patient 20yo w/ an Oral Evaluation Encounter 1/1 of the MP & Dental Caries Condition that ends on 1/1 after the MP.\""
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS75FHIRChildrenDentalDecay",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 1.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/02b613cd-c4f0-431d-8799-2ed39b11785f"
+      }, {
+        "reference": "Encounter/2e34e9e8-eedb-4ee9-a969-090af282cef8"
+      }, {
+        "reference": "Condition/58640448-9d1b-44b5-b198-d9f3c74ea71a"
+      } ]
+    }
+  } ]
+}
