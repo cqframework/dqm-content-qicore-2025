@@ -129,6 +129,9 @@ define "Documented Reason For Not Giving Anticoagulant At Discharge":
             and TaskReject.code ~ QICoreCommon."Fulfill"
     )
 
+define "test task": ["TaskRejected"]
+
+
 define "SDE Ethnicity":
   SDE."SDE Ethnicity"
 

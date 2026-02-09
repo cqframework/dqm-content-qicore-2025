@@ -2,7 +2,7 @@ import os
 import json
 import csv
 
-base_dir = "./input/tests/measure"
+base_dir = "./input/tests/measure/"
 measure_resource_dir = "./input/resources/measure"
 output_file = "./scripts/comparison/expected_results.csv"
 
@@ -25,7 +25,7 @@ for measure_name in os.listdir(base_dir):
                                 rows.append([
                                     measure_name, 
                                     guid, 
-                                    f'{group['id']}:{pop.get("code", {}).get("coding", [{}])[0].get("display", "")}', 
+                                    f'{group.get("id")}:{pop.get("code", {}).get("coding", [{}])[0].get("display", "")}', 
                                     pop.get('count', '')])
 
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
