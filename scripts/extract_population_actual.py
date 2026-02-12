@@ -24,11 +24,11 @@ allowed_display_names = {
     "Numerator Exclusion",
     "Numerator Exclusions",
     "Numerator Observation",
-    # "Measure Population",
-    # "Measure Population Observation",
-    # "Measure Population Observations",
-    # "Measure Population Exclusion",
-    # "Measure Population Exclusions"
+    "Measure Population",
+    "Measure Population Observation",
+    "Measure Population Observations",
+    "Measure Population Exclusion",
+    "Measure Population Exclusions"
 }
 
 patient_pattern = re.compile(r'Patient\s*=\s*Patient\(id=(?P<id>[a-f0-9\-]+)\)')
