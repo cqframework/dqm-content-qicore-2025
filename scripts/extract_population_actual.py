@@ -19,16 +19,16 @@ allowed_display_names = {
     "Denominator Exclusions",
     "Denominator Exception",
     "Denominator Exceptions",
+    "Denominator Observation",
     "Numerator",
     "Numerator Exclusion",
     "Numerator Exclusions",
-    "Measure Observation",
-    "Measure Observations",
-    "Measure Population",
-    "Measure Population Observation",
-    "Measure Population Observations",
-    "Measure Population Exclusion",
-    "Measure Population Exclusions"
+    "Numerator Observation",
+    # "Measure Population",
+    # "Measure Population Observation",
+    # "Measure Population Observations",
+    # "Measure Population Exclusion",
+    # "Measure Population Exclusions"
 }
 
 patient_pattern = re.compile(r'Patient\s*=\s*Patient\(id=(?P<id>[a-f0-9\-]+)\)')
@@ -56,7 +56,12 @@ def extract_measure_criteria(measure_data: Dict) -> Dict[str, Dict[str, str]]:
         criteria_map = measure_criteria.setdefault(group['id'], {})
         for pop in group.get('population', []):
             expression = pop.get('criteria', {}).get('expression', '')
-            population = pop.get('code', {}).get('coding', [{}])[0].get('display', '')
+            if pop.get('id', '') == 'MeasureObservation_1_1':
+                population = 'Denominator Observation'
+            elif pop.get('id', '') == 'MeasureObservation_1_2':
+                population = 'Numerator Observation'
+            else:
+                population = pop.get('code', {}).get('coding', [{}])[0].get('display', '')
             # Index by measure_name, group_id, and expression
             criteria_map[expression] = population
     return measure_criteria
@@ -102,14 +107,17 @@ def validate_numerator(populations: Dict[str, str]):
     numer = populations.get('Numerator', 0)
     numex = populations.get('Numerator Exclusion', 0)
     
-    if not denom and denex:
-        denex = 0
 
-    if numer and (denom and denex) or not denom:
-        numer = 0
-
-    if not numer and numex:
-        numex = 0
+    if denom < 2:
+        if not numer and numex and (denom and denex):
+            numer = 0
+            numex = 0
+        elif numer and not numex and (denom and denex) or not denom:
+            numer = 0
+        elif not numer and numex:
+            numex = 0
+        elif not denom and denex:
+            denex = 0
 
     # save updated scoring back to population, but only if the value already existed in the population
     if 'Numerator'in populations:

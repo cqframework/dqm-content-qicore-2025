@@ -248,7 +248,7 @@ define "Low Risk Indicator For VTE":
       }
   )
     union ( ["LaboratoryResultObservation": "INR"] INRLabTest
-        where INRLabTest.value as Quantity > 3.0
+        where INRLabTest.value as Quantity > 3.0 '{INR}'
           and INRLabTest.status in { 'final', 'amended', 'corrected' }
         return {
           id: INRLabTest.id,

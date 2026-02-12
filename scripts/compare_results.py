@@ -20,12 +20,14 @@ ValidMeasurePopulationTypes = [
     'Initial Population',
     'Numerator',
     'Numerator Exclusion',
+    'Numerator Observations',
     'Denominator',
+    'Denominator Exclusion',
     'Denominator-exclusion',
     'Denominator-exception',
+    'Denominator Observations',
     'Measure Population',
-    'Measure Population Exclusion',
-    'Measure Observation'
+    'Measure Population Exclusion'
 ]
 
 class MissingPopulation(NamedTuple):

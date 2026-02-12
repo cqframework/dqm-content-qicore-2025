@@ -225,6 +225,10 @@ define "SDE Race":
 define "SDE Sex":
   SDE."SDE Sex"
 
+define "Denominator Observation": "Measure Observation".denominatorObservations[0]
+
+define "Numerator Observation": "Measure Observation".numeratorObservations[0]
+
 
 define "Measure Observation": "Qualifying Encounter" encounter
   return Tuple {
