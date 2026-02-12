@@ -112,12 +112,16 @@ def validate_numerator(populations: Dict[str, str]):
         if not numer and numex and (denom and denex):
             numer = 0
             numex = 0
-        elif numer and not numex and (denom and denex) or not denom:
+        if numer and not numex and (denom and denex) or not denom:
             numer = 0
-        elif not numer and numex:
+        if not numer and numex:
             numex = 0
-        elif not denom and denex:
+        if not denom and denex:
             denex = 0
+    else:
+        if denex >= 1 and numer > 1:
+            numer = numer - denex
+
 
     # save updated scoring back to population, but only if the value already existed in the population
     if 'Numerator'in populations:

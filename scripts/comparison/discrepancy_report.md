@@ -1,22 +1,22 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-02-12 12:38:05.030344 |
+| Generated | 2026-02-12 12:52:05.034705 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
-| Measures with Discrepancies | 16 |
+| Measures with Discrepancies | 13 |
 
 
 | Discrepancy Summary | Measure Count | Test Case Count |
 |---|:---:|:---:|
 | Missing Results | 4 | 83 |
 | Missing Populations | 0 | 0 |
-| Mismatched Test Cases | 13 | 250 |
+| Mismatched Test Cases | 10 | 197 |
 
 
 
 _Note: Measures can have multiple discrepancies, so the Measures with Discrepancies count may not match the summary counts._
-## Measures with No Discrepancies (58)
+## Measures with No Discrepancies (61)
 - CMS2FHIRPCSDepScreenAndFollowUp [ [cql] ](../../input/cql/CMS2FHIRPCSDepScreenAndFollowUp.cql) [ [test results] ](../../input/tests/results/CMS2FHIRPCSDepScreenAndFollowUp.txt)
 - CMS22FHIRPCSBPScreeningFollowUp [ [cql] ](../../input/cql/CMS22FHIRPCSBPScreeningFollowUp.cql) [ [test results] ](../../input/tests/results/CMS22FHIRPCSBPScreeningFollowUp.txt)
 - CMS50FHIRReceiptofSpecialistReport [ [cql] ](../../input/cql/CMS50FHIRReceiptofSpecialistReport.cql) [ [test results] ](../../input/tests/results/CMS50FHIRReceiptofSpecialistReport.txt)
@@ -37,7 +37,9 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS130FHIRColorectalCancerScrn [ [cql] ](../../input/cql/CMS130FHIRColorectalCancerScrn.cql) [ [test results] ](../../input/tests/results/CMS130FHIRColorectalCancerScrn.txt)
 - CMS131FHIRDiabetesEyeExam [ [cql] ](../../input/cql/CMS131FHIRDiabetesEyeExam.cql) [ [test results] ](../../input/tests/results/CMS131FHIRDiabetesEyeExam.txt)
 - CMS133FHIRCataracts2040BCVA90Days [ [cql] ](../../input/cql/CMS133FHIRCataracts2040BCVA90Days.cql) [ [test results] ](../../input/tests/results/CMS133FHIRCataracts2040BCVA90Days.txt)
+- CMS136FHIRChildADHDMedFollowUp [ [cql] ](../../input/cql/CMS136FHIRChildADHDMedFollowUp.cql) [ [test results] ](../../input/tests/results/CMS136FHIRChildADHDMedFollowUp.txt)
 - CMS137FHIRSUDTxInitEngagement [ [cql] ](../../input/cql/CMS137FHIRSUDTxInitEngagement.cql) [ [test results] ](../../input/tests/results/CMS137FHIRSUDTxInitEngagement.txt)
+- CMS138FHIRTobaccoScrnCessation [ [cql] ](../../input/cql/CMS138FHIRTobaccoScrnCessation.cql) [ [test results] ](../../input/tests/results/CMS138FHIRTobaccoScrnCessation.txt)
 - CMS139FHIRFallRiskScreening [ [cql] ](../../input/cql/CMS139FHIRFallRiskScreening.cql) [ [test results] ](../../input/tests/results/CMS139FHIRFallRiskScreening.txt)
 - CMS142FHIRCommWithDrManagingDiab [ [cql] ](../../input/cql/CMS142FHIRCommWithDrManagingDiab.cql) [ [test results] ](../../input/tests/results/CMS142FHIRCommWithDrManagingDiab.txt)
 - CMS143FHIRPOAGOpticNerveEval [ [cql] ](../../input/cql/CMS143FHIRPOAGOpticNerveEval.cql) [ [test results] ](../../input/tests/results/CMS143FHIRPOAGOpticNerveEval.txt)
@@ -52,6 +54,7 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS177FHIRChildMDDSuicideAssmt [ [cql] ](../../input/cql/CMS177FHIRChildMDDSuicideAssmt.cql) [ [test results] ](../../input/tests/results/CMS177FHIRChildMDDSuicideAssmt.txt)
 - CMS314FHIRHIVViralSuppression [ [cql] ](../../input/cql/CMS314FHIRHIVViralSuppression.cql) [ [test results] ](../../input/tests/results/CMS314FHIRHIVViralSuppression.txt)
 - CMS0334FHIRPCCesareanBirth [ [cql] ](../../input/cql/CMS0334FHIRPCCesareanBirth.cql) [ [test results] ](../../input/tests/results/CMS0334FHIRPCCesareanBirth.txt)
+- CMS347FHIRStatinPreventionTxCVD [ [cql] ](../../input/cql/CMS347FHIRStatinPreventionTxCVD.cql) [ [test results] ](../../input/tests/results/CMS347FHIRStatinPreventionTxCVD.txt)
 - CMS349FHIRHIVScreening [ [cql] ](../../input/cql/CMS349FHIRHIVScreening.cql) [ [test results] ](../../input/tests/results/CMS349FHIRHIVScreening.txt)
 - CMS506FHIRSafeUseofOpioids [ [cql] ](../../input/cql/CMS506FHIRSafeUseofOpioids.cql) [ [test results] ](../../input/tests/results/CMS506FHIRSafeUseofOpioids.txt)
 - CMSFHIR529HybridHospitalWideReadmission [ [cql] ](../../input/cql/CMSFHIR529HybridHospitalWideReadmission.cql) [ [test results] ](../../input/tests/results/CMSFHIR529HybridHospitalWideReadmission.txt)
@@ -64,36 +67,33 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS871FHIRHHHyper [ [cql] ](../../input/cql/CMS871FHIRHHHyper.cql) [ [test results] ](../../input/tests/results/CMS871FHIRHHHyper.txt)
 - CMS951FHIRKidneyHealthEval [ [cql] ](../../input/cql/CMS951FHIRKidneyHealthEval.cql) [ [test results] ](../../input/tests/results/CMS951FHIRKidneyHealthEval.txt)
 - CMS986FHIRMalnutritionScore [ [cql] ](../../input/cql/CMS986FHIRMalnutritionScore.cql) [ [test results] ](../../input/tests/results/CMS986FHIRMalnutritionScore.txt)
-- CMS1017FHIRHHFI [ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
 - CMS1028FHIRPCSevereOBComps [ [cql] ](../../input/cql/CMS1028FHIRPCSevereOBComps.cql) [ [test results] ](../../input/tests/results/CMS1028FHIRPCSevereOBComps.txt)
 - CMS1056FHIRCTClinical [ [cql] ](../../input/cql/CMS1056FHIRCTClinical.cql) [ [test results] ](../../input/tests/results/CMS1056FHIRCTClinical.txt)
 - CMS1074FHIRCTIQR [ [cql] ](../../input/cql/CMS1074FHIRCTIQR.cql) [ [test results] ](../../input/tests/results/CMS1074FHIRCTIQR.txt)
 - CMS1157FHIRHIVRetention [ [cql] ](../../input/cql/CMS1157FHIRHIVRetention.cql) [ [test results] ](../../input/tests/results/CMS1157FHIRHIVRetention.txt)
+- CMS1173FHIRDiagnosticDelayVTE [ [cql] ](../../input/cql/CMS1173FHIRDiagnosticDelayVTE.cql) [ [test results] ](../../input/tests/results/CMS1173FHIRDiagnosticDelayVTE.txt)
 - CMS1188FHIRHIVSTITesting [ [cql] ](../../input/cql/CMS1188FHIRHIVSTITesting.cql) [ [test results] ](../../input/tests/results/CMS1188FHIRHIVSTITesting.txt)
 - CMS1206FHIRCTOQR [ [cql] ](../../input/cql/CMS1206FHIRCTOQR.cql) [ [test results] ](../../input/tests/results/CMS1206FHIRCTOQR.txt)
 - CMS1244FHIRECATHOQR [ [cql] ](../../input/cql/CMS1244FHIRECATHOQR.cql) [ [test results] ](../../input/tests/results/CMS1244FHIRECATHOQR.txt)
 - CMS1264FHIRECATREHQR [ [cql] ](../../input/cql/CMS1264FHIRECATREHQR.cql) [ [test results] ](../../input/tests/results/CMS1264FHIRECATREHQR.txt)
 - NHSNAcuteCareHospitalMonthlyInitialPopulation1 [ [cql] ](../../input/cql/NHSNAcuteCareHospitalMonthlyInitialPopulation1.cql) [ [test results] ](../../input/tests/results/NHSNAcuteCareHospitalMonthlyInitialPopulation1.txt)
 - NHSNGlycemicControlHypoglycemiaInitialPopulation [ [cql] ](../../input/cql/NHSNGlycemicControlHypoglycemiaInitialPopulation.cql) [ [test results] ](../../input/tests/results/NHSNGlycemicControlHypoglycemiaInitialPopulation.txt)
-## Measures with Discrepancies (16)
+## Measures with Discrepancies (13)
 | Measure | Total Test Cases | Missing Results | Missing Populations | Mismatched Test Cases |
 |---|:---:|:---:|:---:|:---:|
 | [CMS72FHIRSTKAntithromboticDay2](#cms72fhirstkantithromboticday2) | 158 | 0 | 0 | 61.39%   (97) |
 | [CMS104FHIRSTKDCAntithrombotic](#cms104fhirstkdcantithrombotic) | 82 | 0 | 0 | 84.15%   (69) |
 | [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 14 | 0 | 0.00%   (0) |
-| [CMS136FHIRChildADHDMedFollowUp](#cms136fhirchildadhdmedfollowup) | 128 | 0 | 0 | 7.81%   (10) |
-| [CMS138FHIRTobaccoScrnCessation](#cms138fhirtobaccoscrncessation) | 141 | 0 | 0 | 7.80%   (11) |
 | [CMS157FHIRPainIntensityQuantified](#cms157fhirpainintensityquantified) | 126 | 0 | 0 | 15.08%   (19) |
-| [CMS159FHIRDepRemissionat12Months](#cms159fhirdepremissionat12months) | 67 | 0 | 0 | 4.48%   (3) |
+| [CMS159FHIRDepRemissionat12Months](#cms159fhirdepremissionat12months) | 67 | 0 | 0 | 2.99%   (2) |
 | [CMS165FHIRControllingHighBP](#cms165fhircontrollinghighbp) | 68 | 53 | 0 | 0.00%   (0) |
 | [CMS190FHIRVTEProphylaxisICU](#cms190fhirvteprophylaxisicu) | 125 | 0 | 0 | 1.60%   (2) |
-| [CMS347FHIRStatinPreventionTxCVD](#cms347fhirstatinpreventiontxcvd) | 752 | 0 | 0 | 3.99%   (30) |
 | [CMS646FHIRIntravesicalBCGTherapy](#cms646fhirintravesicalbcgtherapy) | 38 | 0 | 0 | 5.26%   (2) |
 | [CMS832FHIRHHAKI](#cms832fhirhhaki) | 47 | 10 | 0 | 0.00%   (0) |
 | [CMS996FHIRAptTxforSTEMI](#cms996fhirapttxforstemi) | 114 | 0 | 0 | 1.75%   (2) |
+| [CMS1017FHIRHHFI](#cms1017fhirhhfi) | 65 | 0 | 0 | 3.08%   (2) |
 | [CMS1154ScreeningPrediabetesFHIR](#cms1154screeningprediabetesfhir) | 10 | 0 | 0 | 10.00%   (1) |
-| [CMS1173FHIRDiagnosticDelayVTE](#cms1173fhirdiagnosticdelayvte) | 65 | 0 | 0 | 3.08%   (2) |
-| [CMS1218FHIRHHRF](#cms1218fhirhhrf) | 75 | 6 | 0 | 2.67%   (2) |
+| [CMS1218FHIRHHRF](#cms1218fhirhhrf) | 75 | 6 | 0 | 1.33%   (1) |
 
 
 
@@ -301,43 +301,6 @@ Missing Results (14 of 40 test cases)
 | [ c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c/MeasureReport-258b085e-a5a9-4f16-83f7-2291c7ac9a19.json) | Group_1 |
 
 
-#### CMS136FHIRChildADHDMedFollowUp
-[ [cql] ](../../input/cql/CMS136FHIRChildADHDMedFollowUp.cql) [ [test results] ](../../input/tests/results/CMS136FHIRChildADHDMedFollowUp.txt)
-
-Mismatched Test Cases (10 of  of 128)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ 00f27092-14a7-4d87-b35a-5a112ca99201 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/00f27092-14a7-4d87-b35a-5a112ca99201/MeasureReport-351a58d1-450e-4d51-bb86-85a7169aecef.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ bee979d5-c118-4e1d-b190-62cf0e084bd1 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/bee979d5-c118-4e1d-b190-62cf0e084bd1/MeasureReport-56c09b31-05f1-4a01-a158-e33bf739b46c.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ db99ef01-a9e9-47c9-a2d5-5cb9c2b23241 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/db99ef01-a9e9-47c9-a2d5-5cb9c2b23241/MeasureReport-36fae350-739a-48f5-bbd5-b96b3e05d395.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 38e6816d-8f0d-46a1-8304-41af8abf8536 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/38e6816d-8f0d-46a1-8304-41af8abf8536/MeasureReport-973474bd-51cf-42d6-80ae-38f3fd47380d.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 98e5cde7-fc04-4b89-9aef-5272087bb5c2 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/98e5cde7-fc04-4b89-9aef-5272087bb5c2/MeasureReport-ab660866-e477-4fbd-9806-fe1ba0bc3eca.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 4db9dee6-422a-472b-beeb-d6a39618125f ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/4db9dee6-422a-472b-beeb-d6a39618125f/MeasureReport-0c4fe070-1c17-48bf-8028-64c6481ce806.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 048c41bc-fe7e-465f-bc10-6ccf7a7d5250 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/048c41bc-fe7e-465f-bc10-6ccf7a7d5250/MeasureReport-b5595330-1ead-452b-8c77-b50bcdcd54c1.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ e5a26079-76db-4851-a15a-7dae023a25ce ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/e5a26079-76db-4851-a15a-7dae023a25ce/MeasureReport-e6fb73a8-cb41-433d-97e3-f0a54f9a5659.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ d95789b9-f144-43e7-81c6-fed3adba5d8f ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/d95789b9-f144-43e7-81c6-fed3adba5d8f/MeasureReport-ce74b3ee-e4db-4dd0-b489-c946a0e96df5.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ aa37bac9-73a6-4b6d-9d22-4b6490a45fa3 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/aa37bac9-73a6-4b6d-9d22-4b6490a45fa3/MeasureReport-d6056160-2c69-41b0-b0fe-fc113e281942.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-
-
-#### CMS138FHIRTobaccoScrnCessation
-[ [cql] ](../../input/cql/CMS138FHIRTobaccoScrnCessation.cql) [ [test results] ](../../input/tests/results/CMS138FHIRTobaccoScrnCessation.txt)
-
-Mismatched Test Cases (11 of  of 141)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ 76e371e4-0363-4fad-9573-a06ada971eef ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/76e371e4-0363-4fad-9573-a06ada971eef/MeasureReport-ceee4067-e616-47a2-b1d1-25694b739861.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 007fe881-a18d-418f-8ddf-0ee94fc9a10a ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/007fe881-a18d-418f-8ddf-0ee94fc9a10a/MeasureReport-45a1ad86-db80-4c37-b6f0-1dcdf04167bf.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ bac2713c-8165-40ce-8180-fb5d44a10f7f ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/bac2713c-8165-40ce-8180-fb5d44a10f7f/MeasureReport-49095abd-511f-4e6f-a870-c7a3e6c820ed.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 6410550a-c928-415b-b8bc-aa1284ca6933 ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/6410550a-c928-415b-b8bc-aa1284ca6933/MeasureReport-b410a68c-155b-4349-ac16-a1ca9ae771ba.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ bf5f6b32-8ffc-42fa-b847-21a871ad16bd ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/bf5f6b32-8ffc-42fa-b847-21a871ad16bd/MeasureReport-dda37d91-64bc-4d46-b726-b6e764483b30.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ bf5f6b32-8ffc-42fa-b847-21a871ad16bd ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/bf5f6b32-8ffc-42fa-b847-21a871ad16bd/MeasureReport-dda37d91-64bc-4d46-b726-b6e764483b30.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ bf5f6b32-8ffc-42fa-b847-21a871ad16bd ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/bf5f6b32-8ffc-42fa-b847-21a871ad16bd/MeasureReport-dda37d91-64bc-4d46-b726-b6e764483b30.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ a0a8fd4f-bfd4-4669-aaef-f66ae5af5eda ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/a0a8fd4f-bfd4-4669-aaef-f66ae5af5eda/MeasureReport-fe41c096-08c3-42ce-b6ad-96de6f88d808.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 73d69a14-7e70-4c9f-89e3-62da4a370fd3 ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/73d69a14-7e70-4c9f-89e3-62da4a370fd3/MeasureReport-78680856-a975-47b9-9b99-f2b5bb300936.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 0d221636-5f14-4074-9337-eb4b0868fb3e ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/0d221636-5f14-4074-9337-eb4b0868fb3e/MeasureReport-59a9caa8-e71c-4bdf-90ec-ce2224d90dd5.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ e3422e20-4e31-4c24-a72b-3c1e1f47de95 ](../.././input/tests/measure/CMS138FHIRTobaccoScrnCessation/e3422e20-4e31-4c24-a72b-3c1e1f47de95/MeasureReport-f5466b54-94e5-40d3-88c1-0b3d223d0598.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-
-
 #### CMS157FHIRPainIntensityQuantified
 [ [cql] ](../../input/cql/CMS157FHIRPainIntensityQuantified.cql) [ [test results] ](../../input/tests/results/CMS157FHIRPainIntensityQuantified.txt)
 
@@ -368,10 +331,9 @@ Mismatched Test Cases (19 of  of 126)
 #### CMS159FHIRDepRemissionat12Months
 [ [cql] ](../../input/cql/CMS159FHIRDepRemissionat12Months.cql) [ [test results] ](../../input/tests/results/CMS159FHIRDepRemissionat12Months.txt)
 
-Mismatched Test Cases (3 of  of 67)
+Mismatched Test Cases (2 of  of 67)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
-| [ 72a7c508-6ab5-444d-b306-686793360c8c ](../.././input/tests/measure/CMS159FHIRDepRemissionat12Months/72a7c508-6ab5-444d-b306-686793360c8c/MeasureReport-156d2dee-64b9-4393-84ba-081309830595.json) | Group_1 | Denominator Exclusion | 0 | 1 |
 | [ 491f554e-e897-40c5-ad2b-0983923df4e8 ](../.././input/tests/measure/CMS159FHIRDepRemissionat12Months/491f554e-e897-40c5-ad2b-0983923df4e8/MeasureReport-580087e1-b59e-43eb-b110-692c35a82dca.json) | Group_1 | Denominator Exclusion<br>Numerator | 1<br>0 | 0<br>1 |
 | [ 96b6579c-1cee-423f-9433-a72db6fb8a0a ](../.././input/tests/measure/CMS159FHIRDepRemissionat12Months/96b6579c-1cee-423f-9433-a72db6fb8a0a/MeasureReport-e3ec1311-05ed-4a6f-b13f-a4d290865bb3.json) | Group_1 | Denominator Exclusion<br>Numerator | 1<br>0 | 0<br>1 |
 
@@ -447,44 +409,6 @@ Mismatched Test Cases (2 of  of 125)
 | [ 39215b49-af59-45a7-a773-65e8353dfafd ](../.././input/tests/measure/CMS190FHIRVTEProphylaxisICU/39215b49-af59-45a7-a773-65e8353dfafd/MeasureReport-4358ad9b-1c93-4569-9985-0f388fe56ebe.json) | Group_1 | Initial Population<br>Denominator | 0<br>0 | 1<br>1 |
 
 
-#### CMS347FHIRStatinPreventionTxCVD
-[ [cql] ](../../input/cql/CMS347FHIRStatinPreventionTxCVD.cql) [ [test results] ](../../input/tests/results/CMS347FHIRStatinPreventionTxCVD.txt)
-
-Mismatched Test Cases (30 of  of 752)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ 59715b85-2d66-4627-ad73-d91e5862cb5b ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/59715b85-2d66-4627-ad73-d91e5862cb5b/MeasureReport-df5cc6ad-153c-4947-929a-348e8a84415d.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ 59715b85-2d66-4627-ad73-d91e5862cb5b ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/59715b85-2d66-4627-ad73-d91e5862cb5b/MeasureReport-df5cc6ad-153c-4947-929a-348e8a84415d.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 59715b85-2d66-4627-ad73-d91e5862cb5b ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/59715b85-2d66-4627-ad73-d91e5862cb5b/MeasureReport-df5cc6ad-153c-4947-929a-348e8a84415d.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ 2727681a-5857-4de1-a892-0cd4e531541c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/2727681a-5857-4de1-a892-0cd4e531541c/MeasureReport-eaee6dcf-60c0-42c0-bd77-a542b1023c29.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 2727681a-5857-4de1-a892-0cd4e531541c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/2727681a-5857-4de1-a892-0cd4e531541c/MeasureReport-eaee6dcf-60c0-42c0-bd77-a542b1023c29.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ 2727681a-5857-4de1-a892-0cd4e531541c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/2727681a-5857-4de1-a892-0cd4e531541c/MeasureReport-eaee6dcf-60c0-42c0-bd77-a542b1023c29.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ fc82f4cb-7c62-41bd-9779-dd0f2e6e437f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fc82f4cb-7c62-41bd-9779-dd0f2e6e437f/MeasureReport-7810b010-2aca-4459-9147-b60351425809.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ fc82f4cb-7c62-41bd-9779-dd0f2e6e437f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fc82f4cb-7c62-41bd-9779-dd0f2e6e437f/MeasureReport-7810b010-2aca-4459-9147-b60351425809.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ fc82f4cb-7c62-41bd-9779-dd0f2e6e437f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fc82f4cb-7c62-41bd-9779-dd0f2e6e437f/MeasureReport-7810b010-2aca-4459-9147-b60351425809.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ e2edb18a-fb70-43cc-b680-6f933af7d182 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e2edb18a-fb70-43cc-b680-6f933af7d182/MeasureReport-155370b0-9120-424f-a125-a410fb05a018.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ e2edb18a-fb70-43cc-b680-6f933af7d182 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e2edb18a-fb70-43cc-b680-6f933af7d182/MeasureReport-155370b0-9120-424f-a125-a410fb05a018.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ e2edb18a-fb70-43cc-b680-6f933af7d182 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e2edb18a-fb70-43cc-b680-6f933af7d182/MeasureReport-155370b0-9120-424f-a125-a410fb05a018.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ bfb8c317-cc95-41cc-9d3d-e1e66dd5b168 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/bfb8c317-cc95-41cc-9d3d-e1e66dd5b168/MeasureReport-38dc6598-68c1-4938-ab30-6687b6b509fa.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ bfb8c317-cc95-41cc-9d3d-e1e66dd5b168 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/bfb8c317-cc95-41cc-9d3d-e1e66dd5b168/MeasureReport-38dc6598-68c1-4938-ab30-6687b6b509fa.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ bfb8c317-cc95-41cc-9d3d-e1e66dd5b168 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/bfb8c317-cc95-41cc-9d3d-e1e66dd5b168/MeasureReport-38dc6598-68c1-4938-ab30-6687b6b509fa.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ 40aa228f-ff55-4653-8bbe-125dc0fb5983 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/40aa228f-ff55-4653-8bbe-125dc0fb5983/MeasureReport-f50e5947-872c-4d62-ac9a-8b9e62a8dc06.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ 40aa228f-ff55-4653-8bbe-125dc0fb5983 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/40aa228f-ff55-4653-8bbe-125dc0fb5983/MeasureReport-f50e5947-872c-4d62-ac9a-8b9e62a8dc06.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ 40aa228f-ff55-4653-8bbe-125dc0fb5983 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/40aa228f-ff55-4653-8bbe-125dc0fb5983/MeasureReport-f50e5947-872c-4d62-ac9a-8b9e62a8dc06.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ e20a62fd-329e-44d7-8767-1951f9392396 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e20a62fd-329e-44d7-8767-1951f9392396/MeasureReport-75467789-8be3-4e69-8a6c-068c0fb269f5.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ e20a62fd-329e-44d7-8767-1951f9392396 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e20a62fd-329e-44d7-8767-1951f9392396/MeasureReport-75467789-8be3-4e69-8a6c-068c0fb269f5.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ e20a62fd-329e-44d7-8767-1951f9392396 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e20a62fd-329e-44d7-8767-1951f9392396/MeasureReport-75467789-8be3-4e69-8a6c-068c0fb269f5.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ c686053c-d4b7-45b7-9ebb-19080a24f031 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/c686053c-d4b7-45b7-9ebb-19080a24f031/MeasureReport-29337290-624b-4143-b38b-a890a07484bc.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ c686053c-d4b7-45b7-9ebb-19080a24f031 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/c686053c-d4b7-45b7-9ebb-19080a24f031/MeasureReport-29337290-624b-4143-b38b-a890a07484bc.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ c686053c-d4b7-45b7-9ebb-19080a24f031 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/c686053c-d4b7-45b7-9ebb-19080a24f031/MeasureReport-29337290-624b-4143-b38b-a890a07484bc.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ 0438e6ec-b6c0-422d-b8c9-074e5f8d9af5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0438e6ec-b6c0-422d-b8c9-074e5f8d9af5/MeasureReport-8ee44bab-5427-4547-92ec-f3eb32c298e0.json) | Group_1 | Denominator Exclusion | 0 | 1 |
-| [ 0438e6ec-b6c0-422d-b8c9-074e5f8d9af5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0438e6ec-b6c0-422d-b8c9-074e5f8d9af5/MeasureReport-8ee44bab-5427-4547-92ec-f3eb32c298e0.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ 0438e6ec-b6c0-422d-b8c9-074e5f8d9af5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0438e6ec-b6c0-422d-b8c9-074e5f8d9af5/MeasureReport-8ee44bab-5427-4547-92ec-f3eb32c298e0.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-| [ 7bc28f33-e1e6-4122-8a38-e9c36685a6ba ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7bc28f33-e1e6-4122-8a38-e9c36685a6ba/MeasureReport-a2b410a9-629f-484e-8918-64308678a396.json) | Group_2 | Denominator Exclusion | 0 | 1 |
-| [ 7bc28f33-e1e6-4122-8a38-e9c36685a6ba ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7bc28f33-e1e6-4122-8a38-e9c36685a6ba/MeasureReport-a2b410a9-629f-484e-8918-64308678a396.json) | Group_3 | Denominator Exclusion | 0 | 1 |
-| [ 7bc28f33-e1e6-4122-8a38-e9c36685a6ba ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7bc28f33-e1e6-4122-8a38-e9c36685a6ba/MeasureReport-a2b410a9-629f-484e-8918-64308678a396.json) | Group_4 | Denominator Exclusion | 0 | 1 |
-
-
 #### CMS646FHIRIntravesicalBCGTherapy
 [ [cql] ](../../input/cql/CMS646FHIRIntravesicalBCGTherapy.cql) [ [test results] ](../../input/tests/results/CMS646FHIRIntravesicalBCGTherapy.txt)
 
@@ -523,6 +447,16 @@ Mismatched Test Cases (2 of  of 114)
 | [ f71b56bb-42fc-4db0-aa60-6b7b91333295 ](../.././input/tests/measure/CMS996FHIRAptTxforSTEMI/f71b56bb-42fc-4db0-aa60-6b7b91333295/MeasureReport-261ec6b2-42f5-46c2-906d-12fe22084f4c.json) | Group_1 | Denominator Exclusion | 1 | 0 |
 
 
+#### CMS1017FHIRHHFI
+[ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
+
+Mismatched Test Cases (2 of  of 65)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ fd4ea84b-cd39-4d03-9641-9ca8d10bbe67 ](../.././input/tests/measure/CMS1017FHIRHHFI/fd4ea84b-cd39-4d03-9641-9ca8d10bbe67/MeasureReport-bed5a065-8af6-4c78-a165-460571622469.json) | Group_1 | Numerator | 2 | 1 |
+| [ 8045dee0-645e-497b-a5e8-ad659cdcf8c6 ](../.././input/tests/measure/CMS1017FHIRHHFI/8045dee0-645e-497b-a5e8-ad659cdcf8c6/MeasureReport-9418fb72-ca02-4a6f-9a0f-067090c8e5f1.json) | Group_1 | Numerator | 2 | 1 |
+
+
 #### CMS1154ScreeningPrediabetesFHIR
 [ [cql] ](../../input/cql/CMS1154ScreeningPrediabetesFHIR.cql) [ [test results] ](../../input/tests/results/CMS1154ScreeningPrediabetesFHIR.txt)
 
@@ -530,16 +464,6 @@ Mismatched Test Cases (1 of  of 10)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
 | [ bc9c82ca-72b5-41c4-a9a3-7e3860a9ac2d ](../.././input/tests/measure/CMS1154ScreeningPrediabetesFHIR/bc9c82ca-72b5-41c4-a9a3-7e3860a9ac2d/MeasureReport-466dec57-6ceb-4f37-8daa-40f26f14a191.json) | Group_1 | Denominator Exclusion | 1 | 0 |
-
-
-#### CMS1173FHIRDiagnosticDelayVTE
-[ [cql] ](../../input/cql/CMS1173FHIRDiagnosticDelayVTE.cql) [ [test results] ](../../input/tests/results/CMS1173FHIRDiagnosticDelayVTE.txt)
-
-Mismatched Test Cases (2 of  of 65)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ a788d38f-a86a-4dc0-8f79-a22a31709495 ](../.././input/tests/measure/CMS1173FHIRDiagnosticDelayVTE/a788d38f-a86a-4dc0-8f79-a22a31709495/MeasureReport-fcd3003c-a2c1-4af4-a358-f28239aa7c35.json) | Group_1 | Numerator | 1 | 2 |
-| [ 33e8f298-ea35-46d2-b1b4-e36f74ef0656 ](../.././input/tests/measure/CMS1173FHIRDiagnosticDelayVTE/33e8f298-ea35-46d2-b1b4-e36f74ef0656/MeasureReport-cab13cd0-374f-4844-ac27-0dabb45a2abb.json) | Group_1 | Numerator | 1 | 2 |
 
 
 #### CMS1218FHIRHHRF
@@ -556,10 +480,9 @@ Missing Results (6 of 75 test cases)
 | [ f2e41ef7-1aa1-4ea0-8541-be476f3cb661 ](../.././input/tests/measure/CMS1218FHIRHHRF/f2e41ef7-1aa1-4ea0-8541-be476f3cb661/MeasureReport-dee11e77-e2fd-4ba0-9557-eaf128dc278f.json) | 67520e47670f1c0879cef598 |
 
 
-Mismatched Test Cases (2 of  of 75)
+Mismatched Test Cases (1 of  of 75)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
 | [ ea9c34ee-b50e-4d13-bd9c-ab2033d15717 ](../.././input/tests/measure/CMS1218FHIRHHRF/ea9c34ee-b50e-4d13-bd9c-ab2033d15717/MeasureReport-97044259-fd76-403c-a40f-1177631abe4f.json) | Group_1 | Initial Population<br>Denominator | 0<br>0 | 1<br>1 |
-| [ 8942da50-6322-4df7-bd03-21aecbc427a4 ](../.././input/tests/measure/CMS1218FHIRHHRF/8942da50-6322-4df7-bd03-21aecbc427a4/MeasureReport-290e5b8b-f5dc-4ca4-ad73-93505abc87bd.json) | Group_1 | Numerator | 1 | 2 |
 
 
