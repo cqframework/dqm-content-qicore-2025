@@ -1,22 +1,22 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-02-13 13:20:59.508014 |
+| Generated | 2026-02-13 14:45:38.976053 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
-| Measures with Discrepancies | 17 |
+| Measures with Discrepancies | 18 |
 
 
 | Discrepancy Summary | Measure Count | Test Case Count |
 |---|:---:|:---:|
 | Missing Results | 4 | 83 |
 | Missing Populations | 0 | 0 |
-| Mismatched Test Cases | 14 | 365 |
+| Mismatched Test Cases | 15 | 366 |
 
 
 
 _Note: Measures can have multiple discrepancies, so the Measures with Discrepancies count may not match the summary counts._
-## Measures with No Discrepancies (57)
+## Measures with No Discrepancies (56)
 - CMS2FHIRPCSDepScreenAndFollowUp [ [cql] ](../../input/cql/CMS2FHIRPCSDepScreenAndFollowUp.cql) [ [test results] ](../../input/tests/results/CMS2FHIRPCSDepScreenAndFollowUp.txt)
 - CMS22FHIRPCSBPScreeningFollowUp [ [cql] ](../../input/cql/CMS22FHIRPCSBPScreeningFollowUp.cql) [ [test results] ](../../input/tests/results/CMS22FHIRPCSBPScreeningFollowUp.txt)
 - CMS50FHIRReceiptofSpecialistReport [ [cql] ](../../input/cql/CMS50FHIRReceiptofSpecialistReport.cql) [ [test results] ](../../input/tests/results/CMS50FHIRReceiptofSpecialistReport.txt)
@@ -37,7 +37,6 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS130FHIRColorectalCancerScrn [ [cql] ](../../input/cql/CMS130FHIRColorectalCancerScrn.cql) [ [test results] ](../../input/tests/results/CMS130FHIRColorectalCancerScrn.txt)
 - CMS131FHIRDiabetesEyeExam [ [cql] ](../../input/cql/CMS131FHIRDiabetesEyeExam.cql) [ [test results] ](../../input/tests/results/CMS131FHIRDiabetesEyeExam.txt)
 - CMS133FHIRCataracts2040BCVA90Days [ [cql] ](../../input/cql/CMS133FHIRCataracts2040BCVA90Days.cql) [ [test results] ](../../input/tests/results/CMS133FHIRCataracts2040BCVA90Days.txt)
-- CMS136FHIRChildADHDMedFollowUp [ [cql] ](../../input/cql/CMS136FHIRChildADHDMedFollowUp.cql) [ [test results] ](../../input/tests/results/CMS136FHIRChildADHDMedFollowUp.txt)
 - CMS137FHIRSUDTxInitEngagement [ [cql] ](../../input/cql/CMS137FHIRSUDTxInitEngagement.cql) [ [test results] ](../../input/tests/results/CMS137FHIRSUDTxInitEngagement.txt)
 - CMS138FHIRTobaccoScrnCessation [ [cql] ](../../input/cql/CMS138FHIRTobaccoScrnCessation.cql) [ [test results] ](../../input/tests/results/CMS138FHIRTobaccoScrnCessation.txt)
 - CMS139FHIRFallRiskScreening [ [cql] ](../../input/cql/CMS139FHIRFallRiskScreening.cql) [ [test results] ](../../input/tests/results/CMS139FHIRFallRiskScreening.txt)
@@ -74,12 +73,13 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS1264FHIRECATREHQR [ [cql] ](../../input/cql/CMS1264FHIRECATREHQR.cql) [ [test results] ](../../input/tests/results/CMS1264FHIRECATREHQR.txt)
 - NHSNAcuteCareHospitalMonthlyInitialPopulation1 [ [cql] ](../../input/cql/NHSNAcuteCareHospitalMonthlyInitialPopulation1.cql) [ [test results] ](../../input/tests/results/NHSNAcuteCareHospitalMonthlyInitialPopulation1.txt)
 - NHSNGlycemicControlHypoglycemiaInitialPopulation [ [cql] ](../../input/cql/NHSNGlycemicControlHypoglycemiaInitialPopulation.cql) [ [test results] ](../../input/tests/results/NHSNGlycemicControlHypoglycemiaInitialPopulation.txt)
-## Measures with Discrepancies (17)
+## Measures with Discrepancies (18)
 | Measure | Total Test Cases | Missing Results | Missing Populations | Mismatched Test Cases |
 |---|:---:|:---:|:---:|:---:|
 | [CMS72FHIRSTKAntithromboticDay2](#cms72fhirstkantithromboticday2) | 158 | 0 | 0 | 1.27%   (2) |
 | [CMS104FHIRSTKDCAntithrombotic](#cms104fhirstkdcantithrombotic) | 82 | 0 | 0 | 6.10%   (5) |
 | [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 14 | 0 | 0.00%   (0) |
+| [CMS136FHIRChildADHDMedFollowUp](#cms136fhirchildadhdmedfollowup) | 128 | 0 | 0 | 0.78%   (1) |
 | [CMS142FHIRCommWithDrManagingDiab](#cms142fhircommwithdrmanagingdiab) | 32 | 0 | 0 | 15.62%   (5) |
 | [CMS143FHIRPOAGOpticNerveEval](#cms143fhirpoagopticnerveeval) | 32 | 0 | 0 | 3.12%   (1) |
 | [CMS144FHIRHFBetaBlockerForLVSD](#cms144fhirhfbetablockerforlvsd) | 48 | 0 | 0 | 2.08%   (1) |
@@ -104,7 +104,7 @@ Mismatched Test Cases (2 of  of 158)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
 | [ 5a329008-fcc1-4168-ab9c-89cb5dd6ff32 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/5a329008-fcc1-4168-ab9c-89cb5dd6ff32/MeasureReport-dda268cb-4395-4776-acd8-0fee046d392a.json) | Group_1 | Numerator | 1 | 2 |
-| [ be5c4068-2639-4b0c-bea3-5b7c80a6fe3b ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/be5c4068-2639-4b0c-bea3-5b7c80a6fe3b/MeasureReport-ad329961-b67b-413b-a186-d6b269572c42.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ ed638412-155e-4349-8461-4550fd4fae3b ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/ed638412-155e-4349-8461-4550fd4fae3b/MeasureReport-cf1aeb73-d464-4dd9-9f46-38afe84f76ec.json) | Group_1 | Denominator Exception | 1 | 0 |
 
 
 #### CMS104FHIRSTKDCAntithrombotic
@@ -140,6 +140,15 @@ Missing Results (14 of 40 test cases)
 | [ e755fc51-8047-4f1a-9d15-d53963496185 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/e755fc51-8047-4f1a-9d15-d53963496185/MeasureReport-88bc5d47-a4a5-44b4-a90b-f79153441e77.json) | Group_1 |
 | [ d4cafe6e-4358-4688-90f5-6a6588512cae ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/d4cafe6e-4358-4688-90f5-6a6588512cae/MeasureReport-688b70c8-2a6c-49d3-a7d8-141464f135fb.json) | Group_1 |
 | [ c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c/MeasureReport-258b085e-a5a9-4f16-83f7-2291c7ac9a19.json) | Group_1 |
+
+
+#### CMS136FHIRChildADHDMedFollowUp
+[ [cql] ](../../input/cql/CMS136FHIRChildADHDMedFollowUp.cql) [ [test results] ](../../input/tests/results/CMS136FHIRChildADHDMedFollowUp.txt)
+
+Mismatched Test Cases (1 of  of 128)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ 00f27092-14a7-4d87-b35a-5a112ca99201 ](../.././input/tests/measure/CMS136FHIRChildADHDMedFollowUp/00f27092-14a7-4d87-b35a-5a112ca99201/MeasureReport-351a58d1-450e-4d51-bb86-85a7169aecef.json) | Group_2 | Denominator Exclusion | 1 | 0 |
 
 
 #### CMS142FHIRCommWithDrManagingDiab
