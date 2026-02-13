@@ -1,7 +1,7 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-02-13 11:49:02.213343 |
+| Generated | 2026-02-13 13:20:59.508014 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
 | Measures with Discrepancies | 17 |
@@ -11,7 +11,7 @@
 |---|:---:|:---:|
 | Missing Results | 4 | 83 |
 | Missing Populations | 0 | 0 |
-| Mismatched Test Cases | 14 | 387 |
+| Mismatched Test Cases | 14 | 365 |
 
 
 
@@ -77,8 +77,8 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 ## Measures with Discrepancies (17)
 | Measure | Total Test Cases | Missing Results | Missing Populations | Mismatched Test Cases |
 |---|:---:|:---:|:---:|:---:|
-| [CMS72FHIRSTKAntithromboticDay2](#cms72fhirstkantithromboticday2) | 158 | 0 | 0 | 12.66%   (20) |
-| [CMS104FHIRSTKDCAntithrombotic](#cms104fhirstkdcantithrombotic) | 82 | 0 | 0 | 10.98%   (9) |
+| [CMS72FHIRSTKAntithromboticDay2](#cms72fhirstkantithromboticday2) | 158 | 0 | 0 | 1.27%   (2) |
+| [CMS104FHIRSTKDCAntithrombotic](#cms104fhirstkdcantithrombotic) | 82 | 0 | 0 | 6.10%   (5) |
 | [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 14 | 0 | 0.00%   (0) |
 | [CMS142FHIRCommWithDrManagingDiab](#cms142fhircommwithdrmanagingdiab) | 32 | 0 | 0 | 15.62%   (5) |
 | [CMS143FHIRPOAGOpticNerveEval](#cms143fhirpoagopticnerveeval) | 32 | 0 | 0 | 3.12%   (1) |
@@ -100,45 +100,23 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 #### CMS72FHIRSTKAntithromboticDay2
 [ [cql] ](../../input/cql/CMS72FHIRSTKAntithromboticDay2.cql) [ [test results] ](../../input/tests/results/CMS72FHIRSTKAntithromboticDay2.txt)
 
-Mismatched Test Cases (20 of  of 158)
+Mismatched Test Cases (2 of  of 158)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
-| [ dd40e582-8c3f-44a2-b781-84acead6120f ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/dd40e582-8c3f-44a2-b781-84acead6120f/MeasureReport-79091535-3736-45a0-a59f-530f1e1843c5.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 3264d587-3c02-45ff-b989-044fcc30abae ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/3264d587-3c02-45ff-b989-044fcc30abae/MeasureReport-64f6f154-288e-4fd9-8ab1-a44671bac1e4.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 4f8b0ca2-baf1-4ce6-8b9a-c3220097cf7c ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/4f8b0ca2-baf1-4ce6-8b9a-c3220097cf7c/MeasureReport-17124191-7e2b-4bbe-b4b6-79dbdb8b862e.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ cc23329d-6635-4347-8669-a98c921f4381 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/cc23329d-6635-4347-8669-a98c921f4381/MeasureReport-26cd60cb-66de-4731-a260-357cb4ad0fb1.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 09a132b9-b03c-4a8d-a09f-f18c544bb660 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/09a132b9-b03c-4a8d-a09f-f18c544bb660/MeasureReport-8efbf52b-9451-4d63-bdb3-0a0c5724b4f2.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 82fd75d8-4816-4d24-b18c-0e454c430eb5 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/82fd75d8-4816-4d24-b18c-0e454c430eb5/MeasureReport-0d03da0f-ebd2-4105-b369-108db3581f5d.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ c787d9c8-9645-4da6-a607-85dbefdf129e ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/c787d9c8-9645-4da6-a607-85dbefdf129e/MeasureReport-c693a5e6-d456-47f9-8f3d-b8c9a0b75e8e.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ b4cd9b20-6d41-4034-907c-b24e362a0699 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/b4cd9b20-6d41-4034-907c-b24e362a0699/MeasureReport-a46d7d47-1ef7-4fd8-9d7a-a506513be473.json) | Group_1 | Denominator Exception | 1 | 0 |
 | [ 5a329008-fcc1-4168-ab9c-89cb5dd6ff32 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/5a329008-fcc1-4168-ab9c-89cb5dd6ff32/MeasureReport-dda268cb-4395-4776-acd8-0fee046d392a.json) | Group_1 | Numerator | 1 | 2 |
-| [ a2cb4956-d7e5-45a9-8007-80dcb893203c ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/a2cb4956-d7e5-45a9-8007-80dcb893203c/MeasureReport-07564084-3f31-46bb-a896-20b31c59e991.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 072fc02e-93db-449c-a293-2e8525a49694 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/072fc02e-93db-449c-a293-2e8525a49694/MeasureReport-63e24f6e-eff5-4052-889c-55cdb4703d50.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ c014ff5d-792f-45c9-9659-4999537005b0 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/c014ff5d-792f-45c9-9659-4999537005b0/MeasureReport-b640a42d-0255-4462-93eb-a3874b14f714.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ d82d5f38-a1b7-4f28-a3db-25f42f7e64b2 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/d82d5f38-a1b7-4f28-a3db-25f42f7e64b2/MeasureReport-cfaac0c0-6c37-45db-a350-75ebe6b53540.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 70e86911-43d6-41de-bfb9-933d8f539b98 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/70e86911-43d6-41de-bfb9-933d8f539b98/MeasureReport-c4fa5ec2-e620-41ce-ae53-7f79b4d25518.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ ac23e6a6-3f36-49db-9eba-2da744a41c57 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/ac23e6a6-3f36-49db-9eba-2da744a41c57/MeasureReport-22bd4d72-fef8-40d9-9a72-e75de7d0fcaf.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 9843e92a-751f-4b3c-86b8-50397a64c8fd ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/9843e92a-751f-4b3c-86b8-50397a64c8fd/MeasureReport-9c1cb639-c060-4009-8ccc-f3078e8d831a.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 2ecbb381-211e-421a-8053-21c820f33043 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/2ecbb381-211e-421a-8053-21c820f33043/MeasureReport-b961c7c3-a318-43c6-abef-9076d0a4a229.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 05ec524f-1d2d-4f9e-8eaa-cc2662030fc6 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/05ec524f-1d2d-4f9e-8eaa-cc2662030fc6/MeasureReport-d64a4545-4930-4f2a-9d87-cd9f65aa49f3.json) | Group_1 | Denominator Exception | 1 | 0 |
-| [ 144370a9-c9cf-43db-ba18-f92f4f8cec29 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/144370a9-c9cf-43db-ba18-f92f4f8cec29/MeasureReport-1c6b5fa5-9d0c-4ca0-84f1-f1a0a0f1130c.json) | Group_1 | Denominator Exception | 1 | 0 |
 | [ be5c4068-2639-4b0c-bea3-5b7c80a6fe3b ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/be5c4068-2639-4b0c-bea3-5b7c80a6fe3b/MeasureReport-ad329961-b67b-413b-a186-d6b269572c42.json) | Group_1 | Denominator Exception | 1 | 0 |
 
 
 #### CMS104FHIRSTKDCAntithrombotic
 [ [cql] ](../../input/cql/CMS104FHIRSTKDCAntithrombotic.cql) [ [test results] ](../../input/tests/results/CMS104FHIRSTKDCAntithrombotic.txt)
 
-Mismatched Test Cases (9 of  of 82)
+Mismatched Test Cases (5 of  of 82)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
-| [ e6f270ed-ddb3-43cf-a2f7-ef26df352d4d ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e6f270ed-ddb3-43cf-a2f7-ef26df352d4d/MeasureReport-68080d0d-9936-4b67-a98a-1791c25c3bcc.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 0edb029c-ae5a-492a-ad4c-79ea0f8059d4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/0edb029c-ae5a-492a-ad4c-79ea0f8059d4/MeasureReport-1e65ef7e-3792-4ae8-8539-a72403f6f144.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 0b1aa8ee-e8bf-49f5-b968-48c5a9702843 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/0b1aa8ee-e8bf-49f5-b968-48c5a9702843/MeasureReport-38f44642-a505-41c0-b367-013e4bb44d58.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
 | [ e84c89f7-3c9e-4ee9-b71a-5025aadb5990 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e84c89f7-3c9e-4ee9-b71a-5025aadb5990/MeasureReport-51e29a50-abca-429e-95eb-8364998be573.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exception | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ c15bee15-84c1-494a-ac82-2159b06da175 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/c15bee15-84c1-494a-ac82-2159b06da175/MeasureReport-bbe28035-6557-410d-964f-21cf38904d0f.json) | Group_1 | Numerator | 2 | 1 |
-| [ 9f18a5c2-e59f-4582-91b5-401a86234284 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/9f18a5c2-e59f-4582-91b5-401a86234284/MeasureReport-aca507b3-b3cb-4a2a-8c65-a04aa06c05f1.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
+| [ 348471db-5aaa-4bf3-a280-75222f20d599 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/348471db-5aaa-4bf3-a280-75222f20d599/MeasureReport-bf54d81d-f635-45ff-b69b-1580a144d3fb.json) | Group_1 | Numerator | 1 | 2 |
 | [ 451b6853-3734-4c1c-b37e-5904629e0350 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/451b6853-3734-4c1c-b37e-5904629e0350/MeasureReport-4eefe8af-efb3-47eb-91df-e2ea877a39e7.json) | Group_1 | Numerator | 1 | 2 |
-| [ a2b8327c-eaf4-4552-863e-851426e729d4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/a2b8327c-eaf4-4552-863e-851426e729d4/MeasureReport-0ced6c1b-75a5-4ee3-a7a0-017818c03e9a.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 2<br>2<br>2 | 0<br>0<br>0 |
+| [ a2b8327c-eaf4-4552-863e-851426e729d4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/a2b8327c-eaf4-4552-863e-851426e729d4/MeasureReport-0ced6c1b-75a5-4ee3-a7a0-017818c03e9a.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 2<br>2<br>2 | 1<br>1<br>0 |
 | [ d21be273-87ad-4ab5-a936-9de820872e73 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/d21be273-87ad-4ab5-a936-9de820872e73/MeasureReport-f933b249-e343-48fd-bb1b-9806fc53ac55.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 2<br>2 |
 
 
