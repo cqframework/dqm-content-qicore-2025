@@ -1,22 +1,22 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-02-12 15:28:55.263817 |
+| Generated | 2026-02-13 11:49:02.213343 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
-| Measures with Discrepancies | 13 |
+| Measures with Discrepancies | 17 |
 
 
 | Discrepancy Summary | Measure Count | Test Case Count |
 |---|:---:|:---:|
 | Missing Results | 4 | 83 |
 | Missing Populations | 0 | 0 |
-| Mismatched Test Cases | 10 | 105 |
+| Mismatched Test Cases | 14 | 387 |
 
 
 
 _Note: Measures can have multiple discrepancies, so the Measures with Discrepancies count may not match the summary counts._
-## Measures with No Discrepancies (61)
+## Measures with No Discrepancies (57)
 - CMS2FHIRPCSDepScreenAndFollowUp [ [cql] ](../../input/cql/CMS2FHIRPCSDepScreenAndFollowUp.cql) [ [test results] ](../../input/tests/results/CMS2FHIRPCSDepScreenAndFollowUp.txt)
 - CMS22FHIRPCSBPScreeningFollowUp [ [cql] ](../../input/cql/CMS22FHIRPCSBPScreeningFollowUp.cql) [ [test results] ](../../input/tests/results/CMS22FHIRPCSBPScreeningFollowUp.txt)
 - CMS50FHIRReceiptofSpecialistReport [ [cql] ](../../input/cql/CMS50FHIRReceiptofSpecialistReport.cql) [ [test results] ](../../input/tests/results/CMS50FHIRReceiptofSpecialistReport.txt)
@@ -41,10 +41,6 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS137FHIRSUDTxInitEngagement [ [cql] ](../../input/cql/CMS137FHIRSUDTxInitEngagement.cql) [ [test results] ](../../input/tests/results/CMS137FHIRSUDTxInitEngagement.txt)
 - CMS138FHIRTobaccoScrnCessation [ [cql] ](../../input/cql/CMS138FHIRTobaccoScrnCessation.cql) [ [test results] ](../../input/tests/results/CMS138FHIRTobaccoScrnCessation.txt)
 - CMS139FHIRFallRiskScreening [ [cql] ](../../input/cql/CMS139FHIRFallRiskScreening.cql) [ [test results] ](../../input/tests/results/CMS139FHIRFallRiskScreening.txt)
-- CMS142FHIRCommWithDrManagingDiab [ [cql] ](../../input/cql/CMS142FHIRCommWithDrManagingDiab.cql) [ [test results] ](../../input/tests/results/CMS142FHIRCommWithDrManagingDiab.txt)
-- CMS143FHIRPOAGOpticNerveEval [ [cql] ](../../input/cql/CMS143FHIRPOAGOpticNerveEval.cql) [ [test results] ](../../input/tests/results/CMS143FHIRPOAGOpticNerveEval.txt)
-- CMS144FHIRHFBetaBlockerForLVSD [ [cql] ](../../input/cql/CMS144FHIRHFBetaBlockerForLVSD.cql) [ [test results] ](../../input/tests/results/CMS144FHIRHFBetaBlockerForLVSD.txt)
-- CMS145FHIRCADBBlockerTPMIorLVSD [ [cql] ](../../input/cql/CMS145FHIRCADBBlockerTPMIorLVSD.cql) [ [test results] ](../../input/tests/results/CMS145FHIRCADBBlockerTPMIorLVSD.txt)
 - CMS146FHIRApproTestPharyngitis [ [cql] ](../../input/cql/CMS146FHIRApproTestPharyngitis.cql) [ [test results] ](../../input/tests/results/CMS146FHIRApproTestPharyngitis.txt)
 - CMS149FHIRDementiaCognitiveAssess [ [cql] ](../../input/cql/CMS149FHIRDementiaCognitiveAssess.cql) [ [test results] ](../../input/tests/results/CMS149FHIRDementiaCognitiveAssess.txt)
 - CMS153FHIRChlamydiaScreening [ [cql] ](../../input/cql/CMS153FHIRChlamydiaScreening.cql) [ [test results] ](../../input/tests/results/CMS153FHIRChlamydiaScreening.txt)
@@ -54,7 +50,6 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS177FHIRChildMDDSuicideAssmt [ [cql] ](../../input/cql/CMS177FHIRChildMDDSuicideAssmt.cql) [ [test results] ](../../input/tests/results/CMS177FHIRChildMDDSuicideAssmt.txt)
 - CMS314FHIRHIVViralSuppression [ [cql] ](../../input/cql/CMS314FHIRHIVViralSuppression.cql) [ [test results] ](../../input/tests/results/CMS314FHIRHIVViralSuppression.txt)
 - CMS0334FHIRPCCesareanBirth [ [cql] ](../../input/cql/CMS0334FHIRPCCesareanBirth.cql) [ [test results] ](../../input/tests/results/CMS0334FHIRPCCesareanBirth.txt)
-- CMS347FHIRStatinPreventionTxCVD [ [cql] ](../../input/cql/CMS347FHIRStatinPreventionTxCVD.cql) [ [test results] ](../../input/tests/results/CMS347FHIRStatinPreventionTxCVD.txt)
 - CMS349FHIRHIVScreening [ [cql] ](../../input/cql/CMS349FHIRHIVScreening.cql) [ [test results] ](../../input/tests/results/CMS349FHIRHIVScreening.txt)
 - CMS506FHIRSafeUseofOpioids [ [cql] ](../../input/cql/CMS506FHIRSafeUseofOpioids.cql) [ [test results] ](../../input/tests/results/CMS506FHIRSafeUseofOpioids.txt)
 - CMSFHIR529HybridHospitalWideReadmission [ [cql] ](../../input/cql/CMSFHIR529HybridHospitalWideReadmission.cql) [ [test results] ](../../input/tests/results/CMSFHIR529HybridHospitalWideReadmission.txt)
@@ -67,6 +62,7 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS871FHIRHHHyper [ [cql] ](../../input/cql/CMS871FHIRHHHyper.cql) [ [test results] ](../../input/tests/results/CMS871FHIRHHHyper.txt)
 - CMS951FHIRKidneyHealthEval [ [cql] ](../../input/cql/CMS951FHIRKidneyHealthEval.cql) [ [test results] ](../../input/tests/results/CMS951FHIRKidneyHealthEval.txt)
 - CMS986FHIRMalnutritionScore [ [cql] ](../../input/cql/CMS986FHIRMalnutritionScore.cql) [ [test results] ](../../input/tests/results/CMS986FHIRMalnutritionScore.txt)
+- CMS1017FHIRHHFI [ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
 - CMS1028FHIRPCSevereOBComps [ [cql] ](../../input/cql/CMS1028FHIRPCSevereOBComps.cql) [ [test results] ](../../input/tests/results/CMS1028FHIRPCSevereOBComps.txt)
 - CMS1056FHIRCTClinical [ [cql] ](../../input/cql/CMS1056FHIRCTClinical.cql) [ [test results] ](../../input/tests/results/CMS1056FHIRCTClinical.txt)
 - CMS1074FHIRCTIQR [ [cql] ](../../input/cql/CMS1074FHIRCTIQR.cql) [ [test results] ](../../input/tests/results/CMS1074FHIRCTIQR.txt)
@@ -78,113 +74,72 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS1264FHIRECATREHQR [ [cql] ](../../input/cql/CMS1264FHIRECATREHQR.cql) [ [test results] ](../../input/tests/results/CMS1264FHIRECATREHQR.txt)
 - NHSNAcuteCareHospitalMonthlyInitialPopulation1 [ [cql] ](../../input/cql/NHSNAcuteCareHospitalMonthlyInitialPopulation1.cql) [ [test results] ](../../input/tests/results/NHSNAcuteCareHospitalMonthlyInitialPopulation1.txt)
 - NHSNGlycemicControlHypoglycemiaInitialPopulation [ [cql] ](../../input/cql/NHSNGlycemicControlHypoglycemiaInitialPopulation.cql) [ [test results] ](../../input/tests/results/NHSNGlycemicControlHypoglycemiaInitialPopulation.txt)
-## Measures with Discrepancies (13)
+## Measures with Discrepancies (17)
 | Measure | Total Test Cases | Missing Results | Missing Populations | Mismatched Test Cases |
 |---|:---:|:---:|:---:|:---:|
-| [CMS72FHIRSTKAntithromboticDay2](#cms72fhirstkantithromboticday2) | 158 | 0 | 0 | 3.16%   (5) |
-| [CMS104FHIRSTKDCAntithrombotic](#cms104fhirstkdcantithrombotic) | 82 | 0 | 0 | 84.15%   (69) |
+| [CMS72FHIRSTKAntithromboticDay2](#cms72fhirstkantithromboticday2) | 158 | 0 | 0 | 12.66%   (20) |
+| [CMS104FHIRSTKDCAntithrombotic](#cms104fhirstkdcantithrombotic) | 82 | 0 | 0 | 10.98%   (9) |
 | [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 14 | 0 | 0.00%   (0) |
+| [CMS142FHIRCommWithDrManagingDiab](#cms142fhircommwithdrmanagingdiab) | 32 | 0 | 0 | 15.62%   (5) |
+| [CMS143FHIRPOAGOpticNerveEval](#cms143fhirpoagopticnerveeval) | 32 | 0 | 0 | 3.12%   (1) |
+| [CMS144FHIRHFBetaBlockerForLVSD](#cms144fhirhfbetablockerforlvsd) | 48 | 0 | 0 | 2.08%   (1) |
+| [CMS145FHIRCADBBlockerTPMIorLVSD](#cms145fhircadbblockertpmiorlvsd) | 106 | 0 | 0 | 1.89%   (2) |
 | [CMS157FHIRPainIntensityQuantified](#cms157fhirpainintensityquantified) | 126 | 0 | 0 | 15.08%   (19) |
 | [CMS159FHIRDepRemissionat12Months](#cms159fhirdepremissionat12months) | 67 | 0 | 0 | 2.99%   (2) |
 | [CMS165FHIRControllingHighBP](#cms165fhircontrollinghighbp) | 68 | 53 | 0 | 0.00%   (0) |
 | [CMS190FHIRVTEProphylaxisICU](#cms190fhirvteprophylaxisicu) | 125 | 0 | 0 | 1.60%   (2) |
+| [CMS347FHIRStatinPreventionTxCVD](#cms347fhirstatinpreventiontxcvd) | 752 | 0 | 0 | 42.42%   (319) |
 | [CMS646FHIRIntravesicalBCGTherapy](#cms646fhirintravesicalbcgtherapy) | 38 | 0 | 0 | 5.26%   (2) |
 | [CMS832FHIRHHAKI](#cms832fhirhhaki) | 47 | 10 | 0 | 0.00%   (0) |
 | [CMS996FHIRAptTxforSTEMI](#cms996fhirapttxforstemi) | 114 | 0 | 0 | 1.75%   (2) |
-| [CMS1017FHIRHHFI](#cms1017fhirhhfi) | 65 | 0 | 0 | 3.08%   (2) |
 | [CMS1154ScreeningPrediabetesFHIR](#cms1154screeningprediabetesfhir) | 10 | 0 | 0 | 10.00%   (1) |
-| [CMS1218FHIRHHRF](#cms1218fhirhhrf) | 75 | 6 | 0 | 1.33%   (1) |
+| [CMS1218FHIRHHRF](#cms1218fhirhhrf) | 75 | 6 | 0 | 2.67%   (2) |
 
 
 
 #### CMS72FHIRSTKAntithromboticDay2
 [ [cql] ](../../input/cql/CMS72FHIRSTKAntithromboticDay2.cql) [ [test results] ](../../input/tests/results/CMS72FHIRSTKAntithromboticDay2.txt)
 
-Mismatched Test Cases (5 of  of 158)
+Mismatched Test Cases (20 of  of 158)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
-| [ e126cdec-dbc8-4ee8-964f-e88e46c04f88 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/e126cdec-dbc8-4ee8-964f-e88e46c04f88/MeasureReport-58249af5-0abc-464b-9e0a-456f7c31b4cf.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 5a329008-fcc1-4168-ab9c-89cb5dd6ff32 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/5a329008-fcc1-4168-ab9c-89cb5dd6ff32/MeasureReport-dda268cb-4395-4776-acd8-0fee046d392a.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 2<br>2<br>1 | 1<br>1<br>0 |
-| [ febd4b3e-99bc-4c55-bba9-3b2136c2160b ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/febd4b3e-99bc-4c55-bba9-3b2136c2160b/MeasureReport-4f80f98a-71ab-45d6-bdda-d0875ec02ec9.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion<br>Numerator | 4<br>4<br>2<br>2 | 1<br>1<br>0<br>1 |
-| [ cb7c95fc-6d6b-4e07-81e8-a79385142b94 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/cb7c95fc-6d6b-4e07-81e8-a79385142b94/MeasureReport-6844e7ed-08a4-43d5-be1c-720dc795b3cf.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 3<br>3<br>2 | 1<br>1<br>0 |
-| [ 144370a9-c9cf-43db-ba18-f92f4f8cec29 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/144370a9-c9cf-43db-ba18-f92f4f8cec29/MeasureReport-1c6b5fa5-9d0c-4ca0-84f1-f1a0a0f1130c.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
+| [ dd40e582-8c3f-44a2-b781-84acead6120f ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/dd40e582-8c3f-44a2-b781-84acead6120f/MeasureReport-79091535-3736-45a0-a59f-530f1e1843c5.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 3264d587-3c02-45ff-b989-044fcc30abae ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/3264d587-3c02-45ff-b989-044fcc30abae/MeasureReport-64f6f154-288e-4fd9-8ab1-a44671bac1e4.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 4f8b0ca2-baf1-4ce6-8b9a-c3220097cf7c ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/4f8b0ca2-baf1-4ce6-8b9a-c3220097cf7c/MeasureReport-17124191-7e2b-4bbe-b4b6-79dbdb8b862e.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ cc23329d-6635-4347-8669-a98c921f4381 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/cc23329d-6635-4347-8669-a98c921f4381/MeasureReport-26cd60cb-66de-4731-a260-357cb4ad0fb1.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 09a132b9-b03c-4a8d-a09f-f18c544bb660 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/09a132b9-b03c-4a8d-a09f-f18c544bb660/MeasureReport-8efbf52b-9451-4d63-bdb3-0a0c5724b4f2.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 82fd75d8-4816-4d24-b18c-0e454c430eb5 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/82fd75d8-4816-4d24-b18c-0e454c430eb5/MeasureReport-0d03da0f-ebd2-4105-b369-108db3581f5d.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ c787d9c8-9645-4da6-a607-85dbefdf129e ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/c787d9c8-9645-4da6-a607-85dbefdf129e/MeasureReport-c693a5e6-d456-47f9-8f3d-b8c9a0b75e8e.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ b4cd9b20-6d41-4034-907c-b24e362a0699 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/b4cd9b20-6d41-4034-907c-b24e362a0699/MeasureReport-a46d7d47-1ef7-4fd8-9d7a-a506513be473.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 5a329008-fcc1-4168-ab9c-89cb5dd6ff32 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/5a329008-fcc1-4168-ab9c-89cb5dd6ff32/MeasureReport-dda268cb-4395-4776-acd8-0fee046d392a.json) | Group_1 | Numerator | 1 | 2 |
+| [ a2cb4956-d7e5-45a9-8007-80dcb893203c ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/a2cb4956-d7e5-45a9-8007-80dcb893203c/MeasureReport-07564084-3f31-46bb-a896-20b31c59e991.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 072fc02e-93db-449c-a293-2e8525a49694 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/072fc02e-93db-449c-a293-2e8525a49694/MeasureReport-63e24f6e-eff5-4052-889c-55cdb4703d50.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ c014ff5d-792f-45c9-9659-4999537005b0 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/c014ff5d-792f-45c9-9659-4999537005b0/MeasureReport-b640a42d-0255-4462-93eb-a3874b14f714.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ d82d5f38-a1b7-4f28-a3db-25f42f7e64b2 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/d82d5f38-a1b7-4f28-a3db-25f42f7e64b2/MeasureReport-cfaac0c0-6c37-45db-a350-75ebe6b53540.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 70e86911-43d6-41de-bfb9-933d8f539b98 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/70e86911-43d6-41de-bfb9-933d8f539b98/MeasureReport-c4fa5ec2-e620-41ce-ae53-7f79b4d25518.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ ac23e6a6-3f36-49db-9eba-2da744a41c57 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/ac23e6a6-3f36-49db-9eba-2da744a41c57/MeasureReport-22bd4d72-fef8-40d9-9a72-e75de7d0fcaf.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 9843e92a-751f-4b3c-86b8-50397a64c8fd ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/9843e92a-751f-4b3c-86b8-50397a64c8fd/MeasureReport-9c1cb639-c060-4009-8ccc-f3078e8d831a.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 2ecbb381-211e-421a-8053-21c820f33043 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/2ecbb381-211e-421a-8053-21c820f33043/MeasureReport-b961c7c3-a318-43c6-abef-9076d0a4a229.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 05ec524f-1d2d-4f9e-8eaa-cc2662030fc6 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/05ec524f-1d2d-4f9e-8eaa-cc2662030fc6/MeasureReport-d64a4545-4930-4f2a-9d87-cd9f65aa49f3.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 144370a9-c9cf-43db-ba18-f92f4f8cec29 ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/144370a9-c9cf-43db-ba18-f92f4f8cec29/MeasureReport-1c6b5fa5-9d0c-4ca0-84f1-f1a0a0f1130c.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ be5c4068-2639-4b0c-bea3-5b7c80a6fe3b ](../.././input/tests/measure/CMS72FHIRSTKAntithromboticDay2/be5c4068-2639-4b0c-bea3-5b7c80a6fe3b/MeasureReport-ad329961-b67b-413b-a186-d6b269572c42.json) | Group_1 | Denominator Exception | 1 | 0 |
 
 
 #### CMS104FHIRSTKDCAntithrombotic
 [ [cql] ](../../input/cql/CMS104FHIRSTKDCAntithrombotic.cql) [ [test results] ](../../input/tests/results/CMS104FHIRSTKDCAntithrombotic.txt)
 
-Mismatched Test Cases (69 of  of 82)
+Mismatched Test Cases (9 of  of 82)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
 | [ e6f270ed-ddb3-43cf-a2f7-ef26df352d4d ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e6f270ed-ddb3-43cf-a2f7-ef26df352d4d/MeasureReport-68080d0d-9936-4b67-a98a-1791c25c3bcc.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 2ffdd04b-5cee-4904-9ce8-2f68dada9941 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/2ffdd04b-5cee-4904-9ce8-2f68dada9941/MeasureReport-3f2d0502-b89a-4fbf-8732-e015c6e816e8.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ ed5ae1dd-5a2e-4b69-9044-1f4cbed2fcfc ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/ed5ae1dd-5a2e-4b69-9044-1f4cbed2fcfc/MeasureReport-c22c7f78-a433-41d7-939b-d2b63bc731db.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 264ec8d1-8e92-4b73-a6cb-e8856b22890d ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/264ec8d1-8e92-4b73-a6cb-e8856b22890d/MeasureReport-73af38ed-070d-46ba-8091-4dca8007cf56.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 0852e05c-94f3-4467-ad2c-255ffc5050e9 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/0852e05c-94f3-4467-ad2c-255ffc5050e9/MeasureReport-dd7b714a-edfb-4cf0-a4ad-5b294a9b33bd.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 88c4fed3-bef0-450a-b9ff-d736d4568838 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/88c4fed3-bef0-450a-b9ff-d736d4568838/MeasureReport-6bdb45e9-c153-407b-b195-e01560247f6e.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 146a6714-8663-4f45-826a-01110ff34490 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/146a6714-8663-4f45-826a-01110ff34490/MeasureReport-e1b111ec-80f6-4548-b462-dc44dd07fd1e.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ ad8c4056-7c25-4dba-a861-ec201afd16fb ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/ad8c4056-7c25-4dba-a861-ec201afd16fb/MeasureReport-5be93fe2-2491-405e-ab30-b8711f711b0b.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
 | [ 0edb029c-ae5a-492a-ad4c-79ea0f8059d4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/0edb029c-ae5a-492a-ad4c-79ea0f8059d4/MeasureReport-1e65ef7e-3792-4ae8-8539-a72403f6f144.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 6cf51e7c-99f4-4c6d-9b1c-6e371c96b742 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/6cf51e7c-99f4-4c6d-9b1c-6e371c96b742/MeasureReport-ba1ac104-2559-4b98-89d2-5ebf6c7b1fe8.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 48952352-d74c-491c-9420-6e999e60f52a ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/48952352-d74c-491c-9420-6e999e60f52a/MeasureReport-5eeb7443-d897-40c5-8815-c5dead56e05e.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
 | [ 0b1aa8ee-e8bf-49f5-b968-48c5a9702843 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/0b1aa8ee-e8bf-49f5-b968-48c5a9702843/MeasureReport-38f44642-a505-41c0-b367-013e4bb44d58.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 2d54a94c-edf1-4f92-baf8-3813a8ef452d ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/2d54a94c-edf1-4f92-baf8-3813a8ef452d/MeasureReport-023784a8-b40e-491b-850f-0c87cb2e5e03.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 15e67912-9913-4b22-9f1b-3e86879e1d6d ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/15e67912-9913-4b22-9f1b-3e86879e1d6d/MeasureReport-cc82c466-71ef-46d8-828a-bfe8588fdcd3.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 6abe0474-e60b-438d-b661-4be178e6b4bd ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/6abe0474-e60b-438d-b661-4be178e6b4bd/MeasureReport-ecfac1f9-69f1-4171-bfd1-30e6e83ac7ab.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 7b1ac1a8-b7be-41ec-a77f-db545af22263 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/7b1ac1a8-b7be-41ec-a77f-db545af22263/MeasureReport-373169e3-3ba1-4ace-bf0c-5c212910cccf.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ e84c89f7-3c9e-4ee9-b71a-5025aadb5990 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e84c89f7-3c9e-4ee9-b71a-5025aadb5990/MeasureReport-51e29a50-abca-429e-95eb-8364998be573.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ db5afa02-02e2-4c0d-88c8-d3c0682333a1 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/db5afa02-02e2-4c0d-88c8-d3c0682333a1/MeasureReport-593b5def-112d-4bdb-bf97-36a1464542c0.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 3f089430-0edb-485d-9844-b2c58fb715e2 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/3f089430-0edb-485d-9844-b2c58fb715e2/MeasureReport-9bbd3008-3ee7-4f7b-b3bb-b40a47d81107.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ ba8bb5f1-966b-4ac1-a311-b2550c0e4858 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/ba8bb5f1-966b-4ac1-a311-b2550c0e4858/MeasureReport-9b6252a0-6fd2-41c8-8c38-8191080dc6bf.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ d8ea50e2-e1a9-41ae-ac73-480bb198d963 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/d8ea50e2-e1a9-41ae-ac73-480bb198d963/MeasureReport-dedc9210-579f-4f0d-b403-5916d78d07b0.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 591c23ea-1ddd-4800-9203-4b6946979818 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/591c23ea-1ddd-4800-9203-4b6946979818/MeasureReport-a871588f-5c88-44ce-890e-ccac41059f64.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ fdd3fe25-b12c-4417-a999-91e4583f6cd4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/fdd3fe25-b12c-4417-a999-91e4583f6cd4/MeasureReport-0103d37f-c849-404a-9b44-d612080b3264.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ ac56c496-c5d6-4c23-be20-130ee8327fd2 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/ac56c496-c5d6-4c23-be20-130ee8327fd2/MeasureReport-34148ef9-fbdd-48ca-ab5d-6a11fd288074.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ c15bee15-84c1-494a-ac82-2159b06da175 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/c15bee15-84c1-494a-ac82-2159b06da175/MeasureReport-bbe28035-6557-410d-964f-21cf38904d0f.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 3<br>3<br>2 | 0<br>0<br>0 |
-| [ 65ef54b4-48ea-4fc0-a9a7-79b3be807393 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/65ef54b4-48ea-4fc0-a9a7-79b3be807393/MeasureReport-fd028f91-baa0-4f78-ab39-f211ce5494fa.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 5aee33a0-e42c-4a79-97b7-40e7ac8b270e ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/5aee33a0-e42c-4a79-97b7-40e7ac8b270e/MeasureReport-efe05b5b-9c65-4e13-95a0-d73580e84472.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
+| [ e84c89f7-3c9e-4ee9-b71a-5025aadb5990 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e84c89f7-3c9e-4ee9-b71a-5025aadb5990/MeasureReport-51e29a50-abca-429e-95eb-8364998be573.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exception | 1<br>1<br>1 | 0<br>0<br>0 |
+| [ c15bee15-84c1-494a-ac82-2159b06da175 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/c15bee15-84c1-494a-ac82-2159b06da175/MeasureReport-bbe28035-6557-410d-964f-21cf38904d0f.json) | Group_1 | Numerator | 2 | 1 |
 | [ 9f18a5c2-e59f-4582-91b5-401a86234284 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/9f18a5c2-e59f-4582-91b5-401a86234284/MeasureReport-aca507b3-b3cb-4a2a-8c65-a04aa06c05f1.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 8e28076e-2fc9-4170-95e9-a4de9e04fd5e ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/8e28076e-2fc9-4170-95e9-a4de9e04fd5e/MeasureReport-7e0a0089-09e6-4413-b411-600ec5534072.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ e8e62dbf-ce54-4f04-b2d9-f574b8ded2c4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e8e62dbf-ce54-4f04-b2d9-f574b8ded2c4/MeasureReport-6f2ffa41-59d8-4729-ad0d-34ce08092aa1.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 2e0b5b75-22d9-4607-b8fe-f31c86620554 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/2e0b5b75-22d9-4607-b8fe-f31c86620554/MeasureReport-b8cea19f-d373-412b-b698-b2dd97e6b8dd.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ b9d52b97-7602-457d-a96d-a1950a01b42a ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/b9d52b97-7602-457d-a96d-a1950a01b42a/MeasureReport-c2294498-ba72-4905-8f7a-1c67aa052c01.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 348471db-5aaa-4bf3-a280-75222f20d599 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/348471db-5aaa-4bf3-a280-75222f20d599/MeasureReport-bf54d81d-f635-45ff-b69b-1580a144d3fb.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion<br>Numerator | 3<br>3<br>1<br>1 | 0<br>0<br>0<br>0 |
-| [ 1ec7f3ad-fe6d-486b-829b-101ebb721824 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/1ec7f3ad-fe6d-486b-829b-101ebb721824/MeasureReport-b90b48bd-ff9a-4eda-9a33-7e2f2eb62c69.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 3da60e55-4952-4341-b2eb-a79707f4ec3e ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/3da60e55-4952-4341-b2eb-a79707f4ec3e/MeasureReport-58c06e7f-94b7-4b67-b526-8c754da8abac.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 593382e8-4ad5-4300-b0ad-26c8954281c6 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/593382e8-4ad5-4300-b0ad-26c8954281c6/MeasureReport-bb6002b4-0bd0-43fa-a7a0-748bd0444688.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 52a258e1-0a79-4bb7-8f50-1aa519aa4e00 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/52a258e1-0a79-4bb7-8f50-1aa519aa4e00/MeasureReport-0ab9f2d4-4727-41ae-8e0e-1b2c463046d4.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ b536acae-02c7-4c6e-914b-4ea199d98f79 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/b536acae-02c7-4c6e-914b-4ea199d98f79/MeasureReport-756fabf3-91e2-400b-9dad-7e1724ffb20d.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 964f8143-6ff7-4b80-ad76-4dc59de2af37 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/964f8143-6ff7-4b80-ad76-4dc59de2af37/MeasureReport-392eacd2-b1a5-4861-bb4f-084df1c7665a.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ a86dcf01-3c5f-43ca-a426-c118d5974332 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/a86dcf01-3c5f-43ca-a426-c118d5974332/MeasureReport-70264bac-c7da-42b1-99ce-16197ae4ca47.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 451b6853-3734-4c1c-b37e-5904629e0350 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/451b6853-3734-4c1c-b37e-5904629e0350/MeasureReport-4eefe8af-efb3-47eb-91df-e2ea877a39e7.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion<br>Numerator | 3<br>3<br>2<br>1 | 0<br>0<br>0<br>0 |
-| [ 87b7df35-0de4-4c6a-a030-8afac02454f2 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/87b7df35-0de4-4c6a-a030-8afac02454f2/MeasureReport-5d71ec02-5d9a-478a-9600-5657ab8cb87f.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ cf0c5672-d86d-47fa-b13b-9bdb299c1d47 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/cf0c5672-d86d-47fa-b13b-9bdb299c1d47/MeasureReport-1df19fae-d238-4210-89bb-70847e9e3c7d.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 93459ee6-e397-477e-b7da-250fb75f5974 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/93459ee6-e397-477e-b7da-250fb75f5974/MeasureReport-951af609-373d-499e-941e-bfb19e1b2a5f.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ e9074892-9513-48d7-999e-afeace427512 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e9074892-9513-48d7-999e-afeace427512/MeasureReport-6eb11bab-8015-47d0-86fb-1be58366fdea.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
+| [ 451b6853-3734-4c1c-b37e-5904629e0350 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/451b6853-3734-4c1c-b37e-5904629e0350/MeasureReport-4eefe8af-efb3-47eb-91df-e2ea877a39e7.json) | Group_1 | Numerator | 1 | 2 |
 | [ a2b8327c-eaf4-4552-863e-851426e729d4 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/a2b8327c-eaf4-4552-863e-851426e729d4/MeasureReport-0ced6c1b-75a5-4ee3-a7a0-017818c03e9a.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 2<br>2<br>2 | 0<br>0<br>0 |
-| [ cfe6d907-c9fa-4d4c-9889-803315e8f707 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/cfe6d907-c9fa-4d4c-9889-803315e8f707/MeasureReport-7fe00f47-f9ff-49bc-85dd-62f94b0ccc21.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ e13ab79b-1b28-4a37-96cc-e63baa5f88cd ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e13ab79b-1b28-4a37-96cc-e63baa5f88cd/MeasureReport-1e38586a-b69e-4d67-99bc-e9fae77643e8.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 34d3361c-95b3-43bf-a2a8-380914e06acb ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/34d3361c-95b3-43bf-a2a8-380914e06acb/MeasureReport-6dfb5ce2-4bf9-490d-9474-7f94a03cfe96.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 302f7629-15c3-4e52-86df-5677eab6770c ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/302f7629-15c3-4e52-86df-5677eab6770c/MeasureReport-c6e78dfb-7c3c-4e60-bb31-80b8019c4606.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ d21be273-87ad-4ab5-a936-9de820872e73 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/d21be273-87ad-4ab5-a936-9de820872e73/MeasureReport-f933b249-e343-48fd-bb1b-9806fc53ac55.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 5adc911a-c2a1-475c-a347-9da4ee98c6df ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/5adc911a-c2a1-475c-a347-9da4ee98c6df/MeasureReport-fbd77dd4-8f40-4bf2-bee9-e1e5ce62d7aa.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ a9c3e62b-fd84-4701-8024-7e3e60af9ed1 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/a9c3e62b-fd84-4701-8024-7e3e60af9ed1/MeasureReport-248e13cb-bd3a-4112-91b1-d90a003170f2.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 162a5913-9989-42f2-8d6a-ae460e245e4c ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/162a5913-9989-42f2-8d6a-ae460e245e4c/MeasureReport-0e1cd4df-b9a5-4a05-8862-e95a78d42a70.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ f705cc70-0d7d-4dc1-88f7-9b37ab5290d2 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/f705cc70-0d7d-4dc1-88f7-9b37ab5290d2/MeasureReport-e52fa836-e3cc-4ea3-9d1a-fd78bd7f8f90.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 6e82e823-f955-43fa-8b8a-b9cd4ae27778 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/6e82e823-f955-43fa-8b8a-b9cd4ae27778/MeasureReport-08a5efe4-8ea7-4dc5-abc8-c7a87b06c686.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ a7b90108-4f50-4164-87b9-73817e9fdac2 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/a7b90108-4f50-4164-87b9-73817e9fdac2/MeasureReport-39c1e507-7484-4ce8-88cc-361dcc188118.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 999617b0-b41a-4a82-910d-f707ce1d7779 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/999617b0-b41a-4a82-910d-f707ce1d7779/MeasureReport-89c10185-eaa0-4fc5-8c0a-e5aaf6dbb5ac.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ dd6c17ad-396b-4ff5-9538-e06da5f0a39c ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/dd6c17ad-396b-4ff5-9538-e06da5f0a39c/MeasureReport-194bd4bd-2265-4773-9d55-67c29539f358.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 7c3ee345-c9da-4ce2-97e8-727de2e5023a ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/7c3ee345-c9da-4ce2-97e8-727de2e5023a/MeasureReport-9f41c847-9ff7-454b-a5e9-e43f995a3569.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 728a543b-9149-4b2a-9e65-3fb41ce3f35b ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/728a543b-9149-4b2a-9e65-3fb41ce3f35b/MeasureReport-65c3601b-02e3-4d71-a220-40e0b97afbb4.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ eb5173bb-769a-4c95-b0e9-362a271f72ea ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/eb5173bb-769a-4c95-b0e9-362a271f72ea/MeasureReport-d2a48133-af7b-4a15-95ae-f8fe4a56e8d6.json) | Group_1 | Initial Population<br>Denominator<br>Denominator Exclusion | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 8493a3fb-9501-4aa2-83a3-39fbafa6644c ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/8493a3fb-9501-4aa2-83a3-39fbafa6644c/MeasureReport-d445d4a6-395a-4c64-8216-452dd2dbd77f.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 7e22eabf-ac1f-4209-a8f6-dcc8b548b71c ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/7e22eabf-ac1f-4209-a8f6-dcc8b548b71c/MeasureReport-2cafeedf-ccb5-40f4-b0ed-1f8828d2c317.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 4d94ffcd-39a0-4e40-83c1-6093ff82d641 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/4d94ffcd-39a0-4e40-83c1-6093ff82d641/MeasureReport-6d8aea02-e683-489d-9ab0-44ecb06a19aa.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ e081bee5-67f8-464f-9356-9b287e32a35a ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/e081bee5-67f8-464f-9356-9b287e32a35a/MeasureReport-560b8ee7-5246-423f-8065-7f02c28eb91f.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 003b2da3-b46a-4b24-91be-65ef27eef3bc ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/003b2da3-b46a-4b24-91be-65ef27eef3bc/MeasureReport-b702518d-433b-48d7-b678-638b8545ecba.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 2326f161-b68e-4034-91cb-4eae3c2ba587 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/2326f161-b68e-4034-91cb-4eae3c2ba587/MeasureReport-fcfff348-e3d4-44de-a284-e6ec5126a75d.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ ea41e48d-7b6d-4c9e-a8a1-f9c4bcf30785 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/ea41e48d-7b6d-4c9e-a8a1-f9c4bcf30785/MeasureReport-090e1420-1972-41b1-b56b-e83a077279d4.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
+| [ d21be273-87ad-4ab5-a936-9de820872e73 ](../.././input/tests/measure/CMS104FHIRSTKDCAntithrombotic/d21be273-87ad-4ab5-a936-9de820872e73/MeasureReport-f933b249-e343-48fd-bb1b-9806fc53ac55.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 2<br>2 |
 
 
 #### CMS135FHIRACEIorARBorARNIforHF
@@ -207,6 +162,47 @@ Missing Results (14 of 40 test cases)
 | [ e755fc51-8047-4f1a-9d15-d53963496185 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/e755fc51-8047-4f1a-9d15-d53963496185/MeasureReport-88bc5d47-a4a5-44b4-a90b-f79153441e77.json) | Group_1 |
 | [ d4cafe6e-4358-4688-90f5-6a6588512cae ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/d4cafe6e-4358-4688-90f5-6a6588512cae/MeasureReport-688b70c8-2a6c-49d3-a7d8-141464f135fb.json) | Group_1 |
 | [ c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c/MeasureReport-258b085e-a5a9-4f16-83f7-2291c7ac9a19.json) | Group_1 |
+
+
+#### CMS142FHIRCommWithDrManagingDiab
+[ [cql] ](../../input/cql/CMS142FHIRCommWithDrManagingDiab.cql) [ [test results] ](../../input/tests/results/CMS142FHIRCommWithDrManagingDiab.txt)
+
+Mismatched Test Cases (5 of  of 32)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ b85440e4-b902-49cd-b3d6-363ba7a99bce ](../.././input/tests/measure/CMS142FHIRCommWithDrManagingDiab/b85440e4-b902-49cd-b3d6-363ba7a99bce/MeasureReport-9d61df39-18a0-451f-a795-988388d58778.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 05f1e2a6-b317-42bb-827f-993ca3995f5b ](../.././input/tests/measure/CMS142FHIRCommWithDrManagingDiab/05f1e2a6-b317-42bb-827f-993ca3995f5b/MeasureReport-84bcf708-71bb-4169-8067-18fd354f3c37.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 6aef5a18-59bd-4a47-80bc-2bd44636e41f ](../.././input/tests/measure/CMS142FHIRCommWithDrManagingDiab/6aef5a18-59bd-4a47-80bc-2bd44636e41f/MeasureReport-e5735d61-0444-4958-8f47-165a59e91dc0.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ 41ae0086-ac99-4a31-9546-21b054bbf7d8 ](../.././input/tests/measure/CMS142FHIRCommWithDrManagingDiab/41ae0086-ac99-4a31-9546-21b054bbf7d8/MeasureReport-b77a6309-214c-4fc2-a9bc-18d81c740da6.json) | Group_1 | Denominator Exception | 1 | 0 |
+| [ d9840e8c-3359-42c2-b354-4b236c3c1b15 ](../.././input/tests/measure/CMS142FHIRCommWithDrManagingDiab/d9840e8c-3359-42c2-b354-4b236c3c1b15/MeasureReport-1fbf56ab-6e60-4ce6-a1d5-b520382164bd.json) | Group_1 | Denominator Exception | 1 | 0 |
+
+
+#### CMS143FHIRPOAGOpticNerveEval
+[ [cql] ](../../input/cql/CMS143FHIRPOAGOpticNerveEval.cql) [ [test results] ](../../input/tests/results/CMS143FHIRPOAGOpticNerveEval.txt)
+
+Mismatched Test Cases (1 of  of 32)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ 20d535da-db77-47c2-bc50-d36ed8a29270 ](../.././input/tests/measure/CMS143FHIRPOAGOpticNerveEval/20d535da-db77-47c2-bc50-d36ed8a29270/MeasureReport-69cda87e-d840-4e66-ac6d-d7f0812c7c9a.json) | Group_1 | Denominator Exception | 0 | 1 |
+
+
+#### CMS144FHIRHFBetaBlockerForLVSD
+[ [cql] ](../../input/cql/CMS144FHIRHFBetaBlockerForLVSD.cql) [ [test results] ](../../input/tests/results/CMS144FHIRHFBetaBlockerForLVSD.txt)
+
+Mismatched Test Cases (1 of  of 48)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ c786457e-4e5b-4c6a-b05b-1600045a6243 ](../.././input/tests/measure/CMS144FHIRHFBetaBlockerForLVSD/c786457e-4e5b-4c6a-b05b-1600045a6243/MeasureReport-9275d2b1-db94-4e55-aeb2-934ae23e70bb.json) | Group_1 | Denominator Exception | 0 | 1 |
+
+
+#### CMS145FHIRCADBBlockerTPMIorLVSD
+[ [cql] ](../../input/cql/CMS145FHIRCADBBlockerTPMIorLVSD.cql) [ [test results] ](../../input/tests/results/CMS145FHIRCADBBlockerTPMIorLVSD.txt)
+
+Mismatched Test Cases (2 of  of 106)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ 1f70822b-c513-4c3a-8162-49f0bb9c914b ](../.././input/tests/measure/CMS145FHIRCADBBlockerTPMIorLVSD/1f70822b-c513-4c3a-8162-49f0bb9c914b/MeasureReport-9b3577fa-355c-409d-8d3f-21e9720fb889.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 4a3086cd-63f3-41c3-8ce9-f75b4b18b85c ](../.././input/tests/measure/CMS145FHIRCADBBlockerTPMIorLVSD/4a3086cd-63f3-41c3-8ce9-f75b4b18b85c/MeasureReport-68e90a55-1471-47a2-80a7-2e465f8332f2.json) | Group_1 | Denominator Exception | 0 | 1 |
 
 
 #### CMS157FHIRPainIntensityQuantified
@@ -317,6 +313,333 @@ Mismatched Test Cases (2 of  of 125)
 | [ 39215b49-af59-45a7-a773-65e8353dfafd ](../.././input/tests/measure/CMS190FHIRVTEProphylaxisICU/39215b49-af59-45a7-a773-65e8353dfafd/MeasureReport-4358ad9b-1c93-4569-9985-0f388fe56ebe.json) | Group_1 | Initial Population<br>Denominator | 0<br>0 | 1<br>1 |
 
 
+#### CMS347FHIRStatinPreventionTxCVD
+[ [cql] ](../../input/cql/CMS347FHIRStatinPreventionTxCVD.cql) [ [test results] ](../../input/tests/results/CMS347FHIRStatinPreventionTxCVD.txt)
+
+Mismatched Test Cases (319 of  of 752)
+| Test Case | Group | Population | Expected | Actual |
+|---|---|---|:---:|:---:|
+| [ de136bce-fffc-4af7-834e-e51944655d67 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/de136bce-fffc-4af7-834e-e51944655d67/MeasureReport-dd4273bc-9804-496b-b223-cec972390ebb.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ de136bce-fffc-4af7-834e-e51944655d67 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/de136bce-fffc-4af7-834e-e51944655d67/MeasureReport-dd4273bc-9804-496b-b223-cec972390ebb.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ de136bce-fffc-4af7-834e-e51944655d67 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/de136bce-fffc-4af7-834e-e51944655d67/MeasureReport-dd4273bc-9804-496b-b223-cec972390ebb.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 8b0f2e04-8c60-4f6e-adc5-8967a540a18f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8b0f2e04-8c60-4f6e-adc5-8967a540a18f/MeasureReport-c0b2c86c-809d-4459-9346-efccccd91090.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 8b0f2e04-8c60-4f6e-adc5-8967a540a18f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8b0f2e04-8c60-4f6e-adc5-8967a540a18f/MeasureReport-c0b2c86c-809d-4459-9346-efccccd91090.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 8b0f2e04-8c60-4f6e-adc5-8967a540a18f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8b0f2e04-8c60-4f6e-adc5-8967a540a18f/MeasureReport-c0b2c86c-809d-4459-9346-efccccd91090.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ cf1d9246-dbe4-4c59-a955-e2301e37732b ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cf1d9246-dbe4-4c59-a955-e2301e37732b/MeasureReport-6b317d2a-70d0-4608-8ab6-4102bb359bf3.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ cf1d9246-dbe4-4c59-a955-e2301e37732b ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cf1d9246-dbe4-4c59-a955-e2301e37732b/MeasureReport-6b317d2a-70d0-4608-8ab6-4102bb359bf3.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ cf1d9246-dbe4-4c59-a955-e2301e37732b ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cf1d9246-dbe4-4c59-a955-e2301e37732b/MeasureReport-6b317d2a-70d0-4608-8ab6-4102bb359bf3.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ a39d4514-814e-45b3-8b2a-3906eb790b31 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a39d4514-814e-45b3-8b2a-3906eb790b31/MeasureReport-0ddb542a-bfd0-4c48-af68-e9e1685a0822.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ a39d4514-814e-45b3-8b2a-3906eb790b31 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a39d4514-814e-45b3-8b2a-3906eb790b31/MeasureReport-0ddb542a-bfd0-4c48-af68-e9e1685a0822.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ a39d4514-814e-45b3-8b2a-3906eb790b31 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a39d4514-814e-45b3-8b2a-3906eb790b31/MeasureReport-0ddb542a-bfd0-4c48-af68-e9e1685a0822.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 8927dd81-b976-4b7f-a78c-c4215ee8fc9a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8927dd81-b976-4b7f-a78c-c4215ee8fc9a/MeasureReport-332c069b-686d-4491-862a-2963e3679d28.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 8927dd81-b976-4b7f-a78c-c4215ee8fc9a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8927dd81-b976-4b7f-a78c-c4215ee8fc9a/MeasureReport-332c069b-686d-4491-862a-2963e3679d28.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 8927dd81-b976-4b7f-a78c-c4215ee8fc9a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8927dd81-b976-4b7f-a78c-c4215ee8fc9a/MeasureReport-332c069b-686d-4491-862a-2963e3679d28.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ f3fd3dca-ae0d-4f2f-915b-8ec0775f5d84 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f3fd3dca-ae0d-4f2f-915b-8ec0775f5d84/MeasureReport-da15c486-a2d1-4c78-8bad-c3b779d0ae7d.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ f3fd3dca-ae0d-4f2f-915b-8ec0775f5d84 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f3fd3dca-ae0d-4f2f-915b-8ec0775f5d84/MeasureReport-da15c486-a2d1-4c78-8bad-c3b779d0ae7d.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ f3fd3dca-ae0d-4f2f-915b-8ec0775f5d84 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f3fd3dca-ae0d-4f2f-915b-8ec0775f5d84/MeasureReport-da15c486-a2d1-4c78-8bad-c3b779d0ae7d.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0ba942ff-50d6-4123-ab21-adcf5fdff0df ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0ba942ff-50d6-4123-ab21-adcf5fdff0df/MeasureReport-18f93977-8cfb-4d93-82af-9d6f292eda19.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 0ba942ff-50d6-4123-ab21-adcf5fdff0df ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0ba942ff-50d6-4123-ab21-adcf5fdff0df/MeasureReport-18f93977-8cfb-4d93-82af-9d6f292eda19.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0ba942ff-50d6-4123-ab21-adcf5fdff0df ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0ba942ff-50d6-4123-ab21-adcf5fdff0df/MeasureReport-18f93977-8cfb-4d93-82af-9d6f292eda19.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 9edcce2d-8d32-4f4f-88a5-6fa689b73f8d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9edcce2d-8d32-4f4f-88a5-6fa689b73f8d/MeasureReport-6b21ac9f-4a33-4694-b2b9-b90b80373d60.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 9edcce2d-8d32-4f4f-88a5-6fa689b73f8d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9edcce2d-8d32-4f4f-88a5-6fa689b73f8d/MeasureReport-6b21ac9f-4a33-4694-b2b9-b90b80373d60.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 9edcce2d-8d32-4f4f-88a5-6fa689b73f8d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9edcce2d-8d32-4f4f-88a5-6fa689b73f8d/MeasureReport-6b21ac9f-4a33-4694-b2b9-b90b80373d60.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 7a273d18-942a-40d1-9bf6-a12275337aae ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7a273d18-942a-40d1-9bf6-a12275337aae/MeasureReport-0da5559c-03e9-4d2f-8a7d-40ec98212141.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 7a273d18-942a-40d1-9bf6-a12275337aae ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7a273d18-942a-40d1-9bf6-a12275337aae/MeasureReport-0da5559c-03e9-4d2f-8a7d-40ec98212141.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 7a273d18-942a-40d1-9bf6-a12275337aae ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7a273d18-942a-40d1-9bf6-a12275337aae/MeasureReport-0da5559c-03e9-4d2f-8a7d-40ec98212141.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 4e72d245-e401-4be7-a743-84ab6a842871 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4e72d245-e401-4be7-a743-84ab6a842871/MeasureReport-dc2f1b7e-7765-4512-9cd5-f0ed5b3ef7b1.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 4e72d245-e401-4be7-a743-84ab6a842871 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4e72d245-e401-4be7-a743-84ab6a842871/MeasureReport-dc2f1b7e-7765-4512-9cd5-f0ed5b3ef7b1.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 4e72d245-e401-4be7-a743-84ab6a842871 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4e72d245-e401-4be7-a743-84ab6a842871/MeasureReport-dc2f1b7e-7765-4512-9cd5-f0ed5b3ef7b1.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ c75e56eb-e95d-4c65-b184-3565362eb3ba ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/c75e56eb-e95d-4c65-b184-3565362eb3ba/MeasureReport-21350675-60d7-4ed0-b1ba-832ff183b480.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ c75e56eb-e95d-4c65-b184-3565362eb3ba ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/c75e56eb-e95d-4c65-b184-3565362eb3ba/MeasureReport-21350675-60d7-4ed0-b1ba-832ff183b480.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ c75e56eb-e95d-4c65-b184-3565362eb3ba ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/c75e56eb-e95d-4c65-b184-3565362eb3ba/MeasureReport-21350675-60d7-4ed0-b1ba-832ff183b480.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ afd6fd51-72ff-41fa-9cec-7591ab6f5a51 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/afd6fd51-72ff-41fa-9cec-7591ab6f5a51/MeasureReport-46d5b798-a4e2-45e0-9ef8-f7348e518f42.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ afd6fd51-72ff-41fa-9cec-7591ab6f5a51 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/afd6fd51-72ff-41fa-9cec-7591ab6f5a51/MeasureReport-46d5b798-a4e2-45e0-9ef8-f7348e518f42.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ afd6fd51-72ff-41fa-9cec-7591ab6f5a51 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/afd6fd51-72ff-41fa-9cec-7591ab6f5a51/MeasureReport-46d5b798-a4e2-45e0-9ef8-f7348e518f42.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0aaae01e-d3b0-4b76-abf8-a044fd4f5d80 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0aaae01e-d3b0-4b76-abf8-a044fd4f5d80/MeasureReport-b458a7fb-93c1-4b34-9056-26bdeaac5f32.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 0aaae01e-d3b0-4b76-abf8-a044fd4f5d80 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0aaae01e-d3b0-4b76-abf8-a044fd4f5d80/MeasureReport-b458a7fb-93c1-4b34-9056-26bdeaac5f32.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0aaae01e-d3b0-4b76-abf8-a044fd4f5d80 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0aaae01e-d3b0-4b76-abf8-a044fd4f5d80/MeasureReport-b458a7fb-93c1-4b34-9056-26bdeaac5f32.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ fe38b06e-b202-4620-a5ac-e2d0d99591d7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fe38b06e-b202-4620-a5ac-e2d0d99591d7/MeasureReport-7d5348c0-6ba9-44ff-a887-6cb4dcb7c2cd.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ fe38b06e-b202-4620-a5ac-e2d0d99591d7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fe38b06e-b202-4620-a5ac-e2d0d99591d7/MeasureReport-7d5348c0-6ba9-44ff-a887-6cb4dcb7c2cd.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ fe38b06e-b202-4620-a5ac-e2d0d99591d7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fe38b06e-b202-4620-a5ac-e2d0d99591d7/MeasureReport-7d5348c0-6ba9-44ff-a887-6cb4dcb7c2cd.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 4d6fb0e2-636d-426f-802b-5ecb4f059440 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4d6fb0e2-636d-426f-802b-5ecb4f059440/MeasureReport-c57c750d-65ce-45dd-945c-fceac22889dd.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 4d6fb0e2-636d-426f-802b-5ecb4f059440 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4d6fb0e2-636d-426f-802b-5ecb4f059440/MeasureReport-c57c750d-65ce-45dd-945c-fceac22889dd.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 4d6fb0e2-636d-426f-802b-5ecb4f059440 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4d6fb0e2-636d-426f-802b-5ecb4f059440/MeasureReport-c57c750d-65ce-45dd-945c-fceac22889dd.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ faae1173-bc93-4fd2-a22f-e7726430857f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/faae1173-bc93-4fd2-a22f-e7726430857f/MeasureReport-6db8fc35-78d7-4bd7-9941-eb7be2aef5d5.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ faae1173-bc93-4fd2-a22f-e7726430857f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/faae1173-bc93-4fd2-a22f-e7726430857f/MeasureReport-6db8fc35-78d7-4bd7-9941-eb7be2aef5d5.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ faae1173-bc93-4fd2-a22f-e7726430857f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/faae1173-bc93-4fd2-a22f-e7726430857f/MeasureReport-6db8fc35-78d7-4bd7-9941-eb7be2aef5d5.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 95fad34f-db86-4e4a-a8a2-42a3b7ac15dc ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/95fad34f-db86-4e4a-a8a2-42a3b7ac15dc/MeasureReport-a06849cd-08a2-48b7-ad0a-de1af11852e6.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 95fad34f-db86-4e4a-a8a2-42a3b7ac15dc ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/95fad34f-db86-4e4a-a8a2-42a3b7ac15dc/MeasureReport-a06849cd-08a2-48b7-ad0a-de1af11852e6.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 95fad34f-db86-4e4a-a8a2-42a3b7ac15dc ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/95fad34f-db86-4e4a-a8a2-42a3b7ac15dc/MeasureReport-a06849cd-08a2-48b7-ad0a-de1af11852e6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 5cebab0f-d32e-4adc-bef3-90812d6c5819 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5cebab0f-d32e-4adc-bef3-90812d6c5819/MeasureReport-528b17db-921e-46ef-8130-9fa98b0d6deb.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 5cebab0f-d32e-4adc-bef3-90812d6c5819 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5cebab0f-d32e-4adc-bef3-90812d6c5819/MeasureReport-528b17db-921e-46ef-8130-9fa98b0d6deb.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 5cebab0f-d32e-4adc-bef3-90812d6c5819 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5cebab0f-d32e-4adc-bef3-90812d6c5819/MeasureReport-528b17db-921e-46ef-8130-9fa98b0d6deb.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 16082e3d-b9c6-4823-87cf-d079e65f073f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/16082e3d-b9c6-4823-87cf-d079e65f073f/MeasureReport-687cd13a-2a00-4906-8d26-2b825c6eb8c6.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 16082e3d-b9c6-4823-87cf-d079e65f073f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/16082e3d-b9c6-4823-87cf-d079e65f073f/MeasureReport-687cd13a-2a00-4906-8d26-2b825c6eb8c6.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 16082e3d-b9c6-4823-87cf-d079e65f073f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/16082e3d-b9c6-4823-87cf-d079e65f073f/MeasureReport-687cd13a-2a00-4906-8d26-2b825c6eb8c6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ e8020421-14a3-4c64-99c4-3366c1400bd7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e8020421-14a3-4c64-99c4-3366c1400bd7/MeasureReport-2dbf1150-20c5-4c8b-9629-746db44ed011.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ e8020421-14a3-4c64-99c4-3366c1400bd7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e8020421-14a3-4c64-99c4-3366c1400bd7/MeasureReport-2dbf1150-20c5-4c8b-9629-746db44ed011.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ e8020421-14a3-4c64-99c4-3366c1400bd7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e8020421-14a3-4c64-99c4-3366c1400bd7/MeasureReport-2dbf1150-20c5-4c8b-9629-746db44ed011.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 3137d292-5094-49ef-82da-d9809b599030 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3137d292-5094-49ef-82da-d9809b599030/MeasureReport-72cd7673-4efe-4845-a66e-6cd26e429f2f.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 3137d292-5094-49ef-82da-d9809b599030 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3137d292-5094-49ef-82da-d9809b599030/MeasureReport-72cd7673-4efe-4845-a66e-6cd26e429f2f.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 3137d292-5094-49ef-82da-d9809b599030 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3137d292-5094-49ef-82da-d9809b599030/MeasureReport-72cd7673-4efe-4845-a66e-6cd26e429f2f.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ d2c7d463-775a-4c8d-bcb0-35ea689b2d20 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d2c7d463-775a-4c8d-bcb0-35ea689b2d20/MeasureReport-30bac3e4-0779-4b97-8d42-9cc771b7278f.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ d2c7d463-775a-4c8d-bcb0-35ea689b2d20 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d2c7d463-775a-4c8d-bcb0-35ea689b2d20/MeasureReport-30bac3e4-0779-4b97-8d42-9cc771b7278f.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ d2c7d463-775a-4c8d-bcb0-35ea689b2d20 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d2c7d463-775a-4c8d-bcb0-35ea689b2d20/MeasureReport-30bac3e4-0779-4b97-8d42-9cc771b7278f.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0ce81150-5908-49a1-bef9-21406359af63 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0ce81150-5908-49a1-bef9-21406359af63/MeasureReport-fb6196c7-1a0a-4fbd-856b-f87833da5d80.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 0ce81150-5908-49a1-bef9-21406359af63 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0ce81150-5908-49a1-bef9-21406359af63/MeasureReport-fb6196c7-1a0a-4fbd-856b-f87833da5d80.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0ce81150-5908-49a1-bef9-21406359af63 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0ce81150-5908-49a1-bef9-21406359af63/MeasureReport-fb6196c7-1a0a-4fbd-856b-f87833da5d80.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 5f799983-39d3-4f03-9a9a-125dc6f12f13 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5f799983-39d3-4f03-9a9a-125dc6f12f13/MeasureReport-71b469e0-0693-413d-8749-8167ef591d78.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 5f799983-39d3-4f03-9a9a-125dc6f12f13 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5f799983-39d3-4f03-9a9a-125dc6f12f13/MeasureReport-71b469e0-0693-413d-8749-8167ef591d78.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 5f799983-39d3-4f03-9a9a-125dc6f12f13 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5f799983-39d3-4f03-9a9a-125dc6f12f13/MeasureReport-71b469e0-0693-413d-8749-8167ef591d78.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 26101306-010f-48c5-aa83-8a94f280f755 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/26101306-010f-48c5-aa83-8a94f280f755/MeasureReport-0f51c880-da3c-4755-ab84-d17cbed4a744.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 26101306-010f-48c5-aa83-8a94f280f755 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/26101306-010f-48c5-aa83-8a94f280f755/MeasureReport-0f51c880-da3c-4755-ab84-d17cbed4a744.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 26101306-010f-48c5-aa83-8a94f280f755 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/26101306-010f-48c5-aa83-8a94f280f755/MeasureReport-0f51c880-da3c-4755-ab84-d17cbed4a744.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 1831f057-fa97-4c2b-b6cc-9830e4a60e11 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1831f057-fa97-4c2b-b6cc-9830e4a60e11/MeasureReport-9dd32caf-b06d-476e-b513-b11d66040463.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 1831f057-fa97-4c2b-b6cc-9830e4a60e11 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1831f057-fa97-4c2b-b6cc-9830e4a60e11/MeasureReport-9dd32caf-b06d-476e-b513-b11d66040463.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 1831f057-fa97-4c2b-b6cc-9830e4a60e11 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1831f057-fa97-4c2b-b6cc-9830e4a60e11/MeasureReport-9dd32caf-b06d-476e-b513-b11d66040463.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 08882e8d-afd1-4a5e-a30b-a5a0ed9e1010 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/08882e8d-afd1-4a5e-a30b-a5a0ed9e1010/MeasureReport-acb75523-f5ac-4a3b-8aed-3a453acfa9a0.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 08882e8d-afd1-4a5e-a30b-a5a0ed9e1010 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/08882e8d-afd1-4a5e-a30b-a5a0ed9e1010/MeasureReport-acb75523-f5ac-4a3b-8aed-3a453acfa9a0.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 08882e8d-afd1-4a5e-a30b-a5a0ed9e1010 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/08882e8d-afd1-4a5e-a30b-a5a0ed9e1010/MeasureReport-acb75523-f5ac-4a3b-8aed-3a453acfa9a0.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 8c357499-cb9a-41c9-9060-1bbbefb0fd7e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8c357499-cb9a-41c9-9060-1bbbefb0fd7e/MeasureReport-0939446e-5ba5-405e-a363-4f4852c6d7be.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 8c357499-cb9a-41c9-9060-1bbbefb0fd7e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8c357499-cb9a-41c9-9060-1bbbefb0fd7e/MeasureReport-0939446e-5ba5-405e-a363-4f4852c6d7be.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 8c357499-cb9a-41c9-9060-1bbbefb0fd7e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/8c357499-cb9a-41c9-9060-1bbbefb0fd7e/MeasureReport-0939446e-5ba5-405e-a363-4f4852c6d7be.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ b35ba523-abea-4848-8dac-256c1727447c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/b35ba523-abea-4848-8dac-256c1727447c/MeasureReport-f6992d99-7d19-40cc-a2fb-ec3d516910d9.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ b35ba523-abea-4848-8dac-256c1727447c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/b35ba523-abea-4848-8dac-256c1727447c/MeasureReport-f6992d99-7d19-40cc-a2fb-ec3d516910d9.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ b35ba523-abea-4848-8dac-256c1727447c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/b35ba523-abea-4848-8dac-256c1727447c/MeasureReport-f6992d99-7d19-40cc-a2fb-ec3d516910d9.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0f204e98-0782-43a3-ae53-b516cc8d5797 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0f204e98-0782-43a3-ae53-b516cc8d5797/MeasureReport-bef8645f-ffd4-409e-b05c-77d2c204fa16.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 0f204e98-0782-43a3-ae53-b516cc8d5797 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0f204e98-0782-43a3-ae53-b516cc8d5797/MeasureReport-bef8645f-ffd4-409e-b05c-77d2c204fa16.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0f204e98-0782-43a3-ae53-b516cc8d5797 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0f204e98-0782-43a3-ae53-b516cc8d5797/MeasureReport-bef8645f-ffd4-409e-b05c-77d2c204fa16.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 50c7b2fc-879b-4088-88bf-36a9f8c0baf0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/50c7b2fc-879b-4088-88bf-36a9f8c0baf0/MeasureReport-e1d0af6a-2d30-49c2-8a21-06937d942360.json) | Group_2 | Denominator Exception | 1 | 0 |
+| [ 4c8a6a20-c5cc-496b-950f-68d6997bf4d1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4c8a6a20-c5cc-496b-950f-68d6997bf4d1/MeasureReport-ff530743-63f3-4f34-b4e6-63c18caa59f3.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 4c8a6a20-c5cc-496b-950f-68d6997bf4d1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4c8a6a20-c5cc-496b-950f-68d6997bf4d1/MeasureReport-ff530743-63f3-4f34-b4e6-63c18caa59f3.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 4c8a6a20-c5cc-496b-950f-68d6997bf4d1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4c8a6a20-c5cc-496b-950f-68d6997bf4d1/MeasureReport-ff530743-63f3-4f34-b4e6-63c18caa59f3.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ f120b2b6-40ba-4ae3-b087-c64e8e3bdf11 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f120b2b6-40ba-4ae3-b087-c64e8e3bdf11/MeasureReport-366b9c5c-270d-4e9c-9def-70b6c21e0b9b.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ f120b2b6-40ba-4ae3-b087-c64e8e3bdf11 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f120b2b6-40ba-4ae3-b087-c64e8e3bdf11/MeasureReport-366b9c5c-270d-4e9c-9def-70b6c21e0b9b.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ f120b2b6-40ba-4ae3-b087-c64e8e3bdf11 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f120b2b6-40ba-4ae3-b087-c64e8e3bdf11/MeasureReport-366b9c5c-270d-4e9c-9def-70b6c21e0b9b.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 5b37b5a5-0e28-4b28-9889-8878d41ff9cf ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5b37b5a5-0e28-4b28-9889-8878d41ff9cf/MeasureReport-ab20807f-0940-40df-b735-9fa683e53672.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 5b37b5a5-0e28-4b28-9889-8878d41ff9cf ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5b37b5a5-0e28-4b28-9889-8878d41ff9cf/MeasureReport-ab20807f-0940-40df-b735-9fa683e53672.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 5b37b5a5-0e28-4b28-9889-8878d41ff9cf ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5b37b5a5-0e28-4b28-9889-8878d41ff9cf/MeasureReport-ab20807f-0940-40df-b735-9fa683e53672.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ e4547b2c-ce1c-4ffb-b5d4-c99687424bf0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e4547b2c-ce1c-4ffb-b5d4-c99687424bf0/MeasureReport-6a80fdc0-8735-4945-b151-f4ad5f5dd9bf.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ e4547b2c-ce1c-4ffb-b5d4-c99687424bf0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e4547b2c-ce1c-4ffb-b5d4-c99687424bf0/MeasureReport-6a80fdc0-8735-4945-b151-f4ad5f5dd9bf.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ e4547b2c-ce1c-4ffb-b5d4-c99687424bf0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e4547b2c-ce1c-4ffb-b5d4-c99687424bf0/MeasureReport-6a80fdc0-8735-4945-b151-f4ad5f5dd9bf.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0045ec92-0b70-4961-8a7c-41b5c43d53a1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0045ec92-0b70-4961-8a7c-41b5c43d53a1/MeasureReport-d8b9368d-8de3-47d7-b512-3522043eaca8.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 0045ec92-0b70-4961-8a7c-41b5c43d53a1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0045ec92-0b70-4961-8a7c-41b5c43d53a1/MeasureReport-d8b9368d-8de3-47d7-b512-3522043eaca8.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0045ec92-0b70-4961-8a7c-41b5c43d53a1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0045ec92-0b70-4961-8a7c-41b5c43d53a1/MeasureReport-d8b9368d-8de3-47d7-b512-3522043eaca8.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ f6a5913b-bfdd-4ccf-8700-3c949b0639ed ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f6a5913b-bfdd-4ccf-8700-3c949b0639ed/MeasureReport-0baeb52a-0371-4683-b0ee-b6a0640efd2a.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ f6a5913b-bfdd-4ccf-8700-3c949b0639ed ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f6a5913b-bfdd-4ccf-8700-3c949b0639ed/MeasureReport-0baeb52a-0371-4683-b0ee-b6a0640efd2a.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ f6a5913b-bfdd-4ccf-8700-3c949b0639ed ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f6a5913b-bfdd-4ccf-8700-3c949b0639ed/MeasureReport-0baeb52a-0371-4683-b0ee-b6a0640efd2a.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ e8a4902f-f4fd-463d-976a-9bbc4d3ee41c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e8a4902f-f4fd-463d-976a-9bbc4d3ee41c/MeasureReport-d8c27435-aeab-497e-978c-d1b16cc183a1.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ e8a4902f-f4fd-463d-976a-9bbc4d3ee41c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e8a4902f-f4fd-463d-976a-9bbc4d3ee41c/MeasureReport-d8c27435-aeab-497e-978c-d1b16cc183a1.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ e8a4902f-f4fd-463d-976a-9bbc4d3ee41c ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e8a4902f-f4fd-463d-976a-9bbc4d3ee41c/MeasureReport-d8c27435-aeab-497e-978c-d1b16cc183a1.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ f8563fcf-4e09-4309-841b-bcce373bc4b2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f8563fcf-4e09-4309-841b-bcce373bc4b2/MeasureReport-adf299bf-cd60-45da-8fa2-213ad4655734.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ f8563fcf-4e09-4309-841b-bcce373bc4b2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f8563fcf-4e09-4309-841b-bcce373bc4b2/MeasureReport-adf299bf-cd60-45da-8fa2-213ad4655734.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ f8563fcf-4e09-4309-841b-bcce373bc4b2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f8563fcf-4e09-4309-841b-bcce373bc4b2/MeasureReport-adf299bf-cd60-45da-8fa2-213ad4655734.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ da34c14f-672e-4f66-827b-3eb08d97559e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/da34c14f-672e-4f66-827b-3eb08d97559e/MeasureReport-e9cbf5af-7e32-436a-8d78-81217b40e9a2.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ da34c14f-672e-4f66-827b-3eb08d97559e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/da34c14f-672e-4f66-827b-3eb08d97559e/MeasureReport-e9cbf5af-7e32-436a-8d78-81217b40e9a2.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ da34c14f-672e-4f66-827b-3eb08d97559e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/da34c14f-672e-4f66-827b-3eb08d97559e/MeasureReport-e9cbf5af-7e32-436a-8d78-81217b40e9a2.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 821087e5-a030-49ac-95b5-5b9ab38e88da ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/821087e5-a030-49ac-95b5-5b9ab38e88da/MeasureReport-5fb8f0ee-32e7-494e-8b9d-5953d21bf5d0.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 821087e5-a030-49ac-95b5-5b9ab38e88da ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/821087e5-a030-49ac-95b5-5b9ab38e88da/MeasureReport-5fb8f0ee-32e7-494e-8b9d-5953d21bf5d0.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 821087e5-a030-49ac-95b5-5b9ab38e88da ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/821087e5-a030-49ac-95b5-5b9ab38e88da/MeasureReport-5fb8f0ee-32e7-494e-8b9d-5953d21bf5d0.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 65c0a8c4-c562-4f73-a534-d7f7a976e42f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/65c0a8c4-c562-4f73-a534-d7f7a976e42f/MeasureReport-a099c618-b97f-4dc5-ae35-eb12c1689cf7.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 65c0a8c4-c562-4f73-a534-d7f7a976e42f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/65c0a8c4-c562-4f73-a534-d7f7a976e42f/MeasureReport-a099c618-b97f-4dc5-ae35-eb12c1689cf7.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 65c0a8c4-c562-4f73-a534-d7f7a976e42f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/65c0a8c4-c562-4f73-a534-d7f7a976e42f/MeasureReport-a099c618-b97f-4dc5-ae35-eb12c1689cf7.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ d3a48d69-2269-472a-9c27-da2c658e8c68 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d3a48d69-2269-472a-9c27-da2c658e8c68/MeasureReport-1006e8a9-4ca9-43ce-8eec-3ad24503065b.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ d3a48d69-2269-472a-9c27-da2c658e8c68 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d3a48d69-2269-472a-9c27-da2c658e8c68/MeasureReport-1006e8a9-4ca9-43ce-8eec-3ad24503065b.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ d3a48d69-2269-472a-9c27-da2c658e8c68 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d3a48d69-2269-472a-9c27-da2c658e8c68/MeasureReport-1006e8a9-4ca9-43ce-8eec-3ad24503065b.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 52b48d35-f47c-4013-9cdc-700baad0fc0f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/52b48d35-f47c-4013-9cdc-700baad0fc0f/MeasureReport-e6197229-2386-4e05-adbb-687a89230972.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 52b48d35-f47c-4013-9cdc-700baad0fc0f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/52b48d35-f47c-4013-9cdc-700baad0fc0f/MeasureReport-e6197229-2386-4e05-adbb-687a89230972.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 52b48d35-f47c-4013-9cdc-700baad0fc0f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/52b48d35-f47c-4013-9cdc-700baad0fc0f/MeasureReport-e6197229-2386-4e05-adbb-687a89230972.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 5d926cc3-70dc-4c82-9513-d39f01765baf ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5d926cc3-70dc-4c82-9513-d39f01765baf/MeasureReport-ec22bc3e-43f4-4a1b-9d93-b4a23adbf21c.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 5d926cc3-70dc-4c82-9513-d39f01765baf ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5d926cc3-70dc-4c82-9513-d39f01765baf/MeasureReport-ec22bc3e-43f4-4a1b-9d93-b4a23adbf21c.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 5d926cc3-70dc-4c82-9513-d39f01765baf ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/5d926cc3-70dc-4c82-9513-d39f01765baf/MeasureReport-ec22bc3e-43f4-4a1b-9d93-b4a23adbf21c.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ f944825a-367c-46c5-b753-d59f088038d2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f944825a-367c-46c5-b753-d59f088038d2/MeasureReport-97322291-2cf0-4161-83ef-e7d75946906c.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ f944825a-367c-46c5-b753-d59f088038d2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f944825a-367c-46c5-b753-d59f088038d2/MeasureReport-97322291-2cf0-4161-83ef-e7d75946906c.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ f944825a-367c-46c5-b753-d59f088038d2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f944825a-367c-46c5-b753-d59f088038d2/MeasureReport-97322291-2cf0-4161-83ef-e7d75946906c.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ a3169726-4d3d-4a3f-8175-67fd795191a5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a3169726-4d3d-4a3f-8175-67fd795191a5/MeasureReport-45731d8f-db60-44c0-8e6e-ba2de8486f4e.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ a3169726-4d3d-4a3f-8175-67fd795191a5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a3169726-4d3d-4a3f-8175-67fd795191a5/MeasureReport-45731d8f-db60-44c0-8e6e-ba2de8486f4e.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ a3169726-4d3d-4a3f-8175-67fd795191a5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a3169726-4d3d-4a3f-8175-67fd795191a5/MeasureReport-45731d8f-db60-44c0-8e6e-ba2de8486f4e.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 69d0ced6-d120-482f-9d68-1c98ecea4f64 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/69d0ced6-d120-482f-9d68-1c98ecea4f64/MeasureReport-44d3bfc2-5441-4519-a841-766fd30731f9.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 69d0ced6-d120-482f-9d68-1c98ecea4f64 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/69d0ced6-d120-482f-9d68-1c98ecea4f64/MeasureReport-44d3bfc2-5441-4519-a841-766fd30731f9.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 69d0ced6-d120-482f-9d68-1c98ecea4f64 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/69d0ced6-d120-482f-9d68-1c98ecea4f64/MeasureReport-44d3bfc2-5441-4519-a841-766fd30731f9.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 15d7fcaa-773f-4888-8b13-bc077cbfdf4a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/15d7fcaa-773f-4888-8b13-bc077cbfdf4a/MeasureReport-d9557b10-9fd8-49f3-99ee-29c1912b1bb6.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 15d7fcaa-773f-4888-8b13-bc077cbfdf4a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/15d7fcaa-773f-4888-8b13-bc077cbfdf4a/MeasureReport-d9557b10-9fd8-49f3-99ee-29c1912b1bb6.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 15d7fcaa-773f-4888-8b13-bc077cbfdf4a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/15d7fcaa-773f-4888-8b13-bc077cbfdf4a/MeasureReport-d9557b10-9fd8-49f3-99ee-29c1912b1bb6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 74499ca5-db3b-4ce1-92e0-e19c6590d138 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/74499ca5-db3b-4ce1-92e0-e19c6590d138/MeasureReport-0338f0c4-356e-463c-acac-c49e2c7ad4d6.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 74499ca5-db3b-4ce1-92e0-e19c6590d138 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/74499ca5-db3b-4ce1-92e0-e19c6590d138/MeasureReport-0338f0c4-356e-463c-acac-c49e2c7ad4d6.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 74499ca5-db3b-4ce1-92e0-e19c6590d138 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/74499ca5-db3b-4ce1-92e0-e19c6590d138/MeasureReport-0338f0c4-356e-463c-acac-c49e2c7ad4d6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ cc9d23e6-2322-4b1c-8a8b-29f6f92c89f1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cc9d23e6-2322-4b1c-8a8b-29f6f92c89f1/MeasureReport-4e0c5110-2d1c-43bf-91d6-ccc631ff32bc.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ cc9d23e6-2322-4b1c-8a8b-29f6f92c89f1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cc9d23e6-2322-4b1c-8a8b-29f6f92c89f1/MeasureReport-4e0c5110-2d1c-43bf-91d6-ccc631ff32bc.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ cc9d23e6-2322-4b1c-8a8b-29f6f92c89f1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cc9d23e6-2322-4b1c-8a8b-29f6f92c89f1/MeasureReport-4e0c5110-2d1c-43bf-91d6-ccc631ff32bc.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ df05b853-3e6d-4a12-b1db-fd9d0ec790a2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/df05b853-3e6d-4a12-b1db-fd9d0ec790a2/MeasureReport-9dba8a63-ec06-49b0-b2f7-023afa112d14.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ df05b853-3e6d-4a12-b1db-fd9d0ec790a2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/df05b853-3e6d-4a12-b1db-fd9d0ec790a2/MeasureReport-9dba8a63-ec06-49b0-b2f7-023afa112d14.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ df05b853-3e6d-4a12-b1db-fd9d0ec790a2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/df05b853-3e6d-4a12-b1db-fd9d0ec790a2/MeasureReport-9dba8a63-ec06-49b0-b2f7-023afa112d14.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 537d14db-6ced-4cd2-9553-e88bd6551771 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/537d14db-6ced-4cd2-9553-e88bd6551771/MeasureReport-b0ed7ddf-a25e-49b6-8b0f-d8e6ff9f6726.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 537d14db-6ced-4cd2-9553-e88bd6551771 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/537d14db-6ced-4cd2-9553-e88bd6551771/MeasureReport-b0ed7ddf-a25e-49b6-8b0f-d8e6ff9f6726.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 537d14db-6ced-4cd2-9553-e88bd6551771 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/537d14db-6ced-4cd2-9553-e88bd6551771/MeasureReport-b0ed7ddf-a25e-49b6-8b0f-d8e6ff9f6726.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ fa446b35-031d-4eb5-b7f1-5782580e5209 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fa446b35-031d-4eb5-b7f1-5782580e5209/MeasureReport-cb1ca02f-7f9b-4ae3-88d7-2ddb268f3061.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ fa446b35-031d-4eb5-b7f1-5782580e5209 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fa446b35-031d-4eb5-b7f1-5782580e5209/MeasureReport-cb1ca02f-7f9b-4ae3-88d7-2ddb268f3061.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ fa446b35-031d-4eb5-b7f1-5782580e5209 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fa446b35-031d-4eb5-b7f1-5782580e5209/MeasureReport-cb1ca02f-7f9b-4ae3-88d7-2ddb268f3061.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 86bacb29-41c3-4ea8-8e4b-3e13c075e557 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/86bacb29-41c3-4ea8-8e4b-3e13c075e557/MeasureReport-d0a8a2af-6b3e-422c-b9e1-0d3d8098ff3b.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 86bacb29-41c3-4ea8-8e4b-3e13c075e557 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/86bacb29-41c3-4ea8-8e4b-3e13c075e557/MeasureReport-d0a8a2af-6b3e-422c-b9e1-0d3d8098ff3b.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 86bacb29-41c3-4ea8-8e4b-3e13c075e557 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/86bacb29-41c3-4ea8-8e4b-3e13c075e557/MeasureReport-d0a8a2af-6b3e-422c-b9e1-0d3d8098ff3b.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ d556f939-81da-4bae-b9a7-314917a20390 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d556f939-81da-4bae-b9a7-314917a20390/MeasureReport-078dc84a-81be-4616-99b8-1421d7f8b268.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ d556f939-81da-4bae-b9a7-314917a20390 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d556f939-81da-4bae-b9a7-314917a20390/MeasureReport-078dc84a-81be-4616-99b8-1421d7f8b268.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ d556f939-81da-4bae-b9a7-314917a20390 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d556f939-81da-4bae-b9a7-314917a20390/MeasureReport-078dc84a-81be-4616-99b8-1421d7f8b268.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 06f036ce-62f0-4807-88d2-f3f8e70d2f31 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/06f036ce-62f0-4807-88d2-f3f8e70d2f31/MeasureReport-d0612355-33c0-4df0-b1f2-0d938d781152.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 06f036ce-62f0-4807-88d2-f3f8e70d2f31 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/06f036ce-62f0-4807-88d2-f3f8e70d2f31/MeasureReport-d0612355-33c0-4df0-b1f2-0d938d781152.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 06f036ce-62f0-4807-88d2-f3f8e70d2f31 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/06f036ce-62f0-4807-88d2-f3f8e70d2f31/MeasureReport-d0612355-33c0-4df0-b1f2-0d938d781152.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 08dfc736-3cb5-467c-93cf-99146604a8f4 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/08dfc736-3cb5-467c-93cf-99146604a8f4/MeasureReport-d6036ed7-ab63-4060-bb41-d2faaae2d9c6.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 08dfc736-3cb5-467c-93cf-99146604a8f4 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/08dfc736-3cb5-467c-93cf-99146604a8f4/MeasureReport-d6036ed7-ab63-4060-bb41-d2faaae2d9c6.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 08dfc736-3cb5-467c-93cf-99146604a8f4 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/08dfc736-3cb5-467c-93cf-99146604a8f4/MeasureReport-d6036ed7-ab63-4060-bb41-d2faaae2d9c6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ eea87300-5d3f-4c9f-8835-9245b4e19059 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/eea87300-5d3f-4c9f-8835-9245b4e19059/MeasureReport-7184797c-d43f-44ac-9063-1323e901f40e.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ eea87300-5d3f-4c9f-8835-9245b4e19059 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/eea87300-5d3f-4c9f-8835-9245b4e19059/MeasureReport-7184797c-d43f-44ac-9063-1323e901f40e.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ eea87300-5d3f-4c9f-8835-9245b4e19059 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/eea87300-5d3f-4c9f-8835-9245b4e19059/MeasureReport-7184797c-d43f-44ac-9063-1323e901f40e.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ be29ff82-9191-4b5f-91ca-cc5590fea905 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/be29ff82-9191-4b5f-91ca-cc5590fea905/MeasureReport-db0c826a-8851-4099-abc9-e879908519b2.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ be29ff82-9191-4b5f-91ca-cc5590fea905 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/be29ff82-9191-4b5f-91ca-cc5590fea905/MeasureReport-db0c826a-8851-4099-abc9-e879908519b2.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ be29ff82-9191-4b5f-91ca-cc5590fea905 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/be29ff82-9191-4b5f-91ca-cc5590fea905/MeasureReport-db0c826a-8851-4099-abc9-e879908519b2.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ a779556b-5041-4d85-9c5f-9af223961ff2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a779556b-5041-4d85-9c5f-9af223961ff2/MeasureReport-60494ba5-0357-487f-8746-18ead9cbe3de.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ a779556b-5041-4d85-9c5f-9af223961ff2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a779556b-5041-4d85-9c5f-9af223961ff2/MeasureReport-60494ba5-0357-487f-8746-18ead9cbe3de.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ a779556b-5041-4d85-9c5f-9af223961ff2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a779556b-5041-4d85-9c5f-9af223961ff2/MeasureReport-60494ba5-0357-487f-8746-18ead9cbe3de.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 7b8b48b3-76d4-4492-81a1-93fdea67b0c1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7b8b48b3-76d4-4492-81a1-93fdea67b0c1/MeasureReport-b69b8128-6e21-4a15-8da3-33aa315a17cf.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 7b8b48b3-76d4-4492-81a1-93fdea67b0c1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7b8b48b3-76d4-4492-81a1-93fdea67b0c1/MeasureReport-b69b8128-6e21-4a15-8da3-33aa315a17cf.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 7b8b48b3-76d4-4492-81a1-93fdea67b0c1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7b8b48b3-76d4-4492-81a1-93fdea67b0c1/MeasureReport-b69b8128-6e21-4a15-8da3-33aa315a17cf.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ dbca4643-bd37-4e01-8024-fb7c70692fe9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/dbca4643-bd37-4e01-8024-fb7c70692fe9/MeasureReport-41464520-8775-44ef-ac95-a781498a2deb.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ dbca4643-bd37-4e01-8024-fb7c70692fe9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/dbca4643-bd37-4e01-8024-fb7c70692fe9/MeasureReport-41464520-8775-44ef-ac95-a781498a2deb.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ dbca4643-bd37-4e01-8024-fb7c70692fe9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/dbca4643-bd37-4e01-8024-fb7c70692fe9/MeasureReport-41464520-8775-44ef-ac95-a781498a2deb.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 6fa4b970-49b2-478e-9406-e6ecc90fea22 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/6fa4b970-49b2-478e-9406-e6ecc90fea22/MeasureReport-c43cbb61-48d4-449a-8f16-48cd9c9d6cf2.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 6fa4b970-49b2-478e-9406-e6ecc90fea22 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/6fa4b970-49b2-478e-9406-e6ecc90fea22/MeasureReport-c43cbb61-48d4-449a-8f16-48cd9c9d6cf2.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 6fa4b970-49b2-478e-9406-e6ecc90fea22 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/6fa4b970-49b2-478e-9406-e6ecc90fea22/MeasureReport-c43cbb61-48d4-449a-8f16-48cd9c9d6cf2.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 74e5f17e-ae6b-4e3c-8183-e75381377d23 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/74e5f17e-ae6b-4e3c-8183-e75381377d23/MeasureReport-c5168eb6-a6e3-4187-9fc7-5b02970823a4.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 74e5f17e-ae6b-4e3c-8183-e75381377d23 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/74e5f17e-ae6b-4e3c-8183-e75381377d23/MeasureReport-c5168eb6-a6e3-4187-9fc7-5b02970823a4.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 74e5f17e-ae6b-4e3c-8183-e75381377d23 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/74e5f17e-ae6b-4e3c-8183-e75381377d23/MeasureReport-c5168eb6-a6e3-4187-9fc7-5b02970823a4.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 93aea3e2-4736-4be0-830f-54c1ef6df6d5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/93aea3e2-4736-4be0-830f-54c1ef6df6d5/MeasureReport-ca9d0d31-e49e-42bd-b2e3-e7f6cc801591.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 93aea3e2-4736-4be0-830f-54c1ef6df6d5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/93aea3e2-4736-4be0-830f-54c1ef6df6d5/MeasureReport-ca9d0d31-e49e-42bd-b2e3-e7f6cc801591.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 93aea3e2-4736-4be0-830f-54c1ef6df6d5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/93aea3e2-4736-4be0-830f-54c1ef6df6d5/MeasureReport-ca9d0d31-e49e-42bd-b2e3-e7f6cc801591.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ a7f7eb97-a44f-4394-bff6-0485ae59bc9e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a7f7eb97-a44f-4394-bff6-0485ae59bc9e/MeasureReport-bf676443-19d8-474e-8127-bbe5da3fac4d.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ a7f7eb97-a44f-4394-bff6-0485ae59bc9e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a7f7eb97-a44f-4394-bff6-0485ae59bc9e/MeasureReport-bf676443-19d8-474e-8127-bbe5da3fac4d.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ a7f7eb97-a44f-4394-bff6-0485ae59bc9e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/a7f7eb97-a44f-4394-bff6-0485ae59bc9e/MeasureReport-bf676443-19d8-474e-8127-bbe5da3fac4d.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 9933efe1-3258-4c1b-8162-258f85831467 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9933efe1-3258-4c1b-8162-258f85831467/MeasureReport-1fece4c1-51dc-49d7-b75c-d8cf7bf4798c.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 9933efe1-3258-4c1b-8162-258f85831467 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9933efe1-3258-4c1b-8162-258f85831467/MeasureReport-1fece4c1-51dc-49d7-b75c-d8cf7bf4798c.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 9933efe1-3258-4c1b-8162-258f85831467 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9933efe1-3258-4c1b-8162-258f85831467/MeasureReport-1fece4c1-51dc-49d7-b75c-d8cf7bf4798c.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 476bff0b-a87a-413b-91ae-c3a14b7778b1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/476bff0b-a87a-413b-91ae-c3a14b7778b1/MeasureReport-e0046c1d-ca4f-4c06-8bb1-61dd26a3ed06.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 476bff0b-a87a-413b-91ae-c3a14b7778b1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/476bff0b-a87a-413b-91ae-c3a14b7778b1/MeasureReport-e0046c1d-ca4f-4c06-8bb1-61dd26a3ed06.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 476bff0b-a87a-413b-91ae-c3a14b7778b1 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/476bff0b-a87a-413b-91ae-c3a14b7778b1/MeasureReport-e0046c1d-ca4f-4c06-8bb1-61dd26a3ed06.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ e7908699-646c-410f-9c1f-76539b412955 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e7908699-646c-410f-9c1f-76539b412955/MeasureReport-f4df645b-53a5-4814-9a21-9b6922edec3d.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ e7908699-646c-410f-9c1f-76539b412955 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e7908699-646c-410f-9c1f-76539b412955/MeasureReport-f4df645b-53a5-4814-9a21-9b6922edec3d.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ e7908699-646c-410f-9c1f-76539b412955 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e7908699-646c-410f-9c1f-76539b412955/MeasureReport-f4df645b-53a5-4814-9a21-9b6922edec3d.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 716760c5-b72e-4d46-b8df-c3b0f86d90ad ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/716760c5-b72e-4d46-b8df-c3b0f86d90ad/MeasureReport-64038237-a5c7-4bbf-b444-e470967a2855.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 716760c5-b72e-4d46-b8df-c3b0f86d90ad ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/716760c5-b72e-4d46-b8df-c3b0f86d90ad/MeasureReport-64038237-a5c7-4bbf-b444-e470967a2855.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 716760c5-b72e-4d46-b8df-c3b0f86d90ad ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/716760c5-b72e-4d46-b8df-c3b0f86d90ad/MeasureReport-64038237-a5c7-4bbf-b444-e470967a2855.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 68d4cf43-ea72-4eaf-8021-8775bc449f66 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/68d4cf43-ea72-4eaf-8021-8775bc449f66/MeasureReport-e1f23ddd-8e65-4061-b758-ea8ad9284432.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 68d4cf43-ea72-4eaf-8021-8775bc449f66 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/68d4cf43-ea72-4eaf-8021-8775bc449f66/MeasureReport-e1f23ddd-8e65-4061-b758-ea8ad9284432.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 68d4cf43-ea72-4eaf-8021-8775bc449f66 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/68d4cf43-ea72-4eaf-8021-8775bc449f66/MeasureReport-e1f23ddd-8e65-4061-b758-ea8ad9284432.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 69e5da71-302a-4cbb-a1f1-3ce03551fdb9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/69e5da71-302a-4cbb-a1f1-3ce03551fdb9/MeasureReport-57a7f69c-8557-485f-ae70-c2aad21f9d0e.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 69e5da71-302a-4cbb-a1f1-3ce03551fdb9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/69e5da71-302a-4cbb-a1f1-3ce03551fdb9/MeasureReport-57a7f69c-8557-485f-ae70-c2aad21f9d0e.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 69e5da71-302a-4cbb-a1f1-3ce03551fdb9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/69e5da71-302a-4cbb-a1f1-3ce03551fdb9/MeasureReport-57a7f69c-8557-485f-ae70-c2aad21f9d0e.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 4a0c6648-a1b6-4361-b966-d3046c519fea ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4a0c6648-a1b6-4361-b966-d3046c519fea/MeasureReport-46452b20-2b4a-47b2-b193-1c5c92fe4c45.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 4a0c6648-a1b6-4361-b966-d3046c519fea ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4a0c6648-a1b6-4361-b966-d3046c519fea/MeasureReport-46452b20-2b4a-47b2-b193-1c5c92fe4c45.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 4a0c6648-a1b6-4361-b966-d3046c519fea ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4a0c6648-a1b6-4361-b966-d3046c519fea/MeasureReport-46452b20-2b4a-47b2-b193-1c5c92fe4c45.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 0f853b02-7949-4d97-ab69-1e48045afe95 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0f853b02-7949-4d97-ab69-1e48045afe95/MeasureReport-ba5835e1-5b80-4876-9fdb-2570d1c77265.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 0f853b02-7949-4d97-ab69-1e48045afe95 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0f853b02-7949-4d97-ab69-1e48045afe95/MeasureReport-ba5835e1-5b80-4876-9fdb-2570d1c77265.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0f853b02-7949-4d97-ab69-1e48045afe95 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0f853b02-7949-4d97-ab69-1e48045afe95/MeasureReport-ba5835e1-5b80-4876-9fdb-2570d1c77265.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 184b56d3-9ebd-4802-8e3b-cdaa95a5f50a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/184b56d3-9ebd-4802-8e3b-cdaa95a5f50a/MeasureReport-cd1744df-da5f-41d1-b706-b2d17c1be0ad.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 184b56d3-9ebd-4802-8e3b-cdaa95a5f50a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/184b56d3-9ebd-4802-8e3b-cdaa95a5f50a/MeasureReport-cd1744df-da5f-41d1-b706-b2d17c1be0ad.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 184b56d3-9ebd-4802-8e3b-cdaa95a5f50a ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/184b56d3-9ebd-4802-8e3b-cdaa95a5f50a/MeasureReport-cd1744df-da5f-41d1-b706-b2d17c1be0ad.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 9d28e99e-7eb6-4149-a7e2-800140b13696 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9d28e99e-7eb6-4149-a7e2-800140b13696/MeasureReport-01873402-55b3-47c5-b9b0-a4403a4068d9.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 9d28e99e-7eb6-4149-a7e2-800140b13696 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9d28e99e-7eb6-4149-a7e2-800140b13696/MeasureReport-01873402-55b3-47c5-b9b0-a4403a4068d9.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 9d28e99e-7eb6-4149-a7e2-800140b13696 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9d28e99e-7eb6-4149-a7e2-800140b13696/MeasureReport-01873402-55b3-47c5-b9b0-a4403a4068d9.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 59d6bb14-b82e-4295-baf1-d96be73e1e38 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/59d6bb14-b82e-4295-baf1-d96be73e1e38/MeasureReport-afb9b378-90a1-4117-9d33-cdeacf0484b6.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 59d6bb14-b82e-4295-baf1-d96be73e1e38 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/59d6bb14-b82e-4295-baf1-d96be73e1e38/MeasureReport-afb9b378-90a1-4117-9d33-cdeacf0484b6.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 59d6bb14-b82e-4295-baf1-d96be73e1e38 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/59d6bb14-b82e-4295-baf1-d96be73e1e38/MeasureReport-afb9b378-90a1-4117-9d33-cdeacf0484b6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ f51f9a0a-9895-4c16-9fc5-fcbe5e9cc79d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f51f9a0a-9895-4c16-9fc5-fcbe5e9cc79d/MeasureReport-46ccb285-0022-4019-af85-16ad3dc63f48.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ f51f9a0a-9895-4c16-9fc5-fcbe5e9cc79d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f51f9a0a-9895-4c16-9fc5-fcbe5e9cc79d/MeasureReport-46ccb285-0022-4019-af85-16ad3dc63f48.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ f51f9a0a-9895-4c16-9fc5-fcbe5e9cc79d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f51f9a0a-9895-4c16-9fc5-fcbe5e9cc79d/MeasureReport-46ccb285-0022-4019-af85-16ad3dc63f48.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 1116b208-af60-4f6b-a5f1-448209aec45f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1116b208-af60-4f6b-a5f1-448209aec45f/MeasureReport-f837ff1a-64b4-402f-b5e9-d56eff104c52.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 1116b208-af60-4f6b-a5f1-448209aec45f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1116b208-af60-4f6b-a5f1-448209aec45f/MeasureReport-f837ff1a-64b4-402f-b5e9-d56eff104c52.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 1116b208-af60-4f6b-a5f1-448209aec45f ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1116b208-af60-4f6b-a5f1-448209aec45f/MeasureReport-f837ff1a-64b4-402f-b5e9-d56eff104c52.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 7c44ff36-2963-4736-81bc-a504026c247d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7c44ff36-2963-4736-81bc-a504026c247d/MeasureReport-8553d8a9-d5d8-4847-9827-fb2786f4a913.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 7c44ff36-2963-4736-81bc-a504026c247d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7c44ff36-2963-4736-81bc-a504026c247d/MeasureReport-8553d8a9-d5d8-4847-9827-fb2786f4a913.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 7c44ff36-2963-4736-81bc-a504026c247d ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/7c44ff36-2963-4736-81bc-a504026c247d/MeasureReport-8553d8a9-d5d8-4847-9827-fb2786f4a913.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ fcd4fe20-9013-4d1c-965b-1445f0088624 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fcd4fe20-9013-4d1c-965b-1445f0088624/MeasureReport-54543ebb-c112-4cea-943c-79e7866e1d08.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ fcd4fe20-9013-4d1c-965b-1445f0088624 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fcd4fe20-9013-4d1c-965b-1445f0088624/MeasureReport-54543ebb-c112-4cea-943c-79e7866e1d08.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ fcd4fe20-9013-4d1c-965b-1445f0088624 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/fcd4fe20-9013-4d1c-965b-1445f0088624/MeasureReport-54543ebb-c112-4cea-943c-79e7866e1d08.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ cbc1d484-f7a2-43f3-b091-e362d9bb770e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cbc1d484-f7a2-43f3-b091-e362d9bb770e/MeasureReport-60d5462f-0564-428a-9239-b582cfcaed1b.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ cbc1d484-f7a2-43f3-b091-e362d9bb770e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cbc1d484-f7a2-43f3-b091-e362d9bb770e/MeasureReport-60d5462f-0564-428a-9239-b582cfcaed1b.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ cbc1d484-f7a2-43f3-b091-e362d9bb770e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cbc1d484-f7a2-43f3-b091-e362d9bb770e/MeasureReport-60d5462f-0564-428a-9239-b582cfcaed1b.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 9a06f385-0bed-4f35-9af4-1ff7971c07f5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9a06f385-0bed-4f35-9af4-1ff7971c07f5/MeasureReport-2b63c3a5-c7bd-4449-acc6-6b91709d6cb6.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 9a06f385-0bed-4f35-9af4-1ff7971c07f5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9a06f385-0bed-4f35-9af4-1ff7971c07f5/MeasureReport-2b63c3a5-c7bd-4449-acc6-6b91709d6cb6.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 9a06f385-0bed-4f35-9af4-1ff7971c07f5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9a06f385-0bed-4f35-9af4-1ff7971c07f5/MeasureReport-2b63c3a5-c7bd-4449-acc6-6b91709d6cb6.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ b88292a5-2443-44a2-a268-2a6cb95f92bd ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/b88292a5-2443-44a2-a268-2a6cb95f92bd/MeasureReport-d10fdd98-a635-40a8-ace7-7c0579f3af0f.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ b88292a5-2443-44a2-a268-2a6cb95f92bd ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/b88292a5-2443-44a2-a268-2a6cb95f92bd/MeasureReport-d10fdd98-a635-40a8-ace7-7c0579f3af0f.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ b88292a5-2443-44a2-a268-2a6cb95f92bd ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/b88292a5-2443-44a2-a268-2a6cb95f92bd/MeasureReport-d10fdd98-a635-40a8-ace7-7c0579f3af0f.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ e656adac-2016-40a4-833f-0c5a02952ba3 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e656adac-2016-40a4-833f-0c5a02952ba3/MeasureReport-c0a2d9e7-1144-4e67-954f-56080d7ffd06.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ e656adac-2016-40a4-833f-0c5a02952ba3 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e656adac-2016-40a4-833f-0c5a02952ba3/MeasureReport-c0a2d9e7-1144-4e67-954f-56080d7ffd06.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ e656adac-2016-40a4-833f-0c5a02952ba3 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e656adac-2016-40a4-833f-0c5a02952ba3/MeasureReport-c0a2d9e7-1144-4e67-954f-56080d7ffd06.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 2c5a09d4-18c9-4128-86fb-bd49871f9231 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/2c5a09d4-18c9-4128-86fb-bd49871f9231/MeasureReport-bf872dce-b795-49e9-831f-ae54ca8b92cf.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 2c5a09d4-18c9-4128-86fb-bd49871f9231 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/2c5a09d4-18c9-4128-86fb-bd49871f9231/MeasureReport-bf872dce-b795-49e9-831f-ae54ca8b92cf.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 2c5a09d4-18c9-4128-86fb-bd49871f9231 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/2c5a09d4-18c9-4128-86fb-bd49871f9231/MeasureReport-bf872dce-b795-49e9-831f-ae54ca8b92cf.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 113749ee-bb22-4395-9621-642f98839340 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/113749ee-bb22-4395-9621-642f98839340/MeasureReport-54e759e6-bf9e-4246-abf6-852dddcdab7a.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 113749ee-bb22-4395-9621-642f98839340 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/113749ee-bb22-4395-9621-642f98839340/MeasureReport-54e759e6-bf9e-4246-abf6-852dddcdab7a.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 113749ee-bb22-4395-9621-642f98839340 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/113749ee-bb22-4395-9621-642f98839340/MeasureReport-54e759e6-bf9e-4246-abf6-852dddcdab7a.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 1d3021bb-b593-4efc-af5b-320243bbe9b7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1d3021bb-b593-4efc-af5b-320243bbe9b7/MeasureReport-13a9bd51-27c8-4992-bbb0-c491175b6a6e.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 1d3021bb-b593-4efc-af5b-320243bbe9b7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1d3021bb-b593-4efc-af5b-320243bbe9b7/MeasureReport-13a9bd51-27c8-4992-bbb0-c491175b6a6e.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 1d3021bb-b593-4efc-af5b-320243bbe9b7 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/1d3021bb-b593-4efc-af5b-320243bbe9b7/MeasureReport-13a9bd51-27c8-4992-bbb0-c491175b6a6e.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ f2136084-b5c4-4171-9d1b-d759637ddcfa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f2136084-b5c4-4171-9d1b-d759637ddcfa/MeasureReport-0bce676f-597b-4a01-abbf-4356a5145a0e.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ f2136084-b5c4-4171-9d1b-d759637ddcfa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f2136084-b5c4-4171-9d1b-d759637ddcfa/MeasureReport-0bce676f-597b-4a01-abbf-4356a5145a0e.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ f2136084-b5c4-4171-9d1b-d759637ddcfa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/f2136084-b5c4-4171-9d1b-d759637ddcfa/MeasureReport-0bce676f-597b-4a01-abbf-4356a5145a0e.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 0784160c-98b6-43a2-baa1-77ea9f3fe884 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0784160c-98b6-43a2-baa1-77ea9f3fe884/MeasureReport-cafc0f57-647c-40a8-a97b-c39c16af6f01.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 0784160c-98b6-43a2-baa1-77ea9f3fe884 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0784160c-98b6-43a2-baa1-77ea9f3fe884/MeasureReport-cafc0f57-647c-40a8-a97b-c39c16af6f01.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 0784160c-98b6-43a2-baa1-77ea9f3fe884 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/0784160c-98b6-43a2-baa1-77ea9f3fe884/MeasureReport-cafc0f57-647c-40a8-a97b-c39c16af6f01.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ bf38398e-4c04-4808-af1c-ea0c86b44d45 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/bf38398e-4c04-4808-af1c-ea0c86b44d45/MeasureReport-defe20b3-fd08-4dbc-bf02-2482c5efe79f.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ bf38398e-4c04-4808-af1c-ea0c86b44d45 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/bf38398e-4c04-4808-af1c-ea0c86b44d45/MeasureReport-defe20b3-fd08-4dbc-bf02-2482c5efe79f.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ bf38398e-4c04-4808-af1c-ea0c86b44d45 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/bf38398e-4c04-4808-af1c-ea0c86b44d45/MeasureReport-defe20b3-fd08-4dbc-bf02-2482c5efe79f.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 4120512a-d0f4-4ffa-acd9-0191db3b7f46 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4120512a-d0f4-4ffa-acd9-0191db3b7f46/MeasureReport-25f80d42-a721-4b6d-9cfa-ec4bf9090dae.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 4120512a-d0f4-4ffa-acd9-0191db3b7f46 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4120512a-d0f4-4ffa-acd9-0191db3b7f46/MeasureReport-25f80d42-a721-4b6d-9cfa-ec4bf9090dae.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 4120512a-d0f4-4ffa-acd9-0191db3b7f46 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/4120512a-d0f4-4ffa-acd9-0191db3b7f46/MeasureReport-25f80d42-a721-4b6d-9cfa-ec4bf9090dae.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 99ab4b63-b8b7-432c-91a6-fb38ba7203dd ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/99ab4b63-b8b7-432c-91a6-fb38ba7203dd/MeasureReport-c5cbad07-a773-40ea-aeb0-9fb7bd91d6e0.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 99ab4b63-b8b7-432c-91a6-fb38ba7203dd ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/99ab4b63-b8b7-432c-91a6-fb38ba7203dd/MeasureReport-c5cbad07-a773-40ea-aeb0-9fb7bd91d6e0.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 99ab4b63-b8b7-432c-91a6-fb38ba7203dd ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/99ab4b63-b8b7-432c-91a6-fb38ba7203dd/MeasureReport-c5cbad07-a773-40ea-aeb0-9fb7bd91d6e0.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 9e01f70e-cb9c-451b-8993-8664e31d92e2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9e01f70e-cb9c-451b-8993-8664e31d92e2/MeasureReport-84293b41-76cc-4e04-9ef0-9c0872167423.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 9e01f70e-cb9c-451b-8993-8664e31d92e2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9e01f70e-cb9c-451b-8993-8664e31d92e2/MeasureReport-84293b41-76cc-4e04-9ef0-9c0872167423.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 9e01f70e-cb9c-451b-8993-8664e31d92e2 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9e01f70e-cb9c-451b-8993-8664e31d92e2/MeasureReport-84293b41-76cc-4e04-9ef0-9c0872167423.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ d06256e5-091f-445e-898f-b8c31d8d3772 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d06256e5-091f-445e-898f-b8c31d8d3772/MeasureReport-45544d64-d0c8-4d0a-86a3-20ad5859e58d.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ d06256e5-091f-445e-898f-b8c31d8d3772 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d06256e5-091f-445e-898f-b8c31d8d3772/MeasureReport-45544d64-d0c8-4d0a-86a3-20ad5859e58d.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ d06256e5-091f-445e-898f-b8c31d8d3772 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/d06256e5-091f-445e-898f-b8c31d8d3772/MeasureReport-45544d64-d0c8-4d0a-86a3-20ad5859e58d.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 759a89b4-51ed-4622-adae-6b0930701ebb ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/759a89b4-51ed-4622-adae-6b0930701ebb/MeasureReport-cec73ecb-4bb0-4013-8a7c-d17d64b73a07.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 759a89b4-51ed-4622-adae-6b0930701ebb ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/759a89b4-51ed-4622-adae-6b0930701ebb/MeasureReport-cec73ecb-4bb0-4013-8a7c-d17d64b73a07.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 759a89b4-51ed-4622-adae-6b0930701ebb ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/759a89b4-51ed-4622-adae-6b0930701ebb/MeasureReport-cec73ecb-4bb0-4013-8a7c-d17d64b73a07.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 3b5da2bf-0fb9-4efc-bc54-4bd329ed31af ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3b5da2bf-0fb9-4efc-bc54-4bd329ed31af/MeasureReport-770e98b5-8e09-421a-9507-0c93e75de117.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 3b5da2bf-0fb9-4efc-bc54-4bd329ed31af ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3b5da2bf-0fb9-4efc-bc54-4bd329ed31af/MeasureReport-770e98b5-8e09-421a-9507-0c93e75de117.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 3b5da2bf-0fb9-4efc-bc54-4bd329ed31af ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3b5da2bf-0fb9-4efc-bc54-4bd329ed31af/MeasureReport-770e98b5-8e09-421a-9507-0c93e75de117.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 95ab5fd7-b1be-4dd3-ba42-1b48215fab70 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/95ab5fd7-b1be-4dd3-ba42-1b48215fab70/MeasureReport-747f10c8-ac05-4676-bad9-1dee3ceef657.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 95ab5fd7-b1be-4dd3-ba42-1b48215fab70 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/95ab5fd7-b1be-4dd3-ba42-1b48215fab70/MeasureReport-747f10c8-ac05-4676-bad9-1dee3ceef657.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 95ab5fd7-b1be-4dd3-ba42-1b48215fab70 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/95ab5fd7-b1be-4dd3-ba42-1b48215fab70/MeasureReport-747f10c8-ac05-4676-bad9-1dee3ceef657.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 38aac591-8983-4d7c-b29e-c8d145e7ffaa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/38aac591-8983-4d7c-b29e-c8d145e7ffaa/MeasureReport-203d25db-8b4f-4106-a7aa-2788b00e0a65.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 38aac591-8983-4d7c-b29e-c8d145e7ffaa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/38aac591-8983-4d7c-b29e-c8d145e7ffaa/MeasureReport-203d25db-8b4f-4106-a7aa-2788b00e0a65.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 38aac591-8983-4d7c-b29e-c8d145e7ffaa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/38aac591-8983-4d7c-b29e-c8d145e7ffaa/MeasureReport-203d25db-8b4f-4106-a7aa-2788b00e0a65.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 9c2afd42-581e-418b-9eaa-3ddf4918c9ac ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9c2afd42-581e-418b-9eaa-3ddf4918c9ac/MeasureReport-c4a7d373-1d9f-4885-a827-26eb666b2db2.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 9c2afd42-581e-418b-9eaa-3ddf4918c9ac ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9c2afd42-581e-418b-9eaa-3ddf4918c9ac/MeasureReport-c4a7d373-1d9f-4885-a827-26eb666b2db2.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 9c2afd42-581e-418b-9eaa-3ddf4918c9ac ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/9c2afd42-581e-418b-9eaa-3ddf4918c9ac/MeasureReport-c4a7d373-1d9f-4885-a827-26eb666b2db2.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 3e09af44-0445-4077-b73c-6896fdbe49c5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3e09af44-0445-4077-b73c-6896fdbe49c5/MeasureReport-4c837a9d-d87f-43c3-8c01-6e3e397dcb04.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 3e09af44-0445-4077-b73c-6896fdbe49c5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3e09af44-0445-4077-b73c-6896fdbe49c5/MeasureReport-4c837a9d-d87f-43c3-8c01-6e3e397dcb04.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 3e09af44-0445-4077-b73c-6896fdbe49c5 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3e09af44-0445-4077-b73c-6896fdbe49c5/MeasureReport-4c837a9d-d87f-43c3-8c01-6e3e397dcb04.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 70fd1056-5313-417f-bbbe-9f2bacf942bb ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/70fd1056-5313-417f-bbbe-9f2bacf942bb/MeasureReport-fc6ec9d4-f5e2-4491-9079-d5b3567db0c9.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 70fd1056-5313-417f-bbbe-9f2bacf942bb ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/70fd1056-5313-417f-bbbe-9f2bacf942bb/MeasureReport-fc6ec9d4-f5e2-4491-9079-d5b3567db0c9.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 70fd1056-5313-417f-bbbe-9f2bacf942bb ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/70fd1056-5313-417f-bbbe-9f2bacf942bb/MeasureReport-fc6ec9d4-f5e2-4491-9079-d5b3567db0c9.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ cbb6a940-7c9b-4d80-b9be-39a029f6f0b0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cbb6a940-7c9b-4d80-b9be-39a029f6f0b0/MeasureReport-c2e98e8d-94a0-496e-b96e-b70a240263b2.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ cbb6a940-7c9b-4d80-b9be-39a029f6f0b0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cbb6a940-7c9b-4d80-b9be-39a029f6f0b0/MeasureReport-c2e98e8d-94a0-496e-b96e-b70a240263b2.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ cbb6a940-7c9b-4d80-b9be-39a029f6f0b0 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/cbb6a940-7c9b-4d80-b9be-39a029f6f0b0/MeasureReport-c2e98e8d-94a0-496e-b96e-b70a240263b2.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ 60b9bda6-6c16-4797-8278-0a667008a69e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/60b9bda6-6c16-4797-8278-0a667008a69e/MeasureReport-a99921b9-62c1-4e59-b888-4d7f63a8187b.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ 60b9bda6-6c16-4797-8278-0a667008a69e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/60b9bda6-6c16-4797-8278-0a667008a69e/MeasureReport-a99921b9-62c1-4e59-b888-4d7f63a8187b.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 60b9bda6-6c16-4797-8278-0a667008a69e ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/60b9bda6-6c16-4797-8278-0a667008a69e/MeasureReport-a99921b9-62c1-4e59-b888-4d7f63a8187b.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 3c4aa676-8ef0-415c-a71e-09289d57cbfa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3c4aa676-8ef0-415c-a71e-09289d57cbfa/MeasureReport-d5f67c81-cc03-461e-81f7-7d2108364323.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ 3c4aa676-8ef0-415c-a71e-09289d57cbfa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3c4aa676-8ef0-415c-a71e-09289d57cbfa/MeasureReport-d5f67c81-cc03-461e-81f7-7d2108364323.json) | Group_3 | Denominator Exception | 0 | 1 |
+| [ 3c4aa676-8ef0-415c-a71e-09289d57cbfa ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/3c4aa676-8ef0-415c-a71e-09289d57cbfa/MeasureReport-d5f67c81-cc03-461e-81f7-7d2108364323.json) | Group_4 | Denominator Exception | 0 | 1 |
+| [ e1c47dc2-2705-4c32-8000-415987028df9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e1c47dc2-2705-4c32-8000-415987028df9/MeasureReport-78d08883-6e06-488a-82d8-6b6564cc3df4.json) | Group_1 | Denominator Exception | 0 | 1 |
+| [ e1c47dc2-2705-4c32-8000-415987028df9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e1c47dc2-2705-4c32-8000-415987028df9/MeasureReport-78d08883-6e06-488a-82d8-6b6564cc3df4.json) | Group_2 | Denominator Exception | 0 | 1 |
+| [ e1c47dc2-2705-4c32-8000-415987028df9 ](../.././input/tests/measure/CMS347FHIRStatinPreventionTxCVD/e1c47dc2-2705-4c32-8000-415987028df9/MeasureReport-78d08883-6e06-488a-82d8-6b6564cc3df4.json) | Group_4 | Denominator Exception | 0 | 1 |
+
+
 #### CMS646FHIRIntravesicalBCGTherapy
 [ [cql] ](../../input/cql/CMS646FHIRIntravesicalBCGTherapy.cql) [ [test results] ](../../input/tests/results/CMS646FHIRIntravesicalBCGTherapy.txt)
 
@@ -355,16 +678,6 @@ Mismatched Test Cases (2 of  of 114)
 | [ f71b56bb-42fc-4db0-aa60-6b7b91333295 ](../.././input/tests/measure/CMS996FHIRAptTxforSTEMI/f71b56bb-42fc-4db0-aa60-6b7b91333295/MeasureReport-261ec6b2-42f5-46c2-906d-12fe22084f4c.json) | Group_1 | Denominator Exclusion | 1 | 0 |
 
 
-#### CMS1017FHIRHHFI
-[ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
-
-Mismatched Test Cases (2 of  of 65)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ fd4ea84b-cd39-4d03-9641-9ca8d10bbe67 ](../.././input/tests/measure/CMS1017FHIRHHFI/fd4ea84b-cd39-4d03-9641-9ca8d10bbe67/MeasureReport-bed5a065-8af6-4c78-a165-460571622469.json) | Group_1 | Numerator | 2 | 1 |
-| [ 8045dee0-645e-497b-a5e8-ad659cdcf8c6 ](../.././input/tests/measure/CMS1017FHIRHHFI/8045dee0-645e-497b-a5e8-ad659cdcf8c6/MeasureReport-9418fb72-ca02-4a6f-9a0f-067090c8e5f1.json) | Group_1 | Numerator | 2 | 1 |
-
-
 #### CMS1154ScreeningPrediabetesFHIR
 [ [cql] ](../../input/cql/CMS1154ScreeningPrediabetesFHIR.cql) [ [test results] ](../../input/tests/results/CMS1154ScreeningPrediabetesFHIR.txt)
 
@@ -388,9 +701,10 @@ Missing Results (6 of 75 test cases)
 | [ f2e41ef7-1aa1-4ea0-8541-be476f3cb661 ](../.././input/tests/measure/CMS1218FHIRHHRF/f2e41ef7-1aa1-4ea0-8541-be476f3cb661/MeasureReport-dee11e77-e2fd-4ba0-9557-eaf128dc278f.json) | 67520e47670f1c0879cef598 |
 
 
-Mismatched Test Cases (1 of  of 75)
+Mismatched Test Cases (2 of  of 75)
 | Test Case | Group | Population | Expected | Actual |
 |---|---|---|:---:|:---:|
 | [ ea9c34ee-b50e-4d13-bd9c-ab2033d15717 ](../.././input/tests/measure/CMS1218FHIRHHRF/ea9c34ee-b50e-4d13-bd9c-ab2033d15717/MeasureReport-97044259-fd76-403c-a40f-1177631abe4f.json) | Group_1 | Initial Population<br>Denominator | 0<br>0 | 1<br>1 |
+| [ 8942da50-6322-4df7-bd03-21aecbc427a4 ](../.././input/tests/measure/CMS1218FHIRHHRF/8942da50-6322-4df7-bd03-21aecbc427a4/MeasureReport-290e5b8b-f5dc-4ca4-ad73-93505abc87bd.json) | Group_1 | Numerator | 1 | 2 |
 
 
