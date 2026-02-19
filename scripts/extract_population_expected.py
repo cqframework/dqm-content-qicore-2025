@@ -21,18 +21,19 @@ for measure_name in os.listdir(base_dir):
                     with open(file_path, "r") as f:
                         data = json.load(f)
                         for group in data.get("group", []):
-                            for pop in group.get("population", []):
-                                if pop.get("id") == 'MeasureObservation_1_1_1':
-                                    pop_name = 'Denominator Observation'
-                                elif pop.get("id") == 'MeasureObservation_1_2_1':
-                                    pop_name = 'Numerator Observation'
-                                else:
-                                    pop_name = pop.get("code", {}).get("coding", [{}])[0].get("display", "")
-                                rows.append([
-                                    measure_name, 
-                                    guid, 
-                                    f'{group.get("id")}:{pop_name}', 
-                                    pop.get('count', '')])
+                            if group.get("id").startswith("Group_"):
+                                for pop in group.get("population", []):
+                                    if pop.get("id") == 'MeasureObservation_1_1_1':
+                                        pop_name = 'Denominator Observation'
+                                    elif pop.get("id") == 'MeasureObservation_1_2_1':
+                                        pop_name = 'Numerator Observation'
+                                    else:
+                                        pop_name = pop.get("code", {}).get("coding", [{}])[0].get("display", "")
+                                    rows.append([
+                                        measure_name, 
+                                        guid, 
+                                        f'{group.get("id")}:{pop_name}', 
+                                        pop.get('count', '')])
 
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 with open(output_file, "w", newline="") as csv_file:

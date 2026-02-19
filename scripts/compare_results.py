@@ -25,6 +25,7 @@ ValidMeasurePopulationTypes = [
     'Denominator Exclusion',
     'Denominator-exclusion',
     'Denominator-exception',
+    'Denominator Exception',
     'Denominator Observations',
     'Measure Population',
     'Measure Population Exclusion'
