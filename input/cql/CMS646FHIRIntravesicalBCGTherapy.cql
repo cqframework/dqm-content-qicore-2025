@@ -89,7 +89,7 @@ define "Acute Tuberculosis Diagnosis":
 define "Cystectomy Done":
   [Procedure: "Cystectomy for Urology Care"] Cystectomy
     with "First Bladder Cancer Staging Procedure" FirstBladderCancerStaging
-      such that Cystectomy.performed.toInterval ( ) 6 months or less before day of start of FirstBladderCancerStaging.performed.toInterval ( )
+      such that Cystectomy.performed.toInterval ( ) 6 months or less before start of FirstBladderCancerStaging.performed.toInterval ( )
     where Cystectomy.status = 'completed'
 
 define "Has Excluding HIV, Immunocompromised Conditions or Mixed Histology Before Staging":
@@ -164,7 +164,7 @@ define "First Bladder Cancer Staging Procedure during 6 Months Prior to Measurem
 define "First BCG Administered":
   First([MedicationAdministration: "Bacillus Calmette Guerin for Urology Care"] BCG
       with "First Bladder Cancer Staging Procedure" FirstBladderCancerStaging
-        such that BCG.effective.toInterval() starts 6 months or less after day of start of FirstBladderCancerStaging.performed.toInterval()
+        such that BCG.effective.toInterval() starts 6 months or less after start of FirstBladderCancerStaging.performed.toInterval()
           and BCG.effective.toInterval() starts during day of "Measurement Period"
       where BCG.status in { 'in-progress', 'completed' }
       sort by start of effective.toInterval()
