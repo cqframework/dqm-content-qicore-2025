@@ -246,7 +246,7 @@ define function MedicationRequestPeriod(Request "MedicationRequest"):
       dose: Coalesce(end of doseRange, doseQuantity),
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       boundsPeriod: timing.repeat.bounds as Interval<DateTime>,
-      daysSupply: R.dispenseRequest.expectedSupplyDuration, //(convert R.dispenseRequest.expectedSupplyDuration to days).value,
+      daysSupply: R.dispenseRequest.expectedSupplyDuration.value, //(convert R.dispenseRequest.expectedSupplyDuration to days).value,
       quantity: R.dispenseRequest.quantity,
       refills: Coalesce(R.dispenseRequest.numberOfRepeatsAllowed, 0),
       startDate:
@@ -258,7 +258,7 @@ define function MedicationRequestPeriod(Request "MedicationRequest"):
       totalDaysSupplied: Coalesce(daysSupply, quantity.value / (dose.value * dosesPerDay)) * (1 + refills)
     return
       if startDate is not null and totalDaysSupplied is not null then
-        Interval[startDate, startDate + (totalDaysSupplied - 1 day) ] //Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day') ]
+        Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day') ]
       else if startDate is not null and boundsPeriod."high" is not null then
         Interval[startDate, date from end of boundsPeriod]
       else
@@ -277,7 +277,7 @@ define function MedicationRequestPeriod(Request "MedicationRequest"):
       dose: Coalesce(end of doseRange, doseQuantity),
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       boundsPeriod: timing.repeat.bounds as Interval<DateTime>,
-      daysSupply: R.dispenseRequest.expectedSupplyDuration, //(convert R.dispenseRequest.expectedSupplyDuration to days).value,
+      daysSupply: R.dispenseRequest.expectedSupplyDuration.value, //(convert R.dispenseRequest.expectedSupplyDuration to days).value,
       quantity: R.dispenseRequest.quantity,
       refills: Coalesce(R.dispenseRequest.numberOfRepeatsAllowed, 0),
       startDate:
@@ -289,7 +289,7 @@ define function MedicationRequestPeriod(Request "MedicationRequest"):
       totalDaysSupplied: Coalesce(daysSupply, quantity.value / (dose.value * dosesPerDay)) * (1 + refills)
     return
       if startDate is not null and totalDaysSupplied is not null then
-        Interval[startDate, startDate + (totalDaysSupplied - 1 day) ] //Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day') ]
+        Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day') ]
       else if startDate is not null and boundsPeriod."high" is not null then
         Interval[startDate, date from end of boundsPeriod]
       else
@@ -375,7 +375,7 @@ define function MedicationDispensePeriod(Dispense "MedicationDispense"):
       doseRange: doseAndRate.dose,
       doseQuantity: doseAndRate.dose,
       dose: Coalesce(end of doseRange, doseQuantity),
-      daysSupply: D.daysSupply,
+      daysSupply: D.daysSupply.value, //(convert D.daysSupply to days).value
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       startDate:
         Coalesce(
@@ -385,7 +385,7 @@ define function MedicationDispensePeriod(Dispense "MedicationDispense"):
       totalDaysSupplied: Coalesce(daysSupply, D.quantity.value / (dose.value * dosesPerDay))
     return
       if startDate is not null and totalDaysSupplied is not null then
-        Interval[startDate, startDate + (totalDaysSupplied - 1)]
+        Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day')]
       else
         null
 
@@ -426,7 +426,7 @@ define fluent function medicationDispensePeriod(Dispense "MedicationDispense"):
       doseRange: doseAndRate.dose,
       doseQuantity: doseAndRate.dose,
       dose: Coalesce(end of doseRange, doseQuantity),
-      daysSupply: D.daysSupply,
+      daysSupply: D.daysSupply.value, //(convert D.daysSupply to days).value
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       startDate:
         Coalesce(
@@ -436,7 +436,7 @@ define fluent function medicationDispensePeriod(Dispense "MedicationDispense"):
       totalDaysSupplied: Coalesce(daysSupply, D.quantity.value / (dose.value * dosesPerDay))
     return
       if startDate is not null and totalDaysSupplied is not null then
-        Interval[startDate, startDate + (totalDaysSupplied - 1 day)]
+        Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day')]
       else
         null
 
