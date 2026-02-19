@@ -1,22 +1,22 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-02-19 09:32:04.176901 |
+| Generated | 2026-02-19 09:50:50.305718 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
-| Measures with Discrepancies | 8 |
+| Measures with Discrepancies | 7 |
 
 
 | Discrepancy Summary | Measure Count | Test Case Count |
 |---|:---:|:---:|
 | Missing Results | 2 | 67 |
 | Missing Populations | 0 | 0 |
-| Mismatched Test Cases | 6 | 20 |
+| Mismatched Test Cases | 5 | 17 |
 
 
 
 _Note: Measures can have multiple discrepancies, so the Measures with Discrepancies count may not match the summary counts._
-## Measures with No Discrepancies (66)
+## Measures with No Discrepancies (67)
 - CMS2FHIRPCSDepScreenAndFollowUp [ [cql] ](../../input/cql/CMS2FHIRPCSDepScreenAndFollowUp.cql) [ [test results] ](../../input/tests/results/CMS2FHIRPCSDepScreenAndFollowUp.txt)
 - CMS22FHIRPCSBPScreeningFollowUp [ [cql] ](../../input/cql/CMS22FHIRPCSBPScreeningFollowUp.cql) [ [test results] ](../../input/tests/results/CMS22FHIRPCSBPScreeningFollowUp.txt)
 - CMS50FHIRReceiptofSpecialistReport [ [cql] ](../../input/cql/CMS50FHIRReceiptofSpecialistReport.cql) [ [test results] ](../../input/tests/results/CMS50FHIRReceiptofSpecialistReport.txt)
@@ -71,6 +71,7 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS871FHIRHHHyper [ [cql] ](../../input/cql/CMS871FHIRHHHyper.cql) [ [test results] ](../../input/tests/results/CMS871FHIRHHHyper.txt)
 - CMS951FHIRKidneyHealthEval [ [cql] ](../../input/cql/CMS951FHIRKidneyHealthEval.cql) [ [test results] ](../../input/tests/results/CMS951FHIRKidneyHealthEval.txt)
 - CMS986FHIRMalnutritionScore [ [cql] ](../../input/cql/CMS986FHIRMalnutritionScore.cql) [ [test results] ](../../input/tests/results/CMS986FHIRMalnutritionScore.txt)
+- CMS1017FHIRHHFI [ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
 - CMS1028FHIRPCSevereOBComps [ [cql] ](../../input/cql/CMS1028FHIRPCSevereOBComps.cql) [ [test results] ](../../input/tests/results/CMS1028FHIRPCSevereOBComps.txt)
 - CMS1056FHIRCTClinical [ [cql] ](../../input/cql/CMS1056FHIRCTClinical.cql) [ [test results] ](../../input/tests/results/CMS1056FHIRCTClinical.txt)
 - CMS1074FHIRCTIQR [ [cql] ](../../input/cql/CMS1074FHIRCTIQR.cql) [ [test results] ](../../input/tests/results/CMS1074FHIRCTIQR.txt)
@@ -83,7 +84,7 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS1264FHIRECATREHQR [ [cql] ](../../input/cql/CMS1264FHIRECATREHQR.cql) [ [test results] ](../../input/tests/results/CMS1264FHIRECATREHQR.txt)
 - NHSNAcuteCareHospitalMonthlyInitialPopulation1 [ [cql] ](../../input/cql/NHSNAcuteCareHospitalMonthlyInitialPopulation1.cql) [ [test results] ](../../input/tests/results/NHSNAcuteCareHospitalMonthlyInitialPopulation1.txt)
 - NHSNGlycemicControlHypoglycemiaInitialPopulation [ [cql] ](../../input/cql/NHSNGlycemicControlHypoglycemiaInitialPopulation.cql) [ [test results] ](../../input/tests/results/NHSNGlycemicControlHypoglycemiaInitialPopulation.txt)
-## Measures with Discrepancies (8)
+## Measures with Discrepancies (7)
 | Measure | Total Test Cases | Missing Results | Missing Populations | Mismatched Test Cases |
 |---|:---:|:---:|:---:|:---:|
 | [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 14 | 0 | 0.00%   (0) |
@@ -92,7 +93,6 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 | [CMS165FHIRControllingHighBP](#cms165fhircontrollinghighbp) | 68 | 53 | 0 | 0.00%   (0) |
 | [CMS190FHIRVTEProphylaxisICU](#cms190fhirvteprophylaxisicu) | 125 | 0 | 0 | 0.80%   (1) |
 | [CMS996FHIRAptTxforSTEMI](#cms996fhirapttxforstemi) | 114 | 0 | 0 | 1.75%   (2) |
-| [CMS1017FHIRHHFI](#cms1017fhirhhfi) | 65 | 0 | 0 | 4.62%   (3) |
 | [CMS1218FHIRHHRF](#cms1218fhirhhrf) | 69 | 0 | 0 | 1.45%   (1) |
 
 
@@ -226,17 +226,6 @@ Mismatched Test Cases (2 of  of 114)
 |---|---|---|:---:|:---:|
 | [ 88d99809-90d6-4cbc-a4bb-d5d73375fc81 ](../.././input/tests/measure/CMS996FHIRAptTxforSTEMI/88d99809-90d6-4cbc-a4bb-d5d73375fc81/MeasureReport-8f114534-ca1f-4d09-bdf1-c683d7a680a7.json) | Group_1 | Denominator Exclusion | 1 | 0 |
 | [ f71b56bb-42fc-4db0-aa60-6b7b91333295 ](../.././input/tests/measure/CMS996FHIRAptTxforSTEMI/f71b56bb-42fc-4db0-aa60-6b7b91333295/MeasureReport-261ec6b2-42f5-46c2-906d-12fe22084f4c.json) | Group_1 | Denominator Exclusion | 1 | 0 |
-
-
-#### CMS1017FHIRHHFI
-[ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
-
-Mismatched Test Cases (3 of  of 65)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ fd4ea84b-cd39-4d03-9641-9ca8d10bbe67 ](../.././input/tests/measure/CMS1017FHIRHHFI/fd4ea84b-cd39-4d03-9641-9ca8d10bbe67/MeasureReport-bed5a065-8af6-4c78-a165-460571622469.json) | Group_1 | Numerator | 2 | 1 |
-| [ 404570c9-b21f-4fa2-be5d-6d02c910fea6 ](../.././input/tests/measure/CMS1017FHIRHHFI/404570c9-b21f-4fa2-be5d-6d02c910fea6/MeasureReport-be4537a3-fcab-48b3-b04f-fced6ef56cbc.json) | Group_1 | Numerator | 1 | 0 |
-| [ 8045dee0-645e-497b-a5e8-ad659cdcf8c6 ](../.././input/tests/measure/CMS1017FHIRHHFI/8045dee0-645e-497b-a5e8-ad659cdcf8c6/MeasureReport-9418fb72-ca02-4a6f-9a0f-067090c8e5f1.json) | Group_1 | Numerator | 2 | 1 |
 
 
 #### CMS1218FHIRHHRF
