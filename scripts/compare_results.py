@@ -20,12 +20,15 @@ ValidMeasurePopulationTypes = [
     'Initial Population',
     'Numerator',
     'Numerator Exclusion',
+    'Numerator Observations',
     'Denominator',
+    'Denominator Exclusion',
     'Denominator-exclusion',
     'Denominator-exception',
+    'Denominator Exception',
+    'Denominator Observations',
     'Measure Population',
-    'Measure Population Exclusion',
-    'Measure Observation'
+    'Measure Population Exclusion'
 ]
 
 class MissingPopulation(NamedTuple):
@@ -116,10 +119,10 @@ def sort_measure_names(measure_names: List[str]) -> List[str]:
     for measure_name in measure_names:
         match = re.match(measure_id_pattern, measure_name)
         if match:
-            measures_with_numbers_in_name.append(f'{match.group('measure_id')}---{measure_name}')
+            measures_with_numbers_in_name.append(f'{match.group("measure_id")}---{measure_name}')
     sorted_measures_with_numbers_in_name = [m.split('---')[1] for m in sorted(measures_with_numbers_in_name, key=lambda x: int(x.split('---')[0]))]
     return sorted_measures_with_numbers_in_name + \
-           [m for m in sorted([m for m in measure_names if m not in sorted_measures_with_numbers_in_name])]
+        [m for m in sorted([m for m in measure_names if m not in sorted_measures_with_numbers_in_name])]
 
 def sort_populations(populations: List[str]) -> List[str]:
     order = {

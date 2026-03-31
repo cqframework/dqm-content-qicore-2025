@@ -19,11 +19,11 @@ allowed_display_names = {
     "Denominator Exclusions",
     "Denominator Exception",
     "Denominator Exceptions",
+    "Denominator Observation",
     "Numerator",
     "Numerator Exclusion",
     "Numerator Exclusions",
-    "Measure Observation",
-    "Measure Observations",
+    "Numerator Observation",
     "Measure Population",
     "Measure Population Observation",
     "Measure Population Observations",
@@ -56,7 +56,12 @@ def extract_measure_criteria(measure_data: Dict) -> Dict[str, Dict[str, str]]:
         criteria_map = measure_criteria.setdefault(group['id'], {})
         for pop in group.get('population', []):
             expression = pop.get('criteria', {}).get('expression', '')
-            population = pop.get('code', {}).get('coding', [{}])[0].get('display', '')
+            if pop.get('id', '') == 'MeasureObservation_1_1':
+                population = 'Denominator Observation'
+            elif pop.get('id', '') == 'MeasureObservation_1_2':
+                population = 'Numerator Observation'
+            else:
+                population = pop.get('code', {}).get('coding', [{}])[0].get('display', '')
             # Index by measure_name, group_id, and expression
             criteria_map[expression] = population
     return measure_criteria
@@ -91,27 +96,72 @@ def parse_count(result_value: str) -> Union[int, str]:
         return 0
     elif result_value.startswith("[") and result_value.endswith("]"):
         items = [item.strip() for item in result_value[1:-1].split(",") if item.strip()]
-        return len(items)
+        return items
     else:
         return result_value  # fallback, could be a number or string
 
-def validate_numerator(populations: Dict[str, str]):
+def validate_measure_population_counts(measurename: str, populations: Dict[str, str]):
     # scoring validation based on https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#proportion-measure-scoring
+    inital = populations.get('Initial Population', 0)
     denom = populations.get('Denominator', 0)
     denex = populations.get('Denominator Exclusion', 0)
     numer = populations.get('Numerator', 0)
+    numex = populations.get('Numerator Exclusion', 0)
+    denexc = populations.get('Denominator Exception', 0)
+    measurepop = populations.get('Measure Population', 0)
+    measurepopexc = populations.get('Measure Population Exclusion', 0)
     
-    if not denom and denex:
-        denex = 0
+    initial_count = len(inital) if isinstance(inital, list) else inital
+    denom_count = len(denom) if isinstance(denom, list) else denom
+    numer_count = len(numer) if isinstance(numer, list) else numer
+    denex_count = len(denex) if isinstance(denex, list) else denex
+    numex_count = len(numex) if isinstance(numex, list) else numex
+    denexc_count = len(denexc) if isinstance(denexc, list) else denexc
+    measurepop_count = len(measurepop) if isinstance(measurepop, list) else measurepop
+    measurepopexc_count = len(measurepopexc) if isinstance(measurepopexc, list) else measurepopexc
 
-    if numer and (denom and denex) or not denom:
-        numer = 0
+    
+    if denom_count < 2:
+        if not numer and numex and (denom and denex):
+            numer_count = 0
+            numex_count = 0
+        if numer and not numex and (denom and denex) or not denom:
+            numer_count = 0
+        if not numer and numex:
+            numex_count = 0
+        if not denom and denex:
+            denex_count = 0
+        if not numer and not denom:
+            denexc_count = 0
+        if numer and denom:
+            denexc_count = 0
+    else:
+        if numer and not numex:
+            if isinstance(numer, list) and isinstance(denex, list):
+                for item in numer:
+                    if item in denex:
+                        numer_count -= 1
+            else:
+                if denex >= 1 and numer > 1:
+                    numer_count = numer_count - denex_count
 
     # save updated scoring back to population, but only if the value already existed in the population
     if 'Numerator'in populations:
-        populations['Numerator'] = numer
+        populations['Numerator'] = numer_count
     if 'Denominator Exclusion'in populations:
-        populations['Denominator Exclusion'] = denex
+        populations['Denominator Exclusion'] = denex_count
+    if 'Numerator Exclusion'in populations:
+        populations['Numerator Exclusion'] = numex_count
+    if 'Denominator Exception'in populations:
+        populations['Denominator Exception'] = denexc_count
+    if 'Denominator'in populations:
+        populations['Denominator'] = denom_count
+    if 'Initial Population'in populations:
+        populations['Initial Population'] = initial_count
+    if 'Measure Population'in populations:
+        populations['Measure Population'] = measurepop_count
+    if 'Measure Population Exclusion'in populations:
+        populations['Measure Population Exclusion'] = measurepopexc_count
 
 def load_measure_sections(dir_path: str) -> Generator['MeasureSection', None, None]:
     """Load Measure Sections from VS Code CQL Extension result files
@@ -130,7 +180,7 @@ def load_measure_sections(dir_path: str) -> Generator['MeasureSection', None, No
         file_path = os.path.join(dir_path, file_name)
         if os.path.isfile(file_path):
             measure_name = os.path.splitext(file_name)[0]
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
             sections = section_pattern.split(content)
             for section in sections:
@@ -173,7 +223,7 @@ def convert_results_to_rows(results: Dict[MeasureResultId, Dict[str, str]]) -> L
     # during conversion verify that proper proportional eCQM population criteria rules are followed
     rows = []
     for measure_id, populations in results.items():
-        validate_numerator(populations)
+        validate_measure_population_counts(measure_id.Measure,populations)
         for population, count in populations.items():
             rows.append([measure_id.Measure, measure_id.PatientGUID, f'{measure_id.GroupId}:{population}', count])
     return rows
