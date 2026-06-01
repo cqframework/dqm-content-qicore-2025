@@ -80,7 +80,7 @@ def load_measure_criteria(measure_resource_dir: str) -> Dict[str, Dict[str, Dict
         if measure_file.endswith('.json'):
             measure_path = os.path.join(measure_resource_dir, measure_file)
             measure_name = os.path.splitext(measure_file)[0]
-            with open(measure_path, 'r') as f:
+            with open(measure_path, 'r', encoding='utf-8') as f:
                 measure_data = json.load(f)
                 measure_criteria = extract_measure_criteria(measure_data)
                 measure_criteria_map[measure_name] = measure_criteria
@@ -180,7 +180,7 @@ def load_measure_sections(dir_path: str) -> Generator['MeasureSection', None, No
         file_path = os.path.join(dir_path, file_name)
         if os.path.isfile(file_path):
             measure_name = os.path.splitext(file_name)[0]
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
             sections = section_pattern.split(content)
             for section in sections:
