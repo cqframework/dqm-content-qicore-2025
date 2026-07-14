@@ -1,22 +1,22 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-02-19 09:50:50.305718 |
+| Generated | 2026-07-14 09:40:44.358517 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
-| Measures with Discrepancies | 7 |
+| Measures with Discrepancies | 3 |
 
 
 | Discrepancy Summary | Measure Count | Test Case Count |
 |---|:---:|:---:|
-| Missing Results | 2 | 67 |
+| Missing Results | 2 | 71 |
 | Missing Populations | 0 | 0 |
-| Mismatched Test Cases | 5 | 17 |
+| Mismatched Test Cases | 1 | 2 |
 
 
 
 _Note: Measures can have multiple discrepancies, so the Measures with Discrepancies count may not match the summary counts._
-## Measures with No Discrepancies (67)
+## Measures with No Discrepancies (71)
 - CMS2FHIRPCSDepScreenAndFollowUp [ [cql] ](../../input/cql/CMS2FHIRPCSDepScreenAndFollowUp.cql) [ [test results] ](../../input/tests/results/CMS2FHIRPCSDepScreenAndFollowUp.txt)
 - CMS22FHIRPCSBPScreeningFollowUp [ [cql] ](../../input/cql/CMS22FHIRPCSBPScreeningFollowUp.cql) [ [test results] ](../../input/tests/results/CMS22FHIRPCSBPScreeningFollowUp.txt)
 - CMS50FHIRReceiptofSpecialistReport [ [cql] ](../../input/cql/CMS50FHIRReceiptofSpecialistReport.cql) [ [test results] ](../../input/tests/results/CMS50FHIRReceiptofSpecialistReport.txt)
@@ -52,8 +52,10 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS154FHIRAppropriateTxforURI [ [cql] ](../../input/cql/CMS154FHIRAppropriateTxforURI.cql) [ [test results] ](../../input/tests/results/CMS154FHIRAppropriateTxforURI.txt)
 - CMS155FHIRWgtAssessCounseling [ [cql] ](../../input/cql/CMS155FHIRWgtAssessCounseling.cql) [ [test results] ](../../input/tests/results/CMS155FHIRWgtAssessCounseling.txt)
 - CMS156FHIRHighRiskMedsElderly [ [cql] ](../../input/cql/CMS156FHIRHighRiskMedsElderly.cql) [ [test results] ](../../input/tests/results/CMS156FHIRHighRiskMedsElderly.txt)
+- CMS157FHIRPainIntensityQuantified [ [cql] ](../../input/cql/CMS157FHIRPainIntensityQuantified.cql) [ [test results] ](../../input/tests/results/CMS157FHIRPainIntensityQuantified.txt)
 - CMS159FHIRDepRemissionat12Months [ [cql] ](../../input/cql/CMS159FHIRDepRemissionat12Months.cql) [ [test results] ](../../input/tests/results/CMS159FHIRDepRemissionat12Months.txt)
 - CMS177FHIRChildMDDSuicideAssmt [ [cql] ](../../input/cql/CMS177FHIRChildMDDSuicideAssmt.cql) [ [test results] ](../../input/tests/results/CMS177FHIRChildMDDSuicideAssmt.txt)
+- CMS190FHIRVTEProphylaxisICU [ [cql] ](../../input/cql/CMS190FHIRVTEProphylaxisICU.cql) [ [test results] ](../../input/tests/results/CMS190FHIRVTEProphylaxisICU.txt)
 - CMS314FHIRHIVViralSuppression [ [cql] ](../../input/cql/CMS314FHIRHIVViralSuppression.cql) [ [test results] ](../../input/tests/results/CMS314FHIRHIVViralSuppression.txt)
 - CMS0334FHIRPCCesareanBirth [ [cql] ](../../input/cql/CMS0334FHIRPCCesareanBirth.cql) [ [test results] ](../../input/tests/results/CMS0334FHIRPCCesareanBirth.txt)
 - CMS347FHIRStatinPreventionTxCVD [ [cql] ](../../input/cql/CMS347FHIRStatinPreventionTxCVD.cql) [ [test results] ](../../input/tests/results/CMS347FHIRStatinPreventionTxCVD.txt)
@@ -71,6 +73,7 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS871FHIRHHHyper [ [cql] ](../../input/cql/CMS871FHIRHHHyper.cql) [ [test results] ](../../input/tests/results/CMS871FHIRHHHyper.txt)
 - CMS951FHIRKidneyHealthEval [ [cql] ](../../input/cql/CMS951FHIRKidneyHealthEval.cql) [ [test results] ](../../input/tests/results/CMS951FHIRKidneyHealthEval.txt)
 - CMS986FHIRMalnutritionScore [ [cql] ](../../input/cql/CMS986FHIRMalnutritionScore.cql) [ [test results] ](../../input/tests/results/CMS986FHIRMalnutritionScore.txt)
+- CMS996FHIRAptTxforSTEMI [ [cql] ](../../input/cql/CMS996FHIRAptTxforSTEMI.cql) [ [test results] ](../../input/tests/results/CMS996FHIRAptTxforSTEMI.txt)
 - CMS1017FHIRHHFI [ [cql] ](../../input/cql/CMS1017FHIRHHFI.cql) [ [test results] ](../../input/tests/results/CMS1017FHIRHHFI.txt)
 - CMS1028FHIRPCSevereOBComps [ [cql] ](../../input/cql/CMS1028FHIRPCSevereOBComps.cql) [ [test results] ](../../input/tests/results/CMS1028FHIRPCSevereOBComps.txt)
 - CMS1056FHIRCTClinical [ [cql] ](../../input/cql/CMS1056FHIRCTClinical.cql) [ [test results] ](../../input/tests/results/CMS1056FHIRCTClinical.txt)
@@ -80,43 +83,29 @@ _Note: Measures can have multiple discrepancies, so the Measures with Discrepanc
 - CMS1173FHIRDiagnosticDelayVTE [ [cql] ](../../input/cql/CMS1173FHIRDiagnosticDelayVTE.cql) [ [test results] ](../../input/tests/results/CMS1173FHIRDiagnosticDelayVTE.txt)
 - CMS1188FHIRHIVSTITesting [ [cql] ](../../input/cql/CMS1188FHIRHIVSTITesting.cql) [ [test results] ](../../input/tests/results/CMS1188FHIRHIVSTITesting.txt)
 - CMS1206FHIRCTOQR [ [cql] ](../../input/cql/CMS1206FHIRCTOQR.cql) [ [test results] ](../../input/tests/results/CMS1206FHIRCTOQR.txt)
+- CMS1218FHIRHHRF [ [cql] ](../../input/cql/CMS1218FHIRHHRF.cql) [ [test results] ](../../input/tests/results/CMS1218FHIRHHRF.txt)
 - CMS1244FHIRECATHOQR [ [cql] ](../../input/cql/CMS1244FHIRECATHOQR.cql) [ [test results] ](../../input/tests/results/CMS1244FHIRECATHOQR.txt)
 - CMS1264FHIRECATREHQR [ [cql] ](../../input/cql/CMS1264FHIRECATREHQR.cql) [ [test results] ](../../input/tests/results/CMS1264FHIRECATREHQR.txt)
 - NHSNAcuteCareHospitalMonthlyInitialPopulation1 [ [cql] ](../../input/cql/NHSNAcuteCareHospitalMonthlyInitialPopulation1.cql) [ [test results] ](../../input/tests/results/NHSNAcuteCareHospitalMonthlyInitialPopulation1.txt)
 - NHSNGlycemicControlHypoglycemiaInitialPopulation [ [cql] ](../../input/cql/NHSNGlycemicControlHypoglycemiaInitialPopulation.cql) [ [test results] ](../../input/tests/results/NHSNGlycemicControlHypoglycemiaInitialPopulation.txt)
-## Measures with Discrepancies (7)
+## Measures with Discrepancies (3)
 | Measure | Total Test Cases | Missing Results | Missing Populations | Mismatched Test Cases |
 |---|:---:|:---:|:---:|:---:|
-| [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 14 | 0 | 0.00%   (0) |
+| [CMS135FHIRACEIorARBorARNIforHF](#cms135fhiraceiorarborarniforhf) | 40 | 3 | 0 | 0.00%   (0) |
 | [CMS145FHIRCADBBlockerTPMIorLVSD](#cms145fhircadbblockertpmiorlvsd) | 106 | 0 | 0 | 1.89%   (2) |
-| [CMS157FHIRPainIntensityQuantified](#cms157fhirpainintensityquantified) | 126 | 0 | 0 | 8.73%   (11) |
-| [CMS165FHIRControllingHighBP](#cms165fhircontrollinghighbp) | 68 | 53 | 0 | 0.00%   (0) |
-| [CMS190FHIRVTEProphylaxisICU](#cms190fhirvteprophylaxisicu) | 125 | 0 | 0 | 0.80%   (1) |
-| [CMS996FHIRAptTxforSTEMI](#cms996fhirapttxforstemi) | 114 | 0 | 0 | 1.75%   (2) |
-| [CMS1218FHIRHHRF](#cms1218fhirhhrf) | 69 | 0 | 0 | 1.45%   (1) |
+| [CMS165FHIRControllingHighBP](#cms165fhircontrollinghighbp) | 68 | 68 | 0 | 0.00%   (0) |
 
 
 
 #### CMS135FHIRACEIorARBorARNIforHF
 [ [cql] ](../../input/cql/CMS135FHIRACEIorARBorARNIforHF.cql) [ [test results] ](../../input/tests/results/CMS135FHIRACEIorARBorARNIforHF.txt)
 
-Missing Results (14 of 40 test cases)
+Missing Results (3 of 40 test cases)
 | Test Case | Group |
 | --- | --- |
-| [ ed36c619-3ef8-44ca-86fa-1993920d76ef ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/ed36c619-3ef8-44ca-86fa-1993920d76ef/MeasureReport-8f5a4aa1-fd04-4a02-bc63-3242bf342bc3.json) | Group_1 |
-| [ ed37e316-c721-4a98-91d7-862f5ece7187 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/ed37e316-c721-4a98-91d7-862f5ece7187/MeasureReport-5afb4817-d279-4afb-b6d8-51419a550a9d.json) | Group_1 |
 | [ cba5a449-1c45-4e11-ae0b-ba3974b410f7 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/cba5a449-1c45-4e11-ae0b-ba3974b410f7/MeasureReport-ae8c4b99-af76-4577-b66d-b1230ac09aa3.json) | Group_1 |
 | [ ec508dbb-76f6-4878-b8a2-114ea8e82297 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/ec508dbb-76f6-4878-b8a2-114ea8e82297/MeasureReport-d1b704c8-7e95-4cd9-89e7-a8b90f925ce2.json) | Group_1 |
-| [ d297e68e-3f02-42a8-a59f-a5a4cecbd47d ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/d297e68e-3f02-42a8-a59f-a5a4cecbd47d/MeasureReport-cc3a4e83-9689-4bb7-83e1-55cb47dc9848.json) | Group_1 |
-| [ d7067d60-b722-4bba-b78e-682d86c0b48e ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/d7067d60-b722-4bba-b78e-682d86c0b48e/MeasureReport-4bb51546-f097-4d5a-b9e2-3387709f2083.json) | Group_1 |
 | [ c095195c-8893-4bf1-aa7d-ad2bfd9bafa5 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/c095195c-8893-4bf1-aa7d-ad2bfd9bafa5/MeasureReport-f2d033da-6f32-46dc-86bc-69fdf82b1cfd.json) | Group_1 |
-| [ ef395d2c-85a3-41a2-b6cb-37c4ff5217dc ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/ef395d2c-85a3-41a2-b6cb-37c4ff5217dc/MeasureReport-3228fd23-a3fd-4b65-a743-bd740763ad1c.json) | Group_1 |
-| [ e1182b17-1292-4473-bd9e-c70e3846ca0b ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/e1182b17-1292-4473-bd9e-c70e3846ca0b/MeasureReport-6c80369d-a318-4e06-9d4f-1244c1faf798.json) | Group_1 |
-| [ d18e37a6-7b66-4e7c-b305-692872c13f8d ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/d18e37a6-7b66-4e7c-b305-692872c13f8d/MeasureReport-ecbb5067-dcb1-48ce-8e78-6dfd556ac43d.json) | Group_1 |
-| [ fb38d345-4723-46b4-a269-8b4fd8982bc7 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/fb38d345-4723-46b4-a269-8b4fd8982bc7/MeasureReport-1e07fe6d-d64f-4e8c-bea8-4da925258c85.json) | Group_1 |
-| [ e755fc51-8047-4f1a-9d15-d53963496185 ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/e755fc51-8047-4f1a-9d15-d53963496185/MeasureReport-88bc5d47-a4a5-44b4-a90b-f79153441e77.json) | Group_1 |
-| [ d4cafe6e-4358-4688-90f5-6a6588512cae ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/d4cafe6e-4358-4688-90f5-6a6588512cae/MeasureReport-688b70c8-2a6c-49d3-a7d8-141464f135fb.json) | Group_1 |
-| [ c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c ](../.././input/tests/measure/CMS135FHIRACEIorARBorARNIforHF/c4aaf7e0-8ffd-44bf-a037-5e12e9706e3c/MeasureReport-258b085e-a5a9-4f16-83f7-2291c7ac9a19.json) | Group_1 |
 
 
 #### CMS145FHIRCADBBlockerTPMIorLVSD
@@ -129,37 +118,22 @@ Mismatched Test Cases (2 of  of 106)
 | [ 4a3086cd-63f3-41c3-8ce9-f75b4b18b85c ](../.././input/tests/measure/CMS145FHIRCADBBlockerTPMIorLVSD/4a3086cd-63f3-41c3-8ce9-f75b4b18b85c/MeasureReport-68e90a55-1471-47a2-80a7-2e465f8332f2.json) | Group_1 | Denominator Exception | 0 | 1 |
 
 
-#### CMS157FHIRPainIntensityQuantified
-[ [cql] ](../../input/cql/CMS157FHIRPainIntensityQuantified.cql) [ [test results] ](../../input/tests/results/CMS157FHIRPainIntensityQuantified.txt)
-
-Mismatched Test Cases (11 of  of 126)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ fe6ef07d-bff1-4e0e-9bf4-b0424a1d0ab4 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/fe6ef07d-bff1-4e0e-9bf4-b0424a1d0ab4/MeasureReport-0648e2db-7eb4-422a-b7f2-b920be7285f2.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 7cedf97f-741c-4c37-9ae9-40e0b8c64576 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/7cedf97f-741c-4c37-9ae9-40e0b8c64576/MeasureReport-32f463b3-7147-4a6c-aaf5-05478cb060da.json) | Group_2 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ 055640ae-dc71-4e1d-918b-e367013de209 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/055640ae-dc71-4e1d-918b-e367013de209/MeasureReport-1bbaa68f-b303-4828-aa6b-c3f5d25b9246.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ c97c9ecf-6c31-4868-bbd3-7a5509bb3882 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/c97c9ecf-6c31-4868-bbd3-7a5509bb3882/MeasureReport-f718a369-2b4b-430a-9d24-9a4f06a7b002.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 5cca62ff-f856-4b8f-9902-6a018a4599cb ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/5cca62ff-f856-4b8f-9902-6a018a4599cb/MeasureReport-c03b4642-f99f-40d7-ae8f-37795a5caf5f.json) | Group_2 | Initial Population<br>Denominator<br>Numerator | 2<br>2<br>1 | 0<br>0<br>0 |
-| [ 51d8547c-f07f-4441-b616-f458f38e4506 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/51d8547c-f07f-4441-b616-f458f38e4506/MeasureReport-54825fed-8c96-4302-90ae-f0b99310d3dd.json) | Group_2 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ aa355e31-8d29-4b06-8d13-7d00a2c817da ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/aa355e31-8d29-4b06-8d13-7d00a2c817da/MeasureReport-cd826ca2-6155-4ae2-884d-6fa9c5343198.json) | Group_2 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ e085c0d1-a736-4596-a5cd-7de785d0d144 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/e085c0d1-a736-4596-a5cd-7de785d0d144/MeasureReport-dfa6cb5c-77dd-47e1-968c-8b280300f2d0.json) | Group_2 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-| [ d4b441fb-5b3a-40f7-ada1-ecf06376f4fb ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/d4b441fb-5b3a-40f7-ada1-ecf06376f4fb/MeasureReport-72e35d1c-2e54-4a52-ac2e-430785c31ee5.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ ede0d103-285f-42f0-807e-ff272f1ae70e ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/ede0d103-285f-42f0-807e-ff272f1ae70e/MeasureReport-db410136-ae00-4328-941e-366a83436c05.json) | Group_1 | Initial Population<br>Denominator | 1<br>1 | 0<br>0 |
-| [ 233d84af-d725-4682-8253-d6c4e02da0d5 ](../.././input/tests/measure/CMS157FHIRPainIntensityQuantified/233d84af-d725-4682-8253-d6c4e02da0d5/MeasureReport-8ebccd0b-cee9-43d9-b663-9d228417615d.json) | Group_1 | Initial Population<br>Denominator<br>Numerator | 1<br>1<br>1 | 0<br>0<br>0 |
-
-
 #### CMS165FHIRControllingHighBP
 [ [cql] ](../../input/cql/CMS165FHIRControllingHighBP.cql) [ [test results] ](../../input/tests/results/CMS165FHIRControllingHighBP.txt)
 
-Missing Results (53 of 68 test cases)
+Missing Results (68 of 68 test cases)
 | Test Case | Group |
 | --- | --- |
 | [ 85ae5a03-576b-4a32-93af-d1a241987a77 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/85ae5a03-576b-4a32-93af-d1a241987a77/MeasureReport-c87a25a3-ee1e-4c34-af30-57544abacf71.json) | Group_1 |
 | [ f5b461d7-e382-4616-a763-d745867735d0 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/f5b461d7-e382-4616-a763-d745867735d0/MeasureReport-c40356e4-5065-4c08-b691-08705513f287.json) | Group_1 |
 | [ d6be5093-9772-4e0f-83e1-b56b26d55529 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/d6be5093-9772-4e0f-83e1-b56b26d55529/MeasureReport-f297fa0b-4244-4f20-87be-c935674d1b6f.json) | Group_1 |
 | [ bff7264b-35fc-402b-8a15-22c78e227064 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/bff7264b-35fc-402b-8a15-22c78e227064/MeasureReport-70a6dfe9-450a-471c-a8a8-73e14443e71b.json) | Group_1 |
+| [ 352a05d3-750c-45bd-a170-a8a8822b7697 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/352a05d3-750c-45bd-a170-a8a8822b7697/MeasureReport-4c90f4fe-b99f-4678-be7d-65a13fc481fb.json) | Group_1 |
+| [ 23004f44-4848-4e62-8813-2a56d900613c ](../.././input/tests/measure/CMS165FHIRControllingHighBP/23004f44-4848-4e62-8813-2a56d900613c/MeasureReport-aec86d39-b601-48bf-b9fb-b40a0aea1847.json) | Group_1 |
 | [ e56c60ca-d0d0-4910-af2e-1d8a074d129a ](../.././input/tests/measure/CMS165FHIRControllingHighBP/e56c60ca-d0d0-4910-af2e-1d8a074d129a/MeasureReport-dc2ea439-c574-4beb-b83d-55f24ef75f67.json) | Group_1 |
 | [ 94d2a25e-9eec-44ce-bc34-711452549be8 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/94d2a25e-9eec-44ce-bc34-711452549be8/MeasureReport-fc4417c5-d5ce-47d1-b934-185fb732e88d.json) | Group_1 |
+| [ 43efb820-9e6e-4180-9a4d-2d7459896e5f ](../.././input/tests/measure/CMS165FHIRControllingHighBP/43efb820-9e6e-4180-9a4d-2d7459896e5f/MeasureReport-2bc454a5-ec02-45c8-b84c-a0a772bcba9f.json) | Group_1 |
+| [ 32edbb16-2029-425a-85e0-6ea9182d1d91 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/32edbb16-2029-425a-85e0-6ea9182d1d91/MeasureReport-ab84003e-9b93-4eeb-aa31-e13c43b5c32d.json) | Group_1 |
 | [ 6885264d-efbf-4e48-99a2-2e8ce29d61ba ](../.././input/tests/measure/CMS165FHIRControllingHighBP/6885264d-efbf-4e48-99a2-2e8ce29d61ba/MeasureReport-1f5b7da1-80c7-4104-85c6-a27c6e8e399b.json) | Group_1 |
 | [ 4c814ca9-da50-43e3-9e31-dbe755ee5c5e ](../.././input/tests/measure/CMS165FHIRControllingHighBP/4c814ca9-da50-43e3-9e31-dbe755ee5c5e/MeasureReport-be1e7096-9087-4965-b04a-6e2804339203.json) | Group_1 |
 | [ a3deee90-5966-4309-b52f-c0a76046f680 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/a3deee90-5966-4309-b52f-c0a76046f680/MeasureReport-e3867723-a042-49e7-a98f-a71e13a7d8cf.json) | Group_1 |
@@ -180,7 +154,10 @@ Missing Results (53 of 68 test cases)
 | [ 642ef7f9-f9c2-45dc-ab7d-41a000b56d9c ](../.././input/tests/measure/CMS165FHIRControllingHighBP/642ef7f9-f9c2-45dc-ab7d-41a000b56d9c/MeasureReport-f9c26049-57dc-4ed6-8937-58eed62ecd9f.json) | Group_1 |
 | [ 50d7cf81-dff4-45eb-b43d-0e40b08c3a75 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/50d7cf81-dff4-45eb-b43d-0e40b08c3a75/MeasureReport-40890a29-fe94-447c-a8f2-0d28f8c549be.json) | Group_1 |
 | [ e94daaa3-ffff-4ca5-b971-7fd4407c3580 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/e94daaa3-ffff-4ca5-b971-7fd4407c3580/MeasureReport-eb1a3ad2-ed14-4225-88f4-523fe5edfa5e.json) | Group_1 |
+| [ 0e045de9-dd14-461d-b7b9-aac287fb8e70 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/0e045de9-dd14-461d-b7b9-aac287fb8e70/MeasureReport-ccb873d1-527f-4085-ae41-c7f3cfa37946.json) | Group_1 |
+| [ 3e214018-7420-4e1f-a24d-e9426ace2bd8 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/3e214018-7420-4e1f-a24d-e9426ace2bd8/MeasureReport-b4faaa79-84c9-4e1f-a15a-0a0267eb1a1b.json) | Group_1 |
 | [ c57b8e40-b3be-484f-8874-8ccafa3d5a38 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/c57b8e40-b3be-484f-8874-8ccafa3d5a38/MeasureReport-b973a4a8-e57b-4cdd-8be0-ba9af8505c76.json) | Group_1 |
+| [ 398e8703-6704-4c75-9887-41117761d2c7 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/398e8703-6704-4c75-9887-41117761d2c7/MeasureReport-8db9638b-9e50-47f3-b29f-941137f3eff3.json) | Group_1 |
 | [ 75d880c8-4220-4907-b29a-f595dc0df2fb ](../.././input/tests/measure/CMS165FHIRControllingHighBP/75d880c8-4220-4907-b29a-f595dc0df2fb/MeasureReport-5c02c21a-feac-484c-b0fb-66926ea4a688.json) | Group_1 |
 | [ 686e2c47-b08f-465c-ab31-1712dd72028b ](../.././input/tests/measure/CMS165FHIRControllingHighBP/686e2c47-b08f-465c-ab31-1712dd72028b/MeasureReport-905d2cf9-d59c-4a68-bca9-b7c30e6548c8.json) | Group_1 |
 | [ 821185af-e5b2-4552-a63c-36b64a9200a9 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/821185af-e5b2-4552-a63c-36b64a9200a9/MeasureReport-774c09d2-ef68-44ce-a0ac-28087cdbab94.json) | Group_1 |
@@ -189,51 +166,31 @@ Missing Results (53 of 68 test cases)
 | [ 9f063f76-a97a-4bba-9f6a-35e7a429a72c ](../.././input/tests/measure/CMS165FHIRControllingHighBP/9f063f76-a97a-4bba-9f6a-35e7a429a72c/MeasureReport-f1c55ef7-2274-491a-b508-21faf51aacec.json) | Group_1 |
 | [ cdfb5385-a466-4d41-9dce-cc50f88d0666 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/cdfb5385-a466-4d41-9dce-cc50f88d0666/MeasureReport-d349c4bb-3aa3-4b23-b141-22f3be31387e.json) | Group_1 |
 | [ f2d1fd7e-35ae-45cd-86e6-8b874c3e3fb9 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/f2d1fd7e-35ae-45cd-86e6-8b874c3e3fb9/MeasureReport-657791f1-242d-40ee-8b6a-1fdb4d85c849.json) | Group_1 |
+| [ 30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/30086fb9-0aea-4e5e-86cc-46f4d1aa8dd4/MeasureReport-dfceed85-e149-4c73-96cc-9285d8dbc7d4.json) | Group_1 |
 | [ 59d7f239-7614-4e6e-a973-fe107aee5749 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/59d7f239-7614-4e6e-a973-fe107aee5749/MeasureReport-85177012-7ab0-4a49-9def-647f931e1ab9.json) | Group_1 |
 | [ 6d97c086-8776-45f4-898f-cece9e80990a ](../.././input/tests/measure/CMS165FHIRControllingHighBP/6d97c086-8776-45f4-898f-cece9e80990a/MeasureReport-71955a26-8189-435a-8ae7-bafae74877d8.json) | Group_1 |
 | [ 5421e420-8d42-4628-ba47-9abaf9ebfaa8 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/5421e420-8d42-4628-ba47-9abaf9ebfaa8/MeasureReport-a4ed4d25-8b89-4cf4-aa20-2d51383b9cf4.json) | Group_1 |
 | [ 4f168366-f0a7-4aad-ab9e-b0bcbecda886 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/4f168366-f0a7-4aad-ab9e-b0bcbecda886/MeasureReport-e4e2a2eb-a35d-4fe7-81cb-bfec1902ea50.json) | Group_1 |
+| [ 2c55811b-1571-43e5-919c-f90bf763b3d4 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/2c55811b-1571-43e5-919c-f90bf763b3d4/MeasureReport-75c17983-f022-41f6-8008-b1f8cc73f3c6.json) | Group_1 |
 | [ d150409f-0616-4565-ba60-7ca732a87288 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/d150409f-0616-4565-ba60-7ca732a87288/MeasureReport-c99c233b-98f9-44bd-a0ba-137b6a9a916b.json) | Group_1 |
 | [ 972c7128-f3c2-401d-89f3-a0752dd02620 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/972c7128-f3c2-401d-89f3-a0752dd02620/MeasureReport-5d808dd7-654f-4f0b-baa8-5f252cb1c490.json) | Group_1 |
 | [ f9bf76c5-7b85-4fd7-b883-b7c14e8b1801 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/f9bf76c5-7b85-4fd7-b883-b7c14e8b1801/MeasureReport-941a9d79-fa3f-435d-8bf0-21c49474528f.json) | Group_1 |
+| [ 29d930b1-1bb6-4089-9ed6-aa2b7b77d5a4 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/29d930b1-1bb6-4089-9ed6-aa2b7b77d5a4/MeasureReport-1590b87e-b65f-4331-8ffa-0d2952d2fba0.json) | Group_1 |
 | [ b84bdc08-62ae-4bce-857d-d2492e0c82fd ](../.././input/tests/measure/CMS165FHIRControllingHighBP/b84bdc08-62ae-4bce-857d-d2492e0c82fd/MeasureReport-7ca59b81-c61b-47e9-b900-5f1e1d6fc310.json) | Group_1 |
+| [ 048a7212-c19c-4f9d-89e2-13727b23e585 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/048a7212-c19c-4f9d-89e2-13727b23e585/MeasureReport-6c48d533-a267-4186-be87-1c5b0fc04064.json) | Group_1 |
 | [ dbc8c8f1-3f10-4352-adbe-e0d4c12ade72 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/dbc8c8f1-3f10-4352-adbe-e0d4c12ade72/MeasureReport-7b4148a0-65ef-40c4-bccc-6efa603e461a.json) | Group_1 |
 | [ 4ade2900-b5fd-4bed-bacb-1e048c83366f ](../.././input/tests/measure/CMS165FHIRControllingHighBP/4ade2900-b5fd-4bed-bacb-1e048c83366f/MeasureReport-3aa05838-6757-4626-b9e3-a8aaf3731bc0.json) | Group_1 |
+| [ 0e867903-400d-4d71-a7fd-dc9b96d94a17 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/0e867903-400d-4d71-a7fd-dc9b96d94a17/MeasureReport-24439e57-9c88-474c-baf8-4d424d40153e.json) | Group_1 |
 | [ b378c30b-ebc2-4378-9a75-8a97711cac81 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/b378c30b-ebc2-4378-9a75-8a97711cac81/MeasureReport-928d91b8-7482-496d-a809-641afc75f39c.json) | Group_1 |
+| [ 045f7e0b-bfb3-4ee0-a06d-83c853f6a81e ](../.././input/tests/measure/CMS165FHIRControllingHighBP/045f7e0b-bfb3-4ee0-a06d-83c853f6a81e/MeasureReport-331c5841-65f1-4d32-9bb6-36cf2716fe15.json) | Group_1 |
 | [ 4d50f3eb-f56f-4f13-8fcf-4d26e05b9a6a ](../.././input/tests/measure/CMS165FHIRControllingHighBP/4d50f3eb-f56f-4f13-8fcf-4d26e05b9a6a/MeasureReport-5c4d32a9-5bfa-4894-96b5-b382c7a5931b.json) | Group_1 |
+| [ 1905549a-1783-4195-95b9-b0879cb81d96 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/1905549a-1783-4195-95b9-b0879cb81d96/MeasureReport-48b71fbe-f1ba-4c56-950a-30901e055481.json) | Group_1 |
 | [ 45e01fed-56bb-483d-a860-af3d566bda11 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/45e01fed-56bb-483d-a860-af3d566bda11/MeasureReport-02991ca7-859d-422d-8849-655760f8e10a.json) | Group_1 |
+| [ 0b9cb569-149a-4b47-a535-66b59a77bceb ](../.././input/tests/measure/CMS165FHIRControllingHighBP/0b9cb569-149a-4b47-a535-66b59a77bceb/MeasureReport-67dafcdb-4713-436d-a450-a8ad6b62bea5.json) | Group_1 |
 | [ 7de4b027-eb4c-4a2e-958f-e6b7a3eb6309 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/7de4b027-eb4c-4a2e-958f-e6b7a3eb6309/MeasureReport-ef49684d-0996-4dd3-8c9b-e0ebfba51c03.json) | Group_1 |
 | [ 546de5d8-f614-41c7-938f-671d14e4f540 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/546de5d8-f614-41c7-938f-671d14e4f540/MeasureReport-3fe308d7-0a5e-4a53-aa92-181144441d82.json) | Group_1 |
 | [ 78fc0433-a72a-45a3-b2c4-995e614674cb ](../.././input/tests/measure/CMS165FHIRControllingHighBP/78fc0433-a72a-45a3-b2c4-995e614674cb/MeasureReport-8e7d65e5-92e3-4c55-a536-5208554bf43a.json) | Group_1 |
 | [ 4b31dc2b-7867-4766-8a8c-e1971d1e570a ](../.././input/tests/measure/CMS165FHIRControllingHighBP/4b31dc2b-7867-4766-8a8c-e1971d1e570a/MeasureReport-a85d455e-5dbe-4898-88bb-592890b57cde.json) | Group_1 |
 | [ 53abc166-8cd7-46c2-8159-8ed6fc5bcba0 ](../.././input/tests/measure/CMS165FHIRControllingHighBP/53abc166-8cd7-46c2-8159-8ed6fc5bcba0/MeasureReport-03a01438-394c-478c-a8ba-699844d80fc9.json) | Group_1 |
-
-
-#### CMS190FHIRVTEProphylaxisICU
-[ [cql] ](../../input/cql/CMS190FHIRVTEProphylaxisICU.cql) [ [test results] ](../../input/tests/results/CMS190FHIRVTEProphylaxisICU.txt)
-
-Mismatched Test Cases (1 of  of 125)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ 39215b49-af59-45a7-a773-65e8353dfafd ](../.././input/tests/measure/CMS190FHIRVTEProphylaxisICU/39215b49-af59-45a7-a773-65e8353dfafd/MeasureReport-4358ad9b-1c93-4569-9985-0f388fe56ebe.json) | Group_1 | Initial Population<br>Denominator | 0<br>0 | 1<br>1 |
-
-
-#### CMS996FHIRAptTxforSTEMI
-[ [cql] ](../../input/cql/CMS996FHIRAptTxforSTEMI.cql) [ [test results] ](../../input/tests/results/CMS996FHIRAptTxforSTEMI.txt)
-
-Mismatched Test Cases (2 of  of 114)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ 88d99809-90d6-4cbc-a4bb-d5d73375fc81 ](../.././input/tests/measure/CMS996FHIRAptTxforSTEMI/88d99809-90d6-4cbc-a4bb-d5d73375fc81/MeasureReport-8f114534-ca1f-4d09-bdf1-c683d7a680a7.json) | Group_1 | Denominator Exclusion | 1 | 0 |
-| [ f71b56bb-42fc-4db0-aa60-6b7b91333295 ](../.././input/tests/measure/CMS996FHIRAptTxforSTEMI/f71b56bb-42fc-4db0-aa60-6b7b91333295/MeasureReport-261ec6b2-42f5-46c2-906d-12fe22084f4c.json) | Group_1 | Denominator Exclusion | 1 | 0 |
-
-
-#### CMS1218FHIRHHRF
-[ [cql] ](../../input/cql/CMS1218FHIRHHRF.cql) [ [test results] ](../../input/tests/results/CMS1218FHIRHHRF.txt)
-
-Mismatched Test Cases (1 of  of 69)
-| Test Case | Group | Population | Expected | Actual |
-|---|---|---|:---:|:---:|
-| [ ea9c34ee-b50e-4d13-bd9c-ab2033d15717 ](../.././input/tests/measure/CMS1218FHIRHHRF/ea9c34ee-b50e-4d13-bd9c-ab2033d15717/MeasureReport-97044259-fd76-403c-a40f-1177631abe4f.json) | Group_1 | Initial Population<br>Denominator | 0<br>0 | 1<br>1 |
 
 
