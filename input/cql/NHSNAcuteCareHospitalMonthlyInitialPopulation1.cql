@@ -71,7 +71,7 @@ code "Laboratory procedure": '108252007' from "SNOMEDCT" display 'Laboratory pro
 code "Imaging": '363679005' from "SNOMEDCT" display 'Imaging'
 
 parameter "Measurement Period" Interval<DateTime>
-  default Interval[@2026-01-01T00:00:00.000Z, @2026-02-01T00:00:00.000Z)
+  default Interval[@2025-01-01T00:00:00.000Z, @2025-02-01T00:00:00.000Z)
 
 context Patient 
 

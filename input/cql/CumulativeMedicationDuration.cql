@@ -246,7 +246,7 @@ define function MedicationRequestPeriod(Request "MedicationRequest"):
       dose: Coalesce(end of doseRange, doseQuantity),
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       boundsPeriod: timing.repeat.bounds as Interval<DateTime>,
-      daysSupply: (convert R.dispenseRequest.expectedSupplyDuration to days).value,
+      daysSupply: R.dispenseRequest.expectedSupplyDuration.value, //(convert R.dispenseRequest.expectedSupplyDuration to days).value,
       quantity: R.dispenseRequest.quantity,
       refills: Coalesce(R.dispenseRequest.numberOfRepeatsAllowed, 0),
       startDate:
@@ -277,7 +277,7 @@ define function MedicationRequestPeriod(Request "MedicationRequest"):
       dose: Coalesce(end of doseRange, doseQuantity),
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       boundsPeriod: timing.repeat.bounds as Interval<DateTime>,
-      daysSupply: (convert R.dispenseRequest.expectedSupplyDuration to days).value,
+      daysSupply: R.dispenseRequest.expectedSupplyDuration.value, //(convert R.dispenseRequest.expectedSupplyDuration to days).value,
       quantity: R.dispenseRequest.quantity,
       refills: Coalesce(R.dispenseRequest.numberOfRepeatsAllowed, 0),
       startDate:
@@ -375,7 +375,7 @@ define function MedicationDispensePeriod(Dispense "MedicationDispense"):
       doseRange: doseAndRate.dose,
       doseQuantity: doseAndRate.dose,
       dose: Coalesce(end of doseRange, doseQuantity),
-      daysSupply: (convert D.daysSupply to days).value,
+      daysSupply: D.daysSupply.value, //(convert D.daysSupply to days).value
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       startDate:
         Coalesce(
@@ -426,7 +426,7 @@ define fluent function medicationDispensePeriod(Dispense "MedicationDispense"):
       doseRange: doseAndRate.dose,
       doseQuantity: doseAndRate.dose,
       dose: Coalesce(end of doseRange, doseQuantity),
-      daysSupply: (convert D.daysSupply to days).value,
+      daysSupply: D.daysSupply.value, //(convert D.daysSupply to days).value
       dosesPerDay: Coalesce(ToDaily(frequency, period), Count(timing.repeat.timeOfDay), 1.0),
       startDate:
         Coalesce(
@@ -439,7 +439,7 @@ define fluent function medicationDispensePeriod(Dispense "MedicationDispense"):
         Interval[startDate, startDate + Quantity(totalDaysSupplied - 1, 'day')]
       else
         null
- 
+
 /*
 Returns the established therapeutic duration for a given medication.
 This is likely measure specific, though could potentially be established for
