@@ -175,7 +175,7 @@ def capture_discrepancies_by_measure(expected_results: Dict[ResultKey, Dict[str,
                     measure_discrepancy.mismatched_test_cases[TestCaseGroupId(expected_results_key.patient_guid, expected_results_key.group)] = mismatched_populations
     return {measure: discrepancies[measure] for measure in sort_measure_names([k for k,v in discrepancies.items() if has_discrepancy(v)])}
 
-def generate_comparison_report(file: str, expected_results: Dict[ResultKey, Dict[str, str]], actual_results: Dict[ResultKey, Dict[str, str]]):
+def generate_comparison_report(file: str, expected_results: Dict[ResultKey, Dict[str, str]], actual_results: Dict[ResultKey, Dict[str, str]], pass_count: int, fail_count: int):
     discrepancies = capture_discrepancies_by_measure(expected_results, actual_results)
 
     with open(file, "w", newline="") as f:
@@ -186,7 +186,9 @@ def generate_comparison_report(file: str, expected_results: Dict[ResultKey, Dict
                 ['Generated', datetime.now()],
                 ['Total Measures', len(set([result_key.measure_name for result_key in expected_results.keys()]))],
                 ['Total Test Cases', len(set([(result_key.measure_name, result_key.patient_guid) for result_key in expected_results.keys()]))],
-                ['Measures with Discrepancies', len(discrepancies)]
+                ['Measures with Discrepancies', len(discrepancies)],
+                ['Pass Count', f'{pass_count} ({pass_count / (pass_count + fail_count) * 100:.2f}%)'],
+                ['Fail Count', f'{fail_count} ({fail_count / (pass_count + fail_count) * 100:.2f}%)'],
             ]
         ))
         f.writelines(create_markdown_table(
@@ -278,7 +280,7 @@ def main(expected_file: str, actual_file: str, output_file: str, comparison_repo
     print(f"PASS: {pass_fail_count[0]} ({pass_pct:.2f})%")
     print(f"FAIL: {pass_fail_count[1]} ({(100 - pass_pct):.2f})%")
     
-    generate_comparison_report(comparison_report, expected_results[1], actual_results[1])
+    generate_comparison_report(comparison_report, expected_results[1], actual_results[1], pass_fail_count[0], pass_fail_count[1])
 
 if __name__ == '__main__':
     expected_file = "./scripts/comparison/expected_results.csv"

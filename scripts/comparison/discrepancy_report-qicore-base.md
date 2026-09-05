@@ -1,12 +1,10 @@
 # Discrepancy Report
 | Details | Value |
 | --- | --- |
-| Generated | 2026-09-03 09:30:46.723327 |
+| Generated | 2026-08-24 16:37:38.541361 |
 | Total Measures | 74 |
 | Total Test Cases | 3964 |
 | Measures with Discrepancies | 35 |
-| Pass Count | 22678 (95.60%) |
-| Fail Count | 1044 (4.40%) |
 
 
 | Discrepancy Summary | Measure Count | Test Case Count |

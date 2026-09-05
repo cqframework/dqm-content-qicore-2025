@@ -14,13 +14,19 @@ header = ["measure_name", "guid", "population", "count"]
 
 allowed_display_names = {
     "Initial Population",
+    "Initial Population 1",
+    "Initial Population 2",
     "Denominator",
+    "Denominator 1",
+    "Denominator 2",
     "Denominator Exclusion",
     "Denominator Exclusions",
     "Denominator Exception",
     "Denominator Exceptions",
     "Denominator Observation",
     "Numerator",
+    "Numerator 1",
+    "Numerator 2",
     "Numerator Exclusion",
     "Numerator Exclusions",
     "Numerator Observation",
@@ -80,7 +86,7 @@ def load_measure_criteria(measure_resource_dir: str) -> Dict[str, Dict[str, Dict
         if measure_file.endswith('.json'):
             measure_path = os.path.join(measure_resource_dir, measure_file)
             measure_name = os.path.splitext(measure_file)[0]
-            with open(measure_path, 'r', encoding='utf-8') as f:
+            with open(measure_path, 'r') as f:
                 measure_data = json.load(f)
                 measure_criteria = extract_measure_criteria(measure_data)
                 measure_criteria_map[measure_name] = measure_criteria
@@ -120,8 +126,19 @@ def validate_measure_population_counts(measurename: str, populations: Dict[str, 
     measurepop_count = len(measurepop) if isinstance(measurepop, list) else measurepop
     measurepopexc_count = len(measurepopexc) if isinstance(measurepopexc, list) else measurepopexc
 
-    
-    if denom_count < 2:
+    # A patient who is not in this group's own Denominator can never count toward this
+    # group's Numerator, Denominator Exclusion, or Denominator Exception, even when those
+    # criteria expressions are shared (unqualified) across multiple groups/strata, as in
+    # multi-population measures like CMS347. Gate on this group's own Denominator value
+    # before any of the more granular numerator/exclusion adjustment rules below, since
+    # those rules key off the (possibly cross-group-shared) Numerator/Exclusion values
+    # rather than this group's own Denominator.
+    if not denom_count:
+        numer_count = 0
+        numex_count = 0
+        denex_count = 0
+        denexc_count = 0
+    elif denom_count < 2:
         if not numer and numex and (denom and denex):
             numer_count = 0
             numex_count = 0
@@ -180,7 +197,7 @@ def load_measure_sections(dir_path: str) -> Generator['MeasureSection', None, No
         file_path = os.path.join(dir_path, file_name)
         if os.path.isfile(file_path):
             measure_name = os.path.splitext(file_name)[0]
-            with open(file_path, "r", encoding="utf-8") as f:
+            with open(file_path, "r") as f:
                 content = f.read()
             sections = section_pattern.split(content)
             for section in sections:
