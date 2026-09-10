@@ -225,6 +225,18 @@ define "SDE Race":
 define "SDE Sex":
   SDE."SDE Sex"
 
+define "Denominator Observation": "Measure Observation".denominatorObservations[0]
+
+define "Numerator Observation": "Measure Observation".numeratorObservations[0]
+
+
+define "Measure Observation": "Qualifying Encounter" encounter
+  return Tuple {
+    encounter: encounter,
+    denominatorObservations: "Denominator Observations"(encounter),
+    numeratorObservations: "Numerator Observations"(encounter)
+  }
+
 define fluent function hospitalDaysMax10(Period Interval<DateTime>):
   Interval[start of Period, Min({ 
     end of Period, start of Period + 10 days }

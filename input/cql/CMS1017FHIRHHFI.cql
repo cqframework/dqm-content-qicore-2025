@@ -287,10 +287,21 @@ define "SDE Race":
 define "SDE Sex":
   SDE."SDE Sex"
 
-define function "Denominator Observation"(QualifyingEncounter Encounter):
+define "Denominator Observation": "Measure Observation".denominatorObservations[0]
+
+define "Numerator Observation": "Measure Observation".numeratorObservations[0]
+
+define "Measure Observation": "Qualifying Encounter" encounter
+  return Tuple {
+    encounter: encounter,
+    denominatorObservations: "Denominator Observations"(encounter),
+    numeratorObservations: "Numerator Observations"(encounter)
+  }
+
+define function "Denominator Observations"(QualifyingEncounter Encounter):
   duration in days of QualifyingEncounter.hospitalizationWithObservation ( )
 
-define function "Numerator Observation"(QualifyingEncounter Encounter):
+define function "Numerator Observations"(QualifyingEncounter Encounter):
   Count("Numerator" FallsEncounter
       where FallsEncounter.period ends during QualifyingEncounter.hospitalizationWithObservation()
   )

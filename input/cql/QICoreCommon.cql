@@ -607,6 +607,9 @@ the final day if it is less than 24 hours. This also includes the first 24 hour 
 @deprecated: This function is deprecated. Use the fluent function `toDayNumbers()` instead
 */
 define function "Interval To Day Numbers"(Period Interval<DateTime>):
+  if (duration in days between start of Period and end of Period) < 1 then
+    {} as List<Integer>
+  else
   ( expand { Interval[1, duration in days between start of Period and end of Period]} ) DayNumber
     return end of DayNumber
 
@@ -615,8 +618,12 @@ define function "Interval To Day Numbers"(Period Interval<DateTime>):
 the final day if it is less than 24 hours. This also includes the first 24 hour period.
 */
 define fluent function toDayNumbers(Period Interval<DateTime>):
-  ( expand { Interval[1, duration in days between start of Period and end of Period]} ) DayNumber
-    return end of DayNumber
+  // Added this check to return empty list when < 1 day duration (< 24 hours)
+  if (duration in days between start of Period and end of Period) < 1 then
+    {} as List<Integer>
+  else
+    ( expand { Interval[1, duration in days between start of Period and end of Period]} ) DayNumber
+      return end of DayNumber
 
 /*
 @description: Creates a list of 24 hour long intervals in an interval paired with the index (1 indexed) to which 24 hour interval it is.

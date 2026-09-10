@@ -295,12 +295,13 @@ define fluent function medicationRequestPeriodInDays(Request MedicationRequest):
     ),
     dosesPerDay: Coalesce((CMD."ToDaily"(frequency, period)), Count(timing.repeat.timeOfDay), 1.0),
     boundsPeriod: timing.repeat.bounds as Interval<DateTime>,
-    daysSupply: ( convert R.dispenseRequest.expectedSupplyDuration to days ).value,
+    daysSupply: R.dispenseRequest.expectedSupplyDuration.value,//( convert R.dispenseRequest.expectedSupplyDuration to days ).value,
     quantity: R.dispenseRequest.quantity,
     refills: Coalesce(R.dispenseRequest.numberOfRepeatsAllowed, 0),
     startDate: Coalesce(date from start of boundsPeriod, date from R.authoredOn, date from start of R.dispenseRequest.validityPeriod),
     totalDaysSupplied: Coalesce(daysSupply, quantity.value /(dose.value * dosesPerDay)) * ( 1 + refills )
     return totalDaysSupplied
+
 
 define fluent function averageDailyDose(MedicationRequest MedicationRequest):
   MedicationRequest Order
@@ -311,5 +312,5 @@ define fluent function averageDailyDose(MedicationRequest MedicationRequest):
           or ( MedicationStrength.unit = 'mg/mL'
               and Order.dispenseRequest.quantity.unit = 'mL'
           )
-      ) then ( ( Order.dispenseRequest.quantity * MedicationStrength ) / Quantity { value: DaysSupplied, unit: 'd' } ) 
+      ) then ( Quantity {value: ( Order.dispenseRequest.quantity.value * MedicationStrength.value ) / DaysSupplied, unit: MedicationStrength.unit+'/d'} )
       else null

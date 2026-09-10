@@ -11,6 +11,7 @@ codesystem "CPT": 'http://www.ama-assn.org/go/cpt'
 
 valueset "Audio Visual Telehealth Encounter": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1444.5.215'
 valueset "Cancer": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1010'
+valueset "Cancer2": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.2.1078'
 valueset "Chemotherapy Administration": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1027'
 valueset "Office Visit": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.1001'
 valueset "Radiation Treatment Management": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1026'
@@ -47,7 +48,9 @@ define "Face to Face or Telehealth Encounter with Ongoing Chemotherapy":
     "Chemotherapy Within 31 Days Prior and During Measurement Period" ChemoBeforeEncounter,
     "Chemotherapy Within 31 Days Prior and During Measurement Period" ChemoAfterEncounter,
     ( [ConditionProblemsHealthConcerns: "Cancer"]
-      union [ConditionEncounterDiagnosis: "Cancer"] ) CancerDx
+      union [ConditionEncounterDiagnosis: "Cancer"] 
+      union [ConditionProblemsHealthConcerns: "Cancer2"]
+      union [ConditionEncounterDiagnosis: "Cancer2"]) CancerDx
     where CancerDx.prevalenceInterval ( ) overlaps day of FaceToFaceOrTelehealthEncounter.period
       and ChemoBeforeEncounter.performed.toInterval ( ) starts 30 days or less on or before day of end of FaceToFaceOrTelehealthEncounter.period
       and ChemoAfterEncounter.performed.toInterval ( ) starts 30 days or less on or after day of end of FaceToFaceOrTelehealthEncounter.period
@@ -64,7 +67,9 @@ define "Numerator 1":
 define "Radiation Treatment Management During Measurement Period with Cancer Diagnosis":
   ( [Encounter: "Radiation Treatment Management"] ) RadiationTreatmentManagement
     with ( [ConditionProblemsHealthConcerns: "Cancer"]
-      union [ConditionEncounterDiagnosis: "Cancer"] ) CancerDx
+      union [ConditionEncounterDiagnosis: "Cancer"]
+      union [ConditionProblemsHealthConcerns: "Cancer2"]
+      union [ConditionEncounterDiagnosis: "Cancer2"] ) CancerDx
       such that CancerDx.prevalenceInterval ( ) overlaps day of RadiationTreatmentManagement.period
     where RadiationTreatmentManagement.period during day of "Measurement Period"
       and RadiationTreatmentManagement.status = 'finished'
